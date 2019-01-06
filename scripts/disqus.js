@@ -1,7 +1,4 @@
 window.onload = function () {
-    var page = document.activeElement("page");
-    var site = document.activeElement("site");
-
     var PAGE_URL = "{{site.url}}{{page.url}}";
     var PAGE_IDENTIFIER = "{{ page.id }}";
 
