@@ -2,3 +2,17 @@ name: HevaWu's Blog
 markdown: kramdown
 pygments: false
 highlighter: rouge
+search : true
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+  
+comments:
+provider: "disqus"
+disqus:
+    shortname: "he_wu"
+default:
+    comments: true
