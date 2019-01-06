@@ -1,4 +1,4 @@
 name: HevaWu's Blog
-markdown: redcarpet
+markdown: kramdown
 pygments: false
 highlighter: rouge
