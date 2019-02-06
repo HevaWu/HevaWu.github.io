@@ -43,13 +43,11 @@
         </ul>
       </div>
       <div class="tags">
-        <h3 class="page-heading">All pages tagged with
-          <b>
-            {% if page.autopages %}
-            {{page.autopages.display_name}}
-            {% endif %}
-          </b>
-        </h3>
+        <ul class="tags-list">
+            {% for tag in tags %}
+            <a href="#{{ tag | slugify }}"> {{ tag }} </a>
+          {% endfor %}
+        </ul>
       </div>
       <div class="footer">
         <span id="footer-links">
