@@ -4,11 +4,21 @@
   </div>
   <div id="post-info">
     <div id="cover-photo-container">
+      {% if post.cover != empty %}
       <img style='height: 100%; width: 100%; object-fit: contain' id="cover-photo" src="/images/{{ page.cover }}">
+      {% endif}
     </div>
     <div id="info-container">
       <h1 id="title">{{ page.title }}</h1>
-      <span id="date">{{ page.date | date_to_string }}</span>
+      <span id="date">
+        {{ page.date | date_to_string }}
+        {% if post.tags != empty %}
+        |
+        {% for tag in post.tags %}
+        <a class="codinfox-tag-mark" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+        {% endif %}
+      </span>
     </div>
   </div>
 
