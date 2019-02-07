@@ -4,7 +4,7 @@
   </div>
   <div id="post-info">
     <div id="cover-photo-container">
-      {% if post.cover != empty %}
+      {% if post.cover == "nil" %}
       <img style='height: 100%; width: 100%; object-fit: contain' id="cover-photo" src="/images/{{ page.cover }}">
       {% endif %}
     </div>
@@ -13,8 +13,13 @@
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%b %-d, %Y" }}
       </time>
-      {% if page.tags %}
-      <br>Tags: {{ page.tags }}
+      {% if post.tags %}
+      |
+      {% for tag in post.tags %}
+      <a class="heva-tag-mark" href="/blog/tag/#{{ tag | slugify }}">
+        {{ tag }}
+      </a>
+      {% endfor %}
       {% endif %}
     </div>
   </div>
