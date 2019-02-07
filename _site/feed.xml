@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-07T19:25:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Push Local Notifications in iOS app - PART I Ask Permission</title><link href="http://localhost:4000/ios/user%20notifications/2019/02/07/Push-Notifications-in-iOS-app-PART-I-Ask-Permission.html" rel="alternate" type="text/html" title="Push Local Notifications in iOS app - PART I Ask Permission" /><published>2019-02-07T01:34:00+09:00</published><updated>2019-02-07T01:34:00+09:00</updated><id>http://localhost:4000/ios/user%20notifications/2019/02/07/Push-Notifications-in-iOS-app-PART-I-Ask-Permission</id><content type="html" xml:base="http://localhost:4000/ios/user%20notifications/2019/02/07/Push-Notifications-in-iOS-app-PART-I-Ask-Permission.html">&lt;p&gt;This article only discuss about the &lt;code class=&quot;highlighter-rouge&quot;&gt;Asking Permission part for Local Notifications&lt;/code&gt;. I will discuss the remain part &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;Remote Notifications&lt;/code&gt; part in the future article.&lt;/p&gt;
+
+&lt;p&gt;Here is the guide link from Apple document, if you have time, I would suggest to read it :blush:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;User Notifications: https://developer.apple.com/documentation/usernotifications&lt;/li&gt;
+  &lt;li&gt;User Notifications - Asking permission to use notifications: https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Come back to the topic. I want to show you how it would work.&lt;/p&gt;
+
+&lt;h2 id=&quot;request-authorization&quot;&gt;Request Authorization&lt;/h2&gt;
+
+&lt;p&gt;About pushing notifications, whether the local notifications or the remote notifications. Of course the first thing we need to do is to request user’s authorization to show the notification messags.&lt;/p&gt;
+
+&lt;p&gt;The code is super simple:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UNUserNotificationCenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Request permission to display alerts and play sounds.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;requestAuthorization&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;granted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Enable or disable features based on authorization.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;granted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Just add this code where you want to request the authorization. Most of the time, we make the authorization reqeust when we launch the app. Depends on your app, you could also ask the permission in some customized Permission UI and trigger it by clicking the buttons.&lt;/p&gt;
+
+&lt;p&gt;But, there is one thing you need to pay attention is:
+in iOS app, we will only show this default notification permission dialog &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; time.&lt;/p&gt;
+
+&lt;p&gt;:arrow_up: This means user will only have 1 chance to use this default dialog to set their promotion about pushing notifications.&lt;/p&gt;
+
+&lt;p&gt;Sometimes, people ask, if I want to show this dialog again, and make user to change their options, what should I do? Well, in this case, I have to say, maybe you could give a custom permision page for this part, and with a trigger button for requesting setting notifications. Once user click it, you could just redirect your app to &lt;code class=&quot;highlighter-rouge&quot;&gt;Apple Default Settings&lt;/code&gt; page, and let user to change switch on or off for showing your app notifications. OR, there is a simple way, you just give them a dialog, and tell them, you should set/change your notification settings in the Apple Default Settings part. It is so easy, right?&lt;/p&gt;
+
+&lt;h2 id=&quot;check-current-settings&quot;&gt;Check Current Settings&lt;/h2&gt;
+
+&lt;p&gt;After user click &lt;code class=&quot;highlighter-rouge&quot;&gt;Allow&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;Not Allow&lt;/code&gt;, apple help us to store this value. And we could directly retrieve it.&lt;/p&gt;
+
+&lt;p&gt;Before we starting scheduling the notifications, we should check if current settings status. And schedule the corresponding notifications.&lt;/p&gt;
+
+&lt;p&gt;Here is the example code:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;notificationCenter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UNUserNotificationCenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;notificationCenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getNotificationSettings&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;// Do not schedule notifications if not authorized.&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorizationStatus&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authorized&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;settings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alertSetting&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// Schedule an alert-only notification.&lt;/span&gt;
+	   &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;myScheduleAlertNotification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;// Schedule a notification with a badge and sound.&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;badgeAppAndPlaySound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is the begining of pushing notifications. Just 3 minutes is enough for setting this. :tada:&lt;/p&gt;
+
+&lt;p&gt;Next I will introduce how to scheduling local notifications, let’s try to push our own notifications together. :tada:&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="User Notificatios" /><category term="Push Notifications" /><category term="Local Notifications" /><category term="Permission to Show Notifications" /><summary type="html">This article only discuss about the Asking Permission part for Local Notifications. I will discuss the remain part &amp;amp; Remote Notifications part in the future article.</summary></entry><entry><title type="html">Test post</title><link href="http://localhost:4000/test/2019/01/06/test-post.html" rel="alternate" type="text/html" title="Test post" /><published>2019-01-06T20:45:00+09:00</published><updated>2019-01-06T20:45:00+09:00</updated><id>http://localhost:4000/test/2019/01/06/test-post</id><content type="html" xml:base="http://localhost:4000/test/2019/01/06/test-post.html">&lt;h2 id=&quot;test-post&quot;&gt;Test Post&lt;/h2&gt;
+
+&lt;p&gt;This is using for test if the layout is okay.&lt;/p&gt;</content><author><name></name></author><category term="Test" /><summary type="html">Test Post</summary></entry></feed>
