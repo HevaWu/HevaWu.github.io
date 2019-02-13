@@ -229,6 +229,10 @@ a:hover {
   padding-left: 11em;
   padding-right: 2.125em;
   border-right: 1px solid #e7e7e7;
+  background-image: url("/images/sidebar_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
 }
 
 .content {
