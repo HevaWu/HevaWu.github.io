@@ -91,8 +91,17 @@ a:hover {
 
 .tagline {
   width: 100%;
-  color: #787878;
+  color: #f7faff;
   font-weight: 600;
+  text-align: center;
+  margin-top: 0.5em;
+  display: block;
+}
+
+.motto {
+  width: 100%;
+  color: #d9dee0;
+  font-weight: 100;
   text-align: center;
   margin-top: 0.5em;
   display: block;
