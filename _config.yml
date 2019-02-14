@@ -76,7 +76,7 @@ pagination:
 autopages:
 
   # Site-wide kill switch, disable here and it doesn't run at all
-  enabled: false
+  enabled: true
 
   # Category pages, omit entire config element to disable
   categories:
