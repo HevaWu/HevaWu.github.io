@@ -9,8 +9,7 @@ categories: [iOS, Dispatch]
 tags: [iOS, Dispatch, Dispatch Group]
 ---
 
-Introduction
-===
+## Introduction
 
 `Dispatch Group` is a part of GCD. As you can read from [Apple Documents](https://developer.apple.com/documentation/dispatch/dispatchgroup). :arrow_down:
 
@@ -20,8 +19,7 @@ DispatchGroup allows for aggregate synchronization of work. You can use them to 
 
 You might still be confusing, :confused: . So, let's check the example code.
 
-First Method: Directly add `DispatchGroup` where we needed it
-===
+## First Method: Directly add `DispatchGroup` where we needed it
 
 Here is the code:
 
@@ -55,9 +53,9 @@ func dispatchGroup_useEnter() {
 Based on the code, you could find, we just simplify running this procedure in the `Main thread`. And trying to use it to use `DispatchQueue` to synchronize running 3 tasks.
 
 At here, we use `DispatchGroup` to make sure each task is started after the former one is finished.
-- 1. run `wait()` to wait former thread is finished(current resource is empty)
-- 2. run `enter()` to start the group
-- 3. Do the async code, and add `leave()` when the async is finished.
+- 1.run `wait()` to wait former thread is finished(current resource is empty)
+- 2.run `enter()` to start the group
+- 3.Do the async code, and add `leave()` when the async is finished.
 
 At the end of code, we add `result` to help confirming if all of the tasks is done.
 
@@ -72,8 +70,7 @@ end 2 task
 All Done
 ```
 
-Second Method: Generate `DispatchGroup` when init `async DispatchQueue`
-===
+## Second Method: Generate `DispatchGroup` when init `async DispatchQueue`
 
 This method is kind of similar with the former one. The difference is where we put/init the `DispatchGroup`. Here is the code:
 
