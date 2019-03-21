@@ -14,7 +14,10 @@ tags: [iOS, Dispatch, Dispatch Group]
 `Dispatch Group` is a part of GCD. As you can read from [Apple Documents](https://developer.apple.com/documentation/dispatch/dispatchgroup). :arrow_down:
 
 ```
-DispatchGroup allows for aggregate synchronization of work. You can use them to submit multiple different work items and track when they all complete, even though they might run on different queues. This behavior can be helpful when progress can’t be made until all of the specified tasks are complete.
+DispatchGroup allows for aggregate synchronization of work. You can use them to submit
+ multiple different work items and track when they all complete, even though they might
+ run on different queues. This behavior can be helpful when progress can’t be made until
+ all of the specified tasks are complete.
 ```
 
 You might still be confusing, :confused: . So, let's check the example code.
