@@ -10,6 +10,7 @@ tags: [UIViewAlertForUnsatisfiableConstraints, iOS, Layout Constraint]
 ---
 
 When we update our app's UI, sometimes we might got this layout warning like this:
+
 <img src="/images/2019-05-27-Debug-UIViewAlertForUnsatisfiableConstraints/layout_warning.png" width="100%">
 
 Uhhhhh, What should we do now?
@@ -19,12 +20,14 @@ So, follow the instruction
 to catch this in the debugger`
 
 OK. Got it. Let's set a `Symbolic` breakpoint by setting its `Symbol` to `UIViewAlertForUnsatisfiableConstraints`.
+
 <img src="/images/2019-05-27-Debug-UIViewAlertForUnsatisfiableConstraints/add_symbolic.png" width="100%">
 
 DONE. :tada:
 
 Now, go into this warning view again. The breakpoint will automatically
 interruput you to this :arrow_down:
+
 <img src="/images/2019-05-27-Debug-UIViewAlertForUnsatisfiableConstraints/symbolic_breakpoint.png" width="100%">
 
 What to do now with pointers and assembly codes?
