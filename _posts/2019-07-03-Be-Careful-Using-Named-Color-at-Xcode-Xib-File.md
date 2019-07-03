@@ -76,6 +76,8 @@ But I tried to put the `label.color = .red` rewrite color code at
 `variabe's didSet{}` & `viewDidLayoutSubview()` & `viewWillAppear()` part.
 All of them cannot rewrite the color succesfully.
 Except `viewDidAppear()`
+You could checking them in this file
+https://github.com/HevaWu/TestColorAssets/blob/master/TestColorAssets/TestColorAssets/FirstViewController.swift
 
 I don't know the detail implementation about the `Named Color`
 
