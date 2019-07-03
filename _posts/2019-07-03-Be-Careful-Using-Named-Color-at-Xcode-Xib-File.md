@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Be Careful Using `Named Color` at Xcode Xib File
-date: 2019-06-28 11:53:00
+date: 2019-07-03 15:30:00
 cover: nil
 comments: true
 disqus_category_id: BeCarefulUsingNamedColorAtXcodeXibFile
@@ -22,11 +22,13 @@ I could switch my view controllers (FirstViewController, SecondViewController) b
 ## Add New Color Set
 - Open `Assets.xcassets`
 - Click `+` and choosing `New Color Set`, then you could naming it(I add a `TabBarItemLabelColor`)
+
 <img src="/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/color_set.png" width="100%">
 - Under `Attributes Inspector`, set the `Color` params
 
 ## Use New Color Set
 - At `xib` file, we could directly select the color under `Attributes Inspector`
+
 <img src="/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/xib.png" width="100%">
 - At coding part, we could directly call `UIColor(named: "TabBarItemLabelColor")` to use it
 
@@ -85,9 +87,12 @@ For what I am thinking is:
 Maybe reading the `color` from `Assets.xsassets` takes some time & calculation.
 
 At the `xib` file part, if we checking its code
+
 <img src="/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/text_color.png" width="100%">
+
 So Xcode read the color by its `name`
 And in the `resources` part
+
 <img src="/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/resources.png" width="100%">
 Xcode will try to find the `named Color` by reading its resources
 
