@@ -4,7 +4,7 @@ title: Cannot Run `Realm` Scheme After Install Xcode11 beta
 date: 2019-06-28 11:53:00
 cover: nil
 comments: true
-disqus_category_id: ModernSwiftAPIDeisgn
+disqus_category_id: CannotRunRealmSchemeAfterInstallXcode11Beta
 categories: [iOS, WWDC2019, API Design, Swift]
 tags: [iOS, WWDC2019, API Design, Swift]
 ---

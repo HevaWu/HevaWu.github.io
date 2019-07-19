@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Heva Wu's Blog - Insertion Sort</title>
+  <meta name="viewport" content="width=device-width">
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="/css/responsive.css">
+
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="site">
+    <div class="sidebar" id="sidebar">
+      <div class="header">
+        <h1 class="title"><a href="/"><img id="logo" src="/images/logo.png"></a></h1>
+        <span class="tagline">Heva Wu's Blog</span>
+        <span class="motto">I may not be there yet, but I'm closer than I was yesterday. </span>
+        <span class="motto">(￣︶￣)↗[GO!]</span>
+      </div>
+      <div class="posts">
+        <ul class="posts-list">
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/logging/oslog/2019/05/14/OSLog.html">
+              <span class="post-date">14 May 2019</span>
+              iOS Logging System -- OSLog
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html">
+              <span class="post-date">14 May 2019</span>
+              Crash Reports
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern.html">
+              <span class="post-date">15 Apr 2019</span>
+              Design Pattern PART I - Creational Patterns
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/github/2019/04/04/Difference-In-SSH-key-Deploy-key.html">
+              <span class="post-date">04 Apr 2019</span>
+              Difference between SSH keys &amp; Deploy keys
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/dispatch/2019/02/20/Dispatch-Group.html">
+              <span class="post-date">20 Feb 2019</span>
+              Dispatch Group
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/algorithm/sort/2019/02/17/Insertion-Sort.html">
+              <span class="post-date">17 Feb 2019</span>
+              Insertion Sort
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/github/emoji/2019/02/15/Emoji-Unicode-Memo.html">
+              <span class="post-date">15 Feb 2019</span>
+              Emoji Unicode Memo
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/user%20notifications/2019/02/07/Push-Notifications-in-iOS-app-PART-I-Ask-Permission.html">
+              <span class="post-date">07 Feb 2019</span>
+              Push Local Notifications in iOS app - PART I Ask Permission
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/test/2019/01/06/test-post.html">
+              <span class="post-date">06 Jan 2019</span>
+              Test post
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="tags">
+          <h4 class="page-heading">
+            <!-- Tags: -->
+          </h4>
+      </div>
+      <div class="footer">
+        <span id="footer-links">
+          <a href="" class="footer-link">About</a> <span class="separator">•</span>
+          <a href="https://www.linkedin.com/in/he-heva-wu-2a6819113/" class="footer-link">LinkedIn</a> <span class="separator">•</span>
+          <a href="https://github.com/HevaWu" class="footer-link">GitHub</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+  <div id="post-info">
+    <div id="cover-photo-container">
+      
+    </div>
+    <div id="info-container">
+      <h1 id="title">Insertion Sort</h1>
+      <time datetime="2019-02-17T09:14:00+09:00" itemprop="datePublished">
+        Feb 17, 2019
+      </time>
+       |
+      
+      <a href="#algorithm" class="post-tag">Algorithm</a>
+      
+      <a href="#sort" class="post-tag">Sort</a>
+      
+      <a href="#insertion-sort" class="post-tag">Insertion Sort</a>
+      
+      
+    </div>
+  </div>
+
+  <div class="post">
+    <p>Let’s see the introduction from the <a href="https://en.wikipedia.org/wiki/Insertion_sort">wiki</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Insertion sort is a simple sorting algorithm that builds the final sorted array (or
+ list) one item at a time. It is much less efficient on large lists than more advanced
+ algorithms such as quicksort, heapsort, or merge sort. However, insertion sort provides
+ several advantages:
+&gt;
+&gt; Simple implementation: Jon Bentley shows a three-line C version, and a five-line
+ optimized version[2]
+&gt; Efficient for (quite) small data sets, much like other quadratic sorting algorithms
+&gt; More efficient in practice than most other simple quadratic (i.e., O(n2)) algorithms
+such as selection sort or bubble sort
+&gt; Adaptive, i.e., efficient for data sets that are already substantially sorted: the
+time complexity is O(kn) when each element in the input is no more than k places away
+from its sorted position
+&gt; Stable; i.e., does not change the relative order of elements with equal keys
+&gt; In-place; i.e., only requires a constant amount O(1) of additional memory space
+&gt; Online; i.e., can sort a list as it receives it
+</code></pre></div></div>
+
+<p>Insertion Sort is quite useful for sorting a few elements. The idea is:</p>
+<ul>
+  <li>Start from the 2nd element, we start comparing it with the former sorted one. Until we found a proper place to put it.</li>
+</ul>
+
+<p>For sorting an array A, we sort the elements inside A. During sorting, it will only have <strong>constant elements</strong> ourside of the array. When <code class="highlighter-rouge">Insertion Sort</code> is finished, the output array will be the sorted array.</p>
+
+<p>Let’s check the code together:</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">insertionSort</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">output</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span>
+    <span class="k">for</span> <span class="n">index</span> <span class="k">in</span> <span class="mi">1</span><span class="o">...</span><span class="n">output</span><span class="o">.</span><span class="n">count</span><span class="o">-</span><span class="mi">1</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">current</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="k">var</span> <span class="nv">j</span> <span class="o">=</span> <span class="n">index</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">output</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">current</span> <span class="p">{</span>
+            <span class="n">output</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="p">}</span>
+        <span class="n">output</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">current</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">output</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And if we add this run this code :</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">A</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="k">let</span> <span class="nv">sortedA</span> <span class="o">=</span> <span class="nf">insertionSort</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="kt">A</span><span class="p">)</span>
+<span class="c1">// output: [0, 1, 3, 4, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div></div>
+
+<p>After reading the code, we could quickly find it worst time-complexity is O(n^2).
+This is the simplest sorting algorithm, and I will introduce other sorting algorithm in the future. <img class="emoji" title=":satisfied:" alt=":satisfied:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f606.png" height="20" width="20"></p>
+
+  </div>
+  <div class="colophon">
+    <p>
+      <span id="pub-date">Published on 17 Feb 2019</span> <span class="separator">•</span>
+      <span id="social">Find me on <a href="">Twitter</a>!</span>
+    </p>
+  </div>
+
+  <!-- Add Disqus comments. -->
+  <div id="disqus_thread"></div>
+  <script src="/scripts/disqus.js" type="text/javascript"></script>
+  <script id="dsq-count-scr" src="//hevawu-github-io.disqus.com/count.js" async></script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+  </div>
+  <script src="/scripts/responsive.js" type="text/javascript"></script>
+</body>
+
+</html>

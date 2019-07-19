@@ -34,6 +34,55 @@
         <ul class="posts-list">
           
           <li class="post-link">
+            <a class="post-title" href="/ios/logging/oslog/2019/05/14/OSLog.html">
+              <span class="post-date">14 May 2019</span>
+              iOS Logging System -- OSLog
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html">
+              <span class="post-date">14 May 2019</span>
+              Crash Reports
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern.html">
+              <span class="post-date">15 Apr 2019</span>
+              Design Pattern PART I - Creational Patterns
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/github/2019/04/04/Difference-In-SSH-key-Deploy-key.html">
+              <span class="post-date">04 Apr 2019</span>
+              Difference between SSH keys & Deploy keys
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/dispatch/2019/02/20/Dispatch-Group.html">
+              <span class="post-date">20 Feb 2019</span>
+              Dispatch Group
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/algorithm/sort/2019/02/17/Insertion-Sort.html">
+              <span class="post-date">17 Feb 2019</span>
+              Insertion Sort
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/github/emoji/2019/02/15/Emoji-Unicode-Memo.html">
+              <span class="post-date">15 Feb 2019</span>
+              Emoji Unicode Memo
+            </a>
+          </li>
+          
+          <li class="post-link">
             <a class="post-title" href="/ios/user%20notifications/2019/02/07/Push-Notifications-in-iOS-app-PART-I-Ask-Permission.html">
               <span class="post-date">07 Feb 2019</span>
               Push Local Notifications in iOS app - PART I Ask Permission
@@ -56,8 +105,8 @@
       </div>
       <div class="footer">
         <span id="footer-links">
-          <a href="" class="footer-link">About</a> <span class="separator">•</span>
-          <a href="https://www.linkedin.com/in/he-heva-wu-2a6819113/" class="footer-link">LinkedIn</a> <span class="separator">•</span>
+          <a href="" class="footer-link">About</a> <span class="separator">&bull;</span>
+          <a href="https://www.linkedin.com/in/he-heva-wu-2a6819113/" class="footer-link">LinkedIn</a> <span class="separator">&bull;</span>
           <a href="https://github.com/HevaWu" class="footer-link">GitHub</a>
         </span>
       </div>
@@ -74,94 +123,288 @@
       
     </div>
     <div id="info-container">
-      <h1 id="title">Push Local Notifications in iOS app - PART I Ask Permission</h1>
-      <time datetime="2019-02-07T01:34:00+09:00" itemprop="datePublished">
-        Feb 7, 2019
+      <h1 id="title">iOS Logging System -- OSLog</h1>
+      <time datetime="2019-05-14T01:04:00+09:00" itemprop="datePublished">
+        May 14, 2019
       </time>
        |
       
       <a href="#ios" class="post-tag">iOS</a>
       
-      <a href="#user-notificatios" class="post-tag">User Notificatios</a>
+      <a href="#logging" class="post-tag">Logging</a>
       
-      <a href="#push-notifications" class="post-tag">Push Notifications</a>
+      <a href="#oslog" class="post-tag">OSLog</a>
       
-      <a href="#local-notifications" class="post-tag">Local Notifications</a>
-      
-      <a href="#permission-to-show-notifications" class="post-tag">Permission to Show Notifications</a>
+      <a href="#os" class="post-tag">OS</a>
       
       
     </div>
   </div>
 
   <div class="post">
-    <p>This article only discuss about the <code class="highlighter-rouge">Asking Permission part for Local Notifications</code>. I will discuss the remain part &amp; <code class="highlighter-rouge">Remote Notifications</code> part in the future article.</p>
+    <p>This article is introducing the <code class="highlighter-rouge">Unified Logging</code> system and how to use it to measure performace.</p>
 
-<p>Here is the guide link from Apple document, if you have time, I would suggest to read it <img class="emoji" title=":blush:" alt=":blush:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60a.png" height="20" width="20"></p>
+<h1 id="unified-logging">Unified Logging</h1>
+<p>From the document:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The unified logging system provides a single, efficient,
+ performant API for capturing messaging across all levels
+ of the system.
+</code></pre></div></div>
+
+<p>The Unified Logging uses Activity Tracing for performance, consolicates kernel and user-space logging.</p>
+
+<h2 id="why-using-it">Why using it</h2>
 <ul>
-  <li>User Notifications: https://developer.apple.com/documentation/usernotifications</li>
-  <li>User Notifications - Asking permission to use notifications: https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications</li>
+  <li>Compressing data</li>
+  <li>Deferring work and data collection</li>
+  <li>Managing log message lifecycle</li>
 </ul>
 
-<p>Come back to the topic. I want to show you how it would work.</p>
+<p>We want as much logging on all the time as possible.</p>
 
-<h2 id="request-authorization">Request Authorization</h2>
+<h2 id="key-features">Key Features</h2>
+<ul>
+  <li>Improved categorization and filtering of log messages</li>
+  <li>Logging system collects caller information</li>
+  <li>New Builtin type specifiers - simplifies log message preparation</li>
+  <li>New Console application and command-line tool (graph)</li>
+  <li>Supported on macOS, iOS, tvOS, watchOS and Simulators</li>
+  <li>Support for Objective C, C++, C and Swift</li>
+</ul>
 
-<p>About pushing notifications, whether the local notifications or the remote notifications. Of course the first thing we need to do is to request user’s authorization to show the notification messags.</p>
+<h2 id="logging-concepts">Logging Concepts</h2>
 
-<p>The code is super simple:</p>
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">center</span> <span class="o">=</span> <span class="kt">UNUserNotificationCenter</span><span class="o">.</span><span class="nf">current</span><span class="p">()</span>
-<span class="c1">// Request permission to display alerts and play sounds.</span>
-<span class="n">center</span><span class="o">.</span><span class="nf">requestAuthorization</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">alert</span><span class="p">,</span> <span class="o">.</span><span class="n">sound</span><span class="p">])</span> <span class="p">{</span> <span class="p">(</span><span class="n">granted</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="c1">// Enable or disable features based on authorization.</span>
-    <span class="k">if</span> <span class="n">granted</span><span class="p">,</span> <span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="o">...</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="o">...</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<h3 id="adption">Adption</h3>
+<ul>
+  <li>Build with the macOS 10.12, iOS 10.0 or watchOS 3.0 SDK</li>
+  <li>Legacy APIs(NSLog, as_log_message, syslog…) redirected into new system</li>
+  <li>Log data will be in new format and location</li>
+</ul>
 
-<p>Just add this code where you want to request the authorization. Most of the time, we make the authorization reqeust when we launch the app. Depends on your app, you could also ask the permission in some customized Permission UI and trigger it by clicking the buttons.</p>
+<h3 id="new-file-formats">New File Formats</h3>
+<ul>
+  <li>Log data is kept in a compressed binary format: <code class="highlighter-rouge">.tracev3</code> files</li>
+  <li>Stored under <code class="highlighter-rouge">/var/db/diagnostics</code> with support in <code class="highlighter-rouge">/var/db/uuidtext</code></li>
+  <li><code class="highlighter-rouge">.logarchive</code> format for portability of logs (collection of log data, easier to transfer to email or …)</li>
+</ul>
 
-<p>But, there is one thing you need to pay attention is:
-in iOS app, we will only show this default notification permission dialog <code class="highlighter-rouge">1</code> time.</p>
+<h3 id="subsystems-and-categories">Subsystems and Categories</h3>
+<ul>
+  <li>Log messages can be associated with a subsystem and category</li>
+  <li>Can be used to control how log messages are fitered and displayed</li>
+  <li>A subsystem can contain multiple categories</li>
+</ul>
 
-<p><img class="emoji" title=":arrow_up:" alt=":arrow_up:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b06.png" height="20" width="20"> This means user will only have 1 chance to use this default dialog to set their promotion about pushing notifications.</p>
+<p>Your application will have own subsystems and categories as needed.</p>
 
-<p>Sometimes, people ask, if I want to show this dialog again, and make user to change their options, what should I do? Well, in this case, I have to say, maybe you could give a custom permision page for this part, and with a trigger button for requesting setting notifications. Once user click it, you could just redirect your app to <code class="highlighter-rouge">Apple Default Settings</code> page, and let user to change switch on or off for showing your app notifications. OR, there is a simple way, you just give them a dialog, and tell them, you should set/change your notification settings in the Apple Default Settings part. It is so easy, right?</p>
+<h3 id="logging-behavior">Logging Behavior</h3>
+<p>Each log message has a level determined by the API used</p>
+<ul>
+  <li>Three basic levels – Default, Info, Debug</li>
+  <li>Two special levels – Fault, Error</li>
+</ul>
 
-<h2 id="check-current-settings">Check Current Settings</h2>
+<p>Each basic levels has two characteristics that can be set for system, subsystem, or category</p>
+<ul>
+  <li>Need to check if it is enabled (Default messages are always enabled)</li>
+  <li>Is it stored to disk or memory? (Fault or Error are always stored to disk.)</li>
+</ul>
 
-<p>After user click <code class="highlighter-rouge">Allow</code> or <code class="highlighter-rouge">Not Allow</code>, apple help us to store this value. And we could directly retrieve it.</p>
+<p>The levels are hierarchical</p>
+<ul>
+  <li>Setting Debug to go to disk implies that Info will also go to disk</li>
+</ul>
 
-<p>Before we starting scheduling the notifications, we should check if current settings status. And schedule the corresponding notifications.</p>
+<p>Behavior can be customized by installing profiles or, on macOS, via log command</p>
 
-<p>Here is the example code:</p>
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">notificationCenter</span> <span class="o">=</span> <span class="kt">UNUserNotificationCenter</span><span class="o">.</span><span class="nf">current</span><span class="p">()</span>
-<span class="n">notificationCenter</span><span class="o">.</span><span class="n">getNotificationSettings</span> <span class="p">{</span> <span class="p">(</span><span class="n">settings</span><span class="p">)</span> <span class="k">in</span>
-   <span class="c1">// Do not schedule notifications if not authorized.</span>
-   <span class="k">guard</span> <span class="n">settings</span><span class="o">.</span><span class="n">authorizationStatus</span> <span class="o">==</span> <span class="o">.</span><span class="n">authorized</span> <span class="k">else</span> <span class="p">{</span><span class="k">return</span><span class="p">}</span>
+<h3 id="standard-behavior">Standard Behavior</h3>
 
-   <span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">alertSetting</span> <span class="o">==</span> <span class="o">.</span><span class="n">enabled</span> <span class="p">{</span>
-      <span class="c1">// Schedule an alert-only notification.</span>
-	   <span class="k">self</span><span class="o">.</span><span class="nf">myScheduleAlertNotification</span><span class="p">()</span>
-   <span class="p">}</span>
-   <span class="k">else</span> <span class="p">{</span>
-      <span class="c1">// Schedule a notification with a badge and sound.</span>
-      <span class="k">self</span><span class="o">.</span><span class="nf">badgeAppAndPlaySound</span><span class="p">()</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Message Level</th>
+      <th style="text-align: left">Enabled</th>
+      <th style="text-align: left">Destination</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">DEFAULT LEVEL</td>
+      <td style="text-align: left">ALWAYS</td>
+      <td style="text-align: left">DISK</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">INFO LEVEL</td>
+      <td style="text-align: left">YES</td>
+      <td style="text-align: left">MEMORY</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">DEBUG LEVEL</td>
+      <td style="text-align: left">NO</td>
+      <td style="text-align: left">N/A</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ERROR</td>
+      <td style="text-align: left">ALWAYS</td>
+      <td style="text-align: left">DISK</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">FAULT</td>
+      <td style="text-align: left">ALWAYS</td>
+      <td style="text-align: left">DISK</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>This is the begining of pushing notifications. Just 3 minutes is enough for setting this. <img class="emoji" title=":tada:" alt=":tada:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png" height="20" width="20"></p>
+<h3 id="privacy">Privacy</h3>
+<p>Prevent accidental logging of Personally Identifiable Information(PII)</p>
 
-<p>Next I will introduce how to scheduling local notifications, let’s try to push our own notifications together. <img class="emoji" title=":tada:" alt=":tada:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png" height="20" width="20"></p>
+<h3 id="faults-and-errors">Faults and Errors</h3>
+<ul>
+  <li>Errors – represent issues discovered within a given application/library</li>
+  <li>Faults – represent more global problems in the system</li>
+  <li>Faults and Error log information is captured into a seperate set of log files (They will exsit longer than normal logs)</li>
+</ul>
+
+<h3 id="architecture">Architecture</h3>
+<p><img src="/images/2019-05-16-OSLog/architecture.png" width="100%" /></p>
+
+<h3 id="type-formatters">Type Formatters</h3>
+<p><img src="/images/2019-05-16-OSLog/type_formatter.png" width="100%" /></p>
+
+<h2 id="parameter-privacy">Parameter Privacy</h2>
+<p>Privacy is handled on a parameter by parameter basis
+<code class="highlighter-rouge">Scalars</code> and <code class="highlighter-rouge">Static strings</code> are assumed to be public
+<code class="highlighter-rouge">Dynamic strings</code>, <code class="highlighter-rouge">collections</code> and <code class="highlighter-rouge">objects</code> are assumed to be private</p>
+
+<h2 id="demo">Demo</h2>
+<p>Here is the changing :</p>
+
+<p><img src="/images/2019-05-16-OSLog/log_message_ex.png" width="100%" /></p>
+
+<h2 id="activity-api-improvements">Activity API Improvements</h2>
+<p>Activites are not objects that can be stored and re-used</p>
+<ul>
+  <li>Direct control of activity relationships during creation</li>
+</ul>
+
+<p>New API to auto-scope activites within the code</p>
+
+<p><img src="/images/2019-05-16-OSLog/activity_example.png" width="100%" /></p>
+
+<h2 id="tools">Tools</h2>
+
+<h3 id="console">Console</h3>
+<ul>
+  <li>View live content form a system</li>
+  <li>Open log archives</li>
+  <li>New Activity centric view of logging and tracing</li>
+  <li>Advanced filtering and searching</li>
+  <li>Device support</li>
+</ul>
+
+<h3 id="log-command-line-tool">log Command Line Tool</h3>
+<p><img src="/images/2019-05-16-OSLog/log_system_console.png" width="100%" /></p>
+
+<h2 id="logging-etiquette">Logging Etiquette</h2>
+<ul>
+  <li>Ensure messages contain only information useful for debugging</li>
+  <li>Leverage built-in formatters</li>
+  <li>Avoid creating wrapper functions for <code class="highlighter-rouge">os_log</code> APIs</li>
+  <li>Log only what you need from collections (Dictionaries, Arrays, etc)</li>
+  <li>Avoid logging in tight code loops</li>
+</ul>
+
+<h2 id="suggest">Suggest</h2>
+<ul>
+  <li>Use <code class="highlighter-rouge">os_log</code> to log critical details to help debug issues</li>
+  <li>Use <code class="highlighter-rouge">os_log_info</code> for additional info that will be captured during error or fault</li>
+  <li>Use <code class="highlighter-rouge">os_log_debug</code> for high-volume debugging during development</li>
+  <li>Use <code class="highlighter-rouge">os_log_error</code> to cause additional information capture from app</li>
+  <li>Use <code class="highlighter-rouge">os_log_fault</code> to cause additional information capture from system</li>
+</ul>
+
+<h2 id="using-sysdiagnose">Using <code class="highlighter-rouge">sysdiagnose</code></h2>
+<p><code class="highlighter-rouge">sysdiagnose</code> is the preferred method to capture data for bug reports</p>
+<ul>
+  <li>Unified logging data in <code class="highlighter-rouge">system_logs.archive</code></li>
+</ul>
+
+<p>Use <code class="highlighter-rouge">key-chord</code> to trigger
+<code class="highlighter-rouge">sysdiagnose</code> on Apple Watch will trigger on both Apple Watch and iPhone
+Transfer from device using iTunes</p>
+
+<p>Here are some <code class="highlighter-rouge">key-chord</code>s</p>
+
+<p><img src="/images/2019-05-16-OSLog/key_chords.png" width="100%" /></p>
+
+<h1 id="measure-performance">Measure Performance</h1>
+
+<h2 id="os_signpost"><code class="highlighter-rouge">os_signpost</code></h2>
+<p>Instruments can take the data that <code class="highlighter-rouge">signposts</code> produce and you could check what your program is doing.</p>
+
+<p>Here is an example:</p>
+
+<p><img src="/images/2019-05-16-OSLog/os_signpost.png" width="100%" /></p>
+
+<p><code class="highlighter-rouge">os_signpost</code> allows to mark the beginning and the end(<code class="highlighter-rouge">.begin</code> &amp; <code class="highlighter-rouge">.end</code>).</p>
+
+<h2 id="measure-asynchronous-operation">Measure Asynchronous Operation</h2>
+<ul>
+  <li>Signpost Name</li>
+  <li>Signpost ID – tell overlapping operations apart
+  <img src="/images/2019-05-16-OSLog/signpost_id.png" width="100%" />
+    <ul>
+      <li>Making Signpost ID ()
+  <img src="/images/2019-05-16-OSLog/make_signpost_id.png" width="100%" /></li>
+      <li>process-scoped</li>
+      <li>making from object is convenient if we have the same object at <code class="highlighter-rouge">.begin</code> and <code class="highlighter-rouge">.end</code></li>
+      <li>Demo
+  <img src="/images/2019-05-16-OSLog/signpost_id_ex.png" width="100%" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="add-metadata-to-signpost">Add Metadata to Signpost</h2>
+<ul>
+  <li>Add context to the <code class="highlighter-rouge">.begin</code> and <code class="highlighter-rouge">.end</code></li>
+  <li>Be able to pass arguments with <code class="highlighter-rouge">os_log</code> format string literal</li>
+  <li>Pass many arguments with different types</li>
+  <li>Pass dynamic strings</li>
+</ul>
+
+<h2 id="add-independent-event">Add Independent Event</h2>
+<p><code class="highlighter-rouge">os_signpost</code> have <code class="highlighter-rouge">.event</code> type
+Marking a single point</p>
+
+<h2 id="conditionally-enable-signpost">Conditionally Enable Signpost</h2>
+<p>Signposts are lightweight</p>
+<ul>
+  <li>Built to minimize observer effect</li>
+  <li>Built for fine-grained measurement in a short time span</li>
+</ul>
+
+<p><code class="highlighter-rouge">OSLog.disabled</code></p>
+
+<p><img src="/images/2019-05-16-OSLog/signpost_enable.png" width="100%" /></p>
+
+<h2 id="instruments">Instruments</h2>
+<ul>
+  <li>Blank -&gt; add <code class="highlighter-rouge">os_signpost</code></li>
+  <li>Able to retrieve from <code class="highlighter-rouge">Summary</code> part</li>
+  <li>Able to <code class="highlighter-rouge">Record</code> the action</li>
+</ul>
+
+<h4 id="reference-link">Reference link</h4>
+<ul>
+  <li><a href="https://developer.apple.com/documentation/os/logging">Logging</a></li>
+  <li><a href="https://developer.apple.com/videos/play/wwdc2016/721/">Unified Logging and Activity Tracing</a></li>
+</ul>
 
   </div>
   <div class="colophon">
     <p>
-      <span id="pub-date">Published on 07 Feb 2019</span> <span class="separator">•</span>
+      <span id="pub-date">Published on 14 May 2019</span> <span class="separator">&bull;</span>
       <span id="social">Find me on <a href="">Twitter</a>!</span>
     </p>
   </div>
@@ -170,8 +413,7 @@ in iOS app, we will only show this default notification permission dialog <code 
   <div id="disqus_thread"></div>
   <script src="/scripts/disqus.js" type="text/javascript"></script>
   <script id="dsq-count-scr" src="//hevawu-github-io.disqus.com/count.js" async></script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 </div>
