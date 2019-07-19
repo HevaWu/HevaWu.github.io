@@ -1,8 +1,11 @@
 ---
 layout: post
+pagination:
+  enabled: true
+  categories: Test
+  tags: Test
 title: Modern Swift API Design
 date: 2019-06-12 15:59:00
-cover: nil
 comments: true
 disqus_category_id: ModernSwiftAPIDeisgn
 categories: [iOS, WWDC2019, API Design, Swift]

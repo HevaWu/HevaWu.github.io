@@ -1,8 +1,11 @@
 ---
 layout: post
+pagination:
+  enabled: true
+  categories: Test
+  tags: Test
 title: Difference between SSH keys & Deploy keys
 date: 2019-04-03 16:30:00
-cover: nil
 comments: true
 disqus_category_id: DifferenceInSSHKeys&DeployKeys
 categories: [Github]

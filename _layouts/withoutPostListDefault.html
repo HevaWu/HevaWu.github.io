@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+  <div class="site">
+    <div class="sidebar" id="sidebar">
+      <div class="header">
+        <h1 class="title"><a href="/"><img id="logo" src="/images/logo.png"></a></h1>
+        <span class="tagline">Heva Wu's Blog</span>
+        <span class="motto">I may not be there yet, but I'm closer than I was yesterday. </span>
+        <span class="motto">(￣︶￣)↗[GO!]</span>
+      </div>
+      <div class="footer">
+        <span id="footer-links">
+          <a href="" class="footer-link">About</a> <span class="separator">&bull;</span>
+          <a href="https://www.linkedin.com/in/he-heva-wu-2a6819113/" class="footer-link">LinkedIn</a> <span class="separator">&bull;</span>
+          <a href="https://github.com/HevaWu" class="footer-link">GitHub</a>
+        </span>
+      </div>
+    </div>
+
+    {{ content }}
+
+  </div>
+  <script src="/scripts/responsive.js" type="text/javascript"></script>
+</body>
+
+</html>

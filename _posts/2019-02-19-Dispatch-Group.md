@@ -1,8 +1,11 @@
 ---
 layout: post
+pagination:
+  enabled: true
+  categories: Test
+  tags: Test
 title: Dispatch Group
 date: 2019-02-19 19:19:00
-cover: nil
 comments: true
 disqus_category_id: DispatchGroup
 categories: [iOS, Dispatch]

@@ -1,8 +1,11 @@
 ---
 layout: post
+pagination:
+  enabled: true
+  categories: Test
+  tags: Test
 title: Emoji Unicode Memo
 date: 2019-02-14 16:49:00
-cover: nil
 comments: true
 disqus_category_id: EmojiUnicodeMemo
 categories: [Github, Emoji]

@@ -1,8 +1,11 @@
 ---
 layout: post
+pagination:
+  enabled: true
+  categories: Test
+  tags: Test
 title: Crash Reports
 date: 2019-05-13 16:04:00
-cover: nil
 comments: true
 disqus_category_id: DesignPatternPARTICreationalPatterns
 categories: [iOS, XCode, Crash Reports, Debug]
