@@ -1,8 +1,11 @@
 ---
 layout: post
+pagination:
+  enabled: true
+  categories: Test
+  tags: Test
 title: Debug UIViewAlertForUnsatisfiableConstraints
 date: 2019-05-27 16:04:00
-cover: nil
 comments: true
 disqus_category_id: iOSLoggingSystemOSLog
 categories: [iOS, Layout, Constraint]

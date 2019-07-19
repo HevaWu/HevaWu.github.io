@@ -1,12 +1,13 @@
 ---
 layout: post
+pagination:
+  enabled: true
+  categories: iOS, User Notifications
+  tags: iOS, User Notificatios, Push Notifications, Local Notifications, Permission to Show Notifications
 title: Push Local Notifications in iOS app - PART I Ask Permission
 date: 2019-02-06 16:34:00
-cover: nil
 comments: true
 disqus_category_id: PushNotificationsIniOSApp
-categories: [iOS, User Notifications]
-tags: [iOS, User Notificatios, Push Notifications, Local Notifications, Permission to Show Notifications]
 ---
 
 This article only discuss about the `Asking Permission part for Local Notifications`. I will discuss the remain part & `Remote Notifications` part in the future article.

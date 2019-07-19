@@ -1,0 +1,12 @@
+---
+layout: withoutPostListDefault
+title: About
+---
+
+<div class="content">
+    {% capture index %}
+        {% include about.md %}
+    {% endcapture %}
+    {{ index | markdownify }}
+    <!-- {% include about.md %} -->
+</div>

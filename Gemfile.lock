@@ -49,9 +49,12 @@ GEM
       sprockets (~> 3.3, < 3.8)
     jekyll-feed (0.11.0)
       jekyll (~> 3.3)
-    jekyll-paginate (1.1.0)
+    jekyll-paginate-v2 (2.1.0)
+      jekyll (~> 3.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-seo-tag (2.6.1)
+      jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.1.2)
       listen (~> 3.0)
     jemoji (0.10.1)
@@ -98,7 +101,8 @@ DEPENDENCIES
   jekyll
   jekyll-assets (~> 2.3.2)
   jekyll-feed
-  jekyll-paginate
+  jekyll-paginate-v2
+  jekyll-seo-tag
   jemoji
 
 BUNDLED WITH

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Heva Wu's Blog - Dispatch Group</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="site">
+    <div class="sidebar" id="sidebar">
+      <div class="header">
+        <h1 class="title"><a href="/"><img id="logo" src="/images/logo.png"></a></h1>
+        <span class="tagline">Heva Wu's Blog</span>
+        <span class="motto">I may not be there yet, but I'm closer than I was yesterday. </span>
+        <span class="motto">(￣︶￣)↗[GO!]</span>
+      </div>
+      <div class="posts">
+        <ul class="posts-list">
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI.html">
+              <span class="post-date">12 Jul 2019</span>
+              First Try with SwiftUI
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/xcode/xib/named%20color/2019/07/04/Be-Careful-Using-Named-Color-at-Xcode-Xib-File.html">
+              <span class="post-date">04 Jul 2019</span>
+              Be Careful Using `Named Color` at Xcode Xib File
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/wwdc2019/api%20design/swift/2019/06/28/Cannot_Run_Realm_Scheme_After_Install_Xcode11beta.html">
+              <span class="post-date">28 Jun 2019</span>
+              Cannot Run `Realm` Scheme After Install Xcode11 beta
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/wwdc2019/api%20design/swift/2019/06/13/Modern-Swift-API-Deisgn.html">
+              <span class="post-date">13 Jun 2019</span>
+              Modern Swift API Design
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/image%20processing/vision/2019/06/07/Vision-Framework.html">
+              <span class="post-date">07 Jun 2019</span>
+              Vision Framework
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/layout/constraint/2019/05/28/Debug-UIViewAlertForUnsatisfiableConstraints.html">
+              <span class="post-date">28 May 2019</span>
+              Debug UIViewAlertForUnsatisfiableConstraints
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/logging/oslog/2019/05/14/OSLog.html">
+              <span class="post-date">14 May 2019</span>
+              iOS Logging System -- OSLog
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html">
+              <span class="post-date">14 May 2019</span>
+              Crash Reports
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern.html">
+              <span class="post-date">15 Apr 2019</span>
+              Design Pattern PART I - Creational Patterns
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/github/2019/04/04/Difference-In-SSH-key-Deploy-key.html">
+              <span class="post-date">04 Apr 2019</span>
+              Difference between SSH keys &amp; Deploy keys
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/ios/dispatch/2019/02/20/Dispatch-Group.html">
+              <span class="post-date">20 Feb 2019</span>
+              Dispatch Group
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/algorithm/sort/2019/02/17/Insertion-Sort.html">
+              <span class="post-date">17 Feb 2019</span>
+              Insertion Sort
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/github/emoji/2019/02/15/Emoji-Unicode-Memo.html">
+              <span class="post-date">15 Feb 2019</span>
+              Emoji Unicode Memo
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/2019/02/07/Push-Notifications-in-iOS-app-PART-I-Ask-Permission.html">
+              <span class="post-date">07 Feb 2019</span>
+              Push Local Notifications in iOS app - PART I Ask Permission
+            </a>
+          </li>
+          
+          <li class="post-link">
+            <a class="post-title" href="/2019/01/06/test-post.html">
+              <span class="post-date">06 Jan 2019</span>
+              Test post
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="footer">
+        <span id="footer-links">
+          <a href="" class="footer-link">About</a> <span class="separator">•</span>
+          <a href="https://www.linkedin.com/in/he-heva-wu-2a6819113/" class="footer-link">LinkedIn</a> <span class="separator">•</span>
+          <a href="https://github.com/HevaWu" class="footer-link">GitHub</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="content" id="home">
+  <div id="sidebar-button">
+    <img src="/images/sidebar-button.png">
+  </div>
+
+  <div id="post-info">
+    <div id="cover-photo-container">
+      
+    </div>
+    <div id="info-container">
+      <h1 id="title">Dispatch Group</h1>
+      <time datetime="2019-02-20T04:19:00+09:00" itemprop="datePublished">
+        Feb 20, 2019
+      </time>
+       |
+      
+      <a href="#ios" class="post-tag">iOS</a>
+      
+      <a href="#dispatch" class="post-tag">Dispatch</a>
+      
+      <a href="#dispatch-group" class="post-tag">Dispatch Group</a>
+      
+      
+    </div>
+  </div>
+
+  <div class="post">
+    <h2 id="introduction">Introduction</h2>
+
+<p><code class="highlighter-rouge">Dispatch Group</code> is a part of GCD. As you can read from <a href="https://developer.apple.com/documentation/dispatch/dispatchgroup">Apple Documents</a>. <img class="emoji" title=":arrow_down:" alt=":arrow_down:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2b07.png" height="20" width="20"></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DispatchGroup allows for aggregate synchronization of work. You can use them to submit
+ multiple different work items and track when they all complete, even though they might
+ run on different queues. This behavior can be helpful when progress can’t be made until
+ all of the specified tasks are complete.
+</code></pre></div></div>
+
+<p>You might still be confusing, <img class="emoji" title=":confused:" alt=":confused:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f615.png" height="20" width="20"> . So, let’s check the example code.</p>
+
+<h2 id="first-method-directly-add-dispatchgroup-where-we-needed-it">First Method: Directly add <code class="highlighter-rouge">DispatchGroup</code> where we needed it</h2>
+
+<p>Here is the code:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">dispatchQueue</span> <span class="o">=</span> <span class="kt">DispatchQueue</span><span class="p">(</span><span class="nv">label</span><span class="p">:</span> <span class="s">"dispatch queue"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">dispatchGroup</span> <span class="o">=</span> <span class="kt">DispatchGroup</span><span class="p">()</span>
+
+<span class="kd">func</span> <span class="nf">dispatchGroup_useEnter</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span> <span class="p">[</span><span class="n">dispatchQueue</span><span class="p">,</span> <span class="n">dispatchGroup</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="mi">3</span> <span class="p">{</span>
+            <span class="n">dispatchGroup</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+            <span class="n">dispatchGroup</span><span class="o">.</span><span class="nf">enter</span><span class="p">()</span>
+            <span class="n">dispatchQueue</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"start </span><span class="se">\(</span><span class="n">i</span><span class="se">)</span><span class="s"> task"</span><span class="p">)</span>
+                <span class="nf">sleep</span><span class="p">(</span><span class="kt">UInt32</span><span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="n">i</span><span class="p">))</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"end </span><span class="se">\(</span><span class="n">i</span><span class="se">)</span><span class="s"> task"</span><span class="p">)</span>
+                <span class="n">dispatchGroup</span><span class="o">.</span><span class="nf">leave</span><span class="p">()</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="c1">//</span>
+        <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">dispatchGroup</span><span class="o">.</span><span class="nf">wait</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="kt">DispatchTime</span><span class="o">.</span><span class="n">distantFuture</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="o">.</span><span class="n">success</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"All Done"</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"Run out of time"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Based on the code, you could find, we just simplify running this procedure in the <code class="highlighter-rouge">Main thread</code>. And trying to use it to use <code class="highlighter-rouge">DispatchQueue</code> to synchronize running 3 tasks.</p>
+
+<p>At here, we use <code class="highlighter-rouge">DispatchGroup</code> to make sure each task is started after the former one is finished.</p>
+<ul>
+  <li>1.run <code class="highlighter-rouge">wait()</code> to wait former thread is finished(current resource is empty)</li>
+  <li>2.run <code class="highlighter-rouge">enter()</code> to start the group</li>
+  <li>3.Do the async code, and add <code class="highlighter-rouge">leave()</code> when the async is finished.</li>
+</ul>
+
+<p>At the end of code, we add <code class="highlighter-rouge">result</code> to help confirming if all of the tasks is done.</p>
+
+<p>Here is the print out:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>start 0 task
+end 0 task
+start 1 task
+end 1 task
+start 2 task
+end 2 task
+All Done
+</code></pre></div></div>
+
+<h2 id="second-method-generate-dispatchgroup-when-init-async-dispatchqueue">Second Method: Generate <code class="highlighter-rouge">DispatchGroup</code> when init <code class="highlighter-rouge">async DispatchQueue</code>
+</h2>
+
+<p>This method is kind of similar with the former one. The difference is where we put/init the <code class="highlighter-rouge">DispatchGroup</code>. Here is the code:</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">dispatchGroup_useAsyncGroup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span> <span class="p">[</span><span class="n">dispatchQueue</span><span class="p">,</span> <span class="n">dispatchGroup</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="mi">3</span> <span class="p">{</span>
+            <span class="n">dispatchQueue</span><span class="o">.</span><span class="nf">async</span><span class="p">(</span><span class="nv">group</span><span class="p">:</span> <span class="n">dispatchGroup</span><span class="p">,</span> <span class="nv">execute</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"start </span><span class="se">\(</span><span class="n">i</span><span class="se">)</span><span class="s"> task"</span><span class="p">)</span>
+                <span class="nf">sleep</span><span class="p">(</span><span class="kt">UInt32</span><span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="n">i</span><span class="p">))</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"end </span><span class="se">\(</span><span class="n">i</span><span class="se">)</span><span class="s"> task"</span><span class="p">)</span>
+            <span class="p">})</span>
+        <span class="p">}</span>
+        <span class="c1">//</span>
+        <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">dispatchGroup</span><span class="o">.</span><span class="nf">wait</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="kt">DispatchTime</span><span class="o">.</span><span class="n">distantFuture</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="o">.</span><span class="n">success</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"All Done"</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"Run out of time"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>As you can see, we init the group by using <code class="highlighter-rouge">dispatchQueue.async(group: dispatchGroup, execute: {...}</code>. This function is automatically do the <code class="highlighter-rouge">enter()</code> &amp; <code class="highlighter-rouge">leave()</code> things for us. We don’t need to manually call <code class="highlighter-rouge">enter()</code> &amp; <code class="highlighter-rouge">leave()</code>. It will automatically call it at the start &amp; end part of the <code class="highlighter-rouge">DispatchQueue</code>.</p>
+
+<p>The result is as same as the former one:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>start 0 task
+end 0 task
+start 1 task
+end 1 task
+start 2 task
+end 2 task
+All Done
+</code></pre></div></div>
+
+<p>Two methods. You could pick what you want according to the requests. Enjoy! <img class="emoji" title=":fireworks:" alt=":fireworks:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f386.png" height="20" width="20"></p>
+
+  </div>
+  <div class="colophon">
+    <p>
+      <span id="pub-date">Published on 20 Feb 2019</span> <span class="separator">•</span>
+      <span id="social">Find me on <a href="">Twitter</a>!</span>
+    </p>
+  </div>
+
+  <!-- Add Disqus comments. -->
+  <div id="disqus_thread"></div>
+  <script src="/scripts/disqus.js" type="text/javascript"></script>
+  <script id="dsq-count-scr" src="//hevawu-github-io.disqus.com/count.js" async></script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+
+  </div>
+  <script src="/scripts/responsive.js" type="text/javascript"></script>
+</body>
+
+</html>

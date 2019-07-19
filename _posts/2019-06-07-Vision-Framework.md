@@ -1,8 +1,11 @@
 ---
 layout: post
+pagination:
+  enabled: true
+  categories: Test
+  tags: Test
 title: Vision Framework
 date: 2019-06-07 14:35:00
-cover: nil
 comments: true
 disqus_category_id: VisionFramework
 categories: [iOS, Image Processing, Vision]
