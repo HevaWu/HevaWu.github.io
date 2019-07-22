@@ -65,7 +65,7 @@ pagination:
 
   # Optional, the default name of the index file for generated pages (e.g. 'index.html')
   # Without file extension
-  indexpage: 'index'
+  indexpage: 'about'
 
   # https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md
   # page genarate path
