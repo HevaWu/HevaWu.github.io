@@ -1,5 +1,5 @@
 
-<img src="/images/test.jpg" width="100%">
+<img src="/images/logo.png" width="300">
 
 <br/>
 ### Heva working at Line Fukuoka Corp as an iOS engineer.

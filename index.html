@@ -1,8 +1,11 @@
 ---
-layout: default
-title: Home
+layout: withoutPostListDefault
 ---
 
-{% assign page = site.posts.first %}
-{% assign content = page.content %}
-{% include post.html %}
+<div class="content">
+    {% capture about %}
+        {% include about.md %}
+    {% endcapture %}
+    {{ about | markdownify }}
+    <!-- {% include about.md %} -->
+</div>
