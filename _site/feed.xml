@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-23T17:13:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">First Try with SwiftUI</title><link href="http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI.html" rel="alternate" type="text/html" title="First Try with SwiftUI" /><published>2019-07-12T21:14:00+09:00</published><updated>2019-07-12T21:14:00+09:00</updated><id>http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI</id><content type="html" xml:base="http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI.html">&lt;h1 id=&quot;accessibility-in-swiftui&quot;&gt;Accessibility in SwiftUI&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-26T19:18:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Try Vision Sample Code</title><link href="http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code.html" rel="alternate" type="text/html" title="Try Vision Sample Code" /><published>2019-07-26T21:33:00+09:00</published><updated>2019-07-26T21:33:00+09:00</updated><id>http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code</id><content type="html" xml:base="http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code.html">&lt;p&gt;WWDC 2019 Introduce the &lt;code class=&quot;highlighter-rouge&quot;&gt;Vision&lt;/code&gt; Framework.
+And they also provide the Sample Code !!!&lt;/p&gt;
+
+&lt;p&gt;How exciting! Let’s try it!&lt;/p&gt;
+
+&lt;h2 id=&quot;classifying-images-for-categorization-and-search&quot;&gt;Classifying Images for Categorization and Search&lt;/h2&gt;
+
+&lt;p&gt;This is sample project for labeling/categorizing the giving images.&lt;/p&gt;
+
+&lt;h3 id=&quot;requirements&quot;&gt;Requirements&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SDKs: macOS 10.15+
+Xcode: 11.0+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-07-26-Try-Vision-Sample-Code/classify_image.gif&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;analyzing-image-similarity-with-feature-print&quot;&gt;Analyzing Image Similarity with Feature Print&lt;/h2&gt;
+
+&lt;p&gt;This is sample project for checking how silimarity between several pictures.
+Sorry I didn’t update my device to iOS 13.
+So the only thing I could attach at here is the video-cut from WWDC video.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-07-26-Try-Vision-Sample-Code/image_similarity.gif&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;highlighting-areas-of-interest-in-an-image-using-saliency&quot;&gt;Highlighting Areas of Interest in an Image Using Saliency&lt;/h2&gt;
+
+&lt;p&gt;This is sample project for bounding people forcused area.
+I only try in on macOS.&lt;/p&gt;
+
+&lt;p&gt;After selecting the picture you want to anlyze, &lt;code class=&quot;highlighter-rouge&quot;&gt;Rects&lt;/code&gt; cut the saliency bound,
+and &lt;code class=&quot;highlighter-rouge&quot;&gt;Mask&lt;/code&gt; give us the saliency masks. &lt;code class=&quot;highlighter-rouge&quot;&gt;Combind&lt;/code&gt; means combine the bounds &amp;amp; masks,
+which will show the saliency area above the picture.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-07-26-Try-Vision-Sample-Code/highlight_image_saliency.gif&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="Vision" /><summary type="html">WWDC 2019 Introduce the Vision Framework. And they also provide the Sample Code !!!</summary></entry><entry><title type="html">First Try with SwiftUI</title><link href="http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI.html" rel="alternate" type="text/html" title="First Try with SwiftUI" /><published>2019-07-12T21:14:00+09:00</published><updated>2019-07-12T21:14:00+09:00</updated><id>http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI</id><content type="html" xml:base="http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI.html">&lt;h1 id=&quot;accessibility-in-swiftui&quot;&gt;Accessibility in SwiftUI&lt;/h1&gt;
 
 &lt;h2 id=&quot;introduction-to-accessibility&quot;&gt;Introduction to Accessibility&lt;/h2&gt;
 
@@ -893,21 +926,4 @@ objects in a manner suitabl to the situation.
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;https://sourcemaking.com/design_patterns/creational_patterns&lt;/p&gt;</content><author><name></name></author><category term="Design Pattern" /><summary type="html">Define Creational Design Patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitabl to the situation.</summary></entry><entry><title type="html">Difference between SSH keys &amp;amp; Deploy keys</title><link href="http://localhost:4000/github/2019/04/04/Difference-In-SSH-key-Deploy-key.html" rel="alternate" type="text/html" title="Difference between SSH keys &amp; Deploy keys" /><published>2019-04-04T01:30:00+09:00</published><updated>2019-04-04T01:30:00+09:00</updated><id>http://localhost:4000/github/2019/04/04/Difference-In-SSH-key-Deploy-key</id><content type="html" xml:base="http://localhost:4000/github/2019/04/04/Difference-In-SSH-key-Deploy-key.html">&lt;p&gt;We always have many repository in Github.
-When we start to build track our git remote repo, we need to set our ssh keys.
--&amp;gt; Add &lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; to our account &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH Keys&lt;/code&gt;
-&lt;em&gt;NOTE: DO NOT add it into the &lt;code class=&quot;highlighter-rouge&quot;&gt;Deploy Keys&lt;/code&gt;. Otherwise it might cause the other repository cannot add &lt;code class=&quot;highlighter-rouge&quot;&gt;Deploy Keys&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;difference-between-ssh-keys--deploy-keys&quot;&gt;Difference between SSH Keys &amp;amp; Deploy Keys:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SSH Keys&lt;/code&gt; is the account’s highest level key, so, if you have the account authority, you will be able to access all of its repository&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Repository&lt;/code&gt;’s &lt;code class=&quot;highlighter-rouge&quot;&gt;Deploy Keys&lt;/code&gt; is the repository’s private key&lt;/li&gt;
-  &lt;li&gt;More easily understanding is:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SSH Keys&lt;/code&gt; is a big apartment key(with this key you could oepn each room in this apartment)&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Deploy Keys&lt;/code&gt; is the room key(with this key you could only open this room)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One more thing, &lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; is the public key, and you could add it to the server side. And local &lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt; is the correspond private key, they are &lt;code class=&quot;highlighter-rouge&quot;&gt;pair&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Github" /><summary type="html">We always have many repository in Github. When we start to build track our git remote repo, we need to set our ssh keys. -&amp;gt; Add id_rsa.pub to our account SSH Keys NOTE: DO NOT add it into the Deploy Keys. Otherwise it might cause the other repository cannot add Deploy Keys.</summary></entry></feed>
+&lt;p&gt;https://sourcemaking.com/design_patterns/creational_patterns&lt;/p&gt;</content><author><name></name></author><category term="Design Pattern" /><summary type="html">Define Creational Design Patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitabl to the situation.</summary></entry></feed>
