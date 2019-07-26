@@ -2,6 +2,7 @@ name: HevaWu's Blog
 markdown: kramdown
 highlighter: rouge
 search : true
+future: true
 
 plugins:
   - jekyll-paginate
