@@ -15,13 +15,9 @@ tags: [Algorithm, Sort, Insertion Sort]
 Let's see the introduction from the [wiki](https://en.wikipedia.org/wiki/Insertion_sort)
 
 ```
-> Insertion sort is a simple sorting algorithm that builds the final sorted array (or
- list) one item at a time. It is much less efficient on large lists than more advanced
- algorithms such as quicksort, heapsort, or merge sort. However, insertion sort provides
- several advantages:
->
-> Simple implementation: Jon Bentley shows a three-line C version, and a five-line
- optimized version[2]
+> Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort. However, insertion sort provides several advantages:
+> 
+> Simple implementation: Jon Bentley shows a three-line C version, and a five-line optimized version[2]
 > Efficient for (quite) small data sets, much like other quadratic sorting algorithms
 > More efficient in practice than most other simple quadratic (i.e., O(n2)) algorithms
 such as selection sort or bubble sort
