@@ -16,9 +16,13 @@ html, body {
   scroll-behavior: smooth;
 }
 
-.h1, .h2, .h3, .h4, .h5, a {
+.h1, .h2, .h3, .h4, .h5, a, hr {
   margin-top: 1.25em;
   margin-left: -0.5em;
+}
+
+hr {
+  margin-bottom: 1.25em;
 }
 
 body {
@@ -312,15 +316,6 @@ a:hover {
 
 .page h1 {
   padding-top: 1em;
-  padding-left: 0.5em;
-}
-
-.tags-expo {
-  vertical-align: top;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
-  margin-top: 2em;
   padding-left: 0.5em;
 }
 
