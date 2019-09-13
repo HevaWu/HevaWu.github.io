@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-13T17:30:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Java Primitive Data Types</title><link href="http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types.html" rel="alternate" type="text/html" title="Java Primitive Data Types" /><published>2019-09-13T23:22:00+09:00</published><updated>2019-09-13T23:22:00+09:00</updated><id>http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types</id><content type="html" xml:base="http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types.html">&lt;p&gt;List of Java’s primitive data types&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-13T18:35:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">HashMap vs HashSet</title><link href="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html" rel="alternate" type="text/html" title="HashMap vs HashSet" /><published>2019-09-14T02:52:00+09:00</published><updated>2019-09-14T02:52:00+09:00</updated><id>http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet</id><content type="html" xml:base="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html">&lt;p&gt;The obvious difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;HashSet&lt;/code&gt; would be interface.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HashSet is an implementation of Set Interface which does not allow duplicate value. Objects that are stored in HashSet must override equals() for checking equality and hashCode() methods for no duplicate value are stored in our set.&lt;/li&gt;
+  &lt;li&gt;HashMap is an implementaion of Map Interface which map a key to value. Duplicate keys are not allowed in a map. Map Interface has 2 implementation classes: HashMap, TreeMap. The main difference is TreeMap maintains order of the objects but HashMap will not. HashMap allows null values and null keys.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;note&quot;&gt;Note&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HashMap is faster than HashSet.&lt;/li&gt;
+  &lt;li&gt;Dummy value: HashMap doesn’t have concept of dummy value, HashSet internally uses HashMap to add elements. In HashSet, java internally associates dummy value for each value passed in add(Object) method.&lt;/li&gt;
+  &lt;li&gt;Storing or Adding mechanism: HashMap internally uses hashing to store or add objects. HashSet internally uses HashMap object to store or add objects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;map--hashmap&quot;&gt;Map &amp;amp; HashMap&lt;/h3&gt;
+
+&lt;p&gt;No difference between the objects. We could set &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&amp;lt;String, Object&amp;gt;&lt;/code&gt; in both cases.&lt;/p&gt;
+
+&lt;p&gt;The advantage to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Map&amp;lt;String, Object&amp;gt;&lt;/code&gt; is that you can change the object to be a different kind of map without breaking the contract with any code that’s using. If we declare it as &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&amp;lt;String, Object&amp;gt;&lt;/code&gt;, it is needed to change the contract code if we want to change the underlying implementation.&lt;/p&gt;
+
+&lt;p&gt;Interfaces (and base classes) let us reveal &lt;code class=&quot;highlighter-rouge&quot;&gt;only as  much as is necessary&lt;/code&gt;, keeping our flexibility under the covers to make changes as appropriate. In general, we want to have our references be as basic as possible. If we don’t need to know its a &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&lt;/code&gt;, just call it a &lt;code class=&quot;highlighter-rouge&quot;&gt;Map&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Same for Set &amp;amp; HashSet.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+
+&lt;p&gt;https://www.geeksforgeeks.org/difference-between-hashmap-and-hashset/
+https://stackoverflow.com/a/1348228&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="HashMap" /><category term="HashSet" /><category term="Map" /><category term="Set" /><summary type="html">The obvious difference between HashMap &amp;amp; HashSet would be interface.</summary></entry><entry><title type="html">Java Primitive Data Types</title><link href="http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types.html" rel="alternate" type="text/html" title="Java Primitive Data Types" /><published>2019-09-13T23:22:00+09:00</published><updated>2019-09-13T23:22:00+09:00</updated><id>http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types</id><content type="html" xml:base="http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types.html">&lt;p&gt;List of Java’s primitive data types&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -689,261 +717,4 @@ OS the application was running on when it crashed.&lt;/p&gt;
 9) Xcode 6 will also list low memory logs here. These will be shown with a Process name “Unknown” and Type “Unknown”. You should examine the contents of these logs to determine whether any of these are caused by your app. For more information about low memory logs, see Understanding and Analyzing iOS Application Crash Reports.&lt;/p&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/technotes/tn2151/_index.html&quot;&gt;Technical Note TN2151: Understanding and Analyzing Application Crash Reports&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="XCode" /><category term="Crash Reports" /><category term="Debug" /><summary type="html">As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.</summary></entry><entry><title type="html">iOS Logging System – OSLog</title><link href="http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog.html" rel="alternate" type="text/html" title="iOS Logging System -- OSLog" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog</id><content type="html" xml:base="http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog.html">&lt;p&gt;This article is introducing the &lt;code class=&quot;highlighter-rouge&quot;&gt;Unified Logging&lt;/code&gt; system and how to use it to measure performace.&lt;/p&gt;
-
-&lt;h1 id=&quot;unified-logging&quot;&gt;Unified Logging&lt;/h1&gt;
-&lt;p&gt;From the document:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The unified logging system provides a single, efficient,
- performant API for capturing messaging across all levels
- of the system.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The Unified Logging uses Activity Tracing for performance, consolicates kernel and user-space logging.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-using-it&quot;&gt;Why using it&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Compressing data&lt;/li&gt;
-  &lt;li&gt;Deferring work and data collection&lt;/li&gt;
-  &lt;li&gt;Managing log message lifecycle&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We want as much logging on all the time as possible.&lt;/p&gt;
-
-&lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Improved categorization and filtering of log messages&lt;/li&gt;
-  &lt;li&gt;Logging system collects caller information&lt;/li&gt;
-  &lt;li&gt;New Builtin type specifiers - simplifies log message preparation&lt;/li&gt;
-  &lt;li&gt;New Console application and command-line tool (graph)&lt;/li&gt;
-  &lt;li&gt;Supported on macOS, iOS, tvOS, watchOS and Simulators&lt;/li&gt;
-  &lt;li&gt;Support for Objective C, C++, C and Swift&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;logging-concepts&quot;&gt;Logging Concepts&lt;/h2&gt;
-
-&lt;h3 id=&quot;adption&quot;&gt;Adption&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Build with the macOS 10.12, iOS 10.0 or watchOS 3.0 SDK&lt;/li&gt;
-  &lt;li&gt;Legacy APIs(NSLog, as_log_message, syslog…) redirected into new system&lt;/li&gt;
-  &lt;li&gt;Log data will be in new format and location&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;new-file-formats&quot;&gt;New File Formats&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Log data is kept in a compressed binary format: &lt;code class=&quot;highlighter-rouge&quot;&gt;.tracev3&lt;/code&gt; files&lt;/li&gt;
-  &lt;li&gt;Stored under &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/db/diagnostics&lt;/code&gt; with support in &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/db/uuidtext&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.logarchive&lt;/code&gt; format for portability of logs (collection of log data, easier to transfer to email or …)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;subsystems-and-categories&quot;&gt;Subsystems and Categories&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Log messages can be associated with a subsystem and category&lt;/li&gt;
-  &lt;li&gt;Can be used to control how log messages are fitered and displayed&lt;/li&gt;
-  &lt;li&gt;A subsystem can contain multiple categories&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Your application will have own subsystems and categories as needed.&lt;/p&gt;
-
-&lt;h3 id=&quot;logging-behavior&quot;&gt;Logging Behavior&lt;/h3&gt;
-&lt;p&gt;Each log message has a level determined by the API used&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Three basic levels – Default, Info, Debug&lt;/li&gt;
-  &lt;li&gt;Two special levels – Fault, Error&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Each basic levels has two characteristics that can be set for system, subsystem, or category&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Need to check if it is enabled (Default messages are always enabled)&lt;/li&gt;
-  &lt;li&gt;Is it stored to disk or memory? (Fault or Error are always stored to disk.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The levels are hierarchical&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Setting Debug to go to disk implies that Info will also go to disk&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Behavior can be customized by installing profiles or, on macOS, via log command&lt;/p&gt;
-
-&lt;h3 id=&quot;standard-behavior&quot;&gt;Standard Behavior&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Message Level&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Enabled&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Destination&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DEFAULT LEVEL&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ALWAYS&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DISK&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;INFO LEVEL&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;YES&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;MEMORY&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DEBUG LEVEL&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;NO&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;N/A&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ERROR&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ALWAYS&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DISK&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;FAULT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ALWAYS&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DISK&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;privacy&quot;&gt;Privacy&lt;/h3&gt;
-&lt;p&gt;Prevent accidental logging of Personally Identifiable Information(PII)&lt;/p&gt;
-
-&lt;h3 id=&quot;faults-and-errors&quot;&gt;Faults and Errors&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Errors – represent issues discovered within a given application/library&lt;/li&gt;
-  &lt;li&gt;Faults – represent more global problems in the system&lt;/li&gt;
-  &lt;li&gt;Faults and Error log information is captured into a seperate set of log files (They will exsit longer than normal logs)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;architecture&quot;&gt;Architecture&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/architecture.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;type-formatters&quot;&gt;Type Formatters&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/type_formatter.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;parameter-privacy&quot;&gt;Parameter Privacy&lt;/h2&gt;
-&lt;p&gt;Privacy is handled on a parameter by parameter basis
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Scalars&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Static strings&lt;/code&gt; are assumed to be public
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Dynamic strings&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;collections&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;objects&lt;/code&gt; are assumed to be private&lt;/p&gt;
-
-&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Here is the changing :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/log_message_ex.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;activity-api-improvements&quot;&gt;Activity API Improvements&lt;/h2&gt;
-&lt;p&gt;Activites are not objects that can be stored and re-used&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Direct control of activity relationships during creation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;New API to auto-scope activites within the code&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/activity_example.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
-
-&lt;h3 id=&quot;console&quot;&gt;Console&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;View live content form a system&lt;/li&gt;
-  &lt;li&gt;Open log archives&lt;/li&gt;
-  &lt;li&gt;New Activity centric view of logging and tracing&lt;/li&gt;
-  &lt;li&gt;Advanced filtering and searching&lt;/li&gt;
-  &lt;li&gt;Device support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;log-command-line-tool&quot;&gt;log Command Line Tool&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/log_system_console.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;logging-etiquette&quot;&gt;Logging Etiquette&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ensure messages contain only information useful for debugging&lt;/li&gt;
-  &lt;li&gt;Leverage built-in formatters&lt;/li&gt;
-  &lt;li&gt;Avoid creating wrapper functions for &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log&lt;/code&gt; APIs&lt;/li&gt;
-  &lt;li&gt;Log only what you need from collections (Dictionaries, Arrays, etc)&lt;/li&gt;
-  &lt;li&gt;Avoid logging in tight code loops&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;suggest&quot;&gt;Suggest&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log&lt;/code&gt; to log critical details to help debug issues&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log_info&lt;/code&gt; for additional info that will be captured during error or fault&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log_debug&lt;/code&gt; for high-volume debugging during development&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log_error&lt;/code&gt; to cause additional information capture from app&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log_fault&lt;/code&gt; to cause additional information capture from system&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;using-sysdiagnose&quot;&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;sysdiagnose&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sysdiagnose&lt;/code&gt; is the preferred method to capture data for bug reports&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unified logging data in &lt;code class=&quot;highlighter-rouge&quot;&gt;system_logs.archive&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;key-chord&lt;/code&gt; to trigger
-&lt;code class=&quot;highlighter-rouge&quot;&gt;sysdiagnose&lt;/code&gt; on Apple Watch will trigger on both Apple Watch and iPhone
-Transfer from device using iTunes&lt;/p&gt;
-
-&lt;p&gt;Here are some &lt;code class=&quot;highlighter-rouge&quot;&gt;key-chord&lt;/code&gt;s&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/key_chords.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;measure-performance&quot;&gt;Measure Performance&lt;/h1&gt;
-
-&lt;h2 id=&quot;os_signpost&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;os_signpost&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Instruments can take the data that &lt;code class=&quot;highlighter-rouge&quot;&gt;signposts&lt;/code&gt; produce and you could check what your program is doing.&lt;/p&gt;
-
-&lt;p&gt;Here is an example:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/os_signpost.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;os_signpost&lt;/code&gt; allows to mark the beginning and the end(&lt;code class=&quot;highlighter-rouge&quot;&gt;.begin&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;.end&lt;/code&gt;).&lt;/p&gt;
-
-&lt;h2 id=&quot;measure-asynchronous-operation&quot;&gt;Measure Asynchronous Operation&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Signpost Name&lt;/li&gt;
-  &lt;li&gt;Signpost ID – tell overlapping operations apart
-  &lt;img src=&quot;/images/2019-05-16-OSLog/signpost_id.png&quot; width=&quot;100%&quot; /&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Making Signpost ID ()
-  &lt;img src=&quot;/images/2019-05-16-OSLog/make_signpost_id.png&quot; width=&quot;100%&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;process-scoped&lt;/li&gt;
-      &lt;li&gt;making from object is convenient if we have the same object at &lt;code class=&quot;highlighter-rouge&quot;&gt;.begin&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.end&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Demo
-  &lt;img src=&quot;/images/2019-05-16-OSLog/signpost_id_ex.png&quot; width=&quot;100%&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;add-metadata-to-signpost&quot;&gt;Add Metadata to Signpost&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Add context to the &lt;code class=&quot;highlighter-rouge&quot;&gt;.begin&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.end&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Be able to pass arguments with &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log&lt;/code&gt; format string literal&lt;/li&gt;
-  &lt;li&gt;Pass many arguments with different types&lt;/li&gt;
-  &lt;li&gt;Pass dynamic strings&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;add-independent-event&quot;&gt;Add Independent Event&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;os_signpost&lt;/code&gt; have &lt;code class=&quot;highlighter-rouge&quot;&gt;.event&lt;/code&gt; type
-Marking a single point&lt;/p&gt;
-
-&lt;h2 id=&quot;conditionally-enable-signpost&quot;&gt;Conditionally Enable Signpost&lt;/h2&gt;
-&lt;p&gt;Signposts are lightweight&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Built to minimize observer effect&lt;/li&gt;
-  &lt;li&gt;Built for fine-grained measurement in a short time span&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OSLog.disabled&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/signpost_enable.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;instruments&quot;&gt;Instruments&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Blank -&amp;gt; add &lt;code class=&quot;highlighter-rouge&quot;&gt;os_signpost&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Able to retrieve from &lt;code class=&quot;highlighter-rouge&quot;&gt;Summary&lt;/code&gt; part&lt;/li&gt;
-  &lt;li&gt;Able to &lt;code class=&quot;highlighter-rouge&quot;&gt;Record&lt;/code&gt; the action&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;reference-link&quot;&gt;Reference link&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/os/logging&quot;&gt;Logging&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/721/&quot;&gt;Unified Logging and Activity Tracing&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="iOS" /><category term="Logging" /><category term="OSLog" /><category term="OS" /><summary type="html">This article is introducing the Unified Logging system and how to use it to measure performace.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/technotes/tn2151/_index.html&quot;&gt;Technical Note TN2151: Understanding and Analyzing Application Crash Reports&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="XCode" /><category term="Crash Reports" /><category term="Debug" /><summary type="html">As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.</summary></entry></feed>
