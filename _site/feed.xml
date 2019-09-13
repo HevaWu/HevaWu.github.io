@@ -1,18 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-01T15:00:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">CreateML - Image Classify</title><link href="http://localhost:4000/macos/xcode/playground/ml/createml/image%20classify/wwdc%202018/2019/08/01/CreateML-Image-Classify.html" rel="alternate" type="text/html" title="CreateML - Image Classify" /><published>2019-08-01T23:46:00+09:00</published><updated>2019-08-01T23:46:00+09:00</updated><id>http://localhost:4000/macos/xcode/playground/ml/createml/image%20classify/wwdc%202018/2019/08/01/CreateML-Image-Classify</id><content type="html" xml:base="http://localhost:4000/macos/xcode/playground/ml/createml/image%20classify/wwdc%202018/2019/08/01/CreateML-Image-Classify.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-13T17:30:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Java Primitive Data Types</title><link href="http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types.html" rel="alternate" type="text/html" title="Java Primitive Data Types" /><published>2019-09-13T23:22:00+09:00</published><updated>2019-09-13T23:22:00+09:00</updated><id>http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types</id><content type="html" xml:base="http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types.html">&lt;p&gt;List of Java’s primitive data types&lt;/p&gt;
 
-&lt;p&gt;Apple WWDC 2018 introduces the Create ML.
-And I really want to have a try.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Types&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Size in Bytes&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Range&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;byte&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1 byte&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;-128 to 127&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;short&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;-32768 to 32767&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;int&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;-2,147,483,648 to 2,147,483, 647&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;long&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;8 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;float&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;approximately ±3.40282347E+38F(6-7 significant decimal digits)Java implements IEEE 754 standard&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;double&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;8 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;approximately ±1.79769313486231570E+308(15 significant decimal digits)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;char&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2 byte&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0 to 65,536 (unsigned)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;boolean&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;not precisely defined&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;true or false&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><category term="Java" /><category term="Primitive Data" /><summary type="html">List of Java’s primitive data types</summary></entry><entry><title type="html">Java Arrays Sort Algorithm</title><link href="http://localhost:4000/sort/java/arrays/2019/09/12/Java-Arrays-Sort-Algorithm.html" rel="alternate" type="text/html" title="Java Arrays Sort Algorithm" /><published>2019-09-12T19:57:00+09:00</published><updated>2019-09-12T19:57:00+09:00</updated><id>http://localhost:4000/sort/java/arrays/2019/09/12/Java-Arrays-Sort-Algorithm</id><content type="html" xml:base="http://localhost:4000/sort/java/arrays/2019/09/12/Java-Arrays-Sort-Algorithm.html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.Arrays&lt;/code&gt; uses&lt;/p&gt;
 
-&lt;p&gt;Since Apple announced &lt;code class=&quot;highlighter-rouge&quot;&gt;Core ML&lt;/code&gt; at WWDC 2017,
-and it is already supported by every major ML platform.
-We could also convert the existing ml models, such as Caffe, Keras, etc.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;quicksort(dual pivot quick sort) : primitive types such as &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;mergesort : for objects that implement &lt;code class=&quot;highlighter-rouge&quot;&gt;Comparable&lt;/code&gt; or use the &lt;code class=&quot;highlighter-rouge&quot;&gt;Comparator&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Create ML&lt;/p&gt;
+&lt;p&gt;quicksort &amp;lt;- fast
+mergesort &amp;lt;- stable&lt;/p&gt;
 
-&lt;p&gt;Here is the Apple document about CreatML:
-https://developer.apple.com/documentation/createml&lt;/p&gt;
+&lt;p&gt;Dual pivot quicksort is a combination of insertion sort and quick sort. Insertion sort has faster runtime when the number of elements t obe sorted is small, double pivot quicksort uses this fact thus when the number of elements is &amp;lt;= 47 Java performs insertion sort under the hood.&lt;/p&gt;
 
-&lt;p&gt;#&lt;/p&gt;</content><author><name></name></author><category term="macOS" /><category term="Xcode" /><category term="playground" /><category term="ML" /><category term="CreateML" /><category term="Image Classify" /><summary type="html">Introduction</summary></entry><entry><title type="html">Try Vision Sample Code</title><link href="http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code.html" rel="alternate" type="text/html" title="Try Vision Sample Code" /><published>2019-07-26T21:33:00+09:00</published><updated>2019-07-26T21:33:00+09:00</updated><id>http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code</id><content type="html" xml:base="http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code.html">&lt;p&gt;WWDC 2019 Introduce the &lt;code class=&quot;highlighter-rouge&quot;&gt;Vision&lt;/code&gt; Framework.
+&lt;p&gt;When input size array is larger than 47 Java uses &lt;code class=&quot;highlighter-rouge&quot;&gt;Doubl pivot quicksort&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;dual-pivot-quick-sort&quot;&gt;Dual Pivot Quick Sort&lt;/h2&gt;
+
+&lt;p&gt;Single pivot quick sort takes a pivot from one of the ends of the array and partitioning the array, so that all elements which at the left side are less than or equal to the pivot, and all elements which at the right side are greater than pivot.&lt;/p&gt;
+
+&lt;p&gt;The idea of dual pivot quick sort is to take two pivots. One in the left end of the array and the second, in the right end of array. The left pivot must be less than or equal to the right pivot, if it is not, we swap them. Then begin partitioning the array into 3 parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the first part, all elements will be less than the left pivot.&lt;/li&gt;
+  &lt;li&gt;In the second part, all elements will be greater or equal to the left pivot and also will be less than or equal to the right pivot&lt;/li&gt;
+  &lt;li&gt;In the third part, all elements will be greater than the right pivot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt; LP&lt;/td&gt;
+      &lt;td&gt;LP&lt;/td&gt;
+      &lt;td&gt;LP&amp;lt;= &amp;amp; &amp;lt;= RP&lt;/td&gt;
+      &lt;td&gt;RP&lt;/td&gt;
+      &lt;td&gt;RP &amp;lt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Dual pivot quick sort is typlically faster than traditional single pivot quicksort. This algorithm offers &lt;code class=&quot;highlighter-rouge&quot;&gt;O(n log(n))&lt;/code&gt; performance on many data sets that cause other quicksorts to degrade to quadratic performance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-09-12-Java-Arrays-Sort-Algorithm/dual_pivot_quick_sort.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cafe.elharo.com/programming/java-programming/why-java-util-arrays-uses-two-sorting-algorithms/&quot;&gt;Why java.util.Arrays uses Two Sorting Algorithms&lt;/a&gt;
+&lt;a href=&quot;https://www.geeksforgeeks.org/dual-pivot-quicksort/&quot;&gt;Dual Pivot Quick Sort&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Sort" /><category term="Java" /><category term="Arrays" /><category term="Dual Pivot Quick Sort" /><category term="Merge Sort" /><summary type="html">java.util.Arrays uses</summary></entry><entry><title type="html">Try Vision Sample Code</title><link href="http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code.html" rel="alternate" type="text/html" title="Try Vision Sample Code" /><published>2019-07-26T21:33:00+09:00</published><updated>2019-07-26T21:33:00+09:00</updated><id>http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code</id><content type="html" xml:base="http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code.html">&lt;p&gt;WWDC 2019 Introduce the &lt;code class=&quot;highlighter-rouge&quot;&gt;Vision&lt;/code&gt; Framework.
 And they also provide the Sample Code !!!&lt;/p&gt;
 
 &lt;p&gt;How exciting! Let’s try it!&lt;/p&gt;
@@ -458,7 +541,155 @@ background color has been changed.&lt;/p&gt;
 views, so it wont be immediately visible on the screen.
 In such case, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;Debug View Hierachy&lt;/code&gt; to dig deeper ~~~~&lt;/p&gt;
 
-&lt;p&gt;Hope it would be helpful to someone. :relaxed:&lt;/p&gt;</content><author><name></name></author><category term="UIViewAlertForUnsatisfiableConstraints" /><category term="iOS" /><category term="Layout Constraint" /><summary type="html">When we update our app’s UI, sometimes we might got this layout warning like this:</summary></entry><entry><title type="html">iOS Logging System – OSLog</title><link href="http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog.html" rel="alternate" type="text/html" title="iOS Logging System -- OSLog" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog</id><content type="html" xml:base="http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog.html">&lt;p&gt;This article is introducing the &lt;code class=&quot;highlighter-rouge&quot;&gt;Unified Logging&lt;/code&gt; system and how to use it to measure performace.&lt;/p&gt;
+&lt;p&gt;Hope it would be helpful to someone. :relaxed:&lt;/p&gt;</content><author><name></name></author><category term="UIViewAlertForUnsatisfiableConstraints" /><category term="iOS" /><category term="Layout Constraint" /><summary type="html">When we update our app’s UI, sometimes we might got this layout warning like this:</summary></entry><entry><title type="html">Crash Reports</title><link href="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html" rel="alternate" type="text/html" title="Crash Reports" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports</id><content type="html" xml:base="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html">&lt;p&gt;As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.&lt;/p&gt;
+
+&lt;p&gt;When an application crashed, a &lt;code class=&quot;highlighter-rouge&quot;&gt;crash report&lt;/code&gt; is created and stored on the device. This article is simple introduce the crash reports contents and the analytic method.&lt;/p&gt;
+
+&lt;h1 id=&quot;symbolicating-crash-reports&quot;&gt;Symbolicating Crash Reports&lt;/h1&gt;
+&lt;p&gt;Crash reports with backtraces need to be &lt;code class=&quot;highlighter-rouge&quot;&gt;symbolicated&lt;/code&gt; before being anlyzed. Symbolication replacec memory addresses with human-readable function names and line numbers.&lt;/p&gt;
+
+&lt;p&gt;Here is the overview of the crash reporting and symbolicating process.
+&lt;img src=&quot;/images/2019-05-13-Crash-Reports/overview.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;symbolicating-process&quot;&gt;Symbolicating Process&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Compiler translates the source code, it also generates debug symbols (which map each machine instruction in the comipled binary back to the line of source code from which it originated) – Depending on the &lt;code class=&quot;highlighter-rouge&quot;&gt;Debug Information Format&lt;/code&gt; build settings. These debug symbols are stored inside the binary or in a companion Debug Symbol(&lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt;) file. By default, debug builds of an application store the debug symbols inside the compiled binary while release builds of an application store the debug symbols in a companion dSYM file to reduce the binary size. The Debug Symbol file and application binary are tied together on a per-build-basis by the build UUID. A new UUID is generated for each build of your application and uniquely identifies that build. Even if a functionally-identical executable is rebuilt from the same source code, with the same compiler settings, it will have a different build UUID. Debug Symbol files from subsequent builds, even from the same source files, will not interoperate with binaries from other builds.&lt;/li&gt;
+  &lt;li&gt;During archive, Xcode will gather the application binary along with the .dSYM file and store them at a location inside your home folder. You can find all of your archived applications in the Xcode Organizer under the “Archived” section.
+    &lt;ul&gt;
+      &lt;li&gt;NOTE: To symbolicate crash reports from testers, app review, and customers, you must retain th archive for each build of the application that you distribute.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Distributing: if you are distributing your app via the App Store, or conducting a beta test using Test Flight, you will be given the option of including the &lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt; file when uploading your archive to iTunes Connect. In the submission dialog, check “Include app symbols for your application…”. Uploading your &lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt; file is necessary to receive crash reports collected from TestFlight users and customers who have opted to share diagnostic data.&lt;/li&gt;
+  &lt;li&gt;When your application crashes, an unsymbolicated crash report is created and stored on the device.&lt;/li&gt;
+  &lt;li&gt;Users can retrieve crash reports directly from their device by following the steps in Debugging Deployed iOS Apps. If you have distributed your application via AdHoc or Enterprise distribution, this is the only way to acquire crash reports from your users.&lt;/li&gt;
+  &lt;li&gt;Crash reports retrieved from a device are unsymbolicated and will need to be symbolicated using Xcode. Xcode uses the dSYM file associated with your application binary to replace each address in the backtrace with its originating location in your source code. The result is a symbolicated crash report.&lt;/li&gt;
+  &lt;li&gt;If the user has opted to share diagnostic data with Apple, or if the user has installed a beta version of your application through TestFlight, the crash report is uploaded to the App Store.&lt;/li&gt;
+  &lt;li&gt;The App Store symbolicates the crash report and groups it with similar crash reports. This aggregate of similar crash reports is called a Crash Point.&lt;/li&gt;
+  &lt;li&gt;The symbolicated crash reports are made available to you in Xcode’s Crashes organizer.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;getting-dsym-files&quot;&gt;Getting dSYM files&lt;/h2&gt;
+
+&lt;h3 id=&quot;downloading-the-dsym-files-from-xcode&quot;&gt;Downloading the dSYM files from Xcode&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;In the Archives organizer, select the archive that you originally submitted to the App Store.&lt;/li&gt;
+  &lt;li&gt;Click the Download dSYMs button.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;downloading-the-dsym-files-from-the-itunes-connect-website&quot;&gt;Downloading the dSYM files from the iTunes Connect website&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open the App Details page.&lt;/li&gt;
+  &lt;li&gt;Click Activity.&lt;/li&gt;
+  &lt;li&gt;From the list of All Builds, select a version.&lt;/li&gt;
+  &lt;li&gt;Click the Download dSYM link.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;translating-symbol-names-back-to-original-names&quot;&gt;Translating symbol names back to original names&lt;/h3&gt;
+&lt;p&gt;When you upload your app with bitcode to the App Store, you may choose not to
+send your application’s symbols by unchecking the “Upload your app’s symbols to
+receive symbolicated reports from Apple” box in the submission dialog.
+If you choose not to send your app’s symbol information to Apple, Xcode will
+replace the symbols in your app’s .dSYM files with obfuscated symbols such as
+“&lt;em&gt;_hidden#109&lt;/em&gt;” before sending your app to iTunes Connect. Xcode creates a
+mapping between the original symbols and the “hidden” symbols and stores this
+mapping in a .bcsymbolmap file inside the application archive. Each .dSYM file
+will have a corresponding .bcsymbolmap file.&lt;/p&gt;
+
+&lt;p&gt;Before symbolicating crash reports, you will need to de-obfuscate the symbols in
+the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dSYM&lt;/code&gt; files downloaded from iTunes Connect.
+If you use the Download dSYMs button in Xcode, this de-obfuscation will be
+performed automatically for you.
+However, if you use the iTunes Connect website to download the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dSYM&lt;/code&gt; files, open Terminal and use the following command to de-obfuscate your symbols
+(replacing the example paths with your own archive and the dSYMs folder downloaded from iTunes Connect):&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcrun dsymutil -symbol-map ~/Library/Developer/Xcode/Archives/2017-11-23/MyGreatApp\ 11-23-17\,\ 12.00\ PM.xcarchive/BCSymbolMaps ~/Downloads/dSYMs/3B15C133-88AA-35B0-B8BA-84AF76826CE0.dSYM
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;check-if-a-crash-report-is-symbolicated&quot;&gt;Check if a Crash Report is Symbolicated&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-05-13-Crash-Reports/symbolicate_report.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;symbolicating-ios-crash-reports-with-xcode&quot;&gt;Symbolicating iOS Crash Reports with Xcode&lt;/h2&gt;
+&lt;p&gt;Xcode will automatically attempt to symbolicate all crash reports.
+All you need to do for symbolication is to add the crash report to the Xcode Organizer.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Note: Xcode will not accept crash reports without a &lt;code class=&quot;highlighter-rouge&quot;&gt;.crash&lt;/code&gt; extension. If you have received a crash report without an extension, or with a &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt; extension, rename it to have a &lt;code class=&quot;highlighter-rouge&quot;&gt;.crash&lt;/code&gt; extension before following the steps listed below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Follow the steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Connect an iOS device to your Mac&lt;/li&gt;
+  &lt;li&gt;Choose “Devices” from the “Window” menu&lt;/li&gt;
+  &lt;li&gt;Under the “DEVICES” section in the left column, choose a device&lt;/li&gt;
+  &lt;li&gt;Click the “View Device Logs” button under the “Device Information” section on the right hand panel&lt;/li&gt;
+  &lt;li&gt;Drag your crash report onto the left column of the presented panel&lt;/li&gt;
+  &lt;li&gt;Xcode will automatically symbolicate the crash report and display the results&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;symbolicating-crash-reports-with-atos&quot;&gt;Symbolicating Crash Reports With atos&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;atos&lt;/code&gt; command can be used to symbolicate individual addresses in the backtrace
+of an unsymbolicatd, or partially symbolicatd, crash report.&lt;/p&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Find a line in the backtrace which you want to symbolicate. Note the name of the binary image in the second column, and the address in the third column.&lt;/li&gt;
+  &lt;li&gt;Look for a binary image with that name in the list of binary images at the bottom of the crash report. Note the architecture and load address of the binary image.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;atos -arch &amp;lt;Binary Architecture&amp;gt; -o &amp;lt;Path to dSYM file&amp;gt;/Contents/Resources/DWARF/&amp;lt;binary image name&amp;gt; -l &amp;lt;load address&amp;gt; &amp;lt;address to symbolicate&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;symbolication-troubleshooting&quot;&gt;Symbolication Troubleshooting&lt;/h2&gt;
+&lt;p&gt;If Xcode is failing to fully symbolicate a crash report, it’s likely because your
+Mac is missing the dSYM file for the application binary, the dSYM files for one
+or more frameworks the application links against, or the device symbols for the
+OS the application was running on when it crashed.&lt;/p&gt;
+
+&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Find a line in the backtrace which Xcode failed to symbolicate. Note the name of the binary image in the second column.&lt;/li&gt;
+  &lt;li&gt;Look for a binary image with that name in the list of binary images at the bottom of the crash report. This list contains the UUIDs for each of the binary images that were loaded into the process at the time of the crash.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ grep --after-context=1000 &quot;Binary Images:&quot; &amp;lt;Path to Crash Report&amp;gt; | grep &amp;lt;Binary Name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Convert the UUID of the binary image to a 32 character string seperated in groups of 8-4-4-4-12 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX). Note that all letters must be uppercased.&lt;/li&gt;
+  &lt;li&gt;Search for the UUID using the mdfind command line tool using the query “com_apple_xcode_dsym_uuids == &lt;UUID&gt;&quot; (include the quotation marks).
+&lt;/UUID&gt;    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mdfind &quot;com_apple_xcode_dsym_uuids == &amp;lt;UUID&amp;gt;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If Spotlight finds a dSYM file for the UUID, mdfind will print the path to the dSYM file and possibly its containing archive. If a dSYM file for the UUID was not found, mdfind will exit without printing anything.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you think that you have the correct dSYM for the binary image, you can use the dwarfdump command to print the matching UUIDs. You can also use the dwarfdump command to print the UUIDs of a binary.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcrun dwarfdump --uuid &amp;lt;Path to dSYM file&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;analyzing-crash-reports&quot;&gt;Analyzing Crash Reports&lt;/h1&gt;
+
+&lt;h1 id=&quot;getting-crash-logs&quot;&gt;Getting Crash Logs&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/qa/qa1747/_index.html&quot;&gt;Debugging Deployed iOS Apps&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-crash-logs-directly-from-a-device-without-xcode&quot;&gt;Getting Crash Logs Directly From a Device Without Xcode&lt;/h3&gt;
+&lt;p&gt;(It is not possible to get device console logs directly from a device)
+1) Open Settings app
+2) Go to Privacy, then Diagnostics &amp;amp; Usage
+3) Select Diagnostics &amp;amp; Usage Data
+4) Locate the log for the crashed app. The logs will be named in the format: &lt;AppName&gt;_&lt;DateTime&gt;_&lt;DeviceName&gt;
+5) Select the desired log. Then, using the text selection UI select the entire text of the log. Once the text is selected, tap Copy
+6) Paste the copied text to Mail and send to an email address as desired&lt;/DeviceName&gt;&lt;/DateTime&gt;&lt;/AppName&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-crash-logs-and-console-output-from-a-device-using-xcode&quot;&gt;Getting Crash Logs and Console Output From a Device Using Xcode&lt;/h3&gt;
+&lt;p&gt;(Even though you won’t be able to run the app in Xcode’s debugger, Xcode can still give you all the information you need to debug the problem.)
+1) Plug in the device and open Xcode
+2) Choose Window -&amp;gt; Devices from the menu bar
+3) Under the DEVICES section in the left column, choose the device
+4) To see the device console, click the up-triangle at the bottom left of the right hand panel
+5) Click the down arrow on the bottom right to save the console as a file
+6) To see crash logs, select the View Device Logs button under the Device Information section on the right hand panel
+7) Find your app in the Process column and select the Crash log to see the contents.
+8) To save a crash log, right click the entry on the left column and choose “Export Log”
+9) Xcode 6 will also list low memory logs here. These will be shown with a Process name “Unknown” and Type “Unknown”. You should examine the contents of these logs to determine whether any of these are caused by your app. For more information about low memory logs, see Understanding and Analyzing iOS Application Crash Reports.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/technotes/tn2151/_index.html&quot;&gt;Technical Note TN2151: Understanding and Analyzing Application Crash Reports&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="XCode" /><category term="Crash Reports" /><category term="Debug" /><summary type="html">As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.</summary></entry><entry><title type="html">iOS Logging System – OSLog</title><link href="http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog.html" rel="alternate" type="text/html" title="iOS Logging System -- OSLog" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog</id><content type="html" xml:base="http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog.html">&lt;p&gt;This article is introducing the &lt;code class=&quot;highlighter-rouge&quot;&gt;Unified Logging&lt;/code&gt; system and how to use it to measure performace.&lt;/p&gt;
 
 &lt;h1 id=&quot;unified-logging&quot;&gt;Unified Logging&lt;/h1&gt;
 &lt;p&gt;From the document:&lt;/p&gt;
@@ -715,220 +946,4 @@ Marking a single point&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/os/logging&quot;&gt;Logging&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/721/&quot;&gt;Unified Logging and Activity Tracing&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="iOS" /><category term="Logging" /><category term="OSLog" /><category term="OS" /><summary type="html">This article is introducing the Unified Logging system and how to use it to measure performace.</summary></entry><entry><title type="html">Crash Reports</title><link href="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html" rel="alternate" type="text/html" title="Crash Reports" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports</id><content type="html" xml:base="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html">&lt;p&gt;As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.&lt;/p&gt;
-
-&lt;p&gt;When an application crashed, a &lt;code class=&quot;highlighter-rouge&quot;&gt;crash report&lt;/code&gt; is created and stored on the device. This article is simple introduce the crash reports contents and the analytic method.&lt;/p&gt;
-
-&lt;h1 id=&quot;symbolicating-crash-reports&quot;&gt;Symbolicating Crash Reports&lt;/h1&gt;
-&lt;p&gt;Crash reports with backtraces need to be &lt;code class=&quot;highlighter-rouge&quot;&gt;symbolicated&lt;/code&gt; before being anlyzed. Symbolication replacec memory addresses with human-readable function names and line numbers.&lt;/p&gt;
-
-&lt;p&gt;Here is the overview of the crash reporting and symbolicating process.
-&lt;img src=&quot;/images/2019-05-13-Crash-Reports/overview.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;symbolicating-process&quot;&gt;Symbolicating Process&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Compiler translates the source code, it also generates debug symbols (which map each machine instruction in the comipled binary back to the line of source code from which it originated) – Depending on the &lt;code class=&quot;highlighter-rouge&quot;&gt;Debug Information Format&lt;/code&gt; build settings. These debug symbols are stored inside the binary or in a companion Debug Symbol(&lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt;) file. By default, debug builds of an application store the debug symbols inside the compiled binary while release builds of an application store the debug symbols in a companion dSYM file to reduce the binary size. The Debug Symbol file and application binary are tied together on a per-build-basis by the build UUID. A new UUID is generated for each build of your application and uniquely identifies that build. Even if a functionally-identical executable is rebuilt from the same source code, with the same compiler settings, it will have a different build UUID. Debug Symbol files from subsequent builds, even from the same source files, will not interoperate with binaries from other builds.&lt;/li&gt;
-  &lt;li&gt;During archive, Xcode will gather the application binary along with the .dSYM file and store them at a location inside your home folder. You can find all of your archived applications in the Xcode Organizer under the “Archived” section.
-    &lt;ul&gt;
-      &lt;li&gt;NOTE: To symbolicate crash reports from testers, app review, and customers, you must retain th archive for each build of the application that you distribute.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Distributing: if you are distributing your app via the App Store, or conducting a beta test using Test Flight, you will be given the option of including the &lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt; file when uploading your archive to iTunes Connect. In the submission dialog, check “Include app symbols for your application…”. Uploading your &lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt; file is necessary to receive crash reports collected from TestFlight users and customers who have opted to share diagnostic data.&lt;/li&gt;
-  &lt;li&gt;When your application crashes, an unsymbolicated crash report is created and stored on the device.&lt;/li&gt;
-  &lt;li&gt;Users can retrieve crash reports directly from their device by following the steps in Debugging Deployed iOS Apps. If you have distributed your application via AdHoc or Enterprise distribution, this is the only way to acquire crash reports from your users.&lt;/li&gt;
-  &lt;li&gt;Crash reports retrieved from a device are unsymbolicated and will need to be symbolicated using Xcode. Xcode uses the dSYM file associated with your application binary to replace each address in the backtrace with its originating location in your source code. The result is a symbolicated crash report.&lt;/li&gt;
-  &lt;li&gt;If the user has opted to share diagnostic data with Apple, or if the user has installed a beta version of your application through TestFlight, the crash report is uploaded to the App Store.&lt;/li&gt;
-  &lt;li&gt;The App Store symbolicates the crash report and groups it with similar crash reports. This aggregate of similar crash reports is called a Crash Point.&lt;/li&gt;
-  &lt;li&gt;The symbolicated crash reports are made available to you in Xcode’s Crashes organizer.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;getting-dsym-files&quot;&gt;Getting dSYM files&lt;/h2&gt;
-
-&lt;h3 id=&quot;downloading-the-dsym-files-from-xcode&quot;&gt;Downloading the dSYM files from Xcode&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;In the Archives organizer, select the archive that you originally submitted to the App Store.&lt;/li&gt;
-  &lt;li&gt;Click the Download dSYMs button.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;downloading-the-dsym-files-from-the-itunes-connect-website&quot;&gt;Downloading the dSYM files from the iTunes Connect website&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Open the App Details page.&lt;/li&gt;
-  &lt;li&gt;Click Activity.&lt;/li&gt;
-  &lt;li&gt;From the list of All Builds, select a version.&lt;/li&gt;
-  &lt;li&gt;Click the Download dSYM link.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;translating-symbol-names-back-to-original-names&quot;&gt;Translating symbol names back to original names&lt;/h3&gt;
-&lt;p&gt;When you upload your app with bitcode to the App Store, you may choose not to
-send your application’s symbols by unchecking the “Upload your app’s symbols to
-receive symbolicated reports from Apple” box in the submission dialog.
-If you choose not to send your app’s symbol information to Apple, Xcode will
-replace the symbols in your app’s .dSYM files with obfuscated symbols such as
-“&lt;em&gt;_hidden#109&lt;/em&gt;” before sending your app to iTunes Connect. Xcode creates a
-mapping between the original symbols and the “hidden” symbols and stores this
-mapping in a .bcsymbolmap file inside the application archive. Each .dSYM file
-will have a corresponding .bcsymbolmap file.&lt;/p&gt;
-
-&lt;p&gt;Before symbolicating crash reports, you will need to de-obfuscate the symbols in
-the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dSYM&lt;/code&gt; files downloaded from iTunes Connect.
-If you use the Download dSYMs button in Xcode, this de-obfuscation will be
-performed automatically for you.
-However, if you use the iTunes Connect website to download the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dSYM&lt;/code&gt; files, open Terminal and use the following command to de-obfuscate your symbols
-(replacing the example paths with your own archive and the dSYMs folder downloaded from iTunes Connect):&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcrun dsymutil -symbol-map ~/Library/Developer/Xcode/Archives/2017-11-23/MyGreatApp\ 11-23-17\,\ 12.00\ PM.xcarchive/BCSymbolMaps ~/Downloads/dSYMs/3B15C133-88AA-35B0-B8BA-84AF76826CE0.dSYM
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;check-if-a-crash-report-is-symbolicated&quot;&gt;Check if a Crash Report is Symbolicated&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-13-Crash-Reports/symbolicate_report.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;symbolicating-ios-crash-reports-with-xcode&quot;&gt;Symbolicating iOS Crash Reports with Xcode&lt;/h2&gt;
-&lt;p&gt;Xcode will automatically attempt to symbolicate all crash reports.
-All you need to do for symbolication is to add the crash report to the Xcode Organizer.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Note: Xcode will not accept crash reports without a &lt;code class=&quot;highlighter-rouge&quot;&gt;.crash&lt;/code&gt; extension. If you have received a crash report without an extension, or with a &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt; extension, rename it to have a &lt;code class=&quot;highlighter-rouge&quot;&gt;.crash&lt;/code&gt; extension before following the steps listed below.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Follow the steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Connect an iOS device to your Mac&lt;/li&gt;
-  &lt;li&gt;Choose “Devices” from the “Window” menu&lt;/li&gt;
-  &lt;li&gt;Under the “DEVICES” section in the left column, choose a device&lt;/li&gt;
-  &lt;li&gt;Click the “View Device Logs” button under the “Device Information” section on the right hand panel&lt;/li&gt;
-  &lt;li&gt;Drag your crash report onto the left column of the presented panel&lt;/li&gt;
-  &lt;li&gt;Xcode will automatically symbolicate the crash report and display the results&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;symbolicating-crash-reports-with-atos&quot;&gt;Symbolicating Crash Reports With atos&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;atos&lt;/code&gt; command can be used to symbolicate individual addresses in the backtrace
-of an unsymbolicatd, or partially symbolicatd, crash report.&lt;/p&gt;
-
-&lt;p&gt;Steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Find a line in the backtrace which you want to symbolicate. Note the name of the binary image in the second column, and the address in the third column.&lt;/li&gt;
-  &lt;li&gt;Look for a binary image with that name in the list of binary images at the bottom of the crash report. Note the architecture and load address of the binary image.
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;atos -arch &amp;lt;Binary Architecture&amp;gt; -o &amp;lt;Path to dSYM file&amp;gt;/Contents/Resources/DWARF/&amp;lt;binary image name&amp;gt; -l &amp;lt;load address&amp;gt; &amp;lt;address to symbolicate&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;symbolication-troubleshooting&quot;&gt;Symbolication Troubleshooting&lt;/h2&gt;
-&lt;p&gt;If Xcode is failing to fully symbolicate a crash report, it’s likely because your
-Mac is missing the dSYM file for the application binary, the dSYM files for one
-or more frameworks the application links against, or the device symbols for the
-OS the application was running on when it crashed.&lt;/p&gt;
-
-&lt;p&gt;Steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Find a line in the backtrace which Xcode failed to symbolicate. Note the name of the binary image in the second column.&lt;/li&gt;
-  &lt;li&gt;Look for a binary image with that name in the list of binary images at the bottom of the crash report. This list contains the UUIDs for each of the binary images that were loaded into the process at the time of the crash.
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ grep --after-context=1000 &quot;Binary Images:&quot; &amp;lt;Path to Crash Report&amp;gt; | grep &amp;lt;Binary Name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Convert the UUID of the binary image to a 32 character string seperated in groups of 8-4-4-4-12 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX). Note that all letters must be uppercased.&lt;/li&gt;
-  &lt;li&gt;Search for the UUID using the mdfind command line tool using the query “com_apple_xcode_dsym_uuids == &lt;UUID&gt;&quot; (include the quotation marks).
-&lt;/UUID&gt;    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mdfind &quot;com_apple_xcode_dsym_uuids == &amp;lt;UUID&amp;gt;&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If Spotlight finds a dSYM file for the UUID, mdfind will print the path to the dSYM file and possibly its containing archive. If a dSYM file for the UUID was not found, mdfind will exit without printing anything.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If you think that you have the correct dSYM for the binary image, you can use the dwarfdump command to print the matching UUIDs. You can also use the dwarfdump command to print the UUIDs of a binary.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcrun dwarfdump --uuid &amp;lt;Path to dSYM file&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;analyzing-crash-reports&quot;&gt;Analyzing Crash Reports&lt;/h1&gt;
-
-&lt;h1 id=&quot;getting-crash-logs&quot;&gt;Getting Crash Logs&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/qa/qa1747/_index.html&quot;&gt;Debugging Deployed iOS Apps&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-crash-logs-directly-from-a-device-without-xcode&quot;&gt;Getting Crash Logs Directly From a Device Without Xcode&lt;/h3&gt;
-&lt;p&gt;(It is not possible to get device console logs directly from a device)
-1) Open Settings app
-2) Go to Privacy, then Diagnostics &amp;amp; Usage
-3) Select Diagnostics &amp;amp; Usage Data
-4) Locate the log for the crashed app. The logs will be named in the format: &lt;AppName&gt;_&lt;DateTime&gt;_&lt;DeviceName&gt;
-5) Select the desired log. Then, using the text selection UI select the entire text of the log. Once the text is selected, tap Copy
-6) Paste the copied text to Mail and send to an email address as desired&lt;/DeviceName&gt;&lt;/DateTime&gt;&lt;/AppName&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-crash-logs-and-console-output-from-a-device-using-xcode&quot;&gt;Getting Crash Logs and Console Output From a Device Using Xcode&lt;/h3&gt;
-&lt;p&gt;(Even though you won’t be able to run the app in Xcode’s debugger, Xcode can still give you all the information you need to debug the problem.)
-1) Plug in the device and open Xcode
-2) Choose Window -&amp;gt; Devices from the menu bar
-3) Under the DEVICES section in the left column, choose the device
-4) To see the device console, click the up-triangle at the bottom left of the right hand panel
-5) Click the down arrow on the bottom right to save the console as a file
-6) To see crash logs, select the View Device Logs button under the Device Information section on the right hand panel
-7) Find your app in the Process column and select the Crash log to see the contents.
-8) To save a crash log, right click the entry on the left column and choose “Export Log”
-9) Xcode 6 will also list low memory logs here. These will be shown with a Process name “Unknown” and Type “Unknown”. You should examine the contents of these logs to determine whether any of these are caused by your app. For more information about low memory logs, see Understanding and Analyzing iOS Application Crash Reports.&lt;/p&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/technotes/tn2151/_index.html&quot;&gt;Technical Note TN2151: Understanding and Analyzing Application Crash Reports&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="XCode" /><category term="Crash Reports" /><category term="Debug" /><summary type="html">As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.</summary></entry><entry><title type="html">Design Pattern PART I - Creational Patterns</title><link href="http://localhost:4000/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern.html" rel="alternate" type="text/html" title="Design Pattern PART I - Creational Patterns" /><published>2019-04-15T21:20:00+09:00</published><updated>2019-04-15T21:20:00+09:00</updated><id>http://localhost:4000/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern</id><content type="html" xml:base="http://localhost:4000/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern.html">&lt;h1 id=&quot;define&quot;&gt;Define&lt;/h1&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Creational Design Patterns are design patterns that
-deal with object creation mechanisms, trying to create
-objects in a manner suitabl to the situation.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;basic-form&quot;&gt;Basic Form&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;Abstract Factory
- Creates an instance of several familis of classes&lt;/li&gt;
-  &lt;li&gt;Builder
- Separates object construction from its representation&lt;/li&gt;
-  &lt;li&gt;Factory Method
- Creates an instance of several derived classes&lt;/li&gt;
-  &lt;li&gt;Object Pool
- Avoid expensive acquisition and release of resources by recycling objects that are no longer in use&lt;/li&gt;
-  &lt;li&gt;Prototype
- A fully initialized instance to be copied and cloned&lt;/li&gt;
-  &lt;li&gt;Singleton
- A class which only a single instance can exist&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;rules&quot;&gt;Rules&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;Sometimes the basic form might not fit properly.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt; might store set of &lt;em&gt;Prototypes&lt;/em&gt; from which to clone and return product objects&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Builder&lt;/em&gt; can use of the other patterns to implement which components get build&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt;, &lt;em&gt;BUilder&lt;/em&gt; and &lt;em&gt;Prototype&lt;/em&gt; can use &lt;em&gt;Singleton&lt;/em&gt; in their implementation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt;, &lt;em&gt;Builder&lt;/em&gt;, and &lt;em&gt;Prototype&lt;/em&gt; define a factory object that’s responsible for knowing and creating the class of product objects, and make it a parameter of the system.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt; has the factory object producing objects of several classes.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Builder&lt;/em&gt; has the factory object building a complex product incrementally using a correspondingly complex protocol.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Prototype&lt;/em&gt; has the factory object (aka prototype) building a product by copying a prototype object.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;are often implemented with Factory Methods, but they can also be implemented using &lt;em&gt;Prototype&lt;/em&gt;.&lt;/li&gt;
-      &lt;li&gt;can be used as an alternative to Facade to hide platform-specific classes.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Builder&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;focuses on constructing a complex object step by step. &lt;em&gt;Abstract Factory&lt;/em&gt; emphasizes a family of product objects (either simple or complex). &lt;em&gt;Builder&lt;/em&gt; returns the product as a final step, but as far as the &lt;em&gt;Abstract Factory&lt;/em&gt; is concerned, the product gets returned immediately.&lt;/li&gt;
-      &lt;li&gt;is to creation as &lt;em&gt;Strategy&lt;/em&gt; is to algorithm.&lt;/li&gt;
-      &lt;li&gt;often builds a &lt;em&gt;Composite&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Factory Methods&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;are usually called within &lt;em&gt;Template methods&lt;/em&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Factory Method&lt;/em&gt;: creation through inheritance.
-&lt;em&gt;Prototype&lt;/em&gt;: creation through delegation.&lt;/li&gt;
-      &lt;li&gt;Often, designs start out using &lt;em&gt;Factory Method&lt;/em&gt; (less complicated, more customizable, subclasses proliferate) and evolve toward &lt;em&gt;Abstract Factory&lt;/em&gt;, &lt;em&gt;Prototype&lt;/em&gt;, or &lt;em&gt;Builder&lt;/em&gt; (more flexible, more complex) as the designer discovers where more flexibility is needed.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Prototype&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;doesn’t require subclassing, but it does require an Initialize operation. &lt;em&gt;Factory Method&lt;/em&gt; requires subclassing, but doesn’t require Initialize.&lt;/li&gt;
-      &lt;li&gt;Designs that make heavy use of the &lt;em&gt;Composite&lt;/em&gt; and &lt;em&gt;Decorator&lt;/em&gt; patterns often can benefit from Prototype as well.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;https://sourcemaking.com/design_patterns/creational_patterns&lt;/p&gt;</content><author><name></name></author><category term="Design Pattern" /><summary type="html">Define Creational Design Patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitabl to the situation.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="iOS" /><category term="Logging" /><category term="OSLog" /><category term="OS" /><summary type="html">This article is introducing the Unified Logging system and how to use it to measure performace.</summary></entry></feed>
