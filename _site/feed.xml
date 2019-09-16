@@ -1,13 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-22T12:33:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">First Try with SwiftUI</title><link href="http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI.html" rel="alternate" type="text/html" title="First Try with SwiftUI" /><published>2019-07-12T21:14:00+09:00</published><updated>2019-07-12T21:14:00+09:00</updated><id>http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI</id><content type="html" xml:base="http://localhost:4000/ios/wwdc2019/swiftui/2019/07/12/First-Try-With-SwiftUI.html">&lt;h1 id=&quot;accessibility-in-swiftui&quot;&gt;Accessibility in SwiftUI&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-13T18:35:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">HashMap vs HashSet</title><link href="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html" rel="alternate" type="text/html" title="HashMap vs HashSet" /><published>2019-09-14T02:52:00+09:00</published><updated>2019-09-14T02:52:00+09:00</updated><id>http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet</id><content type="html" xml:base="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html">&lt;p&gt;The obvious difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;HashSet&lt;/code&gt; would be interface.&lt;/p&gt;
 
-&lt;h2 id=&quot;introduction-to-accessibility&quot;&gt;Introduction to Accessibility&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;HashSet is an implementation of Set Interface which does not allow duplicate value. Objects that are stored in HashSet must override equals() for checking equality and hashCode() methods for no duplicate value are stored in our set.&lt;/li&gt;
+  &lt;li&gt;HashMap is an implementaion of Map Interface which map a key to value. Duplicate keys are not allowed in a map. Map Interface has 2 implementation classes: HashMap, TreeMap. The main difference is TreeMap maintains order of the objects but HashMap will not. HashMap allows null values and null keys.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Make sure your app’s accessibility is:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Understandable: Labels&lt;/li&gt;
-  &lt;li&gt;Interactable: Actions&lt;/li&gt;
-  &lt;li&gt;Navigable: Ordering and Grouping&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="iOS" /><category term="WWDC2019" /><category term="SwiftUI" /><summary type="html">Accessibility in SwiftUI</summary></entry><entry><title type="html">Be Careful Using `Named Color` at Xcode Xib File</title><link href="http://localhost:4000/ios/xcode/xib/named%20color/2019/07/04/Be-Careful-Using-Named-Color-at-Xcode-Xib-File.html" rel="alternate" type="text/html" title="Be Careful Using `Named Color` at Xcode Xib File" /><published>2019-07-04T00:30:00+09:00</published><updated>2019-07-04T00:30:00+09:00</updated><id>http://localhost:4000/ios/xcode/xib/named%20color/2019/07/04/Be-Careful-Using-Named-Color-at-Xcode-Xib-File</id><content type="html" xml:base="http://localhost:4000/ios/xcode/xib/named%20color/2019/07/04/Be-Careful-Using-Named-Color-at-Xcode-Xib-File.html">&lt;p&gt;At WWDC 2019, Apple introduced the nice dark mode color settings.
+&lt;h3 id=&quot;note&quot;&gt;Note&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HashMap is faster than HashSet.&lt;/li&gt;
+  &lt;li&gt;Dummy value: HashMap doesn’t have concept of dummy value, HashSet internally uses HashMap to add elements. In HashSet, java internally associates dummy value for each value passed in add(Object) method.&lt;/li&gt;
+  &lt;li&gt;Storing or Adding mechanism: HashMap internally uses hashing to store or add objects. HashSet internally uses HashMap object to store or add objects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;map--hashmap&quot;&gt;Map &amp;amp; HashMap&lt;/h3&gt;
+
+&lt;p&gt;No difference between the objects. We could set &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&amp;lt;String, Object&amp;gt;&lt;/code&gt; in both cases.&lt;/p&gt;
+
+&lt;p&gt;The advantage to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Map&amp;lt;String, Object&amp;gt;&lt;/code&gt; is that you can change the object to be a different kind of map without breaking the contract with any code that’s using. If we declare it as &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&amp;lt;String, Object&amp;gt;&lt;/code&gt;, it is needed to change the contract code if we want to change the underlying implementation.&lt;/p&gt;
+
+&lt;p&gt;Interfaces (and base classes) let us reveal &lt;code class=&quot;highlighter-rouge&quot;&gt;only as  much as is necessary&lt;/code&gt;, keeping our flexibility under the covers to make changes as appropriate. In general, we want to have our references be as basic as possible. If we don’t need to know its a &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&lt;/code&gt;, just call it a &lt;code class=&quot;highlighter-rouge&quot;&gt;Map&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Same for Set &amp;amp; HashSet.&lt;/p&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+
+&lt;p&gt;https://www.geeksforgeeks.org/difference-between-hashmap-and-hashset/
+https://stackoverflow.com/a/1348228&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="HashMap" /><category term="HashSet" /><category term="Map" /><category term="Set" /><summary type="html">The obvious difference between HashMap &amp;amp; HashSet would be interface.</summary></entry><entry><title type="html">Java Primitive Data Types</title><link href="http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types.html" rel="alternate" type="text/html" title="Java Primitive Data Types" /><published>2019-09-13T23:22:00+09:00</published><updated>2019-09-13T23:22:00+09:00</updated><id>http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types</id><content type="html" xml:base="http://localhost:4000/java/primitive%20data/2019/09/13/Java-Primitive-Data-Types.html">&lt;p&gt;List of Java’s primitive data types&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Types&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Size in Bytes&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Range&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;byte&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1 byte&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;-128 to 127&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;short&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;-32768 to 32767&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;int&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;-2,147,483,648 to 2,147,483, 647&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;long&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;8 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;float&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;approximately ±3.40282347E+38F(6-7 significant decimal digits)Java implements IEEE 754 standard&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;double&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;8 bytes&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;approximately ±1.79769313486231570E+308(15 significant decimal digits)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;char&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2 byte&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;0 to 65,536 (unsigned)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;boolean&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;not precisely defined&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;true or false&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><category term="Java" /><category term="Primitive Data" /><summary type="html">List of Java’s primitive data types</summary></entry><entry><title type="html">Java Arrays Sort Algorithm</title><link href="http://localhost:4000/sort/java/arrays/2019/09/12/Java-Arrays-Sort-Algorithm.html" rel="alternate" type="text/html" title="Java Arrays Sort Algorithm" /><published>2019-09-12T19:57:00+09:00</published><updated>2019-09-12T19:57:00+09:00</updated><id>http://localhost:4000/sort/java/arrays/2019/09/12/Java-Arrays-Sort-Algorithm</id><content type="html" xml:base="http://localhost:4000/sort/java/arrays/2019/09/12/Java-Arrays-Sort-Algorithm.html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;java.util.Arrays&lt;/code&gt; uses&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;quicksort(dual pivot quick sort) : primitive types such as &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;mergesort : for objects that implement &lt;code class=&quot;highlighter-rouge&quot;&gt;Comparable&lt;/code&gt; or use the &lt;code class=&quot;highlighter-rouge&quot;&gt;Comparator&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;quicksort &amp;lt;- fast
+mergesort &amp;lt;- stable&lt;/p&gt;
+
+&lt;p&gt;Dual pivot quicksort is a combination of insertion sort and quick sort. Insertion sort has faster runtime when the number of elements t obe sorted is small, double pivot quicksort uses this fact thus when the number of elements is &amp;lt;= 47 Java performs insertion sort under the hood.&lt;/p&gt;
+
+&lt;p&gt;When input size array is larger than 47 Java uses &lt;code class=&quot;highlighter-rouge&quot;&gt;Doubl pivot quicksort&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;dual-pivot-quick-sort&quot;&gt;Dual Pivot Quick Sort&lt;/h2&gt;
+
+&lt;p&gt;Single pivot quick sort takes a pivot from one of the ends of the array and partitioning the array, so that all elements which at the left side are less than or equal to the pivot, and all elements which at the right side are greater than pivot.&lt;/p&gt;
+
+&lt;p&gt;The idea of dual pivot quick sort is to take two pivots. One in the left end of the array and the second, in the right end of array. The left pivot must be less than or equal to the right pivot, if it is not, we swap them. Then begin partitioning the array into 3 parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the first part, all elements will be less than the left pivot.&lt;/li&gt;
+  &lt;li&gt;In the second part, all elements will be greater or equal to the left pivot and also will be less than or equal to the right pivot&lt;/li&gt;
+  &lt;li&gt;In the third part, all elements will be greater than the right pivot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&amp;lt; LP&lt;/td&gt;
+      &lt;td&gt;LP&lt;/td&gt;
+      &lt;td&gt;LP&amp;lt;= &amp;amp; &amp;lt;= RP&lt;/td&gt;
+      &lt;td&gt;RP&lt;/td&gt;
+      &lt;td&gt;RP &amp;lt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Dual pivot quick sort is typlically faster than traditional single pivot quicksort. This algorithm offers &lt;code class=&quot;highlighter-rouge&quot;&gt;O(n log(n))&lt;/code&gt; performance on many data sets that cause other quicksorts to degrade to quadratic performance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-09-12-Java-Arrays-Sort-Algorithm/dual_pivot_quick_sort.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cafe.elharo.com/programming/java-programming/why-java-util-arrays-uses-two-sorting-algorithms/&quot;&gt;Why java.util.Arrays uses Two Sorting Algorithms&lt;/a&gt;
+&lt;a href=&quot;https://www.geeksforgeeks.org/dual-pivot-quicksort/&quot;&gt;Dual Pivot Quick Sort&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Sort" /><category term="Java" /><category term="Arrays" /><category term="Dual Pivot Quick Sort" /><category term="Merge Sort" /><summary type="html">java.util.Arrays uses</summary></entry><entry><title type="html">Try Vision Sample Code</title><link href="http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code.html" rel="alternate" type="text/html" title="Try Vision Sample Code" /><published>2019-07-26T21:33:00+09:00</published><updated>2019-07-26T21:33:00+09:00</updated><id>http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code</id><content type="html" xml:base="http://localhost:4000/ios/vision/sample%20code/2019/07/26/Try-Vision-Sample-Code.html">&lt;p&gt;WWDC 2019 Introduce the &lt;code class=&quot;highlighter-rouge&quot;&gt;Vision&lt;/code&gt; Framework.
+And they also provide the Sample Code !!!&lt;/p&gt;
+
+&lt;p&gt;How exciting! Let’s try it!&lt;/p&gt;
+
+&lt;h2 id=&quot;classifying-images-for-categorization-and-search&quot;&gt;Classifying Images for Categorization and Search&lt;/h2&gt;
+
+&lt;p&gt;This is sample project for labeling/categorizing the giving images.&lt;/p&gt;
+
+&lt;h3 id=&quot;requirements&quot;&gt;Requirements&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SDKs: macOS 10.15+
+Xcode: 11.0+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-07-26-Try-Vision-Sample-Code/classify_image.gif&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;analyzing-image-similarity-with-feature-print&quot;&gt;Analyzing Image Similarity with Feature Print&lt;/h2&gt;
+
+&lt;p&gt;This is sample project for checking how silimarity between several pictures.
+Sorry I didn’t update my device to iOS 13.
+So the only thing I could attach at here is the video-cut from WWDC video.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-07-26-Try-Vision-Sample-Code/image_similarity.gif&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;highlighting-areas-of-interest-in-an-image-using-saliency&quot;&gt;Highlighting Areas of Interest in an Image Using Saliency&lt;/h2&gt;
+
+&lt;p&gt;This is sample project for bounding people forcused area.
+I only try in on macOS.&lt;/p&gt;
+
+&lt;p&gt;After selecting the picture you want to anlyze, &lt;code class=&quot;highlighter-rouge&quot;&gt;Rects&lt;/code&gt; cut the saliency bound,
+and &lt;code class=&quot;highlighter-rouge&quot;&gt;Mask&lt;/code&gt; give us the saliency masks. &lt;code class=&quot;highlighter-rouge&quot;&gt;Combind&lt;/code&gt; means combine the bounds &amp;amp; masks,
+which will show the saliency area above the picture.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-07-26-Try-Vision-Sample-Code/highlight_image_saliency.gif&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="Vision" /><summary type="html">WWDC 2019 Introduce the Vision Framework. And they also provide the Sample Code !!!</summary></entry><entry><title type="html">Be Careful Using `Named Color` at Xcode Xib File</title><link href="http://localhost:4000/ios/xcode/xib/named%20color/2019/07/04/Be-Careful-Using-Named-Color-at-Xcode-Xib-File.html" rel="alternate" type="text/html" title="Be Careful Using `Named Color` at Xcode Xib File" /><published>2019-07-04T00:30:00+09:00</published><updated>2019-07-04T00:30:00+09:00</updated><id>http://localhost:4000/ios/xcode/xib/named%20color/2019/07/04/Be-Careful-Using-Named-Color-at-Xcode-Xib-File</id><content type="html" xml:base="http://localhost:4000/ios/xcode/xib/named%20color/2019/07/04/Be-Careful-Using-Named-Color-at-Xcode-Xib-File.html">&lt;p&gt;At WWDC 2019, Apple introduced the nice dark mode color settings.
 By adding the dark mode color settings, Apple suggest to define &lt;code class=&quot;highlighter-rouge&quot;&gt;Named Color&lt;/code&gt; at &lt;code class=&quot;highlighter-rouge&quot;&gt;Assets.xsassets&lt;/code&gt;.
 However, during implementation, there is an issue, and we should pay attetion on it.&lt;/p&gt;
 
@@ -420,264 +569,7 @@ background color has been changed.&lt;/p&gt;
 views, so it wont be immediately visible on the screen.
 In such case, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;Debug View Hierachy&lt;/code&gt; to dig deeper ~~~~&lt;/p&gt;
 
-&lt;p&gt;Hope it would be helpful to someone. :relaxed:&lt;/p&gt;</content><author><name></name></author><category term="UIViewAlertForUnsatisfiableConstraints" /><category term="iOS" /><category term="Layout Constraint" /><summary type="html">When we update our app’s UI, sometimes we might got this layout warning like this:</summary></entry><entry><title type="html">iOS Logging System – OSLog</title><link href="http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog.html" rel="alternate" type="text/html" title="iOS Logging System -- OSLog" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog</id><content type="html" xml:base="http://localhost:4000/ios/logging/oslog/2019/05/14/OSLog.html">&lt;p&gt;This article is introducing the &lt;code class=&quot;highlighter-rouge&quot;&gt;Unified Logging&lt;/code&gt; system and how to use it to measure performace.&lt;/p&gt;
-
-&lt;h1 id=&quot;unified-logging&quot;&gt;Unified Logging&lt;/h1&gt;
-&lt;p&gt;From the document:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The unified logging system provides a single, efficient,
- performant API for capturing messaging across all levels
- of the system.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The Unified Logging uses Activity Tracing for performance, consolicates kernel and user-space logging.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-using-it&quot;&gt;Why using it&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Compressing data&lt;/li&gt;
-  &lt;li&gt;Deferring work and data collection&lt;/li&gt;
-  &lt;li&gt;Managing log message lifecycle&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We want as much logging on all the time as possible.&lt;/p&gt;
-
-&lt;h2 id=&quot;key-features&quot;&gt;Key Features&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Improved categorization and filtering of log messages&lt;/li&gt;
-  &lt;li&gt;Logging system collects caller information&lt;/li&gt;
-  &lt;li&gt;New Builtin type specifiers - simplifies log message preparation&lt;/li&gt;
-  &lt;li&gt;New Console application and command-line tool (graph)&lt;/li&gt;
-  &lt;li&gt;Supported on macOS, iOS, tvOS, watchOS and Simulators&lt;/li&gt;
-  &lt;li&gt;Support for Objective C, C++, C and Swift&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;logging-concepts&quot;&gt;Logging Concepts&lt;/h2&gt;
-
-&lt;h3 id=&quot;adption&quot;&gt;Adption&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Build with the macOS 10.12, iOS 10.0 or watchOS 3.0 SDK&lt;/li&gt;
-  &lt;li&gt;Legacy APIs(NSLog, as_log_message, syslog…) redirected into new system&lt;/li&gt;
-  &lt;li&gt;Log data will be in new format and location&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;new-file-formats&quot;&gt;New File Formats&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Log data is kept in a compressed binary format: &lt;code class=&quot;highlighter-rouge&quot;&gt;.tracev3&lt;/code&gt; files&lt;/li&gt;
-  &lt;li&gt;Stored under &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/db/diagnostics&lt;/code&gt; with support in &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/db/uuidtext&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.logarchive&lt;/code&gt; format for portability of logs (collection of log data, easier to transfer to email or …)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;subsystems-and-categories&quot;&gt;Subsystems and Categories&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Log messages can be associated with a subsystem and category&lt;/li&gt;
-  &lt;li&gt;Can be used to control how log messages are fitered and displayed&lt;/li&gt;
-  &lt;li&gt;A subsystem can contain multiple categories&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Your application will have own subsystems and categories as needed.&lt;/p&gt;
-
-&lt;h3 id=&quot;logging-behavior&quot;&gt;Logging Behavior&lt;/h3&gt;
-&lt;p&gt;Each log message has a level determined by the API used&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Three basic levels – Default, Info, Debug&lt;/li&gt;
-  &lt;li&gt;Two special levels – Fault, Error&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Each basic levels has two characteristics that can be set for system, subsystem, or category&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Need to check if it is enabled (Default messages are always enabled)&lt;/li&gt;
-  &lt;li&gt;Is it stored to disk or memory? (Fault or Error are always stored to disk.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The levels are hierarchical&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Setting Debug to go to disk implies that Info will also go to disk&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Behavior can be customized by installing profiles or, on macOS, via log command&lt;/p&gt;
-
-&lt;h3 id=&quot;standard-behavior&quot;&gt;Standard Behavior&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Message Level&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Enabled&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Destination&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DEFAULT LEVEL&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ALWAYS&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DISK&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;INFO LEVEL&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;YES&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;MEMORY&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DEBUG LEVEL&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;NO&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;N/A&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ERROR&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ALWAYS&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DISK&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;FAULT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;ALWAYS&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;DISK&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;privacy&quot;&gt;Privacy&lt;/h3&gt;
-&lt;p&gt;Prevent accidental logging of Personally Identifiable Information(PII)&lt;/p&gt;
-
-&lt;h3 id=&quot;faults-and-errors&quot;&gt;Faults and Errors&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Errors – represent issues discovered within a given application/library&lt;/li&gt;
-  &lt;li&gt;Faults – represent more global problems in the system&lt;/li&gt;
-  &lt;li&gt;Faults and Error log information is captured into a seperate set of log files (They will exsit longer than normal logs)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;architecture&quot;&gt;Architecture&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/architecture.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;type-formatters&quot;&gt;Type Formatters&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/type_formatter.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;parameter-privacy&quot;&gt;Parameter Privacy&lt;/h2&gt;
-&lt;p&gt;Privacy is handled on a parameter by parameter basis
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Scalars&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Static strings&lt;/code&gt; are assumed to be public
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Dynamic strings&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;collections&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;objects&lt;/code&gt; are assumed to be private&lt;/p&gt;
-
-&lt;h2 id=&quot;demo&quot;&gt;Demo&lt;/h2&gt;
-&lt;p&gt;Here is the changing :&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/log_message_ex.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;activity-api-improvements&quot;&gt;Activity API Improvements&lt;/h2&gt;
-&lt;p&gt;Activites are not objects that can be stored and re-used&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Direct control of activity relationships during creation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;New API to auto-scope activites within the code&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/activity_example.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
-
-&lt;h3 id=&quot;console&quot;&gt;Console&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;View live content form a system&lt;/li&gt;
-  &lt;li&gt;Open log archives&lt;/li&gt;
-  &lt;li&gt;New Activity centric view of logging and tracing&lt;/li&gt;
-  &lt;li&gt;Advanced filtering and searching&lt;/li&gt;
-  &lt;li&gt;Device support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;log-command-line-tool&quot;&gt;log Command Line Tool&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/log_system_console.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;logging-etiquette&quot;&gt;Logging Etiquette&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ensure messages contain only information useful for debugging&lt;/li&gt;
-  &lt;li&gt;Leverage built-in formatters&lt;/li&gt;
-  &lt;li&gt;Avoid creating wrapper functions for &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log&lt;/code&gt; APIs&lt;/li&gt;
-  &lt;li&gt;Log only what you need from collections (Dictionaries, Arrays, etc)&lt;/li&gt;
-  &lt;li&gt;Avoid logging in tight code loops&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;suggest&quot;&gt;Suggest&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log&lt;/code&gt; to log critical details to help debug issues&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log_info&lt;/code&gt; for additional info that will be captured during error or fault&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log_debug&lt;/code&gt; for high-volume debugging during development&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log_error&lt;/code&gt; to cause additional information capture from app&lt;/li&gt;
-  &lt;li&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log_fault&lt;/code&gt; to cause additional information capture from system&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;using-sysdiagnose&quot;&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;sysdiagnose&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sysdiagnose&lt;/code&gt; is the preferred method to capture data for bug reports&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unified logging data in &lt;code class=&quot;highlighter-rouge&quot;&gt;system_logs.archive&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;key-chord&lt;/code&gt; to trigger
-&lt;code class=&quot;highlighter-rouge&quot;&gt;sysdiagnose&lt;/code&gt; on Apple Watch will trigger on both Apple Watch and iPhone
-Transfer from device using iTunes&lt;/p&gt;
-
-&lt;p&gt;Here are some &lt;code class=&quot;highlighter-rouge&quot;&gt;key-chord&lt;/code&gt;s&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/key_chords.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;measure-performance&quot;&gt;Measure Performance&lt;/h1&gt;
-
-&lt;h2 id=&quot;os_signpost&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;os_signpost&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;Instruments can take the data that &lt;code class=&quot;highlighter-rouge&quot;&gt;signposts&lt;/code&gt; produce and you could check what your program is doing.&lt;/p&gt;
-
-&lt;p&gt;Here is an example:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/os_signpost.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;os_signpost&lt;/code&gt; allows to mark the beginning and the end(&lt;code class=&quot;highlighter-rouge&quot;&gt;.begin&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;.end&lt;/code&gt;).&lt;/p&gt;
-
-&lt;h2 id=&quot;measure-asynchronous-operation&quot;&gt;Measure Asynchronous Operation&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Signpost Name&lt;/li&gt;
-  &lt;li&gt;Signpost ID – tell overlapping operations apart
-  &lt;img src=&quot;/images/2019-05-16-OSLog/signpost_id.png&quot; width=&quot;100%&quot; /&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Making Signpost ID ()
-  &lt;img src=&quot;/images/2019-05-16-OSLog/make_signpost_id.png&quot; width=&quot;100%&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;process-scoped&lt;/li&gt;
-      &lt;li&gt;making from object is convenient if we have the same object at &lt;code class=&quot;highlighter-rouge&quot;&gt;.begin&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.end&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Demo
-  &lt;img src=&quot;/images/2019-05-16-OSLog/signpost_id_ex.png&quot; width=&quot;100%&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;add-metadata-to-signpost&quot;&gt;Add Metadata to Signpost&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Add context to the &lt;code class=&quot;highlighter-rouge&quot;&gt;.begin&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;.end&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Be able to pass arguments with &lt;code class=&quot;highlighter-rouge&quot;&gt;os_log&lt;/code&gt; format string literal&lt;/li&gt;
-  &lt;li&gt;Pass many arguments with different types&lt;/li&gt;
-  &lt;li&gt;Pass dynamic strings&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;add-independent-event&quot;&gt;Add Independent Event&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;os_signpost&lt;/code&gt; have &lt;code class=&quot;highlighter-rouge&quot;&gt;.event&lt;/code&gt; type
-Marking a single point&lt;/p&gt;
-
-&lt;h2 id=&quot;conditionally-enable-signpost&quot;&gt;Conditionally Enable Signpost&lt;/h2&gt;
-&lt;p&gt;Signposts are lightweight&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Built to minimize observer effect&lt;/li&gt;
-  &lt;li&gt;Built for fine-grained measurement in a short time span&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;OSLog.disabled&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-16-OSLog/signpost_enable.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;instruments&quot;&gt;Instruments&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Blank -&amp;gt; add &lt;code class=&quot;highlighter-rouge&quot;&gt;os_signpost&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Able to retrieve from &lt;code class=&quot;highlighter-rouge&quot;&gt;Summary&lt;/code&gt; part&lt;/li&gt;
-  &lt;li&gt;Able to &lt;code class=&quot;highlighter-rouge&quot;&gt;Record&lt;/code&gt; the action&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;reference-link&quot;&gt;Reference link&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/os/logging&quot;&gt;Logging&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2016/721/&quot;&gt;Unified Logging and Activity Tracing&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="iOS" /><category term="Logging" /><category term="OSLog" /><category term="OS" /><summary type="html">This article is introducing the Unified Logging system and how to use it to measure performace.</summary></entry><entry><title type="html">Crash Reports</title><link href="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html" rel="alternate" type="text/html" title="Crash Reports" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports</id><content type="html" xml:base="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html">&lt;p&gt;As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.&lt;/p&gt;
+&lt;p&gt;Hope it would be helpful to someone. :relaxed:&lt;/p&gt;</content><author><name></name></author><category term="UIViewAlertForUnsatisfiableConstraints" /><category term="iOS" /><category term="Layout Constraint" /><summary type="html">When we update our app’s UI, sometimes we might got this layout warning like this:</summary></entry><entry><title type="html">Crash Reports</title><link href="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html" rel="alternate" type="text/html" title="Crash Reports" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports</id><content type="html" xml:base="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html">&lt;p&gt;As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.&lt;/p&gt;
 
 &lt;p&gt;When an application crashed, a &lt;code class=&quot;highlighter-rouge&quot;&gt;crash report&lt;/code&gt; is created and stored on the device. This article is simple introduce the crash reports contents and the analytic method.&lt;/p&gt;
 
@@ -825,89 +717,4 @@ OS the application was running on when it crashed.&lt;/p&gt;
 9) Xcode 6 will also list low memory logs here. These will be shown with a Process name “Unknown” and Type “Unknown”. You should examine the contents of these logs to determine whether any of these are caused by your app. For more information about low memory logs, see Understanding and Analyzing iOS Application Crash Reports.&lt;/p&gt;
 
 &lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/technotes/tn2151/_index.html&quot;&gt;Technical Note TN2151: Understanding and Analyzing Application Crash Reports&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="XCode" /><category term="Crash Reports" /><category term="Debug" /><summary type="html">As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.</summary></entry><entry><title type="html">Design Pattern PART I - Creational Patterns</title><link href="http://localhost:4000/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern.html" rel="alternate" type="text/html" title="Design Pattern PART I - Creational Patterns" /><published>2019-04-15T21:20:00+09:00</published><updated>2019-04-15T21:20:00+09:00</updated><id>http://localhost:4000/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern</id><content type="html" xml:base="http://localhost:4000/design%20pattern/creational%20pattern/2019/04/15/Design-Pattern-PART-I-Creational-Pattern.html">&lt;h1 id=&quot;define&quot;&gt;Define&lt;/h1&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Creational Design Patterns are design patterns that
-deal with object creation mechanisms, trying to create
-objects in a manner suitabl to the situation.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;basic-form&quot;&gt;Basic Form&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;Abstract Factory
- Creates an instance of several familis of classes&lt;/li&gt;
-  &lt;li&gt;Builder
- Separates object construction from its representation&lt;/li&gt;
-  &lt;li&gt;Factory Method
- Creates an instance of several derived classes&lt;/li&gt;
-  &lt;li&gt;Object Pool
- Avoid expensive acquisition and release of resources by recycling objects that are no longer in use&lt;/li&gt;
-  &lt;li&gt;Prototype
- A fully initialized instance to be copied and cloned&lt;/li&gt;
-  &lt;li&gt;Singleton
- A class which only a single instance can exist&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;rules&quot;&gt;Rules&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;Sometimes the basic form might not fit properly.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt; might store set of &lt;em&gt;Prototypes&lt;/em&gt; from which to clone and return product objects&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Builder&lt;/em&gt; can use of the other patterns to implement which components get build&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt;, &lt;em&gt;BUilder&lt;/em&gt; and &lt;em&gt;Prototype&lt;/em&gt; can use &lt;em&gt;Singleton&lt;/em&gt; in their implementation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt;, &lt;em&gt;Builder&lt;/em&gt;, and &lt;em&gt;Prototype&lt;/em&gt; define a factory object that’s responsible for knowing and creating the class of product objects, and make it a parameter of the system.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt; has the factory object producing objects of several classes.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Builder&lt;/em&gt; has the factory object building a complex product incrementally using a correspondingly complex protocol.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Prototype&lt;/em&gt; has the factory object (aka prototype) building a product by copying a prototype object.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Abstract Factory&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;are often implemented with Factory Methods, but they can also be implemented using &lt;em&gt;Prototype&lt;/em&gt;.&lt;/li&gt;
-      &lt;li&gt;can be used as an alternative to Facade to hide platform-specific classes.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Builder&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;focuses on constructing a complex object step by step. &lt;em&gt;Abstract Factory&lt;/em&gt; emphasizes a family of product objects (either simple or complex). &lt;em&gt;Builder&lt;/em&gt; returns the product as a final step, but as far as the &lt;em&gt;Abstract Factory&lt;/em&gt; is concerned, the product gets returned immediately.&lt;/li&gt;
-      &lt;li&gt;is to creation as &lt;em&gt;Strategy&lt;/em&gt; is to algorithm.&lt;/li&gt;
-      &lt;li&gt;often builds a &lt;em&gt;Composite&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Factory Methods&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;are usually called within &lt;em&gt;Template methods&lt;/em&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Factory Method&lt;/em&gt;: creation through inheritance.
-&lt;em&gt;Prototype&lt;/em&gt;: creation through delegation.&lt;/li&gt;
-      &lt;li&gt;Often, designs start out using &lt;em&gt;Factory Method&lt;/em&gt; (less complicated, more customizable, subclasses proliferate) and evolve toward &lt;em&gt;Abstract Factory&lt;/em&gt;, &lt;em&gt;Prototype&lt;/em&gt;, or &lt;em&gt;Builder&lt;/em&gt; (more flexible, more complex) as the designer discovers where more flexibility is needed.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Prototype&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;doesn’t require subclassing, but it does require an Initialize operation. &lt;em&gt;Factory Method&lt;/em&gt; requires subclassing, but doesn’t require Initialize.&lt;/li&gt;
-      &lt;li&gt;Designs that make heavy use of the &lt;em&gt;Composite&lt;/em&gt; and &lt;em&gt;Decorator&lt;/em&gt; patterns often can benefit from Prototype as well.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-&lt;p&gt;https://sourcemaking.com/design_patterns/creational_patterns&lt;/p&gt;</content><author><name></name></author><category term="Design Pattern" /><summary type="html">Define Creational Design Patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitabl to the situation.</summary></entry><entry><title type="html">Difference between SSH keys &amp;amp; Deploy keys</title><link href="http://localhost:4000/github/2019/04/04/Difference-In-SSH-key-Deploy-key.html" rel="alternate" type="text/html" title="Difference between SSH keys &amp; Deploy keys" /><published>2019-04-04T01:30:00+09:00</published><updated>2019-04-04T01:30:00+09:00</updated><id>http://localhost:4000/github/2019/04/04/Difference-In-SSH-key-Deploy-key</id><content type="html" xml:base="http://localhost:4000/github/2019/04/04/Difference-In-SSH-key-Deploy-key.html">&lt;p&gt;We always have many repository in Github.
-When we start to build track our git remote repo, we need to set our ssh keys.
--&amp;gt; Add &lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; to our account &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH Keys&lt;/code&gt;
-&lt;em&gt;NOTE: DO NOT add it into the &lt;code class=&quot;highlighter-rouge&quot;&gt;Deploy Keys&lt;/code&gt;. Otherwise it might cause the other repository cannot add &lt;code class=&quot;highlighter-rouge&quot;&gt;Deploy Keys&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;difference-between-ssh-keys--deploy-keys&quot;&gt;Difference between SSH Keys &amp;amp; Deploy Keys:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SSH Keys&lt;/code&gt; is the account’s highest level key, so, if you have the account authority, you will be able to access all of its repository&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Repository&lt;/code&gt;’s &lt;code class=&quot;highlighter-rouge&quot;&gt;Deploy Keys&lt;/code&gt; is the repository’s private key&lt;/li&gt;
-  &lt;li&gt;More easily understanding is:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;SSH Keys&lt;/code&gt; is a big apartment key(with this key you could oepn each room in this apartment)&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Deploy Keys&lt;/code&gt; is the room key(with this key you could only open this room)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;One more thing, &lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa.pub&lt;/code&gt; is the public key, and you could add it to the server side. And local &lt;code class=&quot;highlighter-rouge&quot;&gt;id_rsa&lt;/code&gt; is the correspond private key, they are &lt;code class=&quot;highlighter-rouge&quot;&gt;pair&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Github" /><summary type="html">We always have many repository in Github. When we start to build track our git remote repo, we need to set our ssh keys. -&amp;gt; Add id_rsa.pub to our account SSH Keys NOTE: DO NOT add it into the Deploy Keys. Otherwise it might cause the other repository cannot add Deploy Keys.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/technotes/tn2151/_index.html&quot;&gt;Technical Note TN2151: Understanding and Analyzing Application Crash Reports&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="XCode" /><category term="Crash Reports" /><category term="Debug" /><summary type="html">As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.</summary></entry></feed>
