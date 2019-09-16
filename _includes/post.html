@@ -14,11 +14,19 @@
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%b %-d, %Y" }}
       </time>
-      {% if page.tags %} |
-      {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
-      {% endfor %}
-      {% endif %}
+      <div id="tag-category-container">
+          {% if page.tags %} 
+          {% for tag in page.tags %}
+          <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+          {% endfor %}
+          {% endif %}
+          <p></p>
+          {% if page.categories %} 
+          {% for category in page.categories %}
+          <a href="{{ site.baseurl }}{{ site.category_page }}#{{ category | slugify }}" class="post-category">{{ category }}</a>
+          {% endfor %}
+          {% endif %}
+      </div>
     </div>
   </div>
 

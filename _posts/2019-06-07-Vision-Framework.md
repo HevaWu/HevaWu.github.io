@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Vision Framework
 date: 2019-06-07 14:35:00
 comments: true

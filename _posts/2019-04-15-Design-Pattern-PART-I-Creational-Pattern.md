@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Design Pattern PART I - Creational Patterns
 date: 2019-04-15 12:20:00
 comments: true

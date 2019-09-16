@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Java Primitive Data Types
 date: 2019-09-13 14:22:00
 comments: true
