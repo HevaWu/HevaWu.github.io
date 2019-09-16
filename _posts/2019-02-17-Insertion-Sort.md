@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Insertion Sort
 date: 2019-02-17 00:14:00
 comments: true

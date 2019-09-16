@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Try Vision Sample Code
 date: 2019-07-26 12:33:00
 comments: true

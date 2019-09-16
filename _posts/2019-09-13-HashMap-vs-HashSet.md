@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: HashMap vs HashSet
 date: 2019-09-13 17:52:00
 comments: true

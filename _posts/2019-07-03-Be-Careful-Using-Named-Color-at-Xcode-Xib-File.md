@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Be Careful Using `Named Color` at Xcode Xib File
 date: 2019-07-03 15:30:00
 comments: true

@@ -124,11 +124,20 @@ a:hover {
   display: block;
 }
 
-.posts {
+.posts,
+.sidebar-info {
   border-top: 1px solid #e7e7e7;
   margin-top: 1em;
   padding-top: 1.5em;
   padding-bottom: 1.25em;
+}
+
+.sidebar-info li {
+  list-style-type: none;
+  text-align: center;
+  line-height: 1.75em;
+  font-weight: bold;
+  color: 
 }
 
 .footer {

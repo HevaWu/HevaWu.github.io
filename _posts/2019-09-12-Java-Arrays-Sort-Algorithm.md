@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Java Arrays Sort Algorithm
 date: 2019-09-12 10:57:00
 comments: true

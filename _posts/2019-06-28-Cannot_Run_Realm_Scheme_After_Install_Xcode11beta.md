@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Cannot Run `Realm` Scheme After Install Xcode11 beta
 date: 2019-06-28 11:53:00
 comments: true

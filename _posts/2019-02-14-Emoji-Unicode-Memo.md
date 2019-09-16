@@ -1,9 +1,5 @@
 ---
 layout: post
-pagination:
-  enabled: true
-  categories: Test
-  tags: Test
 title: Emoji Unicode Memo
 date: 2019-02-14 16:49:00
 comments: true
