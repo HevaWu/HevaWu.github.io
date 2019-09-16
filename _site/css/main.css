@@ -229,21 +229,27 @@ a:hover {
   background-color: #333;
 }
 
-.post-tag {
+.post-tag, 
+.post-category {
   display: inline-block;
   margin-right: .5rem;
   border-radius: 4px;
+  height: 1em;
   font-size: 90%;
   transition-timing-function: ease-in-out;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
 }
 
 .post-tag {
   background-image: url(../images/tag-and-category/tag.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left top;
   padding-left: 1.2em;
-  height: 1em;
+}
+
+.post-category {
+  background-image: url(../images/tag-and-category/category.png);
+  padding-left: 1.4em;
 }
 
 /*****************************************************************************/
@@ -322,15 +328,18 @@ a:hover {
 /*
 /*****************************************************************************/
 
-#tags-title {
+#tags-title, 
+#categories-title {
   margin-top: 3em;
 }
 
-.tags-expo-section h2 {
+.tags-expo-section h2,
+.categories-expo-section h2 {
   padding-top: .3em;
 }
 
-.tags-expo-section ul {
+.tags-expo-section ul,
+.categories-expo-section ul {
   list-style-type: circle;
   list-style-position: inside;
   margin-bottom: .5em;
@@ -338,7 +347,8 @@ a:hover {
   font-size: .75em;
 }
 
-.tags-expo-section ul li {
+.tags-expo-section ul li,
+.categories-expo-section ul li {
   transition-timing-function: ease-in-out; 
   list-style-type: disc;
 }
