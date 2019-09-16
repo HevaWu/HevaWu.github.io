@@ -4,7 +4,11 @@ title: Tags
 ---
 
 <div class="content">
-  <div id="post-info">
+  <div id="tags-title">
+    <h1 id="title">{{ page.title }}</h1>
+  </div>
+
+  <div id="tags-expo-list">
     {% for tag in site.tags %}
     <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
     {% endfor %}
