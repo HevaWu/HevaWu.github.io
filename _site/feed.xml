@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-17T15:31:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Swift VS Java</title><link href="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html" rel="alternate" type="text/html" title="Swift VS Java" /><published>2019-09-17T22:56:00+09:00</published><updated>2019-09-17T22:56:00+09:00</updated><id>http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java</id><content type="html" xml:base="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html">&lt;p&gt;Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-17T18:37:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Swift VS Java</title><link href="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html" rel="alternate" type="text/html" title="Swift VS Java" /><published>2019-09-17T22:56:00+09:00</published><updated>2019-09-17T22:56:00+09:00</updated><id>http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java</id><content type="html" xml:base="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html">&lt;p&gt;Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.&lt;/p&gt;
 
 &lt;h2 id=&quot;different-part&quot;&gt;Different Part&lt;/h2&gt;
 
@@ -8,7 +8,46 @@
   &lt;li&gt;Structures are passed by value: For Java, no concept of structures. For C++, structure and classes are same except structure’s member varaiable are public by default. For Swift, structures are passed by value not reference. This difference requires a separate annotation for structures to differentiate it.&lt;/li&gt;
   &lt;li&gt;No abstract class: For Swift, does not have concept of abstract classes. An abstract class is a class which provide partial implementation. It does not have to implement all methods declared. Abstract classes are powerful concept to put common code in one place for multiple derived classes from same base class.&lt;/li&gt;
   &lt;li&gt;Global functions: For Swift, have global functions (i.e. without class scope) which is not possible in Java but possible in C++.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Swift" /><category term="C++" /><summary type="html">Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.</summary></entry><entry><title type="html">HashMap vs HashSet</title><link href="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html" rel="alternate" type="text/html" title="HashMap vs HashSet" /><published>2019-09-14T02:52:00+09:00</published><updated>2019-09-14T02:52:00+09:00</updated><id>http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet</id><content type="html" xml:base="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html">&lt;p&gt;The obvious difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;HashSet&lt;/code&gt; would be interface.&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;swift-pros--cons&quot;&gt;Swift Pros &amp;amp; Cons&lt;/h2&gt;
+
+&lt;p&gt;Swift often referred to as “Objective-C, without the C”, Swift language is in many aspects superrior to its predecessor. According to the official release:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Swift combines the performance and efficiency of compiled languages with the simplicity and interactivity of popular scripting languages.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open Source&lt;/li&gt;
+  &lt;li&gt;Safe&lt;/li&gt;
+  &lt;li&gt;Fast: Swift was built with performance in mind. Not only does its simple&lt;/li&gt;
+  &lt;li&gt;In demand: Swift is ranked 14th among the most popular programming languages of 2018.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pros&quot;&gt;Pros&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rapid development process: it is easier to read and write, and very concise. Automatic Reference Counting(ARC) does all the work tracking and managing the app’s memory usage, so developers don’t need to spend time and effort doing that manually.&lt;/li&gt;
+  &lt;li&gt;Easier to scale the product and the team: the syntax of Swift is considered near to natual English.&lt;/li&gt;
+  &lt;li&gt;Improved safety and performance: there are many ways to optimize Swift code for even better performance. Its strong typing system and error handling prevents code crashes and errors in production.&lt;/li&gt;
+  &lt;li&gt;Decreased memory footprint: it might need to use a lot of third party code, reusable and often open souce frameworks or libraries compiledinto the app’s code. These libraries can be static and dynamic. Swift first introduced dynamic libraries to iOS when it launched. &lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt; libraries are locked in to code at the time you compiled them, become the part of your executable file, thus increasing its size and load time. &lt;code class=&quot;highlighter-rouge&quot;&gt;Dynamic&lt;/code&gt; libraries exist outside of the code and are uploaded only when needed. Static libraries need to have copies in all files of your program while dynamic ones only need one. Though it might take more time to reach for dynamic code from the outside when its already included, you have a choice to keep using static libraries when you want to isolate apps that are not supposed to be shared. Since version 5.0, standard Swift libraries are integrated into every macOS, iOS, tvOS, and watchOS release. With this advancement, stable application binary interface(ABI) was also released. That allows Apple to provide support of Swift across its platforms.&lt;/li&gt;
+  &lt;li&gt;Interoperability with Objective-C: You either add new features in Swift to the existing Objective-C codebase, or use Objective-C elements in your new Swift project. Swift is perfectly compatible with Objective-C and can be used interchangeably within the same project.&lt;/li&gt;
+  &lt;li&gt;Automatic memory management: Swift uses Automatic Memory Counting(ARC). Swift’s ARC determines which instances are no longer in use and gets rid of them on your behalf. It allows you to increase the app’s performance without lagging the memory or CPU.&lt;/li&gt;
+  &lt;li&gt;Full stack potential and cross-device support: using Swift on both backend and frontend of the app allows for extensive code sharing and reuse, speeding up the development process and reducing development efforts.&lt;/li&gt;
+  &lt;li&gt;Vibrant open source community and learnability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cons&quot;&gt;Cons&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The language is still quite young: Swift was introduce to the world in 2014, which seems to be long ago, but the language itself is really only 5 years old, compared to Objective-C live since the 1980s. Swift is limited to native libraries, tools, and doomed to be unstable after every release.&lt;/li&gt;
+  &lt;li&gt;Limited talent pool: While Swift community is growing fast, it is still significantly smaller as compared to any other open source language. Acoording to the latest &lt;a href=&quot;https://insights.stackoverflow.com/survey/2019&quot;&gt;StackOverflow Developer Survey&lt;/a&gt;, only 6.6 percent of the respondents use Swift.&lt;/li&gt;
+  &lt;li&gt;Poor interoperability with third-party tools and IDEs: Developers often report issues with syntax highlighting, autocomplete, refactoring tools and compilers.&lt;/li&gt;
+  &lt;li&gt;Lack of support for earlier iOS versions: we could only use Swift in the apps that target iOS7 and later.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;p&gt;https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-swift-programming-language/&lt;/p&gt;</content><author><name></name></author><category term="Java" /><category term="Swift" /><category term="C++" /><summary type="html">Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.</summary></entry><entry><title type="html">HashMap vs HashSet</title><link href="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html" rel="alternate" type="text/html" title="HashMap vs HashSet" /><published>2019-09-14T02:52:00+09:00</published><updated>2019-09-14T02:52:00+09:00</updated><id>http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet</id><content type="html" xml:base="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html">&lt;p&gt;The obvious difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;HashSet&lt;/code&gt; would be interface.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;HashSet is an implementation of Set Interface which does not allow duplicate value. Objects that are stored in HashSet must override equals() for checking equality and hashCode() methods for no duplicate value are stored in our set.&lt;/li&gt;
