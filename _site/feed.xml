@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-16T17:18:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">HashMap vs HashSet</title><link href="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html" rel="alternate" type="text/html" title="HashMap vs HashSet" /><published>2019-09-14T02:52:00+09:00</published><updated>2019-09-14T02:52:00+09:00</updated><id>http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet</id><content type="html" xml:base="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html">&lt;p&gt;The obvious difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;HashSet&lt;/code&gt; would be interface.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-17T15:31:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Swift VS Java</title><link href="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html" rel="alternate" type="text/html" title="Swift VS Java" /><published>2019-09-17T22:56:00+09:00</published><updated>2019-09-17T22:56:00+09:00</updated><id>http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java</id><content type="html" xml:base="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html">&lt;p&gt;Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.&lt;/p&gt;
+
+&lt;h2 id=&quot;different-part&quot;&gt;Different Part&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Optional: Swift use &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt; to mark if variable is optional or not. Java not obviously showing it.&lt;/li&gt;
+  &lt;li&gt;Computed Properties: For Java, create getter and setter for member variables in a class and separate methods to return any computation over them. For Swift, same is accomplish with computed properties, however convertional way still exists.&lt;/li&gt;
+  &lt;li&gt;Structures are passed by value: For Java, no concept of structures. For C++, structure and classes are same except structure’s member varaiable are public by default. For Swift, structures are passed by value not reference. This difference requires a separate annotation for structures to differentiate it.&lt;/li&gt;
+  &lt;li&gt;No abstract class: For Swift, does not have concept of abstract classes. An abstract class is a class which provide partial implementation. It does not have to implement all methods declared. Abstract classes are powerful concept to put common code in one place for multiple derived classes from same base class.&lt;/li&gt;
+  &lt;li&gt;Global functions: For Swift, have global functions (i.e. without class scope) which is not possible in Java but possible in C++.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Java" /><category term="Swift" /><category term="C++" /><summary type="html">Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.</summary></entry><entry><title type="html">HashMap vs HashSet</title><link href="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html" rel="alternate" type="text/html" title="HashMap vs HashSet" /><published>2019-09-14T02:52:00+09:00</published><updated>2019-09-14T02:52:00+09:00</updated><id>http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet</id><content type="html" xml:base="http://localhost:4000/java/hashmap/hashset/2019/09/14/HashMap-vs-HashSet.html">&lt;p&gt;The obvious difference between &lt;code class=&quot;highlighter-rouge&quot;&gt;HashMap&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;HashSet&lt;/code&gt; would be interface.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;HashSet is an implementation of Set Interface which does not allow duplicate value. Objects that are stored in HashSet must override equals() for checking equality and hashCode() methods for no duplicate value are stored in our set.&lt;/li&gt;
@@ -569,152 +579,4 @@ background color has been changed.&lt;/p&gt;
 views, so it wont be immediately visible on the screen.
 In such case, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;Debug View Hierachy&lt;/code&gt; to dig deeper ~~~~&lt;/p&gt;
 
-&lt;p&gt;Hope it would be helpful to someone. :relaxed:&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="Layout Constraint" /><summary type="html">When we update our app’s UI, sometimes we might got this layout warning like this:</summary></entry><entry><title type="html">Crash Reports</title><link href="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html" rel="alternate" type="text/html" title="Crash Reports" /><published>2019-05-14T01:04:00+09:00</published><updated>2019-05-14T01:04:00+09:00</updated><id>http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports</id><content type="html" xml:base="http://localhost:4000/ios/xcode/crash%20reports/debug/2019/05/14/Crash-Reports.html">&lt;p&gt;As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.&lt;/p&gt;
-
-&lt;p&gt;When an application crashed, a &lt;code class=&quot;highlighter-rouge&quot;&gt;crash report&lt;/code&gt; is created and stored on the device. This article is simple introduce the crash reports contents and the analytic method.&lt;/p&gt;
-
-&lt;h1 id=&quot;symbolicating-crash-reports&quot;&gt;Symbolicating Crash Reports&lt;/h1&gt;
-&lt;p&gt;Crash reports with backtraces need to be &lt;code class=&quot;highlighter-rouge&quot;&gt;symbolicated&lt;/code&gt; before being anlyzed. Symbolication replacec memory addresses with human-readable function names and line numbers.&lt;/p&gt;
-
-&lt;p&gt;Here is the overview of the crash reporting and symbolicating process.
-&lt;img src=&quot;/images/2019-05-13-Crash-Reports/overview.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;symbolicating-process&quot;&gt;Symbolicating Process&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Compiler translates the source code, it also generates debug symbols (which map each machine instruction in the comipled binary back to the line of source code from which it originated) – Depending on the &lt;code class=&quot;highlighter-rouge&quot;&gt;Debug Information Format&lt;/code&gt; build settings. These debug symbols are stored inside the binary or in a companion Debug Symbol(&lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt;) file. By default, debug builds of an application store the debug symbols inside the compiled binary while release builds of an application store the debug symbols in a companion dSYM file to reduce the binary size. The Debug Symbol file and application binary are tied together on a per-build-basis by the build UUID. A new UUID is generated for each build of your application and uniquely identifies that build. Even if a functionally-identical executable is rebuilt from the same source code, with the same compiler settings, it will have a different build UUID. Debug Symbol files from subsequent builds, even from the same source files, will not interoperate with binaries from other builds.&lt;/li&gt;
-  &lt;li&gt;During archive, Xcode will gather the application binary along with the .dSYM file and store them at a location inside your home folder. You can find all of your archived applications in the Xcode Organizer under the “Archived” section.
-    &lt;ul&gt;
-      &lt;li&gt;NOTE: To symbolicate crash reports from testers, app review, and customers, you must retain th archive for each build of the application that you distribute.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Distributing: if you are distributing your app via the App Store, or conducting a beta test using Test Flight, you will be given the option of including the &lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt; file when uploading your archive to iTunes Connect. In the submission dialog, check “Include app symbols for your application…”. Uploading your &lt;code class=&quot;highlighter-rouge&quot;&gt;dSYM&lt;/code&gt; file is necessary to receive crash reports collected from TestFlight users and customers who have opted to share diagnostic data.&lt;/li&gt;
-  &lt;li&gt;When your application crashes, an unsymbolicated crash report is created and stored on the device.&lt;/li&gt;
-  &lt;li&gt;Users can retrieve crash reports directly from their device by following the steps in Debugging Deployed iOS Apps. If you have distributed your application via AdHoc or Enterprise distribution, this is the only way to acquire crash reports from your users.&lt;/li&gt;
-  &lt;li&gt;Crash reports retrieved from a device are unsymbolicated and will need to be symbolicated using Xcode. Xcode uses the dSYM file associated with your application binary to replace each address in the backtrace with its originating location in your source code. The result is a symbolicated crash report.&lt;/li&gt;
-  &lt;li&gt;If the user has opted to share diagnostic data with Apple, or if the user has installed a beta version of your application through TestFlight, the crash report is uploaded to the App Store.&lt;/li&gt;
-  &lt;li&gt;The App Store symbolicates the crash report and groups it with similar crash reports. This aggregate of similar crash reports is called a Crash Point.&lt;/li&gt;
-  &lt;li&gt;The symbolicated crash reports are made available to you in Xcode’s Crashes organizer.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;getting-dsym-files&quot;&gt;Getting dSYM files&lt;/h2&gt;
-
-&lt;h3 id=&quot;downloading-the-dsym-files-from-xcode&quot;&gt;Downloading the dSYM files from Xcode&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;In the Archives organizer, select the archive that you originally submitted to the App Store.&lt;/li&gt;
-  &lt;li&gt;Click the Download dSYMs button.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;downloading-the-dsym-files-from-the-itunes-connect-website&quot;&gt;Downloading the dSYM files from the iTunes Connect website&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Open the App Details page.&lt;/li&gt;
-  &lt;li&gt;Click Activity.&lt;/li&gt;
-  &lt;li&gt;From the list of All Builds, select a version.&lt;/li&gt;
-  &lt;li&gt;Click the Download dSYM link.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;translating-symbol-names-back-to-original-names&quot;&gt;Translating symbol names back to original names&lt;/h3&gt;
-&lt;p&gt;When you upload your app with bitcode to the App Store, you may choose not to
-send your application’s symbols by unchecking the “Upload your app’s symbols to
-receive symbolicated reports from Apple” box in the submission dialog.
-If you choose not to send your app’s symbol information to Apple, Xcode will
-replace the symbols in your app’s .dSYM files with obfuscated symbols such as
-“&lt;em&gt;_hidden#109&lt;/em&gt;” before sending your app to iTunes Connect. Xcode creates a
-mapping between the original symbols and the “hidden” symbols and stores this
-mapping in a .bcsymbolmap file inside the application archive. Each .dSYM file
-will have a corresponding .bcsymbolmap file.&lt;/p&gt;
-
-&lt;p&gt;Before symbolicating crash reports, you will need to de-obfuscate the symbols in
-the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dSYM&lt;/code&gt; files downloaded from iTunes Connect.
-If you use the Download dSYMs button in Xcode, this de-obfuscation will be
-performed automatically for you.
-However, if you use the iTunes Connect website to download the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dSYM&lt;/code&gt; files, open Terminal and use the following command to de-obfuscate your symbols
-(replacing the example paths with your own archive and the dSYMs folder downloaded from iTunes Connect):&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcrun dsymutil -symbol-map ~/Library/Developer/Xcode/Archives/2017-11-23/MyGreatApp\ 11-23-17\,\ 12.00\ PM.xcarchive/BCSymbolMaps ~/Downloads/dSYMs/3B15C133-88AA-35B0-B8BA-84AF76826CE0.dSYM
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;check-if-a-crash-report-is-symbolicated&quot;&gt;Check if a Crash Report is Symbolicated&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-05-13-Crash-Reports/symbolicate_report.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;symbolicating-ios-crash-reports-with-xcode&quot;&gt;Symbolicating iOS Crash Reports with Xcode&lt;/h2&gt;
-&lt;p&gt;Xcode will automatically attempt to symbolicate all crash reports.
-All you need to do for symbolication is to add the crash report to the Xcode Organizer.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Note: Xcode will not accept crash reports without a &lt;code class=&quot;highlighter-rouge&quot;&gt;.crash&lt;/code&gt; extension. If you have received a crash report without an extension, or with a &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt; extension, rename it to have a &lt;code class=&quot;highlighter-rouge&quot;&gt;.crash&lt;/code&gt; extension before following the steps listed below.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Follow the steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Connect an iOS device to your Mac&lt;/li&gt;
-  &lt;li&gt;Choose “Devices” from the “Window” menu&lt;/li&gt;
-  &lt;li&gt;Under the “DEVICES” section in the left column, choose a device&lt;/li&gt;
-  &lt;li&gt;Click the “View Device Logs” button under the “Device Information” section on the right hand panel&lt;/li&gt;
-  &lt;li&gt;Drag your crash report onto the left column of the presented panel&lt;/li&gt;
-  &lt;li&gt;Xcode will automatically symbolicate the crash report and display the results&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;symbolicating-crash-reports-with-atos&quot;&gt;Symbolicating Crash Reports With atos&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;atos&lt;/code&gt; command can be used to symbolicate individual addresses in the backtrace
-of an unsymbolicatd, or partially symbolicatd, crash report.&lt;/p&gt;
-
-&lt;p&gt;Steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Find a line in the backtrace which you want to symbolicate. Note the name of the binary image in the second column, and the address in the third column.&lt;/li&gt;
-  &lt;li&gt;Look for a binary image with that name in the list of binary images at the bottom of the crash report. Note the architecture and load address of the binary image.
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;atos -arch &amp;lt;Binary Architecture&amp;gt; -o &amp;lt;Path to dSYM file&amp;gt;/Contents/Resources/DWARF/&amp;lt;binary image name&amp;gt; -l &amp;lt;load address&amp;gt; &amp;lt;address to symbolicate&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;symbolication-troubleshooting&quot;&gt;Symbolication Troubleshooting&lt;/h2&gt;
-&lt;p&gt;If Xcode is failing to fully symbolicate a crash report, it’s likely because your
-Mac is missing the dSYM file for the application binary, the dSYM files for one
-or more frameworks the application links against, or the device symbols for the
-OS the application was running on when it crashed.&lt;/p&gt;
-
-&lt;p&gt;Steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Find a line in the backtrace which Xcode failed to symbolicate. Note the name of the binary image in the second column.&lt;/li&gt;
-  &lt;li&gt;Look for a binary image with that name in the list of binary images at the bottom of the crash report. This list contains the UUIDs for each of the binary images that were loaded into the process at the time of the crash.
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ grep --after-context=1000 &quot;Binary Images:&quot; &amp;lt;Path to Crash Report&amp;gt; | grep &amp;lt;Binary Name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Convert the UUID of the binary image to a 32 character string seperated in groups of 8-4-4-4-12 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX). Note that all letters must be uppercased.&lt;/li&gt;
-  &lt;li&gt;Search for the UUID using the mdfind command line tool using the query “com_apple_xcode_dsym_uuids == &lt;UUID&gt;&quot; (include the quotation marks).
-&lt;/UUID&gt;    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mdfind &quot;com_apple_xcode_dsym_uuids == &amp;lt;UUID&amp;gt;&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If Spotlight finds a dSYM file for the UUID, mdfind will print the path to the dSYM file and possibly its containing archive. If a dSYM file for the UUID was not found, mdfind will exit without printing anything.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If you think that you have the correct dSYM for the binary image, you can use the dwarfdump command to print the matching UUIDs. You can also use the dwarfdump command to print the UUIDs of a binary.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xcrun dwarfdump --uuid &amp;lt;Path to dSYM file&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;analyzing-crash-reports&quot;&gt;Analyzing Crash Reports&lt;/h1&gt;
-
-&lt;h1 id=&quot;getting-crash-logs&quot;&gt;Getting Crash Logs&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/qa/qa1747/_index.html&quot;&gt;Debugging Deployed iOS Apps&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-crash-logs-directly-from-a-device-without-xcode&quot;&gt;Getting Crash Logs Directly From a Device Without Xcode&lt;/h3&gt;
-&lt;p&gt;(It is not possible to get device console logs directly from a device)
-1) Open Settings app
-2) Go to Privacy, then Diagnostics &amp;amp; Usage
-3) Select Diagnostics &amp;amp; Usage Data
-4) Locate the log for the crashed app. The logs will be named in the format: &lt;AppName&gt;_&lt;DateTime&gt;_&lt;DeviceName&gt;
-5) Select the desired log. Then, using the text selection UI select the entire text of the log. Once the text is selected, tap Copy
-6) Paste the copied text to Mail and send to an email address as desired&lt;/DeviceName&gt;&lt;/DateTime&gt;&lt;/AppName&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-crash-logs-and-console-output-from-a-device-using-xcode&quot;&gt;Getting Crash Logs and Console Output From a Device Using Xcode&lt;/h3&gt;
-&lt;p&gt;(Even though you won’t be able to run the app in Xcode’s debugger, Xcode can still give you all the information you need to debug the problem.)
-1) Plug in the device and open Xcode
-2) Choose Window -&amp;gt; Devices from the menu bar
-3) Under the DEVICES section in the left column, choose the device
-4) To see the device console, click the up-triangle at the bottom left of the right hand panel
-5) Click the down arrow on the bottom right to save the console as a file
-6) To see crash logs, select the View Device Logs button under the Device Information section on the right hand panel
-7) Find your app in the Process column and select the Crash log to see the contents.
-8) To save a crash log, right click the entry on the left column and choose “Export Log”
-9) Xcode 6 will also list low memory logs here. These will be shown with a Process name “Unknown” and Type “Unknown”. You should examine the contents of these logs to determine whether any of these are caused by your app. For more information about low memory logs, see Understanding and Analyzing iOS Application Crash Reports.&lt;/p&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/technotes/tn2151/_index.html&quot;&gt;Technical Note TN2151: Understanding and Analyzing Application Crash Reports&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="XCode" /><category term="Crash Reports" /><category term="Debug" /><summary type="html">As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.</summary></entry></feed>
+&lt;p&gt;Hope it would be helpful to someone. :relaxed:&lt;/p&gt;</content><author><name></name></author><category term="iOS" /><category term="Layout Constraint" /><summary type="html">When we update our app’s UI, sometimes we might got this layout warning like this:</summary></entry></feed>
