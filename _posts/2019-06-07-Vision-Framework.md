@@ -25,9 +25,10 @@ Objectness Based
 - Trained on object segmentation
 
 Here is an example image:
-The first picture is the original picture
-The second is attention based picture
-The third is objectness based picture
+- The first picture is the original picture
+- The second is attention based picture
+- The third is objectness based picture
+
 <img src="/images/2019-06-07-Vision-Framework/attention_objectness.png" width="100%">
 
 ## Determined by
@@ -41,37 +42,47 @@ The third is objectness based picture
 Use `VNGenerateAttensionBasedSaliencyImageRequest` & `VNGenerateObjectnessBasedSaliencyImageRequest`
 to generate the image with the highlight picture.
 The highlight part is covered by a heatmap, which point out the Saliency part.
+
 <img src="/images/2019-06-07-Vision-Framework/saliency_example_code.png" width="100%">
 
 ## Bounding Box
+
 For attension of the saliency, we will have a bounding box, which
 could draw out the correct image area.
 
 Here is an example code about how to adding th bounding box and showing it.
+
 <img src="/images/2019-06-07-Vision-Framework/saliency_boundbox.png" width="100%">
 
 ## Graphical Uses
+
 Add type of filter or photo transition.
+
 <img src="/images/2019-06-07-Vision-Framework/saliency_graphic_uses.png" width="100%">
 
 # Image Classification
+
 1. Use saliency to detect the object & return the bounding box-es
 2. For each bounding box, use image classification to find out which object it is.
 
 ## Taxonomy
+
 Hierarchical structure, containing around 100 classes.
 Grouping based on shared semantic meanings.
 Define relationships between classes of increasing specificity.
 
 ### Taxonomy Construction
+
 Include classes that are visually identifiable
 
 *Avoid*
+
 - Abstract /controversial concepts
 - Proper nouns, adjectives, and basic shapes
 - Occupations
 
 Here is the result of classify image
+
 <img src="/images/2019-06-07-Vision-Framework/image_classification.png" width="100%">
 
 *Terms*
@@ -79,12 +90,15 @@ Confidence > Threshold => Predicted image
 - Precision and Recall
 
 Add `hasMinimumPrecision` & `Recall` params to help filtering the high precision images.
+
 <img src="/images/2019-06-07-Vision-Framework/image_classify_recall.png" width="100%">
 
-    - PR Curve
+- PR Curve
+
 <img src="/images/2019-06-07-Vision-Framework/image_pr_curve.png" width="100%">
 
-    - Use Recall & Precision to controll get the high precision
+- Use Recall & Precision to controll get the high precision
+
 <img src="/images/2019-06-07-Vision-Framework/filter_pr_curve.png" width="100%">
 
 ## Summary

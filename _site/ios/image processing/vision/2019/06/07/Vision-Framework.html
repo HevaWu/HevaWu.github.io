@@ -111,11 +111,14 @@ Highlight when people watch the image.</p>
   <li>Trained on object segmentation</li>
 </ul>
 
-<p>Here is an example image:
-The first picture is the original picture
-The second is attention based picture
-The third is objectness based picture
-<img src="/images/2019-06-07-Vision-Framework/attention_objectness.png" width="100%" /></p>
+<p>Here is an example image:</p>
+<ul>
+  <li>The first picture is the original picture</li>
+  <li>The second is attention based picture</li>
+  <li>The third is objectness based picture</li>
+</ul>
+
+<p><img src="/images/2019-06-07-Vision-Framework/attention_objectness.png" width="100%" /></p>
 
 <h2 id="determined-by">Determined by</h2>
 <ul>
@@ -129,43 +132,53 @@ The third is objectness based picture
 <h2 id="heatmap">Heatmap</h2>
 <p>Use <code class="highlighter-rouge">VNGenerateAttensionBasedSaliencyImageRequest</code> &amp; <code class="highlighter-rouge">VNGenerateObjectnessBasedSaliencyImageRequest</code>
 to generate the image with the highlight picture.
-The highlight part is covered by a heatmap, which point out the Saliency part.
-<img src="/images/2019-06-07-Vision-Framework/saliency_example_code.png" width="100%" /></p>
+The highlight part is covered by a heatmap, which point out the Saliency part.</p>
+
+<p><img src="/images/2019-06-07-Vision-Framework/saliency_example_code.png" width="100%" /></p>
 
 <h2 id="bounding-box">Bounding Box</h2>
+
 <p>For attension of the saliency, we will have a bounding box, which
 could draw out the correct image area.</p>
 
-<p>Here is an example code about how to adding th bounding box and showing it.
-<img src="/images/2019-06-07-Vision-Framework/saliency_boundbox.png" width="100%" /></p>
+<p>Here is an example code about how to adding th bounding box and showing it.</p>
+
+<p><img src="/images/2019-06-07-Vision-Framework/saliency_boundbox.png" width="100%" /></p>
 
 <h2 id="graphical-uses">Graphical Uses</h2>
-<p>Add type of filter or photo transition.
-<img src="/images/2019-06-07-Vision-Framework/saliency_graphic_uses.png" width="100%" /></p>
+
+<p>Add type of filter or photo transition.</p>
+
+<p><img src="/images/2019-06-07-Vision-Framework/saliency_graphic_uses.png" width="100%" /></p>
 
 <h1 id="image-classification">Image Classification</h1>
+
 <ol>
   <li>Use saliency to detect the object &amp; return the bounding box-es</li>
   <li>For each bounding box, use image classification to find out which object it is.</li>
 </ol>
 
 <h2 id="taxonomy">Taxonomy</h2>
+
 <p>Hierarchical structure, containing around 100 classes.
 Grouping based on shared semantic meanings.
 Define relationships between classes of increasing specificity.</p>
 
 <h3 id="taxonomy-construction">Taxonomy Construction</h3>
+
 <p>Include classes that are visually identifiable</p>
 
 <p><em>Avoid</em></p>
+
 <ul>
   <li>Abstract /controversial concepts</li>
   <li>Proper nouns, adjectives, and basic shapes</li>
   <li>Occupations</li>
 </ul>
 
-<p>Here is the result of classify image
-<img src="/images/2019-06-07-Vision-Framework/image_classification.png" width="100%" /></p>
+<p>Here is the result of classify image</p>
+
+<p><img src="/images/2019-06-07-Vision-Framework/image_classification.png" width="100%" /></p>
 
 <p><em>Terms</em>
 Confidence &gt; Threshold =&gt; Predicted image</p>
@@ -173,13 +186,21 @@ Confidence &gt; Threshold =&gt; Predicted image</p>
   <li>Precision and Recall</li>
 </ul>
 
-<p>Add <code class="highlighter-rouge">hasMinimumPrecision</code> &amp; <code class="highlighter-rouge">Recall</code> params to help filtering the high precision images.
-<img src="/images/2019-06-07-Vision-Framework/image_classify_recall.png" width="100%" /></p>
+<p>Add <code class="highlighter-rouge">hasMinimumPrecision</code> &amp; <code class="highlighter-rouge">Recall</code> params to help filtering the high precision images.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- PR Curve &lt;img src="/images/2019-06-07-Vision-Framework/image_pr_curve.png" width="100%"&gt;
+<p><img src="/images/2019-06-07-Vision-Framework/image_classify_recall.png" width="100%" /></p>
 
-- Use Recall &amp; Precision to controll get the high precision &lt;img src="/images/2019-06-07-Vision-Framework/filter_pr_curve.png" width="100%"&gt;
-</code></pre></div></div>
+<ul>
+  <li>PR Curve</li>
+</ul>
+
+<p><img src="/images/2019-06-07-Vision-Framework/image_pr_curve.png" width="100%" /></p>
+
+<ul>
+  <li>Use Recall &amp; Precision to controll get the high precision</li>
+</ul>
+
+<p><img src="/images/2019-06-07-Vision-Framework/filter_pr_curve.png" width="100%" /></p>
 
 <h2 id="summary">Summary</h2>
 <p>Returned observation contains labels and an associated confidence.

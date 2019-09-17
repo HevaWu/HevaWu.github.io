@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-17T18:37:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Swift VS Java</title><link href="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html" rel="alternate" type="text/html" title="Swift VS Java" /><published>2019-09-17T22:56:00+09:00</published><updated>2019-09-17T22:56:00+09:00</updated><id>http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java</id><content type="html" xml:base="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html">&lt;p&gt;Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-17T19:09:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">HevaWu’s Blog</title><entry><title type="html">Swift VS Java</title><link href="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html" rel="alternate" type="text/html" title="Swift VS Java" /><published>2019-09-17T22:56:00+09:00</published><updated>2019-09-17T22:56:00+09:00</updated><id>http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java</id><content type="html" xml:base="http://localhost:4000/java/swift/c++/2019/09/17/Swift-VS-Java.html">&lt;p&gt;Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.&lt;/p&gt;
 
 &lt;h2 id=&quot;different-part&quot;&gt;Different Part&lt;/h2&gt;
 
@@ -435,11 +435,14 @@ Highlight when people watch the image.&lt;/p&gt;
   &lt;li&gt;Trained on object segmentation&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Here is an example image:
-The first picture is the original picture
-The second is attention based picture
-The third is objectness based picture
-&lt;img src=&quot;/images/2019-06-07-Vision-Framework/attention_objectness.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Here is an example image:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The first picture is the original picture&lt;/li&gt;
+  &lt;li&gt;The second is attention based picture&lt;/li&gt;
+  &lt;li&gt;The third is objectness based picture&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-06-07-Vision-Framework/attention_objectness.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;determined-by&quot;&gt;Determined by&lt;/h2&gt;
 &lt;ul&gt;
@@ -453,43 +456,53 @@ The third is objectness based picture
 &lt;h2 id=&quot;heatmap&quot;&gt;Heatmap&lt;/h2&gt;
 &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;VNGenerateAttensionBasedSaliencyImageRequest&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;VNGenerateObjectnessBasedSaliencyImageRequest&lt;/code&gt;
 to generate the image with the highlight picture.
-The highlight part is covered by a heatmap, which point out the Saliency part.
-&lt;img src=&quot;/images/2019-06-07-Vision-Framework/saliency_example_code.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+The highlight part is covered by a heatmap, which point out the Saliency part.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-06-07-Vision-Framework/saliency_example_code.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;bounding-box&quot;&gt;Bounding Box&lt;/h2&gt;
+
 &lt;p&gt;For attension of the saliency, we will have a bounding box, which
 could draw out the correct image area.&lt;/p&gt;
 
-&lt;p&gt;Here is an example code about how to adding th bounding box and showing it.
-&lt;img src=&quot;/images/2019-06-07-Vision-Framework/saliency_boundbox.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Here is an example code about how to adding th bounding box and showing it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-06-07-Vision-Framework/saliency_boundbox.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;graphical-uses&quot;&gt;Graphical Uses&lt;/h2&gt;
-&lt;p&gt;Add type of filter or photo transition.
-&lt;img src=&quot;/images/2019-06-07-Vision-Framework/saliency_graphic_uses.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Add type of filter or photo transition.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-06-07-Vision-Framework/saliency_graphic_uses.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;image-classification&quot;&gt;Image Classification&lt;/h1&gt;
+
 &lt;ol&gt;
   &lt;li&gt;Use saliency to detect the object &amp;amp; return the bounding box-es&lt;/li&gt;
   &lt;li&gt;For each bounding box, use image classification to find out which object it is.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;taxonomy&quot;&gt;Taxonomy&lt;/h2&gt;
+
 &lt;p&gt;Hierarchical structure, containing around 100 classes.
 Grouping based on shared semantic meanings.
 Define relationships between classes of increasing specificity.&lt;/p&gt;
 
 &lt;h3 id=&quot;taxonomy-construction&quot;&gt;Taxonomy Construction&lt;/h3&gt;
+
 &lt;p&gt;Include classes that are visually identifiable&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Avoid&lt;/em&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Abstract /controversial concepts&lt;/li&gt;
   &lt;li&gt;Proper nouns, adjectives, and basic shapes&lt;/li&gt;
   &lt;li&gt;Occupations&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Here is the result of classify image
-&lt;img src=&quot;/images/2019-06-07-Vision-Framework/image_classification.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Here is the result of classify image&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-06-07-Vision-Framework/image_classification.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Terms&lt;/em&gt;
 Confidence &amp;gt; Threshold =&amp;gt; Predicted image&lt;/p&gt;
@@ -497,13 +510,21 @@ Confidence &amp;gt; Threshold =&amp;gt; Predicted image&lt;/p&gt;
   &lt;li&gt;Precision and Recall&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;hasMinimumPrecision&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;Recall&lt;/code&gt; params to help filtering the high precision images.
-&lt;img src=&quot;/images/2019-06-07-Vision-Framework/image_classify_recall.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;hasMinimumPrecision&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;Recall&lt;/code&gt; params to help filtering the high precision images.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- PR Curve &amp;lt;img src=&quot;/images/2019-06-07-Vision-Framework/image_pr_curve.png&quot; width=&quot;100%&quot;&amp;gt;
+&lt;p&gt;&lt;img src=&quot;/images/2019-06-07-Vision-Framework/image_classify_recall.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
-- Use Recall &amp;amp; Precision to controll get the high precision &amp;lt;img src=&quot;/images/2019-06-07-Vision-Framework/filter_pr_curve.png&quot; width=&quot;100%&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;PR Curve&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-06-07-Vision-Framework/image_pr_curve.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use Recall &amp;amp; Precision to controll get the high precision&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-06-07-Vision-Framework/filter_pr_curve.png&quot; width=&quot;100%&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Returned observation contains labels and an associated confidence.
