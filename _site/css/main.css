@@ -136,7 +136,7 @@ a:hover {
   text-align: center;
   line-height: 1.75em;
   font-weight: bold;
-  color: 
+  color:
 }
 
 .footer {
@@ -190,6 +190,11 @@ a:hover {
 .post a,
 #about a {
   border-bottom: 1px solid #8085C1;
+  margin-left: 0em;
+}
+
+.post h2 {
+  margin-top: 0.5em;
 }
 
 .post a:hover {
@@ -224,6 +229,7 @@ a:hover {
 
 .post pre code {
   border: none;
+  white-space: pre-wrap;
 }
 
 /* terminal */
@@ -237,7 +243,7 @@ a:hover {
   background-color: #333;
 }
 
-.post-tag, 
+.post-tag,
 .post-category {
   display: inline-block;
   margin-right: .5rem;
@@ -337,8 +343,8 @@ a:hover {
 /*
 /*****************************************************************************/
 
-#tags-title, 
-#categories-title, 
+#tags-title,
+#categories-title,
 #latest-title {
   margin-top: 3em;
 }
@@ -359,12 +365,12 @@ a:hover {
 
 .tags-expo-section h2 {
   background-image: url(../images/tag-and-category/tag.png);
-  padding-left: 1.5em;  
+  padding-left: 1.5em;
 }
 
 .categories-expo-section h2 {
   background-image: url(../images/tag-and-category/category.png);
-  padding-left: 1.8em; 
+  padding-left: 1.8em;
 }
 
 .tags-expo-section ul,
@@ -377,7 +383,7 @@ a:hover {
 
 .tags-expo-section ul li ,
 .categories-expo-section ul li {
-  transition-timing-function: ease-in-out; 
+  transition-timing-function: ease-in-out;
   list-style-type: none;
 }
 
@@ -405,7 +411,7 @@ a:hover {
 /*
 /*****************************************************************************/
 
-/* blockquote {
+blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
@@ -420,6 +426,3 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
-blockquote p {
-  display: inline;
-} */

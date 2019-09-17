@@ -10,11 +10,7 @@ tags: [Design Pattern]
 
 Define
 ===
-```
-Creational Design Patterns are design patterns that
-deal with object creation mechanisms, trying to create
-objects in a manner suitabl to the situation.
-```
+> Creational Design Patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitabl to the situation.
 
 Basic Form
 ===
