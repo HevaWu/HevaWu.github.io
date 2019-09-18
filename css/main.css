@@ -193,7 +193,7 @@ a:hover {
   margin-left: 0em;
 }
 
-.post h2 {
+.post h2, .post h1 {
   margin-top: 0.5em;
 }
 
