@@ -15,9 +15,6 @@ When an application crashed, a `crash report` is created and stored on the devic
 # Symbolicating Crash Reports
 Crash reports with backtraces need to be `symbolicated` before being anlyzed. Symbolication replacec memory addresses with human-readable function names and line numbers.
 
-Here is the overview of the crash reporting and symbolicating process.
-<img src="/images/2019-05-13-Crash-Reports/overview.png" width="100%">
-
 ## Symbolicating Process
 1. Compiler translates the source code, it also generates debug symbols (which map each machine instruction in the comipled binary back to the line of source code from which it originated) -- Depending on the `Debug Information Format` build settings. These debug symbols are stored inside the binary or in a companion Debug Symbol(`dSYM`) file. By default, debug builds of an application store the debug symbols inside the compiled binary while release builds of an application store the debug symbols in a companion dSYM file to reduce the binary size. The Debug Symbol file and application binary are tied together on a per-build-basis by the build UUID. A new UUID is generated for each build of your application and uniquely identifies that build. Even if a functionally-identical executable is rebuilt from the same source code, with the same compiler settings, it will have a different build UUID. Debug Symbol files from subsequent builds, even from the same source files, will not interoperate with binaries from other builds.
 2. During archive, Xcode will gather the application binary along with the .dSYM file and store them at a location inside your home folder. You can find all of your archived applications in the Xcode Organizer under the "Archived" section.
@@ -62,9 +59,6 @@ However, if you use the iTunes Connect website to download the `.dSYM` files, op
 ```
 xcrun dsymutil -symbol-map ~/Library/Developer/Xcode/Archives/2017-11-23/MyGreatApp\ 11-23-17\,\ 12.00\ PM.xcarchive/BCSymbolMaps ~/Downloads/dSYMs/3B15C133-88AA-35B0-B8BA-84AF76826CE0.dSYM
 ```
-
-### Check if a Crash Report is Symbolicated
-<img src="/images/2019-05-13-Crash-Reports/symbolicate_report.png" width="100%">
 
 ## Symbolicating iOS Crash Reports with Xcode
 Xcode will automatically attempt to symbolicate all crash reports.
@@ -116,31 +110,32 @@ xcrun dwarfdump --uuid <Path to dSYM file>
 
 # Analyzing Crash Reports
 
+## Getting Crash Logs
 
-
-# Getting Crash Logs
 [Debugging Deployed iOS Apps](https://developer.apple.com/library/archive/qa/qa1747/_index.html)
 
 ### Getting Crash Logs Directly From a Device Without Xcode
 (It is not possible to get device console logs directly from a device)
-1) Open Settings app
-2) Go to Privacy, then Diagnostics & Usage
-3) Select Diagnostics & Usage Data
-4) Locate the log for the crashed app. The logs will be named in the format: <AppName>_<DateTime>_<DeviceName>
-5) Select the desired log. Then, using the text selection UI select the entire text of the log. Once the text is selected, tap Copy
-6) Paste the copied text to Mail and send to an email address as desired
+
+1. Open Settings app
+2. Go to Privacy, then Diagnostics & Usage
+3. Select Diagnostics & Usage Data
+4. Locate the log for the crashed app. The logs will be named in the format: <AppName>_<DateTime>_<DeviceName>
+5. Select the desired log. Then, using the text selection UI select the entire text of the log. Once the text is selected, tap Copy
+6. Paste the copied text to Mail and send to an email address as desired
 
 ### Getting Crash Logs and Console Output From a Device Using Xcode
 (Even though you won't be able to run the app in Xcode's debugger, Xcode can still give you all the information you need to debug the problem.)
-1) Plug in the device and open Xcode
-2) Choose Window -> Devices from the menu bar
-3) Under the DEVICES section in the left column, choose the device
-4) To see the device console, click the up-triangle at the bottom left of the right hand panel
-5) Click the down arrow on the bottom right to save the console as a file
-6) To see crash logs, select the View Device Logs button under the Device Information section on the right hand panel
-7) Find your app in the Process column and select the Crash log to see the contents.
-8) To save a crash log, right click the entry on the left column and choose "Export Log"
-9) Xcode 6 will also list low memory logs here. These will be shown with a Process name "Unknown" and Type "Unknown". You should examine the contents of these logs to determine whether any of these are caused by your app. For more information about low memory logs, see Understanding and Analyzing iOS Application Crash Reports.
+
+1. Plug in the device and open Xcode
+2. Choose Window -> Devices from the menu bar
+3. Under the DEVICES section in the left column, choose the device
+4. To see the device console, click the up-triangle at the bottom left of the right hand panel
+5. Click the down arrow on the bottom right to save the console as a file
+6. To see crash logs, select the View Device Logs button under the Device Information section on the right hand panel
+7. Find your app in the Process column and select the Crash log to see the contents.
+8. To save a crash log, right click the entry on the left column and choose "Export Log"
+9. Xcode 6 will also list low memory logs here. These will be shown with a Process name "Unknown" and Type "Unknown". You should examine the contents of these logs to determine whether any of these are caused by your app. For more information about low memory logs, see Understanding and Analyzing iOS Application Crash Reports.
 
 #### Reference
 [Technical Note TN2151: Understanding and Analyzing Application Crash Reports](https://developer.apple.com/library/archive/technotes/tn2151/_index.html)
