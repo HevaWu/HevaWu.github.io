@@ -1,4 +1,4 @@
-Blog example link: https://hevawu.github.io/test/2019/01/06/test-post.html
+Blog link: https://hevawu.github.io/blog.html
 
 Blog theme: use [Flex](http://the-development.github.io/flex/)
 
