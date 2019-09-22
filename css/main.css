@@ -213,7 +213,11 @@ a:hover {
   font-size: 17px;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
-  text-align: justify;
+  text-align: left;
+}
+
+.post img {
+  width: 100%;
 }
 
 .post ul, .post ol {
@@ -265,6 +269,10 @@ a:hover {
   background-image: url(../images/tag-and-category/category.png);
   padding-left: 1.4em;
   height: 1em;
+}
+
+.post .emoji  {
+  width: initial;
 }
 
 /*****************************************************************************/

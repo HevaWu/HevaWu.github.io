@@ -19,31 +19,34 @@ At first, I have a `TabBarController` based project.
 I could switch my view controllers (FirstViewController, SecondViewController) by using the tab bar.
 
 ## Add New Color Set
+
 - Open `Assets.xcassets`
 - Click `+` and choosing `New Color Set`, then you could naming it(I add a `TabBarItemLabelColor`)
 
-<img src="/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/color_set.png" width="100%">
+![color_set](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/color_set.png)
+
 - Under `Attributes Inspector`, set the `Color` params
 
 ## Use New Color Set
+
 - At `xib` file, we could directly select the color under `Attributes Inspector`
 
-<img src="/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/xib.png" width="100%">
+![xib](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/xib.png)
+
 - At coding part, we could directly call `UIColor(named: "TabBarItemLabelColor")` to use it
 
 ## Problems (Be Careful :bomb: )
+
 OK. Now back to our main point.
 
 ### If you are using `Named Color` at the `xib` file, please be carefule to change it at the coding part
-Since we add a new color set at the `Assets.xcassets`,
-so of course we could directly call it at the `xib` file.
+
+Since we add a new color set at the `Assets.xcassets`, so of course we could directly call it at the `xib` file.
 
 **But** If you will `rewrite` this variable in the later coding part.
 Then you should be careful.
 
-At the first, I thought we could rewrite the color at the code part where we want.
-(Same as before). However, I found my color is not updated (showing correctly)
-at the first time. :disappointed:
+At the first, I thought we could rewrite the color at the code part where we want. (Same as before). However, I found my color is not updated (showing correctly) at the first time. :disappointed:
 
 Then I try to find the reason.
 
@@ -87,12 +90,13 @@ Maybe reading the `color` from `Assets.xsassets` takes some time & calculation.
 
 At the `xib` file part, if we checking its code
 
-<img src="/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/text_color.png" width="100%">
+![text_color](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/text_color.png)
 
 So Xcode read the color by its `name`
 And in the `resources` part
 
-<img src="/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/resources.png" width="100%">
+![resources](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/resources.png)
+
 Xcode will try to find the `named Color` by reading its resources
 
 This `finding` might take some times.
@@ -105,6 +109,7 @@ So even we rewrite the label's color in it,
 it still be replaced by `xib` file `Named Color`
 
 ## Conclusion
+
 - If you are not using `Named Color` at the `xib` file part <- everything goes well
 - If you are using `Named Color` at the `xib` file
     - You will not change this color in the code part <- everythin goes well
@@ -113,6 +118,7 @@ it still be replaced by `xib` file `Named Color`
         - You could change the color at `viewDidAppear()` (If you find other places we could rewrite it, please tell me :+1: )
 
 ## At the end
+
 Thank you for the reading. Please feel free to tell me if I wrote anything wrong. :relaxed:
 
 #### Link

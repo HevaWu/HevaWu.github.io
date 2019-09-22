@@ -23,7 +23,7 @@ SDKs: macOS 10.15+
 Xcode: 11.0+
 ```
 
-<img src="/images/2019-07-26-Try-Vision-Sample-Code/classify_image.gif" width="100%">
+![classify_image.gif](/images/2019-07-26-Try-Vision-Sample-Code/classify_image.gif)
 
 ## Analyzing Image Similarity with Feature Print
 
@@ -31,7 +31,7 @@ This is sample project for checking how silimarity between several pictures.
 Sorry I didn't update my device to iOS 13.
 So the only thing I could attach at here is the video-cut from WWDC video.
 
-<img src="/images/2019-07-26-Try-Vision-Sample-Code/image_similarity.gif" width="100%">
+![image_similarity.gif](/images/2019-07-26-Try-Vision-Sample-Code/image_similarity.gif)
 
 ## Highlighting Areas of Interest in an Image Using Saliency
 
@@ -42,4 +42,4 @@ After selecting the picture you want to anlyze, `Rects` cut the saliency bound,
 and `Mask` give us the saliency masks. `Combind` means combine the bounds & masks,
 which will show the saliency area above the picture.
 
-<img src="/images/2019-07-26-Try-Vision-Sample-Code/highlight_image_saliency.gif" width="100%">
+![highlight_image_saliency.gif](/images/2019-07-26-Try-Vision-Sample-Code/highlight_image_saliency.gif)
