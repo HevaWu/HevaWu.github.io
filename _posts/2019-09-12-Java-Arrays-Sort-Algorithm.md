@@ -34,7 +34,7 @@ The idea of dual pivot quick sort is to take two pivots. One in the left end of 
 
 Dual pivot quick sort is typlically faster than traditional single pivot quicksort. This algorithm offers `O(n log(n))` performance on many data sets that cause other quicksorts to degrade to quadratic performance.
 
-<img src="/images/2019-09-12-Java-Arrays-Sort-Algorithm/dual_pivot_quick_sort.png" width="100%">
+![dual_pivot_quick_sort](/images/2019-09-12-Java-Arrays-Sort-Algorithm/dual_pivot_quick_sort.png)
 
 ### Reference
 
