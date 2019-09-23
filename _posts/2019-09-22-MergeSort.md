@@ -44,8 +44,8 @@ for i = 1 to n1
   L[i] = A[p + i - 1]
 for j = 1 to n2
   R[j] = A[q+j]
-L[n1+1] = Infinite <- sentry
-R[n2+1] = Infinite <- sentry
+L[n1+1] = $\infty$ <- sentry
+R[n2+1] = $\infty$ <- sentry
 i = 1
 j = 1
 for k = p to r
@@ -67,4 +67,4 @@ if p < r
 
 ## Time Complexity
 
-The time complexity of `Merge Sort` is `O(n log2(n))`. 
+The time complexity of `Merge Sort` is $O(nlog_{2}n)$. 
