@@ -122,7 +122,27 @@ The steps of this function is:
 - check if current cgimage is a 8 bpc image, if it is, pass it
 - for others(for our case, it would only 16 bpc here), use `UIGraphicsBeginImageContextWithOptions` to generate a context, and draw the current image on it. **Note:** since we are drawing a cgimage at here, we need to manually flip this image, otherwise, it will auto-flip vertically which I actually didn't know why.
 
-Because it need to pass the `size` & `scale` params, so if we want to resize the image, we could also change these 2 params by the code.
+Because it need to pass the `size` & `scale` params, so if we want to resize the image, we could also change these 2 params by the code. For example:
+
+```swift
+extension UIImage {
+    func resize(size _size: CGSize) -> UIImage? {
+        let widthRatio = _size.width / size.width
+        let heightRatio = _size.height / size.height
+        let ratio = widthRatio < heightRatio ? widthRatio : heightRatio
+
+        let resizedSize = CGSize(width: size.width * ratio, height: size.height * ratio)
+
+        // resize the image
+        UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
+        draw(in: CGRect(origin: .zero, size: resizedSize))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return resizedImage
+    }
+}
+```
 
 After using this function to generate the cgimage, we could use this cgimage to create the mask context. Since current context is also the 8 bpc one, the mask problem will be solved.
 
