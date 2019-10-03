@@ -4,8 +4,8 @@ title: Debug UIViewAlertForUnsatisfiableConstraints
 date: 2019-05-27 16:04:00
 comments: true
 disqus_category_id: iOSLoggingSystemOSLog
-categories: [iOS, Layout, Constraint]
-tags: [iOS, Layout Constraint]
+categories: [iOS, Layout]
+tags: [Layout Constraint]
 ---
 
 When we update our app's UI, sometimes we might got this layout warning like this:

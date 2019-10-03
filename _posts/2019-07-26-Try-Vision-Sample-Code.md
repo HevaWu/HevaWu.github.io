@@ -5,7 +5,7 @@ date: 2019-07-26 12:33:00
 comments: true
 disqus_category_id: TryVisionSampleCode
 categories: [iOS, Vision, Sample Code]
-tags: [iOS, Vision]
+tags: [Vision]
 ---
 
 WWDC 2019 Introduce the `Vision` Framework.

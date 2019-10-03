@@ -4,8 +4,8 @@ title: Dispatch Group
 date: 2019-02-19 19:19:00
 comments: true
 disqus_category_id: DispatchGroup
-categories: [iOS, Dispatch]
-tags: [iOS, Dispatch, Dispatch Group]
+categories: [iOS, Async]
+tags: [DispatchGroup, Async]
 ---
 
 ## Introduction
