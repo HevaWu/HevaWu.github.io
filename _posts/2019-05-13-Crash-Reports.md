@@ -4,8 +4,8 @@ title: Crash Reports
 date: 2019-05-13 16:04:00
 comments: true
 disqus_category_id: DesignPatternPARTICreationalPatterns
-categories: [iOS, XCode, Crash Reports, Debug]
-tags: [iOS, XCode, Crash Reports, Debug]
+categories: [iOS, Xcode]
+tags: [Crash Reports, Debug]
 ---
 
 As an app developer, not only deploy the product, we also need to be able to analyze the crash log. And find a way to fix the crashes.

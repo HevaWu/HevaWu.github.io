@@ -5,7 +5,7 @@ date: 2019-06-07 14:35:00
 comments: true
 disqus_category_id: VisionFramework
 categories: [iOS, Image Processing, Vision]
-tags: [iOS, Image Processing, Vision]
+tags: [Image Processing, Vision]
 ---
 
 Since WWDC 2018, Apple introduces the `Vision` Framework.
@@ -43,10 +43,10 @@ Here is an example image:
 
 ## Heatmap
 
-Use 
+Use
 
-- `VNGenerateAttensionBasedSaliencyImageRequest` 
-- `VNGenerateObjectnessBasedSaliencyImageRequest` 
+- `VNGenerateAttensionBasedSaliencyImageRequest`
+- `VNGenerateObjectnessBasedSaliencyImageRequest`
 
 to generate the image with the highlight picture. The highlight part is covered by a heatmap, which point out the Saliency part.
 

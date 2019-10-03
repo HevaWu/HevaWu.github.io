@@ -4,7 +4,7 @@ title: Merge Sort
 date: 2019-09-22 23:19:00
 comments: true
 disqus_category_id: MergeSort
-categories: [Algorithm, Merge Sort, Divide And Conquer Algorithm]
+categories: [Algorithm, Sort]
 tags: [Algorithm, Sort, Merge Sort, Divide And Conquer Algorithm]
 ---
 
@@ -67,4 +67,4 @@ if p < r
 
 ## Time Complexity
 
-The time complexity of `Merge Sort` is $O(nlog_{2}n)$. 
+The time complexity of `Merge Sort` is $O(nlog_{2}n)$.

@@ -5,7 +5,7 @@ date: 2019-02-14 16:49:00
 comments: true
 disqus_category_id: EmojiUnicodeMemo
 categories: [Github, Emoji]
-tags: [Github, Emoji, Unicode]
+tags: [Unicode]
 ---
 
 ## People

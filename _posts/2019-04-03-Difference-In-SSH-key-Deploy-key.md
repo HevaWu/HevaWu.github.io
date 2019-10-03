@@ -5,7 +5,7 @@ date: 2019-04-03 16:30:00
 comments: true
 disqus_category_id: DifferenceInSSHKeys&DeployKeys
 categories: [Github]
-tags: [Github]
+tags: [SSH, Deploy Key]
 ---
 
 We always have many repository in Github.

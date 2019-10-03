@@ -5,7 +5,7 @@ date: 2019-09-20 12:15:00
 comments: true
 disqus_category_id: GPUFrameCaptureError
 categories: [Xcode, Error]
-tags: [Xcode, Error, GPU Frame Capture Error]
+tags: [Xcode, GPU Frame Capture Error]
 ---
 
 Here is one problem I met when build the project.

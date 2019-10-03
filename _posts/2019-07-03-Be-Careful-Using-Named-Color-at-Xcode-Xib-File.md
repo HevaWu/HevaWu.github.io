@@ -4,8 +4,8 @@ title: Be Careful Using `Named Color` at Xcode Xib File
 date: 2019-07-03 15:30:00
 comments: true
 disqus_category_id: BeCarefulUsingNamedColorAtXcodeXibFile
-categories: [iOS, Xcode, XIB, Named Color]
-tags: [iOS, Xcode, XIB, Named Color]
+categories: [iOS, Xcode]
+tags: [xib, Named Color]
 ---
 
 At WWDC 2019, Apple introduced the nice dark mode color settings.
