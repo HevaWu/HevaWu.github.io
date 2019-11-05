@@ -96,7 +96,7 @@ final class BackgroundTimer {
     private var block: (Timer) -> Void
     private let duration: TimeInterval
 
-    private let backgroundQueue = DispatchQueue(label: "backgroundQueue")
+    private let backgroundQueue = DispatchQueue(label: "backgroundQueue", attributes: .concurrent)
 
     init(duration: TimeInterval, block: @escaping (Timer) -> Void) {
         self.duration = duration
@@ -106,7 +106,7 @@ final class BackgroundTimer {
     func schedule() {
         backgroundQueue.async { [weak self] in
             guard let self = self else {
-                print("[BackgroundTimer] self is nil ... ")
+                NSLog("[BackgroundTimer] self is nil ... ")
                 return
             }
             NSLog("[BackgroundTimer] Will be scheduled ... ")
@@ -181,9 +181,67 @@ This time it works well !!! 🎉
 
 There is another way to implement this things which would be using `GCD Timer`. Grand Central Dispatch provide a easy way to create a timer: `DispatchSourceTimer`.
 
+Let's create a `GCDTimer` first:
 
+```swift
+final class GCDTimer {
+    private lazy var timer: DispatchSourceTimer? = {
+        let timer = DispatchSource.makeTimerSource(queue: gcdQueue)
+        timer.schedule(deadline: .now() + self.duration, repeating: self.duration)
+        timer.setEventHandler { [weak self] in
+            NSLog("[GCDTimer] Timer Prepare Scheduled")
+            self?.block?()
+        }
+        return timer
+    }()
 
+    private var block: (() -> Void)?
+    private let duration: TimeInterval
+    private let gcdQueue = DispatchQueue(label: "GCDTimerQueue", attributes: .concurrent)
 
+    init(duration: TimeInterval, block: @escaping () -> Void) {
+        self.duration = duration
+        self.block = block
+    }
+
+    func schedule() {
+        if timer == nil {
+            NSLog("[GCDTimer] Timer is nil")
+            return
+        }
+        NSLog("[GCDTimer] Timer will be scheduled")
+        timer?.resume()
+    }
+}
+```
+
+And call it in the `ViewController.swift` as:
+
+```swift
+gcdTimer =  GCDTimer(duration: 3.0, block: gcdTimerFiredBlock)
+gcdTimer?.schedule()
+
+    func gcdTimerFiredBlock() -> Void {
+        NSLog("[GCDTimer] Timer Fired")
+    }
+```
+
+Run it! And the print out would be:
+
+```swift
+2019-11-05 12:18:34.477133+0900 TestNSTimer[93375:18349565] [GCDTimer] Timer will be scheduled
+2019-11-05 12:18:37.477677+0900 TestNSTimer[93375:18349715] [GCDTimer] Timer Prepare Scheduled
+2019-11-05 12:18:51.046441+0900 TestNSTimer[93375:18349715] [GCDTimer] Timer Fired
+2019-11-05 12:18:51.046826+0900 TestNSTimer[93375:18349715] [GCDTimer] Timer Prepare Scheduled
+2019-11-05 12:18:51.047035+0900 TestNSTimer[93375:18349715] [GCDTimer] Timer Fired
+2019-11-05 12:18:52.477717+0900 TestNSTimer[93375:18349716] [GCDTimer] Timer Prepare Scheduled
+2019-11-05 12:18:52.478171+0900 TestNSTimer[93375:18349716] [GCDTimer] Timer Fired
+```
+
+It runs well!!! 🎉
+
+You could also find all of the source code at:
+https://github.com/HevaWu/TestNSTimer
 
 #### Reference
 https://developer.apple.com/documentation/foundation/nstimer?language=objc
