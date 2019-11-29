@@ -5,7 +5,7 @@ date: 2019-05-27 16:04:00
 comments: true
 disqus_category_id: iOSLoggingSystemOSLog
 categories: [iOS, Layout]
-tags: [Layout Constraint]
+tags: [Constraint]
 ---
 
 When we update our app's UI, sometimes we might got this layout warning like this:

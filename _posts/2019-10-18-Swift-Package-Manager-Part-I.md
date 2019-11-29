@@ -4,7 +4,7 @@ title: Swift Package Manager -- PART I
 date: 2019-10-18 15:29:00
 comments: true
 disqus_category_id: SwiftPackageManagerPARTI
-categories: [iOS, SPM, Xcode, Swift]
+categories: [iOS, Xcode, Swift]
 tags: [SPM, Xcode]
 ---
 

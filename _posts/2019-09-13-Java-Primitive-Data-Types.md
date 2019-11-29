@@ -4,8 +4,8 @@ title: Java Primitive Data Types
 date: 2019-09-13 14:22:00
 comments: true
 disqus_category_id: JavaPrimitiveDataTypes
-categories: [Java, Primitive Data]
-tags: [Java, Primitive Data]
+categories: [Java]
+tags: [Primitive Data]
 ---
 
 List of Java's primitive data types
