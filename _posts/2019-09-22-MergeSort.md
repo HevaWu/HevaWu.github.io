@@ -5,7 +5,7 @@ date: 2019-09-22 23:19:00
 comments: true
 disqus_category_id: MergeSort
 categories: [Algorithm, Sort]
-tags: [Algorithm, Sort, Merge Sort, Divide And Conquer Algorithm]
+tags: [Merge Sort, Divide And Conquer Algorithm]
 ---
 
 ## Divide And Conquer Algorithem

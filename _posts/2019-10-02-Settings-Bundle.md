@@ -4,8 +4,8 @@ title: Settings Bundle
 date: 2019-10-02 18:15:00
 comments: true
 disqus_category_id: SettingsBundle
-categories: [Settings, Bundle]
-tags: [Settings, Bundle, Licenses]
+categories: [iOS, Settings, Bundle]
+tags: [Licenses]
 ---
 
 ## Introduction

@@ -5,7 +5,7 @@ date: 2019-09-17 13:56:00
 comments: true
 disqus_category_id: SwiftVSJava
 categories: [Java, Swift, C++]
-tags: [Java, Swift, C++]
+tags: [VS]
 ---
 
 Java might be easy to learn first. Since Java code follows very standardized coding styles. It is fewer questions about how to implement somthing as the programming styles and patterns are well established and consistent.

@@ -4,8 +4,8 @@ title: Java Arrays Sort Algorithm
 date: 2019-09-12 10:57:00
 comments: true
 disqus_category_id: JavaArraysSortAlgorithm
-categories: [Sort, Java, Arrays]
-tags: [Sort, Java, Arrays, Dual Pivot Quick Sort, Merge Sort]
+categories: [Sort, Java]
+tags: [Arrays, Dual Pivot Quick Sort, Merge Sort]
 ---
 
 `java.util.Arrays` uses

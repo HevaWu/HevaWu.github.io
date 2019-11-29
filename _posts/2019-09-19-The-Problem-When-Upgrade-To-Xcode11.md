@@ -4,8 +4,8 @@ title: The Problem When Upgrade to use Xcode 11 GM
 date: 2019-09-17 13:56:00
 comments: true
 disqus_category_id: TheProblemWhenUpgradeToUseXcode11GM
-categories: [Xcode]
-tags: [Xcode11, Swift, Upgrade]
+categories: [Xcode, Swift]
+tags: [Xcode11, Upgrade]
 ---
 
 When I tried to update to use Xcode 11 GM, there are some problems I met. And I want to share the problems and solutions.

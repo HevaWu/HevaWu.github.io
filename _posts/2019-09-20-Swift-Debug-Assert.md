@@ -5,7 +5,7 @@ date: 2019-09-20 14:36:00
 comments: true
 disqus_category_id: SwiftDebugAssert
 categories: [Swift, Debug]
-tags: [Swift, Debug]
+tags: [Assert(_:_:file:line:)]
 ---
 
 I just notice Swift has this function, which could stop the project when condition is failed.
