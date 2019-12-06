@@ -220,6 +220,10 @@ a:hover {
   width: 100%;
 }
 
+.post img[src*="#simulator"] {
+  width:300px;
+}
+
 .post ul, .post ol {
   margin-left: 2.35em;
   margin-bottom: 1.25em;
