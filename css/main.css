@@ -193,7 +193,7 @@ a:hover {
   margin-left: 0em;
 }
 
-.post h2, .post h1 {
+.post h1, .post h2, .post h3, .post h4 {
   margin-top: 0.5em;
 }
 
@@ -211,8 +211,8 @@ a:hover {
 .post p {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 17px;
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   text-align: left;
 }
 
