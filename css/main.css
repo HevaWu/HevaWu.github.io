@@ -195,6 +195,7 @@ a:hover {
 
 .post h1, .post h2, .post h3, .post h4 {
   margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .post a:hover {
