@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: #8085C1;
+  color: rgb(7, 108, 148);
   text-decoration: none;
   border: none;
 }
@@ -104,39 +104,48 @@ a:hover {
   display: inline-block;
   text-align: center;
   line-height: 25px;
+  opacity: 1;
 }
 
 .tagline {
   width: 100%;
-  color: #f7faff;
-  font-weight: 600;
+  color: #3c4d00;
+  font-weight: 999;
   text-align: center;
   margin-top: 0.5em;
+  margin-bottom: 3em;
   display: block;
+  opacity: 1;
 }
 
 .motto {
   width: 100%;
-  color: #d9dee0;
-  font-weight: 100;
+  color: #3c4d00;
+  font-weight: 800;
+  line-height: 1.25em;
+  margin-bottom: 1.25em;
   text-align: center;
-  margin-top: 0.5em;
   display: block;
+  opacity: 1;
 }
 
 .sidebar-info {
   border-top: 1px solid #e7e7e7;
-  margin-top: 1em;
-  padding-top: 1.5em;
+  margin-top: 1.25em;
+  padding-top: 1.25em;
   padding-bottom: 1.25em;
 }
 
 .sidebar-info li {
   list-style-type: none;
   text-align: center;
-  line-height: 1.75em;
-  font-weight: bold;
-  color:
+  line-height: 3em;
+  opacity: 1;
+}
+
+.sidebar-info li a, .footer a {
+  color: #3c4d00;
+  font-weight: 800;
 }
 
 .footer {
@@ -147,6 +156,7 @@ a:hover {
   overflow: hidden;
   float: center;
   text-align: center;
+  opacity: 1;
 }
 
 /*****************************************************************************/
@@ -305,6 +315,7 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: transparent;
+  opacity: 0.9;
 }
 
 .content {
