@@ -301,7 +301,6 @@ a:hover {
 }
 
 .sidebar {
-  position: absolute;
   float: left;
   width: 14%;
   padding-left: 11em;
