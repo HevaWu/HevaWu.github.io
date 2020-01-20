@@ -4,7 +4,7 @@ title: Vision Framework
 date: 2019-06-07 14:35:00
 comments: true
 disqus_category_id: VisionFramework
-categories: [iOS, Image Processing, Vision, CoreML]
+categories: [iOS, WWDC2019, Image Processing, Vision, CoreML]
 tags: [Saliency, Taxonomy, Landmarks]
 ---
 
