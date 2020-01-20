@@ -24,7 +24,7 @@ Then it appears another error 🤯
 
 ![rubyHeader](/images/2019-12-20-Fix-Cannot-Find-Header-Files-For-Ruby-Error/rubyHeader.png)
 
-So, by reading the error description, it looks like there is some problems on my ruby settings. But when I checked, I found it is a `MocOS 10.14` specific error. 🙁
+So, by reading the error description, it looks like there is some problems on my ruby settings. But when I checked, I found it is a `MacOS 10.14` specific error. 🙁
 
 It looks like some development files got moved, or stopped getting installed by some reason ...
 
