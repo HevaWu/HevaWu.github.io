@@ -47,6 +47,14 @@ After adding it, the next step is changing its content. By open it with source c
 
 It is easily to test it by just adding a new file into the project. It should be able to see ~
 
+By putting it to different places, it will be applied to different group, you could simply check this list:
+
+> - Project user data: <ProjectName>.xcodeproj/xcuserdata/[username].xcuserdatad/IDETemplateMacros.plist.
+> - Project shared data: <ProjectName>.xcodeproj/xcshareddata/IDETemplateMacros.plist
+> - Workspace user data: <WorkspaceName>.xcworkspace/xcuserdata/[username].xcuserdatad/IDETemplateMacros.plist.
+> - Workspace shared data: <WorkspaceName>.xcworkspace/xcshareddata/IDETemplateMacros.plist.
+> - User Xcode data: ~/Library/Developer/Xcode/UserData/IDETemplateMacros.plist.
+
 For more complicated, such as: change date format OR change copyright. [Here](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/dev7fe737ce0) is a guide for text macros ~ 🎉
 
 #### Reference
