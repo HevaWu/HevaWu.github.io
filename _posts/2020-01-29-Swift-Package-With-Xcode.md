@@ -74,6 +74,12 @@ If we have the same package for the local one and the remote one, local one will
 - SPM
 - xcodebuild
 
+## How Swift Packages works in Xcode
+
+Project consists of source files. The packages are also source files. Xcode take all of these source files and compiles them. It particullaly compile the package code in compatible way. It will recompile it multiple times if needed, then it links it in and combines all of that into the application.
+
+Package libraries are static by default, so all the code is linked together.
+
 #### Reference
 
 https://developer.apple.com/videos/play/wwdc2019/408/
