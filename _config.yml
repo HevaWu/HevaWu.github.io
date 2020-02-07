@@ -23,6 +23,10 @@ nav:
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
+# Fix archieve 
+category_archive_path: "/blog/categories/#"
+tag_archive_path: "/blog/tags/#"
+
 comments:
 provider: "disqus"
 disqus:
