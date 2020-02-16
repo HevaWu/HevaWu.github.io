@@ -35,6 +35,31 @@ namesOfIntegers = [:]
 var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 ```
 
+## Default
+
+```swift
+var responseMessages = [200: "OK",
+                        403: "Access forbidden",
+                        404: "File not found",
+                        500: "Internal server error"]
+
+let httpResponseCodes = [200, 403, 301]
+for code in httpResponseCodes {
+    let message = responseMessages[code, default: "Unknown response"]
+    print("Response \(code): \(message)")
+}
+// Prints "Response 200: OK"
+// Prints "Response 403: Access Forbidden"
+// Prints "Response 301: Unknown response"
+
+let message = "Hello, Elle!"
+var letterCounts: [Character: Int] = [:]
+for letter in message {
+    letterCounts[letter, defaultValue: 0] += 1
+}
+// letterCounts == ["H": 1, "e": 2, "l": 4, "o": 1, ...]
+```
+
 ## More function
 
 ```swift
@@ -109,3 +134,4 @@ let airportNames = [String](airports.values)
 #### References
 
 https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html
+https://developer.apple.com/documentation/swift/dictionary/2894528-subscript
