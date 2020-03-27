@@ -10,7 +10,7 @@ tags: [NSTimer]
 
 ## Timer Types
 
-Timer allows to repeat tasks in time interval. There are multiple types for timer: (referenced from: https://medium.com/@danielemargutti/the-secret-world-of-nstimer-708f508c9eb)
+Timer allows to repeat tasks in time interval. There are multiple types for timer: (referenced from: <https://medium.com/@danielemargutti/the-secret-world-of-nstimer-708f508c9eb)>
 
 - **[Real-time clock or RTC](https://en.wikipedia.org/wiki/Real-time_clock)** : The computer clock that keeps track of the current time, user can change this clock and the NTP(Network Time Protocol) keep it in sync with an external reference. Its value increases by one second per real second but sometimes it may run faster/slower or jump forward when it attempts to sync with the external source.
 - **Monotonic Timer** Its a counter incremented by a physical signal sent to the CPU using a ntimer interrupt. On Apple platforms this value is returned by the Mach kernel via mach_abosolute_time(). Returned value is `dependent by the CPU` so you can't just multiply it by a constant to get a real world value. rather, you should call a system-provided conversion function to convert it to a real world value(CoreAnimation has a convenient method for that: CACurrentMediaTime()). The fact it gets reset on boot make it not so interesting to get how much time has elapsed in real world, however its the most precise way to measure difference between 2 intervals.
@@ -241,10 +241,10 @@ Run it! And the print out would be:
 It runs well!!! 🎉
 
 You could also find all of the source code at:
-https://github.com/HevaWu/TestNSTimer
+<https://github.com/HevaWu/TestNSTimer>
 
 #### Reference
 
-https://developer.apple.com/documentation/foundation/nstimer?language=objc
+<https://developer.apple.com/documentation/foundation/nstimer?language=objc>
 
-https://medium.com/@danielemargutti/the-secret-world-of-nstimer-708f508c9eb
+<https://medium.com/@danielemargutti/the-secret-world-of-nstimer-708f508c9eb>

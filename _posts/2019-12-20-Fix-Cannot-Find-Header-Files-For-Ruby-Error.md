@@ -62,4 +62,5 @@ sudo gem install json -v '2.3.0' --source 'https://rubygems.org/'
 TADA! Success!! 🥳
 
 #### Reference
-https://github.com/castwide/vscode-solargraph/issues/78
+
+<https://github.com/castwide/vscode-solargraph/issues/78>

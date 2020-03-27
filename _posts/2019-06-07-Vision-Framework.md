@@ -27,6 +27,7 @@ Objectness Based
 - Trained on object segmentation
 
 Here is an example image:
+
 - The first picture is the original picture
 - The second is attention based picture
 - The third is objectness based picture

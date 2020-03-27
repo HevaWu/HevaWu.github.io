@@ -68,5 +68,6 @@ Make sure you have made swift available in yout path. Once available, you could 
 
 #### Reference
 
-https://swift.org/getting-started/#using-the-package-manager
-https://swift.org/package-manager/
+<https://swift.org/getting-started/#using-the-package-manager>
+
+<https://swift.org/package-manager/>

@@ -108,4 +108,4 @@ for (index, value) in shoppingList.enumerated() {
 
 #### Reference
 
-https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html
+<https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html>

@@ -174,4 +174,4 @@ NSWorkspace.shared.open(url, configuration: configuration) {
 
 #### Reference
 
-https://developer.apple.com/videos/play/wwdc2019/717/
+<https://developer.apple.com/videos/play/wwdc2019/717/>

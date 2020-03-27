@@ -31,4 +31,4 @@ You may use an autorelease pool block inside the loop to dispose of those object
 
 #### Reference
 
-https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmAutoreleasePools.html
+<https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmAutoreleasePools.html>

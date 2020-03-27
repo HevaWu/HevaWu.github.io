@@ -47,8 +47,8 @@ Since `InsertionSort` & `MergeSort` are stable, so `TimSort` are also stable. It
 
 #### References
 
-https://developer.apple.com/documentation/swift/array/1688499-sort
+<https://developer.apple.com/documentation/swift/array/1688499-sort>
 
-https://github.com/apple/swift/blob/master/test/Prototypes/IntroSort.swift
+<https://github.com/apple/swift/blob/master/test/Prototypes/IntroSort.swift>
 
-https://en.wikipedia.org/wiki/Timsort
+<https://en.wikipedia.org/wiki/Timsort>

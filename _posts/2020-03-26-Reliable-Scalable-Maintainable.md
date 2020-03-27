@@ -4,8 +4,8 @@ title: Reliable Scalable & Maintainable
 date: 2020-03-26 21:11:00
 comments: true
 disqus_category_id: ReliableScalableMaintainable
-categories: [DataSystems, DataIntensive]
-tags: [Tree]
+categories: [DataSystems, SystemDesign]
+tags: [DataIntensive]
 ---
 
 ## Overview
@@ -87,7 +87,8 @@ Consider the increased load: perhaps the system has grown from 10,000 concurrent
 Load can be described with `load parameters`.
 
 Example:
-```
+
+```markdown
 Take Twitter as an example, Twitter have two main operations:
 
 - Post Tweet: A user can publish a new message to their followers (4.6k requests/sec on average, over 12k requests/sec at peak).
@@ -128,10 +129,11 @@ Usually it is `better` to use `percentiles`. If you take your list of response t
 
 You could also check how bad your outliers by looking at higher percentiles: the 95th, 99th, and 99.9th(abbreviated p95, p99, p99.9) are common.
 
-High percentiles of response time also know as `tail latencies`, are important because they directly affect users’ experience of the service. 
+High percentiles of response time also know as `tail latencies`, are important because they directly affect users’ experience of the service.
 
-Example: 
-```
+Example:
+
+```markdown
 Amazon describes response time requirements for internal services in terms of the 99.9th percentile, even though it only affects 1 in 1,000 requests. This is because the customers with the slowest requests are often those who have the most data on their accounts because they have made many purchases—that is, they’re the most valuable customers. It’s important to keep those customers happy by ensuring the website is fast for them: Amazon has also observed that a 100 ms increase in response time reduces sales by 1%, and others report that a 1-second slowdown reduces a customer satisfaction metric by 16%
 ```
 
@@ -141,7 +143,7 @@ Queueing delays often account for a large part of the response time at high perc
 
 Example:
 
-```
+```markdown
 High percentiles become especially important in backend services that are called multiple times as part of serving a single end-user request. Even if you make the calls in parallel, the end-user request still needs to wait for the slowest of the parallel calls to complete. It takes just one slow call to make the entire end-user request slow. Even if only a small percentage of backend calls are slow, the chance of getting a slow call increases if an end-user request requires multiple backend calls, and so a higher proportion of end-user requests end up being slow (an effect known as tail latency amplification).
 
 If you want to add response time percentiles to the monitoring dashboards for your services, you need to efficiently calculate them on an ongoing basis. For example, you may want to keep a rolling window of response times of requests in the last 10 minutes. Every minute, you calculate the median and various percentiles over the values in that window and plot those metrics on a graph.
@@ -194,11 +196,11 @@ Data system can do various things to make routine tasks easy:
 
 ### Simplicity: Managing Complexity
 
-A software project mired in complexity is sometimes described as `a big ball of mud`. There are various possible symptoms of complexity: explosion of the state space, tight coupling of modules, tangled dependencies, inconsistent naming and terminology, hacks aimed at solving performance problems, special-casing to work around issues elsewhere, and many more. 
+A software project mired in complexity is sometimes described as `a big ball of mud`. There are various possible symptoms of complexity: explosion of the state space, tight coupling of modules, tangled dependencies, inconsistent naming and terminology, hacks aimed at solving performance problems, special-casing to work around issues elsewhere, and many more.
 
 Making a system simpler does not necessarily mean reducing its functionality; it can also mean removing `accidental` complexity. One of the best tools we have for removing accidental complexity is `abstraction`. A good abstraction can hide a great deal of implementation detail behind a clean, simple-to-understand façade. A good abstraction can also be used for a wide range of different applications. Not only is this reuse more efficient than reimplementing a similar thing multiple times, but it also leads to higher-quality software, as quality improvements in the abstracted component benefit all applications that use it.
 
-```
+```markdown
 For example, high-level programming languages are abstractions that hide machine code, CPU registers, and syscalls. SQL is an abstraction that hides complex on-disk and in-memory data structures, concurrent requests from other clients, and inconsistencies after crashes. Of course, when programming in a high-level language, we are still using machine code; we are just not using it directly, because the programming language abstraction saves us from having to think about it.
 ```
 
@@ -220,4 +222,4 @@ There is unfortunately no easy fix for making applications reliable, scalable, o
 
 #### Reference
 
-https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321
+<https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321>

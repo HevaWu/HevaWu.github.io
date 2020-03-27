@@ -47,4 +47,5 @@ Swift often referred to as "Objective-C, without the C", Swift language is in ma
 - Lack of support for earlier iOS versions: we could only use Swift in the apps that target iOS7 and later.
 
 #### Reference
-https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-swift-programming-language/
+
+<https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-swift-programming-language/>

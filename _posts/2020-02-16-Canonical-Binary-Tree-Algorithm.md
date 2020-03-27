@@ -26,5 +26,6 @@ The function processes all nodes in what is called a preorder traversal, where t
 
 #### Reference
 
-https://en.wikipedia.org/wiki/Canonical_form
-http://www.cs.yale.edu/homes/aspnes/pinewiki/BinaryTrees.html
+<https://en.wikipedia.org/wiki/Canonical_form>
+
+<http://www.cs.yale.edu/homes/aspnes/pinewiki/BinaryTrees.html>

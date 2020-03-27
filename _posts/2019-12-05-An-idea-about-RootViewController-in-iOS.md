@@ -263,4 +263,5 @@ Until now, all of our logic are added. You could check the result would be like 
 By using this method, you could simply check your current application root by using `AppDelegate.shared.rootViewController`. And if you want, you could also add more logic on the redirect part. OR you could add any transfer animation at the switch part~ 🎉
 
 #### Project link
-https://github.com/HevaWu/RootViewControllerNavigation
+
+<https://github.com/HevaWu/RootViewControllerNavigation>

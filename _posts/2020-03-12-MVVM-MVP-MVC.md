@@ -64,8 +64,8 @@ Declarative data and command-binding are implicit in the MVVM pattern. In the Mi
 
 #### References
 
-https://en.wikipedia.org/wiki/Model–view–controller
+<https://en.wikipedia.org/wiki/Model–view–controller>
 
-https://en.wikipedia.org/wiki/Model–view–presenter
+<https://en.wikipedia.org/wiki/Model–view–presenter>
 
-https://en.wikipedia.org/wiki/Model–view–viewmodel
+<https://en.wikipedia.org/wiki/Model–view–viewmodel>

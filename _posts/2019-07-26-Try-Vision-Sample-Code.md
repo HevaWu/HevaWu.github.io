@@ -18,7 +18,8 @@ How exciting! Let's try it!
 This is sample project for labeling/categorizing the giving images.
 
 ### Requirements
-```
+
+```s
 SDKs: macOS 10.15+
 Xcode: 11.0+
 ```

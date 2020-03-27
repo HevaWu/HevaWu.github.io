@@ -57,4 +57,4 @@ The numbers with a fractional component. Floating-point types can represent much
 
 #### References
 
-https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
+<https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html>

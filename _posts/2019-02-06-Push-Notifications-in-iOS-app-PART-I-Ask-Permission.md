@@ -11,8 +11,9 @@ tags: [Push Notification]
 This article only discuss about the `Asking Permission part for Local Notifications`. I will discuss the remain part & `Remote Notifications` part in the future article.
 
 Here is the guide link from Apple document, if you have time, I would suggest to read it :blush:
-- User Notifications: https://developer.apple.com/documentation/usernotifications
-- User Notifications - Asking permission to use notifications: https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications
+
+- User Notifications: <https://developer.apple.com/documentation/usernotifications>
+- User Notifications - Asking permission to use notifications: <https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications>
 
 Come back to the topic. I want to show you how it would work.
 

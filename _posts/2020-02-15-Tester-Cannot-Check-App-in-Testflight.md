@@ -14,7 +14,7 @@ After researching, we found there are lots of people met the same problem, and [
 
 ## Solution
 
-- Update the `Info.plist` by https://developer.apple.com/documentation/security/complying_with_encryption_export_regulations
+- Update the `Info.plist` by <https://developer.apple.com/documentation/security/complying_with_encryption_export_regulations>
 	- By setting the `ITSAppUsesNonExemptEncryption` key, it works!!! 🎉
 - Rebuild
 
@@ -22,4 +22,4 @@ Still no idea why this happens, maybe Apple change some export compliance automa
 
 #### Reference
 
-https://forums.developer.apple.com/thread/128878
+<https://forums.developer.apple.com/thread/128878>

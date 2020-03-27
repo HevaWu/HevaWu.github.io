@@ -307,4 +307,4 @@ extension MutableCollection {
 
 #### Reference
 
-https://github.com/apple/swift-evolution/blob/master/proposals/0202-random-unification.md
+<https://github.com/apple/swift-evolution/blob/master/proposals/0202-random-unification.md>

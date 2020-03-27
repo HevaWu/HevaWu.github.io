@@ -63,6 +63,6 @@ print(String(v, radix: 16, uppercase: true))
 
 #### Reference
 
-https://developer.apple.com/documentation/swift/string/2997127-init
+<https://developer.apple.com/documentation/swift/string/2997127-init>
 
-https://developer.apple.com/documentation/swift/int/2924481-init
+<https://developer.apple.com/documentation/swift/int/2924481-init>

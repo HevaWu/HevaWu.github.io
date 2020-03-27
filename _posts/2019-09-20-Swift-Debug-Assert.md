@@ -38,4 +38,5 @@ default for Xcode's Debug configuation
 So we could use it safely in our code :smile:
 
 #### Reference
-https://developer.apple.com/documentation/swift/1541112-assert
+
+<https://developer.apple.com/documentation/swift/1541112-assert>

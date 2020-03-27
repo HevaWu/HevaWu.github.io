@@ -55,7 +55,8 @@ This problem is solved!!! :tada:
 ## Problem 4: Command PhaseScriptExecution failed with a nonzero exit code
 
 Actually the problem I met is:
-```
+
+```shell
 “${PODS_ROOT}/SwiftLint/swiftlint” causes “Command PhaseScriptExecution failed with a nonzero exit code”
 ```
 
@@ -65,9 +66,10 @@ One of the solution is:
 
 But for sometimes, we might still want to use SwiftLint, and we need to add it back. Actually, it is the SwiftLint new version issue.
 
-https://github.com/realm/SwiftLint/issues/2793
+<https://github.com/realm/SwiftLint/issues/2793>
 
 For me,
+
 - change to use SwiftLint 0.34.0 will solve this
 
 ## Sum up

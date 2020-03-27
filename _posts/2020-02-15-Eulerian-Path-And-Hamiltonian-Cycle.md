@@ -44,8 +44,8 @@ Determin whether such paths and cycles exist in graph is the `Hamiltonian path p
 
 #### Reference
 
-https://en.wikipedia.org/wiki/Eulerian_path
+<https://en.wikipedia.org/wiki/Eulerian_path>
 
-https://en.wikipedia.org/wiki/Hamiltonian_path
+<https://en.wikipedia.org/wiki/Hamiltonian_path>
 
-https://www.geeksforgeeks.org/eulerian-path-and-circuit/
+<https://www.geeksforgeeks.org/eulerian-path-and-circuit/>

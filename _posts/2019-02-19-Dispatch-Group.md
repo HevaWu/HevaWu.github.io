@@ -50,6 +50,7 @@ func dispatchGroup_useEnter() {
 Based on the code, you could find, we just simplify running this procedure in the `Main thread`. And trying to use it to use `DispatchQueue` to synchronize running 3 tasks.
 
 At here, we use `DispatchGroup` to make sure each task is started after the former one is finished.
+
 - 1.run `wait()` to wait former thread is finished(current resource is empty)
 - 2.run `enter()` to start the group
 - 3.Do the async code, and add `leave()` when the async is finished.
@@ -57,7 +58,8 @@ At here, we use `DispatchGroup` to make sure each task is started after the form
 At the end of code, we add `result` to help confirming if all of the tasks is done.
 
 Here is the print out:
-```
+
+```shell
 start 0 task
 end 0 task
 start 1 task
@@ -95,7 +97,8 @@ func dispatchGroup_useAsyncGroup() {
 As you can see, we init the group by using `dispatchQueue.async(group: dispatchGroup, execute: {...}`. This function is automatically do the `enter()` & `leave()` things for us. We don't need to manually call `enter()` & `leave()`. It will automatically call it at the start & end part of the `DispatchQueue`.
 
 The result is as same as the former one:
-```
+
+```shell
 start 0 task
 end 0 task
 start 1 task
@@ -105,4 +108,4 @@ end 2 task
 All Done
 ```
 
-Two methods. You could pick what you want according to the requests. Enjoy! :fireworks:
+Two methods. You could pick what you want according to the requests. Enjoy! :fireworks: 
