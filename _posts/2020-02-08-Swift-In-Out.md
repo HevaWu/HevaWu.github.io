@@ -76,6 +76,6 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 
 #### References
 
-https://docs.swift.org/swift-book/LanguageGuide/Functions.html
+<https://docs.swift.org/swift-book/LanguageGuide/Functions.html>
 
-https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#ID545
+<https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#ID545>

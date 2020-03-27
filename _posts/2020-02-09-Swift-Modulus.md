@@ -34,6 +34,6 @@ print(mod(-1, 3)) // 2
 
 #### Reference
 
-https://en.wikipedia.org/wiki/Modulo_operation
+<https://en.wikipedia.org/wiki/Modulo_operation>
 
-https://stackoverflow.com/questions/41180292/negative-number-modulo-in-swift
+<https://stackoverflow.com/questions/41180292/negative-number-modulo-in-swift>

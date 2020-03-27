@@ -18,7 +18,7 @@ So the problem should come from the mask part.
 But the interesting thing is:
 After doing the research, if I use the same image, and try to use its cgImage to make mask context. The printed result is almost same between iOS 13 & iOS 11/12.
 
-```
+```s
 --------iOS 13
 <CGImage 0x12fe68370> (IP)
 	<<CGColorSpace 0x282850f00> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3)>
@@ -75,7 +75,7 @@ This only happens on the `screenshot` <- which is 16 bpc 64 bpp kCGImageAlphaLas
 
 For the normal picture, which take by iPhone camera, the image params are:
 
-```
+```s
 <CGImage 0x10c6b73a0> (IP)
 	<<CGColorSpace 0x2804da220> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3)>
 		width = 4032, height = 3024, bpc = 8, bpp = 32, row bytes = 16128
@@ -149,4 +149,5 @@ After using this function to generate the cgimage, we could use this cgimage to 
 Actually, this is only the temp way to solve the problem. And unfortunately, until now I still not find the root cause of this issue. And if you find other better solutions, please add the comment ~
 
 #### Reference
-https://developer.apple.com/documentation/uikit/1623912-uigraphicsbeginimagecontextwitho
+
+<https://developer.apple.com/documentation/uikit/1623912-uigraphicsbeginimagecontextwitho>

@@ -49,4 +49,4 @@ print(evaluate(product))
 
 #### Reference
 
-https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
+<https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html>

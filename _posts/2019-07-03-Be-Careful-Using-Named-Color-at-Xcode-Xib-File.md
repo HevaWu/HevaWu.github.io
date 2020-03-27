@@ -51,7 +51,9 @@ At the first, I thought we could rewrite the color at the code part where we wan
 Then I try to find the reason.
 
 For what I am testing is :
+
 - Add an `label color` observer at the `viewDidLoad` part (where I prepare to rewrite the color). I tried to use this observer to help checking how the color changes.
+
 ```swift
 override func viewDidLoad() {
     super.viewDidLoad()
@@ -67,6 +69,7 @@ override func viewDidLoad() {
 ```
 
 And I got this output
+
 ```swift
     Optional(UIExtendedSRGBColorSpace 1 0 0 1)
     Optional(kCGColorSpaceModelRGB 0 0 0 0.5 ) 38
@@ -122,4 +125,5 @@ it still be replaced by `xib` file `Named Color`
 Thank you for the reading. Please feel free to tell me if I wrote anything wrong. :relaxed:
 
 #### Link
+
 https://github.com/HevaWu/TestColorAssets

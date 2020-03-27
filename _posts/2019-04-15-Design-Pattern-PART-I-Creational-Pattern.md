@@ -8,12 +8,12 @@ categories: [Design Pattern]
 tags: [Creational Pattern]
 ---
 
-Define
-===
+### Define
+
 > Creational Design Patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitabl to the situation.
 
-Basic Form
-===
+### Basic Form
+
 1. Abstract Factory
     Creates an instance of several familis of classes
 2. Builder
@@ -27,8 +27,8 @@ Basic Form
 6. Singleton
     A class which only a single instance can exist
 
-Rules
-===
+### Rules
+
 1. Sometimes the basic form might not fit properly.
     - *Abstract Factory* might store set of *Prototypes* from which to clone and return product objects
     - *Builder* can use of the other patterns to implement which components get build
@@ -53,6 +53,6 @@ Rules
     - doesn't require subclassing, but it does require an Initialize operation. *Factory Method* requires subclassing, but doesn't require Initialize.
     - Designs that make heavy use of the *Composite* and *Decorator* patterns often can benefit from Prototype as well.
 
-Reference
-===
-https://sourcemaking.com/design_patterns/creational_patterns
+#### Reference
+
+<https://sourcemaking.com/design_patterns/creational_patterns>

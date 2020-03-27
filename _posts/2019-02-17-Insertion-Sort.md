@@ -24,11 +24,13 @@ from its sorted position
 > Online; i.e., can sort a list as it receives it
 
 Insertion Sort is quite useful for sorting a few elements. The idea is:
+
 - Start from the 2nd element, we start comparing it with the former sorted one. Until we found a proper place to put it.
 
 For sorting an array A, we sort the elements inside A. During sorting, it will only have **constant elements** ourside of the array. When `Insertion Sort` is finished, the output array will be the sorted array.
 
 Let's check the code together:
+
 ```swift
 func insertionSort(array: [Int]) -> [Int] {
     var output: [Int] = array
@@ -46,6 +48,7 @@ func insertionSort(array: [Int]) -> [Int] {
 ```
 
 And if we add this run this code :
+
 ```swift
 let A: [Int] = [4,5,7,9,0,3,1,4,6,8]
 let sortedA = insertionSort(array: A)

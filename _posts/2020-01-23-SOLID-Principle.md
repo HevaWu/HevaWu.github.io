@@ -45,12 +45,12 @@ The principles are promoted by Robert C. Martin. The `SOLID` principles can form
 
 #### Reference
 
-https://en.wikipedia.org/wiki/SOLID
+<https://en.wikipedia.org/wiki/SOLID>
 
-https://en.wikipedia.org/wiki/Single_responsibility_principle
+<https://en.wikipedia.org/wiki/Single_responsibility_principle>
 
-https://en.wikipedia.org/wiki/Open–closed_principle
+<https://en.wikipedia.org/wiki/Open–closed_principle>
 
-https://en.wikipedia.org/wiki/Liskov_substitution_principle
+<https://en.wikipedia.org/wiki/Liskov_substitution_principle>
 
-https://en.wikipedia.org/wiki/Interface_segregation_principle
+<https://en.wikipedia.org/wiki/Interface_segregation_principle>

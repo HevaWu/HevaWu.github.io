@@ -82,6 +82,6 @@ Package libraries are static by default, so all the code is linked together.
 
 #### Reference
 
-https://developer.apple.com/videos/play/wwdc2019/408/
+<https://developer.apple.com/videos/play/wwdc2019/408/>
 
-https://developer.apple.com/videos/play/wwdc2019/410
+<https://developer.apple.com/videos/play/wwdc2019/410>

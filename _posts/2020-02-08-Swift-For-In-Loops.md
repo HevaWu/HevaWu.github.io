@@ -66,4 +66,4 @@ for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
 
 #### Reference
 
-https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html
+<https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html>

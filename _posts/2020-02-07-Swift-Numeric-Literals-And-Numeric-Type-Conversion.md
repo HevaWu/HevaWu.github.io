@@ -79,4 +79,4 @@ Floating-pint values are always truncated when used to initialize a new integer 
 
 #### Reference
 
-https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
+<https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html>

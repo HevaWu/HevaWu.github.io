@@ -35,7 +35,7 @@ Divide the original problem to several small related small problems. The solve t
 
 ## Pseudocode
 
-```
+```shell
 Merge(A, p, q, r) <- O(r-p+1)
 n1 = q - p + 1
 n2 = r - q
@@ -56,7 +56,7 @@ for k = p to r
     j = j + 1
 ```
 
-```
+```shell
 Merge-Sort(A, p, r)
 if p < r
   q = ⌊(p+r)/2⌋

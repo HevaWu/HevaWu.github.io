@@ -122,8 +122,8 @@ All of the operation above take `O(1)` time. The shortcoming of this method is o
 
 #### Reference
 
-https://en.wikipedia.org/wiki/Hash_table
+<https://en.wikipedia.org/wiki/Hash_table>
 
-https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html
+<https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html>
 
-http://www.cplusplus.com/reference/unordered_map/unordered_map/
+<http://www.cplusplus.com/reference/unordered_map/unordered_map/>

@@ -319,9 +319,10 @@ compinit
 
 #### Test Project
 
-https://github.com/HevaWu/TestSwiftPackageManager
+<https://github.com/HevaWu/TestSwiftPackageManager>
 
 #### Reference
 
-https://swift.org/getting-started/#using-the-package-manager
-https://swift.org/package-manager/
+<https://swift.org/getting-started/#using-the-package-manager>
+
+<https://swift.org/package-manager/>

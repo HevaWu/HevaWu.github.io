@@ -171,8 +171,8 @@ Time complexity: case 1,3,4 have constant color changing, and at most rotate 3 t
 
 #### Reference
 
-https://en.wikipedia.org/wiki/Red–black_tree
+<https://en.wikipedia.org/wiki/Red–black_tree>
 
-https://en.wikipedia.org/wiki/Tree_rotation
+<https://en.wikipedia.org/wiki/Tree_rotation>
 
-https://www.tutorialspoint.com/data_structures_algorithms/avl_tree_algorithm.htm
+<https://www.tutorialspoint.com/data_structures_algorithms/avl_tree_algorithm.htm>

@@ -40,4 +40,4 @@ SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) BETA
 Don't forget to append the `$(inherited) ` before it. Otherwise, if you are using like `cocoapods` or `carthage` which might contains the compilation conditions settings. It will have conflicts with them 🙁
 
 Please check the follow link:
-https://github.com/CocoaPods/CocoaPods/issues/6625
+<https://github.com/CocoaPods/CocoaPods/issues/6625>

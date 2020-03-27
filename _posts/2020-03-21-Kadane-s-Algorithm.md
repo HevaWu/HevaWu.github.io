@@ -64,4 +64,4 @@ def max_subarray(numbers):
 
 #### Reference
 
-https://en.wikipedia.org/wiki/Maximum_subarray_problem
+<https://en.wikipedia.org/wiki/Maximum_subarray_problem>

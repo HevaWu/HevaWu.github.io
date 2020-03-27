@@ -22,6 +22,7 @@ while for programming,
 ## DispatchQueue.main
 
 Take an example for **DispatchQueue.main**:
+
 ```swift
 // A: This will cause crash
 DispatchQueue.main.async {
@@ -56,5 +57,7 @@ At here, `Queue` is not same as `Thread`. The first one(A) crashed is because it
 In general, we use `async` other than `sync`, unless `sync` is necessary. Because `sync` will wait until this block has finished executing. We must be careful when we use `sync` on main thread otherwise it will block the UI updates.
 
 #### Reference
-http://et.engr.iupui.edu//~skoskie/ECE362/lecture_notes/LNB25_html/text12.html
-https://stackoverflow.com/questions/46732016/main-async-vs-main-sync-vs-global-async-in-swift3-gcd
+
+<http://et.engr.iupui.edu//~skoskie/ECE362/lecture_notes/LNB25_html/text12.html>
+
+<https://stackoverflow.com/questions/46732016/main-async-vs-main-sync-vs-global-async-in-swift3-gcd>
