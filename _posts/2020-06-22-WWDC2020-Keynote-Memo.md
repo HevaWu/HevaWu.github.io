@@ -104,7 +104,7 @@ Change whole screen call to top banner.
 
 Universal Search.
 
-Not only app, could search the content in the app too.
+- Not only app, could search the content in the app too.
 
 ## Apple Pencil
 
@@ -114,7 +114,7 @@ Draw in Notes.
 
 - Auto-Change to the shape
 - Easy to move space.
-- Transfer to handwrite text to any text field
+- Transfer handwrite text to any text field
 - Simple copy & paste
 
 ![Pencil](/images/2020-06-22-WWDC2020-Keynote-Memo/Pencil.png)
@@ -123,7 +123,7 @@ Draw in Notes.
 
 ### Spatial audio
 
-Make you feel you are in the 
+Make you feel you are in the cinema.
 
 # watchOS
 
