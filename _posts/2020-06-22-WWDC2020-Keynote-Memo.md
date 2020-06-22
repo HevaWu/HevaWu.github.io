@@ -185,7 +185,7 @@ macOS Big Sur
 - Photo Picker
 - Memoji
 
-## Mac Catalys
+## Mac Catalyst
 
 Support more apps, ex: maps
 
@@ -198,7 +198,7 @@ Support more apps, ex: maps
 
 ![macOSDesign](/images/2020-06-22-WWDC2020-Keynote-Memo/macOSDesign.png)
 
-# Apple Silligon
+# Apple Silicon
 
 ![Silligon](/images/2020-06-22-WWDC2020-Keynote-Memo/Silligon.png)
 
