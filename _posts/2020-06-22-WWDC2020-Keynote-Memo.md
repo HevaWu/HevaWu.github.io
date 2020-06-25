@@ -189,7 +189,7 @@ macOS Big Sur
 
 Support more apps, ex: maps
 
-## Sifari
+## Safari
 
 - Page load performance, 50% faster than Chrome.
 - Extensions improve. pick the site which extensions could work.
