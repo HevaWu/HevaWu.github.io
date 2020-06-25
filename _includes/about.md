@@ -17,4 +17,4 @@
 ### Let's coding together!!!
 
 <br/>
-<li href="/blog.html" class="footer-link">Latest Blog List</li>
+<a href="/blog.html">● Latest Blog List</a>

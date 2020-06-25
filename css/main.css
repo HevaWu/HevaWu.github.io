@@ -90,9 +90,9 @@ a:hover {
   width: 100px;
 }
 
-.about li {
+.about a {
   line-height: 1.75em;
-  color: #8085C1;
+  color: rgb(7, 108, 148);
   font-weight: bold;
   font-size: 1em;
 }
