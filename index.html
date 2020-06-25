@@ -1,11 +1,13 @@
 ---
 layout: withoutPostListDefault
+title: About
 ---
 
 <div class="content">
-    {% capture about %}
+    <div class="about">
+        {% capture about %}
         {% include about.md %}
-    {% endcapture %}
-    {{ about | markdownify }}
-    <!-- {% include about.md %} -->
+        {% endcapture %}
+        {{ about | markdownify }}
+    </div>
 </div>
