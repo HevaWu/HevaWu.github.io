@@ -17,13 +17,13 @@
       <div id="tag-category-container">
           {% if page.tags %} 
           {% for tag in page.tags %}
-          <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+          <a href="{{ site.tag_archive.path }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
           {% endfor %}
           {% endif %}
           <p></p>
           {% if page.categories %} 
           {% for category in page.categories %}
-          <a href="{{ site.baseurl }}{{ site.category_page }}#{{ category | slugify }}" class="post-category">{{ category }}</a>
+          <a href="{{ site.category_archive.path }}#{{ category | slugify }}" class="post-category">{{ category }}</a>
           {% endfor %}
           {% endif %}
       </div>
