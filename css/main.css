@@ -81,6 +81,22 @@ a:hover {
   line-height: 1.75em;
 }
 
+.about {
+  text-align: center;
+}
+
+.about img {
+  margin-top: 5em;
+  width: 100px;
+}
+
+.about li {
+  line-height: 1.75em;
+  color: #8085C1;
+  font-weight: bold;
+  font-size: 1em;
+}
+
 /*****************************************************************************/
 /*
 /* Site
