@@ -158,6 +158,7 @@ a:hover {
 .sidebar-info li a, .footer a {
   color: #3c4d00;
   font-weight: 800;
+  margin-left: 0.25em;
 }
 
 .footer {
@@ -437,6 +438,11 @@ a:hover {
   margin-top: 1.25em;
   font-size: 0.95em;
   color: #777;
+}
+
+.colophon a {
+  margin-left: 0.25em;
+  font-weight: bold;
 }
 
 /*****************************************************************************/
