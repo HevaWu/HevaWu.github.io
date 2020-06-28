@@ -3,14 +3,17 @@
       <h1 id="title">{{ page.title }}</h1>
     </div>
   
+    {% assign sortedCategories = site.categories | sort: category[0] %}
     <div id="categories-expo-list">
-      {% for category in site.categories %}
+      {% for category in sortedCategories %}
       <a href="#{{ category[0] | slugify }}" class="post-category">{{ category[0] }}</a>
       {% endfor %}
     </div>
+
     <hr/>
+
     <div class="categories-expo-section">
-      {% for category in site.categories %}
+      {% for category in sortedCategories %}
       <h2 id="{{ category[0] | slugify }}">{{ category[0] }}</h2>
       <ul class="categories-expo-posts">
         {% for post in category[1] %}
