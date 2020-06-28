@@ -61,6 +61,7 @@ a:hover {
 /*
 /*****************************************************************************/
 #logo {
+  border-radius: 15px;
   max-width: 128px;
 }
 
@@ -86,6 +87,7 @@ a:hover {
 }
 
 .about img {
+  border-radius: 15px;
   margin-top: 5em;
   width: 100px;
 }
@@ -140,6 +142,10 @@ a:hover {
   margin-bottom: 1.25em;
   text-align: center;
   display: block;
+}
+
+.sidebar img {
+  border-radius: 15px;
 }
 
 .sidebar-info {

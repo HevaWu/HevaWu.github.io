@@ -18,6 +18,7 @@
 
 @media (max-width:1090px) {
   #logo {
+    border-radius: 15px;
     max-width: 100px;
   }
 
@@ -52,6 +53,7 @@
  **/
 @media (max-width:640px) {
   #logo {
+    border-radius: 15px;
     max-width: 75px;
   }
 
