@@ -408,7 +408,8 @@ a:hover {
 
 .tags-expo-section h2,
 .categories-expo-section h2 {
-  padding-top: .3em;
+  text-align: center;
+  padding-top: 1em;
 
   height: 1em;
   background-size: contain;
@@ -416,20 +417,10 @@ a:hover {
   background-position: left top;
 }
 
-.tags-expo-section h2 {
-  background-image: url(../images/tag-and-category/tag.png);
-  padding-left: 1.5em;
-}
-
-.categories-expo-section h2 {
-  background-image: url(../images/tag-and-category/category.png);
-  padding-left: 1.8em;
-}
-
 .tags-expo-section ul,
 .categories-expo-section ul {
   margin-bottom: 1em;
-  margin-left: 1em;
+  text-align: center;
   line-height: 1em;
   font-size: .75em;
 }
