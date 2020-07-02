@@ -4,8 +4,8 @@ title: Binary Search Tree
 date: 2020-02-23 10:24:00
 comments: true
 disqus_category_id: BinarySearchTree
-categories: [Algorithm, Search]
-tags: [Tree, Trie]
+categories: [Algorithm, ]
+tags: [Search]
 ---
 
 Search Tree data structure support operations as `SEARCH`, `MINIMUM`, `MAXIMUM`,`PREDECESSOR`, `SUCCESSOR`, `INSERT`, `DELETE`, etc. Thus, we could use a search tree as a dictionary or a priority queue.

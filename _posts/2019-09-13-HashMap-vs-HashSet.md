@@ -5,7 +5,7 @@ date: 2019-09-13 17:52:00
 comments: true
 disqus_category_id: HashMapvsHashSet
 categories: [Java]
-tags: [HashMap, HashSet, Map, Set]
+tags: [Collection]
 ---
 
 The obvious difference between `HashMap` & `HashSet` would be interface.

@@ -5,7 +5,7 @@ date: 2020-04-07 16:31:00
 comments: true
 disqus_category_id: PassArrayORArraySliceIntoFunction
 categories: [Swift]
-tags: [Array, ArraySlice]
+tags: [Collection]
 ---
 
 ## Array & ArraySlice

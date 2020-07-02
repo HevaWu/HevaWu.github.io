@@ -5,7 +5,7 @@ date: 2020-02-08 21:36:00
 comments: true
 disqus_category_id: SwiftArrays
 categories: [Swift]
-tags: [Collection Type]
+tags: [Collection]
 ---
 
 Swift `Array` stores values of the same type in an ordered list.

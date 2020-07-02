@@ -5,7 +5,7 @@ date: 2019-09-12 10:57:00
 comments: true
 disqus_category_id: JavaArraysSortAlgorithm
 categories: [Sort, Java]
-tags: [Arrays, Dual Pivot Quick Sort, Merge Sort]
+tags: [Arrays, Sort]
 ---
 
 `java.util.Arrays` uses

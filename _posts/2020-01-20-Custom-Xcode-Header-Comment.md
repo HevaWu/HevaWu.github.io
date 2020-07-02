@@ -4,8 +4,8 @@ title: Custom Xcode Header Comment
 date: 2020-01-20 15:58:00
 comments: true
 disqus_category_id: CustomXcodeHeaderComment
-categories: [Xcode, Text Macros]
-tags: [IDETemplateMacros]
+categories: [Xcode]
+tags: [Text Macros]
 ---
 
 Although Xcode default header might be good enough for some case, but sometimes, we might want to define our own `Header Comment` for our project.

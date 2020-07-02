@@ -4,8 +4,8 @@ title: MVVM MVP MVC
 date: 2020-03-12 11:52:00
 comments: true
 disqus_category_id: MVVMMVPMVC
-categories: [Pattern]
-tags: [MVVM, MVP, MVC]
+categories: [Design Pattern]
+tags: [Pattern]
 ---
 
 ## Overview

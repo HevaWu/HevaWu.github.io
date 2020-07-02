@@ -4,8 +4,8 @@ title: Use Timer In iOS
 date: 2019-11-01 16:24:00
 comments: true
 disqus_category_id: UseTimerInIOS
-categories: [iOS, Timer, Swift]
-tags: [NSTimer]
+categories: [iOS, Swift]
+tags: [Timer]
 ---
 
 ## Timer Types

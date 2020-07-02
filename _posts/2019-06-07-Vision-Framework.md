@@ -4,8 +4,8 @@ title: Vision Framework
 date: 2019-06-07 14:35:00
 comments: true
 disqus_category_id: VisionFramework
-categories: [iOS, WWDC2019, Image Processing, Vision, CoreML]
-tags: [Saliency, Taxonomy, Landmarks]
+categories: [iOS, WWDC2019]
+tags: [Image Processing, Vision, CoreML]
 ---
 
 Since WWDC 2018, Apple introduces the `Vision` Framework.

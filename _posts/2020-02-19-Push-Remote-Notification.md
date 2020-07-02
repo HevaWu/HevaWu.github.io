@@ -4,8 +4,8 @@ title: Push Remote Notification
 date: 2020-02-19 10:38:00
 comments: true
 disqus_category_id: PushRemoteNotification
-categories: [iOS, Notification]
-tags: [RemoteNotification]
+categories: [iOS]
+tags: [Notification]
 ---
 
 Here is some guide from Apple:

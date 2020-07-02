@@ -4,8 +4,8 @@ title: Design Pattern PART I - Creational Patterns
 date: 2019-04-15 12:20:00
 comments: true
 disqus_category_id: DesignPatternPARTICreationalPatterns
-categories: [Design Pattern]
-tags: [Creational Pattern]
+categories: [Object Creation]
+tags: [Design Pattern]
 ---
 
 ### Define
