@@ -4,8 +4,8 @@ title: WWDC2020 Keynote Memo
 date: 2020-06-22 10:08:00
 comments: true
 disqus_category_id: WWDC2020KeynoteMemo
-categories: [Keynote]
-tags: [WWDC2020]
+categories: [WWDC2020]
+tags: [Keynote]
 ---
 
 This year's WWDC finally opened. It's really excited, and here is some memo of today.
