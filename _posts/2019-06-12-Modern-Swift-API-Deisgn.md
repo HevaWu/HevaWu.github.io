@@ -4,7 +4,7 @@ title: Modern Swift API Design
 date: 2019-06-12 15:59:00
 comments: true
 disqus_category_id: ModernSwiftAPIDeisgn
-categories: [iOS, WWDC2019, API Design, Swift]
+categories: [iOS, WWDC2019, Swift]
 tags: [API Design]
 ---
 

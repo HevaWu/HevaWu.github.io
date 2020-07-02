@@ -5,7 +5,7 @@ date: 2020-02-26 10:13:00
 comments: true
 disqus_category_id: XcodeActiveCompilationConditions
 categories: [Xcode]
-tags: [ActiveCompilationCondition]
+tags: [Condition]
 ---
 
 Most of time, we will only want the code run under a specific environment. ex: BETA, ALPHA, DEBUG, RC, etc. So, how should we control this?

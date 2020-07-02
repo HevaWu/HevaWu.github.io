@@ -4,8 +4,8 @@ title: An idea about RootViewController in iOS
 date: 2019-12-05 19:21:00
 comments: true
 disqus_category_id: AnIdeaAboutRootViewControllerInIOS
-categories: [iOS, AppDelegate, Swift]
-tags: [RootViewController]
+categories: [iOS, Swift]
+tags: [AppDelegate]
 ---
 
 If you are an iOS engineer, then you must be familiar with `AppDelegate`.

@@ -4,8 +4,8 @@ title: Resize UIImage
 date: 2019-09-26 17:15:00
 comments: true
 disqus_category_id: ResizeUIImage
-categories: [iOS, UIImage, CGImage]
-tags: [Resize, UIGraphicsBeginImageContextWithOptions]
+categories: [iOS]
+tags: [UIImage, CGImage]
 ---
 
 Actually there is a screenshot problem in our project

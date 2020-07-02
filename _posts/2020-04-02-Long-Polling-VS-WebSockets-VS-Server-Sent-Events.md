@@ -4,8 +4,8 @@ title: Long-Polling VS WebSockets VS Server-Sent Events
 date: 2020-04-02 15:57:00
 comments: true
 disqus_category_id: Long-PollingVSWebSocketsVSServer-SentEvents
-categories: [CommunicationProtocol, SystemDesign]
-tags: [HTTP]
+categories: [SystemDesign]
+tags: [HTTP, Communication Protocol]
 ---
 
 Long-Polling, WebSockets, and Server-Sent Events are popular communication protocols between a client like a web browser and a web server. Following are a sequence of events for regular HTTP request:

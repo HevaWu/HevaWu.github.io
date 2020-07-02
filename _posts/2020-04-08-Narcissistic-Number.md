@@ -4,8 +4,8 @@ title: Narcissistic Number
 date: 2020-04-08 15:16:00
 comments: true
 disqus_category_id: NarcissisticNumber
-categories: [NumberTheory]
-tags: [NarcissisticNumber, PPDI, ArmstrongNumber, PlusPerfectNumber]
+categories: [Math, Number Theory]
+tags: [Perfect Number]
 ---
 
 ## Narcissistic Number

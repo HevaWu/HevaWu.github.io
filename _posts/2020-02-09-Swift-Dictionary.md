@@ -5,7 +5,7 @@ date: 2020-02-09 12:23:00
 comments: true
 disqus_category_id: SwiftDictionary
 categories: [Swift]
-tags: [Collection Type]
+tags: [Collection]
 ---
 
 `Dictionary` stores associations between keys of the same type and values of the same type in a collection with `no defined ordering`. Each value is associated with a unique key, which acts as a identifier for that value within the dictionay.

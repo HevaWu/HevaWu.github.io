@@ -5,7 +5,7 @@ date: 2020-02-02 16:51:00
 comments: true
 disqus_category_id: HashTable
 categories: [DataStructure, Swift, Java, C++]
-tags: [HashTable]
+tags: [Collection]
 ---
 
 ## Overview

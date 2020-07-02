@@ -4,8 +4,8 @@ title: Fix Cannot Find Header Files For Ruby Error
 date: 2019-12-20 12:20:00
 comments: true
 disqus_category_id: FixCannotFindHeaderFilesForRubyError
-categories: [Xcode, MacOS14, Ruby]
-tags: [HeaderFiles]
+categories: [Xcode, Ruby]
+tags: [MacOS14]
 ---
 
 ## Error Description

@@ -4,8 +4,8 @@ title: Emoji Unicode Memo
 date: 2019-02-14 16:49:00
 comments: true
 disqus_category_id: EmojiUnicodeMemo
-categories: [Github, Emoji]
-tags: [Unicode]
+categories: [Unicode]
+tags: [Emoji]
 ---
 
 ## People

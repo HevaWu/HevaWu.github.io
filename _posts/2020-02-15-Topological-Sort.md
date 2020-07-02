@@ -5,7 +5,7 @@ date: 2020-02-15 13:40:00
 comments: true
 disqus_category_id: TopologicalSort
 categories: [Algorithm]
-tags: [TopologicalSort, DAG]
+tags: [Sort, DAG]
 ---
 
 For a directed acyclic graph(DAG) `G = (V, E)`, topological sort is a sort for all of node in G. The order should be:

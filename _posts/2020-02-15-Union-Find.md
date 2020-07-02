@@ -4,8 +4,8 @@ title: Union Find
 date: 2020-02-15 11:21:00
 comments: true
 disqus_category_id: UnionFind
-categories: [Algorithm, UnionFind]
-tags: [DisjointSet]
+categories: [Algorithm]
+tags: [UnionFind]
 ---
 
 Some application needs to seperate n element into `disjoint set`. Almostly it needs 2 operations:

@@ -4,8 +4,8 @@ title: Insertion Sort
 date: 2019-02-17 00:14:00
 comments: true
 disqus_category_id: InsertionSort
-categories: [Algorithm, Sort]
-tags: [Insertion Sort]
+categories: [Algorithm]
+tags: [Sort]
 ---
 
 Let's see the introduction from the [wiki](https://en.wikipedia.org/wiki/Insertion_sort)

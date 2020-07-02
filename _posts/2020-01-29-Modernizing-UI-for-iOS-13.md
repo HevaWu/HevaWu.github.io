@@ -5,7 +5,7 @@ date: 2020-01-29 13:50:00
 comments: true
 disqus_category_id: ModernizingUIForiOS13
 categories: [UI, iOS, WWDC2019]
-tags: [iOS13, UINavigationBar, ]
+tags: [iOS13, NavigationBar]
 ---
 
 It has already passed half of year after WWDC2019, and I just have time to write a memo for it. 😰 For the next time, I might watch some interested ASAP. ><

@@ -4,8 +4,8 @@ title: Settings Bundle
 date: 2019-10-02 18:15:00
 comments: true
 disqus_category_id: SettingsBundle
-categories: [iOS, Settings, Bundle]
-tags: [Licenses]
+categories: [iOS]
+tags: [Bundle]
 ---
 
 ## Introduction
@@ -27,7 +27,7 @@ Every app with Settings bundle should have at least 1 page of preferences, which
 
 First, let's quick look the prefernce control types.
 
-![Merge_sort_algorithm_diagram](/images/2019-10-02-Settings-Bundle/preference_control_types.png)
+![](/images/2019-10-02-Settings-Bundle/preference_control_types.png)
 
 ## Settings Bundle
 
@@ -35,7 +35,7 @@ First, let's quick look the prefernce control types.
 
 Here is the contents of the `Settings.bundle` directory
 
-![Merge_sort_algorithm_diagram](/images/2019-10-02-Settings-Bundle/contents.png)
+![](/images/2019-10-02-Settings-Bundle/contents.png)
 
 ### Settings Page File Format
 
@@ -43,7 +43,7 @@ Each Settings page files is in iPhone Settings property-list file format. We cou
 
 The root-level keys of a prefences Settings page file would be:
 
-![Merge_sort_algorithm_diagram](/images/2019-10-02-Settings-Bundle/rootLevelKey.png)
+![](/images/2019-10-02-Settings-Bundle/rootLevelKey.png)
 
 ## Create Licenses Settings
 
