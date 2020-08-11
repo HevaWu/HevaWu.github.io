@@ -1,13 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'jemoji'
 group :jekyll_plugins do
     gem "jekyll-paginate"
     gem "jekyll-feed"
     gem "jekyll-seo-tag"
     gem "jekyll"
-    gem "rack", ">= 2.1.4"
-    gem "nokogiri", ">= 1.10.4" # Fix github security
-  end
+end
 
-gem 'jekyll-assets'
+gem "jemoji"
+gem "rack", ">= 2.1.4"
+gem "nokogiri", ">= 1.10.4" # Fix github security
+gem "jekyll-assets"
+gem "kramdown", ">= 2.3.0"
+gem "kramdown-parser-gfm"
