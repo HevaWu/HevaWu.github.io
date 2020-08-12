@@ -5,7 +5,7 @@ date: 2020-02-08 16:58:00
 comments: true
 disqus_category_id: SwiftInOut
 categories: [Swift]
-tags: [Declarations]
+tags: [Parameter]
 ---
 
 Swift Function parameters are constant by default. <- we can't change the value of a parameter. If we want function to modify a parameter's value, and want those changes to persist after function has ended, define the parameters as `inout` parameter instead.
