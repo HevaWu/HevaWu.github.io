@@ -1,10 +1,8 @@
 ---
-name: Tasks
-about: Tasks list
-title: "[Category] Title [wiki](add wiki link here) issue: #xxxx"
-labels: task
+name: Blog Comments
+about: Blog Comments list
+title: "[Blog][Comment] [Blog](add blog post link here)"
+labels: comment
 assignees: ''
 
 ---
-
-
