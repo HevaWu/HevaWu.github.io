@@ -2,8 +2,7 @@
 layout: post
 title: Exposure Notification for COVID-19
 date: 2020-04-30 13:40:00
-comments: true
-disqus_category_id: ExposureNotificationforCOVID-19
+comment_id: 81
 categories: [Developer]
 tags: [iOS13.5, ExposureNotification]
 ---

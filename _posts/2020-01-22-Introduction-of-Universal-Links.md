@@ -2,8 +2,7 @@
 layout: post
 title: Introduction of Universal Links
 date: 2020-01-22 15:54:00
-comments: true
-disqus_category_id: IntroductionOfUniversalLinks
+comment_id: 35
 categories: [iOS, macOS, WWDC2019]
 tags: [Universal Link]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Modernizing UI for iOS 13
 date: 2020-01-29 13:50:00
-comments: true
-disqus_category_id: ModernizingUIForiOS13
+comment_id: 37
 categories: [UI, iOS, WWDC2019]
 tags: [iOS13, NavigationBar]
 ---

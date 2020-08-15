@@ -2,8 +2,7 @@
 layout: post
 title: Insertion Sort
 date: 2019-02-17 00:14:00
-comments: true
-disqus_category_id: InsertionSort
+comment_id: 6
 categories: [Algorithm]
 tags: [Sort]
 ---

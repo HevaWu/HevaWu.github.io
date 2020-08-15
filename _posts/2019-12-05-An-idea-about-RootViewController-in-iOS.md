@@ -2,8 +2,7 @@
 layout: post
 title: An idea about RootViewController in iOS
 date: 2019-12-05 19:21:00
-comments: true
-disqus_category_id: AnIdeaAboutRootViewControllerInIOS
+comment_id: 32
 categories: [iOS, Swift]
 tags: [AppDelegate]
 ---

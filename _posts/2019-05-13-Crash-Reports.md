@@ -2,8 +2,7 @@
 layout: post
 title: Crash Reports
 date: 2019-05-13 16:04:00
-comments: true
-disqus_category_id: DesignPatternPARTICreationalPatterns
+comment_id: 11
 categories: [iOS, Xcode]
 tags: [Crash Reports, Debug]
 ---

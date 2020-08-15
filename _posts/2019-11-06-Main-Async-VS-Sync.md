@@ -2,8 +2,7 @@
 layout: post
 title: Main Async VS Sync
 date: 2019-11-06 12:12:00
-comments: true
-disqus_category_id: MainAsyncVSSync
+comment_id: 31
 categories: [Async, Sync, Swift, iOS]
 tags: [DispatchQueue]
 ---

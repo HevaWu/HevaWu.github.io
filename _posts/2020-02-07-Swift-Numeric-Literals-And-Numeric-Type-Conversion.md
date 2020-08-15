@@ -2,8 +2,7 @@
 layout: post
 title: Swift Numeric Literals & Numeric Type Conversion
 date: 2020-02-07 22:17:00
-comments: true
-disqus_category_id: SwiftNumericLiterals&NumericTypeConversion
+comment_id: 41
 categories: [Swift]
 tags: [Numeric, Literal]
 ---

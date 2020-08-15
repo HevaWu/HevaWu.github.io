@@ -2,8 +2,7 @@
 layout: post
 title: Daemon and Services
 date: 2020-07-02 23:02:00
-comments: true
-disqus_category_id: DaemonandServices
+comment_id: 86
 categories: [Activity Monitor]
 tags: [Background Process]
 ---

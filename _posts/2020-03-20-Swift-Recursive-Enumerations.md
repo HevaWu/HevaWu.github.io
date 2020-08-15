@@ -2,8 +2,7 @@
 layout: post
 title: Swift Recursive Enumerations
 date: 2020-03-20 20:06:00
-comments: true
-disqus_category_id: SwiftRecursiveEnumerations
+comment_id: 64
 categories: [Swift]
 tags: [Enum]
 ---

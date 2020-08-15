@@ -2,8 +2,7 @@
 layout: post
 title: Duet Activity Scheduler Daemon
 date: 2020-07-02 22:37:00
-comments: true
-disqus_category_id: DuetActivitySchedulerDaemon
+comment_id: 87
 categories: [Mac, iPhone, Activity Monitor]
 tags: [Background Process]
 ---

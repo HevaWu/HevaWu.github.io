@@ -2,8 +2,7 @@
 layout: post
 title: Swift Random Unification
 date: 2020-02-22 10:57:00
-comments: true
-disqus_category_id: SwiftRandomUnification
+comment_id: 55
 categories: [Swift]
 tags: [Random]
 ---

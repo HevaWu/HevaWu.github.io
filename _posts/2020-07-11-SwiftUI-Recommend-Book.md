@@ -2,8 +2,7 @@
 layout: post
 title: SwiftUI Recommend Book 
 date: 2020-07-11 21:50:00
-comments: true
-disqus_category_id: SwiftUIRecommendBook 
+comment_id: 90
 categories: [Swift]
 tags: [SwiftUI]
 ---

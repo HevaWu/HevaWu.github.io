@@ -2,8 +2,7 @@
 layout: post
 title: Encoding and Evolution
 date: 2020-03-30 15:27:00
-comments: true
-disqus_category_id: EncodingAndEvolution
+comment_id: 72
 categories: [DataSystems, SystemDesign]
 tags: [Encode, Decode]
 ---

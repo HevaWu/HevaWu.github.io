@@ -2,8 +2,7 @@
 layout: post
 title: Swift For In Loops
 date: 2020-02-08 12:02:00
-comments: true
-disqus_category_id: SwiftForInLoops
+comment_id: 43
 categories: [Swift]
 tags: [Control Flow]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Resize UIImage
 date: 2019-09-26 17:15:00
-comments: true
-disqus_category_id: ResizeUIImage
+comment_id: 27
 categories: [iOS]
 tags: [UIImage, CGImage]
 ---

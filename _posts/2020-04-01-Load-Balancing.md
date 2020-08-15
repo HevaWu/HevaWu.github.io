@@ -2,8 +2,7 @@
 layout: post
 title: Load Balancing
 date: 2020-04-01 20:41:00
-comments: true
-disqus_category_id: LoadBalancing
+comment_id: 74
 categories: [DataSystems, SystemDesign]
 tags: [LoadBalancer]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Try Vision Sample Code
 date: 2019-07-26 12:33:00
-comments: true
-disqus_category_id: TryVisionSampleCode
+comment_id: 18
 categories: [iOS]
 tags: [Vision]
 ---

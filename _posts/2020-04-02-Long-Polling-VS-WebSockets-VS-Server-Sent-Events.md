@@ -2,8 +2,7 @@
 layout: post
 title: Long-Polling VS WebSockets VS Server-Sent Events
 date: 2020-04-02 15:57:00
-comments: true
-disqus_category_id: Long-PollingVSWebSocketsVSServer-SentEvents
+comment_id: 75
 categories: [SystemDesign]
 tags: [HTTP, Communication Protocol]
 ---

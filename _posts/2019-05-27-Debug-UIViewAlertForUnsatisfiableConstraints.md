@@ -2,8 +2,7 @@
 layout: post
 title: Debug UIViewAlertForUnsatisfiableConstraints
 date: 2019-05-27 16:04:00
-comments: true
-disqus_category_id: iOSLoggingSystemOSLog
+comment_id: 13
 categories: [iOS]
 tags: [Layout]
 ---

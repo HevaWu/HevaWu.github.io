@@ -2,8 +2,7 @@
 layout: post
 title: Union Find
 date: 2020-02-15 11:21:00
-comments: true
-disqus_category_id: UnionFind
+comment_id: 52
 categories: [Algorithm]
 tags: [UnionFind]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Operational Transformation
 date: 2020-08-11 22:04:00
-comments: true
-disqus_category_id: OperationalTransformation 
+comment_id: 91
 categories: [Algorithm]
 tags: [OT]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Swift Fallthrough
 date: 2020-04-28 17:39:00
-comments: true
-disqus_category_id: UploadApptoAppStoreConnect
+comment_id: 80
 categories: [Swift]
 tags: [Switch]
 ---

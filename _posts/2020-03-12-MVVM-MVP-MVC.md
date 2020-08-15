@@ -2,8 +2,7 @@
 layout: post
 title: MVVM MVP MVC
 date: 2020-03-12 11:52:00
-comments: true
-disqus_category_id: MVVMMVPMVC
+comment_id: 60
 categories: [Design Pattern]
 tags: [Pattern]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Canonical Binary Tree Algorithm
 date: 2020-02-16 12:02:00
-comments: true
-disqus_category_id: CanonicalBinaryTreeAlgorithm
+comment_id: 53
 categories: [Algorithm]
 tags: [BinaryTree]
 ---

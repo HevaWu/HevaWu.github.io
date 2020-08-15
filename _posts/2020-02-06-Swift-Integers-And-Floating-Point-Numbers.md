@@ -2,8 +2,7 @@
 layout: post
 title: Swift Integers & Floating-Point Numbers
 date: 2020-02-06 22:46:00
-comments: true
-disqus_category_id: SwiftIntegers&FloatingPointNumbers
+comment_id: 40
 categories: [Swift]
 tags: [Integers]
 ---

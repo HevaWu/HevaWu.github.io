@@ -2,8 +2,7 @@
 layout: post
 title: SQL vs NoSQL
 date: 2020-03-28 16:22:00
-comments: true
-disqus_category_id: SQLvsNoSQL
+comment_id: 70
 categories: [Database, SystemDesign]
 tags: [SQL, NoSQL]
 ---

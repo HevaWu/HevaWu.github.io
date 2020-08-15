@@ -2,8 +2,7 @@
 layout: post
 title: Custom Xcode Header Comment
 date: 2020-01-20 15:58:00
-comments: true
-disqus_category_id: CustomXcodeHeaderComment
+comment_id: 34
 categories: [Xcode]
 tags: [Text Macros]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Swift Package Manager -- PART II
 date: 2020-02-28 15:53:00
-comments: true
-disqus_category_id: SwiftPackageManagerPARTII
+comment_id: 58
 categories: [iOS, Xcode, Swift]
 tags: [SPM]
 ---

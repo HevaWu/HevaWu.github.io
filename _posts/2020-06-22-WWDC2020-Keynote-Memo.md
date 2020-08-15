@@ -2,8 +2,7 @@
 layout: post
 title: WWDC2020 Keynote Memo
 date: 2020-06-22 10:08:00
-comments: true
-disqus_category_id: WWDC2020KeynoteMemo
+comment_id: 84
 categories: [WWDC2020]
 tags: [Keynote]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Hash Table
 date: 2020-02-02 16:51:00
-comments: true
-disqus_category_id: HashTable
+comment_id: 39
 categories: [DataStructure, Swift, Java, C++]
 tags: [Collection]
 ---

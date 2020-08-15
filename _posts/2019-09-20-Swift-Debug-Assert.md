@@ -2,8 +2,7 @@
 layout: post
 title: Swift Debug Assert
 date: 2019-09-20 14:36:00
-comments: true
-disqus_category_id: SwiftDebugAssert
+comment_id: 25
 categories: [Swift, Debug]
 tags: [Assert]
 ---

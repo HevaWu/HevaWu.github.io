@@ -2,8 +2,7 @@
 layout: post
 title: Swift Package With Xcode
 date: 2020-01-29 14:57:00
-comments: true
-disqus_category_id: SwiftPackageWithXcode
+comment_id: 38
 categories: [iOS, Xcode, Swift]
 tags: [SPM]
 ---

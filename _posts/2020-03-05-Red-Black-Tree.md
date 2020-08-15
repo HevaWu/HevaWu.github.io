@@ -2,8 +2,7 @@
 layout: post
 title: Red Black Tree
 date: 2020-03-05 18:41:00
-comments: true
-disqus_category_id: UseTimerInIOS
+comment_id: 59
 categories: [Algorithm]
 tags: [Tree]
 ---

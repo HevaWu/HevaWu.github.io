@@ -2,8 +2,7 @@
 layout: post
 title: HashMap vs HashSet
 date: 2019-09-13 17:52:00
-comments: true
-disqus_category_id: HashMapvsHashSet
+comment_id: 20
 categories: [Java]
 tags: [Collection]
 ---
