@@ -12,14 +12,28 @@
 			}
 
 			if (0 === response.length) {
-				document.getElementById('no-comments-found').style.display = 'block';
+				document.getElementById('gh-comments-list').appendChild(noCommentEl());
 			}
 		} else {
 			console.error(this);
 		}
 	};
 
+	function noCommentEl() {
+		let noComment = document.createElement('p')
+		noComment.classList.add("gh-no-comment");
+		noComment.innerText = "No comments found for this article."
+
+		return noComment
+	}
+
 	function createCommentEl(response) {
+
+		// Header
+
+		let commentHeader = document.createElement('div');
+		commentHeader.classList.add('comment-header');
+
 		let user = document.createElement('a');
 		user.setAttribute('href', response.user.url.replace('api.github.com/users', 'github.com'));
 		user.classList.add('user');
@@ -29,24 +43,66 @@
 		userAvatar.setAttribute('src', response.user.avatar_url);
 
 		user.appendChild(userAvatar);
+		user.appendChild(document.createTextNode(response.user.login))
 
-		let commentLink = document.createElement('a');
-		commentLink.setAttribute('href', response.html_url);
-		commentLink.classList.add('comment-url');
-		commentLink.innerHTML = '#' + response.id + ' - ' + response.created_at;
+		let commentDateWithURL = document.createElement('a');
+		commentDateWithURL.setAttribute('href', response.html_url);
+		commentDateWithURL.classList.add('comment-url');
+		commentDateWithURL.innerHTML = response.created_at;
+
+		commentHeader.appendChild(user);
+		commentHeader.appendChild(document.createTextNode(" Commented On "));
+		commentHeader.appendChild(commentDateWithURL);
+
+		// Content
 
 		let commentContents = document.createElement('div');
 		commentContents.classList.add('comment-content');
-		commentContents.innerHTML = response.body;
+
+		let commentContentP = document.createElement('p');
+		commentContentP.innerHTML = response.body;
+
+		commentContents.appendChild(commentContentP);
+
+		// Reaction
+
+		// let commentReaction = document.createElement('div');
+		// commentReaction.classList.add('comment-reaction');
+
+		// var emojiCode = {
+		// 	'+1': "<g-emoji alias='+1' fallback-src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png' class='emoji'>👍</g-emoji>",
+		// 	'-1': "<g-emoji alias='-1' fallback-src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f44e.png' class='emoji'>👎</g-emoji>",
+		// 	laugh: "<g-emoji alias='smile' fallback-src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png' class='emoji'>😄</g-emoji>",
+		// 	hooray: "<g-emoji alias='tada' fallback-src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f389.png' class='emoji'>🎉</g-emoji>",
+		// 	confused: "<g-emoji alias='thinking_face' fallback-src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f615.png' class='emoji'>😕</g-emoji>",
+		// 	heart: "<g-emoji alias='framed_picture' fallback-src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f5bc.png' class='emoji'>❤️</g-emoji>"
+		// }
+		// let reactions = response.reactions
+		// if (reactions.total_count > 0) {
+		// 	for (var key in reactions) {
+		// 		if (reactions.hasOwnProperty(key)) {
+		// 			if (reactions[key] > 0 && key !== "total_count") {
+		// 				let reaction = document.createElement('a')
+		// 				reaction.classList.add("emoji-reaction")
+		// 				reaction.setAttribute('href', response.html_url);
+		// 				reaction.innerHTML = emojiCode[key] + reactions[key]
+
+		// 				commentReaction.appendChild(reaction)
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+		// Append to li
 
 		let comment = document.createElement('li');
 		comment.setAttribute('data-created', response.created_at);
 		comment.setAttribute('data-author-avatar', response.user.avatar_url);
 		comment.setAttribute('data-user-url', response.user.url);
 
-		comment.appendChild(user);
+		comment.appendChild(commentHeader);
 		comment.appendChild(commentContents);
-		comment.appendChild(commentLink);
+		// comment.appendChild(commentReaction);
 
 		return comment;
 	}
@@ -58,8 +114,8 @@
 <div class="github-comments">
 	<h2>Comments</h2>
 	<ul id="gh-comments-list"></ul>
-	<p id="no-comments-found">No comments found for this article. </p>
 	<p id="leave-a-comment">
-		Join the discussion for this article on 
-		<a href="https://github.com/HevaWu/HevaWu.github.io/issues/{{ page.comment_id }}">this ticket</a>. Comments will appear on this page instantly.</p>
+		Join the discussion for this article on
+		<a href="https://github.com/HevaWu/HevaWu.github.io/issues/{{ page.comment_id }}">this ticket</a>. Comments will
+		appear on this page instantly.</p>
 </div>
