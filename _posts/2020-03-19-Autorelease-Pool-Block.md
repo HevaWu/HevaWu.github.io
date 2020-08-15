@@ -2,8 +2,7 @@
 layout: post
 title: Autorelease Pool Block
 date: 2020-03-19 19:47:00
-comments: true
-disqus_category_id: AutoreleasePoolBlock
+comment_id: 63
 categories: [Apple]
 tags: [Dealloc]
 ---

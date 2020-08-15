@@ -2,8 +2,7 @@
 layout: post
 title: SOLID Principle
 date: 2020-01-23 14:33:00
-comments: true
-disqus_category_id: SOLID
+comment_id: 36
 categories: [Object Oriented Design]
 tags: [Principle]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Swift Nonfrozen Enumeration
 date: 2020-05-01 19:48:00
-comments: true
-disqus_category_id: SwiftNonfrozenEnumeration
+comment_id: 82
 categories: [Swift]
 tags: [Enum]
 ---

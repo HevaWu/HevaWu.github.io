@@ -2,8 +2,7 @@
 layout: post
 title: Swift Arrays
 date: 2020-02-08 21:36:00
-comments: true
-disqus_category_id: SwiftArrays
+comment_id: 42
 categories: [Swift]
 tags: [Collection]
 ---

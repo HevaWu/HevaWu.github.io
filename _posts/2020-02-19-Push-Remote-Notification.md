@@ -2,8 +2,7 @@
 layout: post
 title: Push Remote Notification
 date: 2020-02-19 10:38:00
-comments: true
-disqus_category_id: PushRemoteNotification
+comment_id: 54
 categories: [iOS]
 tags: [Notification]
 ---

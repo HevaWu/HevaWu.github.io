@@ -2,8 +2,7 @@
 layout: post
 title: iOS Refresh Rate
 date: 2020-05-08 17:07:00
-comments: true
-disqus_category_id: iOSRefreshRate
+comment_id: 83
 categories: [iOS]
 tags: [Dispaly]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Swift Modulus
 date: 2020-02-09 21:25:00
-comments: true
-disqus_category_id: SwiftModulus
+comment_id: 48
 categories: [Swift]
 tags: [Operation]
 ---

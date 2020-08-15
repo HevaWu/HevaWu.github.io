@@ -2,8 +2,7 @@
 layout: post
 title: Settings Bundle
 date: 2019-10-02 18:15:00
-comments: true
-disqus_category_id: SettingsBundle
+comment_id: 28
 categories: [iOS]
 tags: [Bundle]
 ---

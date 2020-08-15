@@ -2,8 +2,7 @@
 layout: post
 title: Storage and Retrieval
 date: 2020-03-28 22:23:00
-comments: true
-disqus_category_id: StorageAndRetrieval
+comment_id: 71
 categories: [DataSystems, SystemDesign]
 tags: [Storage, Retrieval]
 ---

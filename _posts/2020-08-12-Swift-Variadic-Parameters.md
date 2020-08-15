@@ -2,8 +2,7 @@
 layout: post
 title: Swift Variadic Parameters
 date: 2020-08-12 15:27:00
-comments: true
-disqus_category_id: SwiftVariadicParameters
+comment_id: 92
 categories: [Swift]
 tags: [Parameter]
 ---

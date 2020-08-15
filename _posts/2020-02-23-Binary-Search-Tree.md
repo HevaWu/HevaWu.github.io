@@ -2,8 +2,7 @@
 layout: post
 title: Binary Search Tree
 date: 2020-02-23 10:24:00
-comments: true
-disqus_category_id: BinarySearchTree
+comment_id: 56
 categories: [Algorithm, ]
 tags: [Search]
 ---

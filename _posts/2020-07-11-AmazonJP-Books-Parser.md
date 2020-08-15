@@ -2,8 +2,7 @@
 layout: post
 title: AmazonJP Books Parser
 date: 2020-07-11 20:35:00
-comments: true
-disqus_category_id: AmazonJPBooksParser
+comment_id: 89
 categories: [Web]
 tags: [Selenium, MongoDB]
 ---

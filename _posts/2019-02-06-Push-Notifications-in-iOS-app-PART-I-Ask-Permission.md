@@ -2,8 +2,7 @@
 layout: post
 title: Push Local Notifications in iOS app - PART I Ask Permission
 date: 2019-02-06 16:34:00
-comments: true
-disqus_category_id: PushNotificationsIniOSApp
+comment_id: 5
 categories: [iOS]
 tags: [Push Notification]
 ---

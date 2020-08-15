@@ -2,8 +2,7 @@
 layout: post
 title: Pass Array or ArraySlice into Function
 date: 2020-04-07 16:31:00
-comments: true
-disqus_category_id: PassArrayORArraySliceIntoFunction
+comment_id: 76
 categories: [Swift]
 tags: [Collection]
 ---

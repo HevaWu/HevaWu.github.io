@@ -2,8 +2,7 @@
 layout: post
 title: Kadane's Algorithm
 date: 2020-03-21 20:44:00
-comments: true
-disqus_category_id: KadaneAlgorithm
+comment_id: 65
 categories: [Algorithm]
 tags: [Sum]
 ---

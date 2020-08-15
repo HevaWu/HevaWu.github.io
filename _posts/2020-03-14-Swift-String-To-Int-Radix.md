@@ -2,8 +2,7 @@
 layout: post
 title: Swift String To Int Radix
 date: 2020-03-14 22:37:00
-comments: true
-disqus_category_id: SwiftStringToIntRadix
+comment_id: 61
 categories: [Swift]
 tags: [Radix]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Swift In-Out
 date: 2020-02-08 16:58:00
-comments: true
-disqus_category_id: SwiftInOut
+comment_id: 44
 categories: [Swift]
 tags: [Parameter]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Reliable Scalable & Maintainable
 date: 2020-03-26 21:11:00
-comments: true
-disqus_category_id: ReliableScalableMaintainable
+comment_id: 67
 categories: [DataSystems, SystemDesign]
 tags: [DataIntensive]
 ---

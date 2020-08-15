@@ -2,8 +2,7 @@
 layout: post
 title: Difference between SSH keys & Deploy keys
 date: 2019-04-03 16:30:00
-comments: true
-disqus_category_id: DifferenceInSSHKeys&DeployKeys
+comment_id: 9
 categories: [Github]
 tags: [SSH, Deploy Key]
 ---

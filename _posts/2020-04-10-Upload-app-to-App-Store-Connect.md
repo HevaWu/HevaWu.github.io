@@ -2,8 +2,7 @@
 layout: post
 title: Upload app to App Store Connect
 date: 2020-04-10 16:27:00
-comments: true
-disqus_category_id: UploadApptoAppStoreConnect
+comment_id: 79
 categories: [AppStore, Xcode]
 tags: [Xcode11]
 ---

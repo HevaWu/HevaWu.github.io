@@ -2,8 +2,7 @@
 layout: post
 title: Merge Sort
 date: 2019-09-22 23:19:00
-comments: true
-disqus_category_id: MergeSort
+comment_id: 26
 categories: [Algorithm]
 tags: [Sort]
 ---

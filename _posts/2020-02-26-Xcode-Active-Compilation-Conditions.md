@@ -2,8 +2,7 @@
 layout: post
 title: Xcode Active Compilation Conditions
 date: 2020-02-26 10:13:00
-comments: true
-disqus_category_id: XcodeActiveCompilationConditions
+comment_id: 57
 categories: [Xcode]
 tags: [Condition]
 ---

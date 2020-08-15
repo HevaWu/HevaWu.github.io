@@ -2,8 +2,7 @@
 layout: post
 title: Data Models and Query Languages
 date: 2020-03-28 22:13:00
-comments: true
-disqus_category_id: DataModelsAndQueryLanguages
+comment_id: 68
 categories: [DataSystems, SystemDesign]
 tags: [DataIntensive]
 ---

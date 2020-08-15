@@ -2,8 +2,7 @@
 layout: post
 title: Vision Framework
 date: 2019-06-07 14:35:00
-comments: true
-disqus_category_id: VisionFramework
+comment_id: 14
 categories: [iOS, WWDC2019]
 tags: [Image Processing, Vision, CoreML]
 ---

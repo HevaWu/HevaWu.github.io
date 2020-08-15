@@ -2,8 +2,7 @@
 layout: post
 title: Swift Dictionary
 date: 2020-02-09 12:23:00
-comments: true
-disqus_category_id: SwiftDictionary
+comment_id: 47
 categories: [Swift]
 tags: [Collection]
 ---

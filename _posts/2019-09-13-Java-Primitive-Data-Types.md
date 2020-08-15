@@ -2,8 +2,7 @@
 layout: post
 title: Java Primitive Data Types
 date: 2019-09-13 14:22:00
-comments: true
-disqus_category_id: JavaPrimitiveDataTypes
+comment_id: 21
 categories: [Java]
 tags: [Primitive Data]
 ---

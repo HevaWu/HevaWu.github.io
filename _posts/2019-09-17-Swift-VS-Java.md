@@ -2,8 +2,7 @@
 layout: post
 title: Swift VS Java
 date: 2019-09-17 13:56:00
-comments: true
-disqus_category_id: SwiftVSJava
+comment_id: 22
 categories: [Java, Swift, C++]
 tags: [VS]
 ---

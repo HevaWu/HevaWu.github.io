@@ -2,8 +2,7 @@
 layout: post
 title: Swift LazySequence
 date: 2020-08-14 20:57:00
-comments: true
-disqus_category_id: SwiftLazySequence
+comment_id: 94
 categories: [Swift]
 tags: [Sequence]
 ---

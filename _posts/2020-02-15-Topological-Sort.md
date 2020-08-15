@@ -2,8 +2,7 @@
 layout: post
 title: Topological Sort
 date: 2020-02-15 13:40:00
-comments: true
-disqus_category_id: TopologicalSort
+comment_id: 51
 categories: [Algorithm]
 tags: [Sort, DAG]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Eulerian Path And Hamiltonian Path
 date: 2020-02-15 19:48:00
-comments: true
-disqus_category_id: EulerianPathAndHamiltonianCycle
+comment_id: 49
 categories: [Algorithm]
 tags: [Graph, NPComplete]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Intenal Tester Cannot Check App in Testflight
 date: 2020-02-15 11:57:00
-comments: true
-disqus_category_id: TesterCannotCheckAppinTestflight
+comment_id: 50
 categories: [Testflight]
 tags: [InternalTester]
 ---

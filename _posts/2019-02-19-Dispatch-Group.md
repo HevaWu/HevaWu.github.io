@@ -2,8 +2,7 @@
 layout: post
 title: Dispatch Group
 date: 2019-02-19 19:19:00
-comments: true
-disqus_category_id: DispatchGroup
+comment_id: 8
 categories: [iOS]
 tags: [DispatchGroup]
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Swift Sort
 date: 2020-02-08 15:14:00
-comments: true
-disqus_category_id: SwiftSort
+comment_id: 46
 categories: [Swift]
 tags: [Sort]
 ---

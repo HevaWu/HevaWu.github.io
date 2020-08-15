@@ -2,8 +2,7 @@
 layout: post
 title: HTTP Accept-Language
 date: 2020-07-02 21:55:00
-comments: true
-disqus_category_id: HTTPAccept-Language
+comment_id: 88
 categories: [Server]
 tags: [Header]
 ---

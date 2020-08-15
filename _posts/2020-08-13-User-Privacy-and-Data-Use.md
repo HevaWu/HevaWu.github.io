@@ -2,8 +2,7 @@
 layout: post
 title: User Privacy and Data Use
 date: 2020-08-13 15:12:00
-comments: true
-disqus_category_id: UserPrivacyAndDataUse
+comment_id: 93
 categories: [WWDC2020]
 tags: [Privacy]
 ---

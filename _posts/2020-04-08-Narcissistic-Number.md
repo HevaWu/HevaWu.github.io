@@ -2,8 +2,7 @@
 layout: post
 title: Narcissistic Number
 date: 2020-04-08 15:16:00
-comments: true
-disqus_category_id: NarcissisticNumber
+comment_id: 77
 categories: [Math, Number Theory]
 tags: [Perfect Number]
 ---

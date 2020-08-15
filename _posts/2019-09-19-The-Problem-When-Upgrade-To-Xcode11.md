@@ -2,8 +2,7 @@
 layout: post
 title: The Problem When Upgrade to use Xcode 11 GM
 date: 2019-09-17 13:56:00
-comments: true
-disqus_category_id: TheProblemWhenUpgradeToUseXcode11GM
+comment_id: 23
 categories: [Xcode, Swift]
 tags: [Xcode11, Upgrade]
 ---
