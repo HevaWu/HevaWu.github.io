@@ -43,7 +43,7 @@
 		userAvatar.setAttribute('src', response.user.avatar_url);
 
 		user.appendChild(userAvatar);
-		user.appendChild(document.createTextNode(response.user.login))
+		user.appendChild(document.createTextNode(" " + response.user.login + " "))
 
 		let commentDateWithURL = document.createElement('a');
 		commentDateWithURL.setAttribute('href', response.html_url);
