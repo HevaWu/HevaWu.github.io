@@ -18,6 +18,8 @@ nav:
   About:
     - '/about/'
 
+permalink: /blog/:year/:month/:day/:title
+
 category_archive:
   type: liquid
   path: /blog/categories/
