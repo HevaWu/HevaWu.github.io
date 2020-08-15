@@ -354,7 +354,11 @@ a:hover {
 /*****************************************************************************/
 
 .post-nav {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
   display: flex;
+  border-bottom: 1px dotted #e7e7e7;
 }
 
 .post-nav div {
@@ -363,6 +367,7 @@ a:hover {
 
 .post-nav-next {
   text-align: right;
+  margin-right: 2em;
 }
 
 /*****************************************************************************/
