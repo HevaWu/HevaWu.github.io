@@ -25,10 +25,3 @@ category_archive:
 tag_archive:
   type: liquid
   path: '/blog/tags/'
-
-comments:
-provider: "disqus"
-disqus:
-    shortname: "he_wu"
-default:
-    comments: true
