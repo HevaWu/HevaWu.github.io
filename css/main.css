@@ -211,7 +211,7 @@ a:hover {
 
 .post {
   line-height: 24px;
-  margin-right: 5em;
+  margin-right: 1em;
   clear: both;
 }
 
@@ -410,7 +410,7 @@ a:hover {
 }
 
 .content {
-  margin-right: 3em;
+  margin-right: 1em;
   padding-left: 2.125em;
 }
 
