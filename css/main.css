@@ -327,14 +327,22 @@ a:hover {
   border-bottom: none;
 }
 
-.comment-content p {
+.comment-content {
   margin-top: 0em;
   margin-bottom: 0em;
   margin-left: 50px;
   padding-left: 10px;
-  background-color: rgba(233, 232, 232, 0.623);
-  border-radius: 4px;
-  border-left: 2px solid rgba(122, 121, 121, 0.623);
+}
+
+.comment-content blockquote {
+  border-left: 3px solid #ccc;
+  margin: 0em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.comment-content blockquote:before {
+  content: "";
 }
 
 #gh-comments-list img {
@@ -524,4 +532,7 @@ blockquote:before {
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }

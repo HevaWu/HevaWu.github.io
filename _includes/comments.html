@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
 	const GH_API_URL = 'https://api.github.com/repos/HevaWu/HevaWu.github.io/issues/{{ page.comment_id }}/comments';
 
@@ -58,11 +59,7 @@
 
 		let commentContents = document.createElement('div');
 		commentContents.classList.add('comment-content');
-
-		let commentContentP = document.createElement('p');
-		commentContentP.innerHTML = response.body;
-
-		commentContents.appendChild(commentContentP);
+		commentContents.innerHTML = marked(response.body);
 
 		// Reaction
 
