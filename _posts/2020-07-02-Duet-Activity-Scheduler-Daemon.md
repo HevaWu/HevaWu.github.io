@@ -5,7 +5,7 @@ date: 2020-07-02 22:37:00
 comment_id: 87
 categories: [Mac, iPhone, Activity Monitor]
 tags: [Background Process]
----
+--- 
 
 Recently when we tried to add our own remote notification, we notice that there is a thread called `dasd` which cancel our background push notification. So what it is?
 
@@ -13,12 +13,14 @@ Recently when we tried to add our own remote notification, we notice that there 
 
 `dasd` which is called `Duet Activity Scheduler Daemon`. `Daemon` is a background process, this particular daemon manages other background processes. Normally, it shows as:
 
+{% raw %}
 ```s
 dasd -- Daemon for background activity scheduling
 dasd -- Daemon Canceling Activites: {{}}
 dasd -- Removing a launch request for application <private> by activity <private>
 ...
 ```
+{% endraw %}
 
 So, it helps manage background activities.
 
