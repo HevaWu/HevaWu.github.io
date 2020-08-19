@@ -264,9 +264,13 @@ a:hover {
   font-size: 15px
 }
 
-.post pre code {
+.post pre {
+  overflow-x: auto;
+}
+
+.post pre code * {
   border: none;
-  white-space: pre-wrap;
+  white-space: pre;
 }
 
 /* terminal */
