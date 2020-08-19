@@ -211,7 +211,7 @@ a:hover {
 
 .post {
   line-height: 24px;
-  max-width: 725px;
+  margin-right: 5em;
   clear: both;
 }
 
@@ -406,6 +406,7 @@ a:hover {
 }
 
 .content {
+  margin-right: 3em;
   padding-left: 2.125em;
 }
 
