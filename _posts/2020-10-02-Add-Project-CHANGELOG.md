@@ -90,7 +90,7 @@ If we want to use the default templates, but want to change the section descript
 
 OR we could define the sections by ourself:
 ```s
-# ex: --configure-sections '{"improvement": {"prefix":"Improvements:","labels":"feature","improve"}}'
+# ex: --configure-sections '{"improvement": {"prefix":"Improvements:","labels":["feature","improve"]}}'
 --configure-sections [Hash, String]
 								Define your own set of sections which overrides all default sections.
 --add-sections [Hash, String]
