@@ -4,10 +4,10 @@ title: Objective-C - Blocks Simplify Common Tasks
 date: 2020-11-11 21:48:00
 comment_id: 109
 categories: [Objective-C]
-tags: [video, codec]
+tags: [block]
 ---
 
-# Working with Protocols
+# Working with Blocks
 
 > Blocks are often used to simplify common tasks such as collection enumeration, sorting and testing. They also make it easy to schedule tasks for concurrent or asynchronous execution using technologies like Grand Central Dispatch (GCD).
 
