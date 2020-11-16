@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Objective-C - Blocks Simplify Common Tasks
-date: 2020-11-08 21:48:00
+date: 2020-11-11 21:48:00
 comment_id: 109
 categories: [Objective-C]
 tags: [video, codec]
