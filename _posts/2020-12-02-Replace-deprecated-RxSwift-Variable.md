@@ -372,8 +372,6 @@ multiThreadObservable
 */
 ```
 
-**NOTE:**
-
 If we update the value in different thread at the same time:
 
 - By using `BehaviorRelay` and `BehaviorSubject`, they will not block any updating, and will not show any warning, but the result are not follow the order.
@@ -672,18 +670,320 @@ multiThreadObservable
 */
 ```
 
+If we always append newValue after oldValue in different thread at the same time, if we do it simply by directly updating value: 
+
+- `Variable` will making sure that update it by order, ex: `init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 3`
+- `BehaviorRelay` and `BehaviorSubject` cannot update value in either thread order  or observer onNext order correctly
+
+```swift
+multiThreadObservable
+    .delay(.milliseconds(100), scheduler: ConcurrentDispatchQueueScheduler(queue: thread1))
+    .do(onNext: { newValue in
+        let newValue = "[Thread 1] " + newValue
+        variable.value = variable.value + newValue
+        behaviorRelay.accept(behaviorRelay.value + newValue)
+        behaviorSubject.onNext((try! behaviorSubject.value()) + newValue)
+    }, onError: { _ in
+        variable.value = "[Error] variable"
+        behaviorRelay.accept("[Error] behaviorRelay")
+        behaviorSubject.onNext("[Error] behaviorSubject")
+    })
+    .subscribe()
+    .disposed(by: disposeBag)
+
+multiThreadObservable
+    .delay(.milliseconds(100), scheduler: ConcurrentDispatchQueueScheduler(queue: thread2))
+    .do(onNext: { newValue in
+        let newValue = "[Thread 2] " + newValue
+        variable.value = variable.value + newValue
+        behaviorRelay.accept(behaviorRelay.value + newValue)
+        behaviorSubject.onNext((try! behaviorSubject.value()) + newValue)
+    }, onError: { _ in
+        variable.value = "[Error] variable"
+        behaviorRelay.accept("[Error] behaviorRelay")
+        behaviorSubject.onNext("[Error] behaviorSubject")
+    })
+    .subscribe()
+    .disposed(by: disposeBag)
+
+multiThreadObservable
+    .delay(.milliseconds(100), scheduler: ConcurrentDispatchQueueScheduler(queue: thread3))
+    .do(onNext: { newValue in
+        let newValue = "[Thread 3] " + newValue
+        variable.value = variable.value + newValue
+        behaviorRelay.accept(behaviorRelay.value + newValue)
+        behaviorSubject.onNext((try! behaviorSubject.value()) + newValue)
+    }, onError: { _ in
+        variable.value = "[Error] variable"
+        behaviorRelay.accept("[Error] behaviorRelay")
+        behaviorSubject.onNext("[Error] behaviorSubject")
+    })
+    .subscribe()
+    .disposed(by: disposeBag)
+
+/*
+// whole output:
+2020-12-02 23:25:22.250: === variable:  -> subscribed
+2020-12-02 23:25:22.252: === variable:  -> Event next(init variable)
+2020-12-02 23:25:22.280: === behaviorRelay:  -> subscribed
+2020-12-02 23:25:22.280: === behaviorRelay:  -> Event next(init relay)
+2020-12-02 23:25:22.310: === behaviorSubject:  -> subscribed
+2020-12-02 23:25:22.310: === behaviorSubject:  -> Event next(init subject)
+2020-12-02 23:25:22.414: === variable:  -> Event next(init variable[Thread 1] multi 1)
+2020-12-02 23:25:22.415: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1)
+2020-12-02 23:25:22.415: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1)
+2020-12-02 23:25:22.416: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1)
+2020-12-02 23:25:22.416: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1)
+2020-12-02 23:25:22.416: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1)
+2020-12-02 23:25:22.416: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1)
+2020-12-02 23:25:22.416: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1)
+2020-12-02 23:25:22.417: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1)
+2020-12-02 23:25:22.417: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2)
+2020-12-02 23:25:22.417: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2)
+2020-12-02 23:25:22.417: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2)
+⚠️ Synchronization anomaly was detected.
+  > Debugging: To debug this issue you can set a breakpoint in /Users/hewu/Project/Practice/RxSwift_playground/Pods/RxSwift/RxSwift/Rx.swift:112 and observe the call stack.
+  > Problem: This behavior is breaking the observable sequence grammar. `next (error | completed)?`
+    This behavior breaks the grammar because there is overlapping between sequence events.
+    Observable sequence is trying to send an event before sending of previous event has finished.
+  > Interpretation: Two different threads are trying to assign the same `Variable.value` unsynchronized.
+    This is undefined behavior because the end result (variable value) is nondeterministic and depends on the 
+    operating system thread scheduler. This will cause random behavior of your program.
+  > Remedy: If this is the expected behavior this message can be suppressed by adding `.observeOn(MainScheduler.asyncInstance)`
+    or by synchronizing sequence events in some other way.
+
+2020-12-02 23:25:22.469: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2)
+2020-12-02 23:25:22.469: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2)
+2020-12-02 23:25:22.470: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2[Thread 1] multi 3)
+2020-12-02 23:25:22.470: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2)
+2020-12-02 23:25:22.471: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3)
+2020-12-02 23:25:22.471: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 3] multi 2)
+2020-12-02 23:25:22.471: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3)
+⚠️ Synchronization anomaly was detected.
+  > Debugging: To debug this issue you can set a breakpoint in /Users/hewu/Project/Practice/RxSwift_playground/Pods/RxSwift/RxSwift/Rx.swift:112 and observe the call stack.
+  > Problem: This behavior is breaking the observable sequence grammar. `next (error | completed)?`
+    This behavior breaks the grammar because there is overlapping between sequence events.
+    Observable sequence is trying to send an event before sending of previous event has finished.
+  > Interpretation: Two different unsynchronized threads are trying to send some event simultaneously.
+    This is undefined behavior because the ordering of the effects caused by these events is nondeterministic and depends on the 
+    operating system thread scheduler. This will result in a random behavior of your program.
+  > Remedy: If this is the expected behavior this message can be suppressed by adding `.observeOn(MainScheduler.asyncInstance)`
+    or by synchronizing sequence events in some other way.
+
+2020-12-02 23:25:22.471: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3[Thread 2] multi 2)
+2020-12-02 23:25:22.555: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3[Thread 3] multi 2)
+2020-12-02 23:25:22.557: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2[Thread 1] multi 3[Thread 2] multi 3)
+⚠️ Synchronization anomaly was detected.
+  > Debugging: To debug this issue you can set a breakpoint in /Users/hewu/Project/Practice/RxSwift_playground/Pods/RxSwift/RxSwift/Rx.swift:112 and observe the call stack.
+  > Problem: This behavior is breaking the observable sequence grammar. `next (error | completed)?`
+    This behavior breaks the grammar because there is overlapping between sequence events.
+    Observable sequence is trying to send an event before sending of previous event has finished.
+  > Interpretation: Two different threads are trying to assign the same `Variable.value` unsynchronized.
+    This is undefined behavior because the end result (variable value) is nondeterministic and depends on the 
+    operating system thread scheduler. This will cause random behavior of your program.
+  > Remedy: If this is the expected behavior this message can be suppressed by adding `.observeOn(MainScheduler.asyncInstance)`
+    or by synchronizing sequence events in some other way.
+
+2020-12-02 23:25:22.557: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 3)
+2020-12-02 23:25:22.558: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 3] multi 2[Thread 2] multi 3)
+2020-12-02 23:25:22.558: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3[Thread 3] multi 2[Thread 2] multi 3)
+2020-12-02 23:25:22.558: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 3] multi 2[Thread 2] multi 3[Thread 3] multi 3)
+2020-12-02 23:25:22.558: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3[Thread 3] multi 2[Thread 2] multi 3[Thread 3] multi 3)
+
+// summarize
+// variable
+2020-12-02 23:25:22.250: === variable:  -> subscribed
+2020-12-02 23:25:22.252: === variable:  -> Event next(init variable)
+2020-12-02 23:25:22.414: === variable:  -> Event next(init variable[Thread 1] multi 1)
+2020-12-02 23:25:22.415: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1)
+2020-12-02 23:25:22.416: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1)
+2020-12-02 23:25:22.417: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2)
+2020-12-02 23:25:22.417: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2)
+⚠️ Synchronization anomaly was detected.
+  > Debugging: To debug this issue you can set a breakpoint in /Users/hewu/Project/Practice/RxSwift_playground/Pods/RxSwift/RxSwift/Rx.swift:112 and observe the call stack.
+  > Problem: This behavior is breaking the observable sequence grammar. `next (error | completed)?`
+    This behavior breaks the grammar because there is overlapping between sequence events.
+    Observable sequence is trying to send an event before sending of previous event has finished.
+  > Interpretation: Two different threads are trying to assign the same `Variable.value` unsynchronized.
+    This is undefined behavior because the end result (variable value) is nondeterministic and depends on the 
+    operating system thread scheduler. This will cause random behavior of your program.
+  > Remedy: If this is the expected behavior this message can be suppressed by adding `.observeOn(MainScheduler.asyncInstance)`
+    or by synchronizing sequence events in some other way.
+
+2020-12-02 23:25:22.469: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2)
+2020-12-02 23:25:22.470: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2[Thread 1] multi 3)
+⚠️ Synchronization anomaly was detected.
+  > Debugging: To debug this issue you can set a breakpoint in /Users/hewu/Project/Practice/RxSwift_playground/Pods/RxSwift/RxSwift/Rx.swift:112 and observe the call stack.
+  > Problem: This behavior is breaking the observable sequence grammar. `next (error | completed)?`
+    This behavior breaks the grammar because there is overlapping between sequence events.
+    Observable sequence is trying to send an event before sending of previous event has finished.
+  > Interpretation: Two different unsynchronized threads are trying to send some event simultaneously.
+    This is undefined behavior because the ordering of the effects caused by these events is nondeterministic and depends on the 
+    operating system thread scheduler. This will result in a random behavior of your program.
+  > Remedy: If this is the expected behavior this message can be suppressed by adding `.observeOn(MainScheduler.asyncInstance)`
+    or by synchronizing sequence events in some other way.
+
+2020-12-02 23:25:22.557: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2[Thread 1] multi 3[Thread 2] multi 3)
+⚠️ Synchronization anomaly was detected.
+  > Debugging: To debug this issue you can set a breakpoint in /Users/hewu/Project/Practice/RxSwift_playground/Pods/RxSwift/RxSwift/Rx.swift:112 and observe the call stack.
+  > Problem: This behavior is breaking the observable sequence grammar. `next (error | completed)?`
+    This behavior breaks the grammar because there is overlapping between sequence events.
+    Observable sequence is trying to send an event before sending of previous event has finished.
+  > Interpretation: Two different threads are trying to assign the same `Variable.value` unsynchronized.
+    This is undefined behavior because the end result (variable value) is nondeterministic and depends on the 
+    operating system thread scheduler. This will cause random behavior of your program.
+  > Remedy: If this is the expected behavior this message can be suppressed by adding `.observeOn(MainScheduler.asyncInstance)`
+    or by synchronizing sequence events in some other way.
+
+2020-12-02 23:25:22.557: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 3] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 3)
+
+// behaviorRelay
+2020-12-02 23:25:22.280: === behaviorRelay:  -> subscribed
+2020-12-02 23:25:22.280: === behaviorRelay:  -> Event next(init relay)
+2020-12-02 23:25:22.415: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1)
+2020-12-02 23:25:22.416: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1)
+2020-12-02 23:25:22.416: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1)
+2020-12-02 23:25:22.417: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2)
+2020-12-02 23:25:22.470: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2)
+2020-12-02 23:25:22.471: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3)
+2020-12-02 23:25:22.471: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 3] multi 2)
+2020-12-02 23:25:22.558: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 3] multi 2[Thread 2] multi 3)
+2020-12-02 23:25:22.558: === behaviorRelay:  -> Event next(init relay[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 3] multi 2[Thread 2] multi 3[Thread 3] multi 3)
+
+// behaviorSubject
+2020-12-02 23:25:22.310: === behaviorSubject:  -> subscribed
+2020-12-02 23:25:22.310: === behaviorSubject:  -> Event next(init subject)
+2020-12-02 23:25:22.416: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1)
+2020-12-02 23:25:22.416: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1)
+2020-12-02 23:25:22.417: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1)
+2020-12-02 23:25:22.469: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2)
+2020-12-02 23:25:22.471: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3)
+2020-12-02 23:25:22.471: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3[Thread 2] multi 2)
+2020-12-02 23:25:22.555: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3[Thread 3] multi 2)
+2020-12-02 23:25:22.558: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3[Thread 3] multi 2[Thread 2] multi 3)
+2020-12-02 23:25:22.558: === behaviorSubject:  -> Event next(init subject[Thread 2] multi 1[Thread 1] multi 1[Thread 3] multi 1[Thread 1] multi 2[Thread 1] multi 3[Thread 3] multi 2[Thread 2] multi 3[Thread 3] multi 3)
+*/
+```
+
+For resolving ⬆️, we could use `NSLock`:
+
+```swift
+let relayLock = NSLock()
+let subjectLock = NSLock()
+
+multiThreadObservable
+    .delay(.milliseconds(100), scheduler: ConcurrentDispatchQueueScheduler(queue: thread1))
+    .do(onNext: { newValue in
+        let newValue = "[Thread 1] " + newValue
+        variable.value = variable.value + newValue
+        relayLock.lock()
+        behaviorRelay.accept(behaviorRelay.value + newValue)
+        relayLock.unlock()
+        
+        subjectLock.lock()
+        behaviorSubject.onNext((try! behaviorSubject.value()) + newValue)
+        subjectLock.unlock()
+    }, onError: { _ in
+        variable.value = "[Error] variable"
+        behaviorRelay.accept("[Error] behaviorRelay")
+        behaviorSubject.onNext("[Error] behaviorSubject")
+    })
+    .subscribe()
+    .disposed(by: disposeBag)
+
+multiThreadObservable
+    .delay(.milliseconds(100), scheduler: ConcurrentDispatchQueueScheduler(queue: thread2))
+    .do(onNext: { newValue in
+        let newValue = "[Thread 2] " + newValue
+        variable.value = variable.value + newValue
+        relayLock.lock()
+        behaviorRelay.accept(behaviorRelay.value + newValue)
+        relayLock.unlock()
+        
+        subjectLock.lock()
+        behaviorSubject.onNext((try! behaviorSubject.value()) + newValue)
+        subjectLock.unlock()
+    }, onError: { _ in
+        variable.value = "[Error] variable"
+        behaviorRelay.accept("[Error] behaviorRelay")
+        behaviorSubject.onNext("[Error] behaviorSubject")
+    })
+    .subscribe()
+    .disposed(by: disposeBag)
+
+multiThreadObservable
+    .delay(.milliseconds(100), scheduler: ConcurrentDispatchQueueScheduler(queue: thread3))
+    .do(onNext: { newValue in
+        let newValue = "[Thread 3] " + newValue
+        variable.value = variable.value + newValue
+        relayLock.lock()
+        behaviorRelay.accept(behaviorRelay.value + newValue)
+        relayLock.unlock()
+        
+        subjectLock.lock()
+        behaviorSubject.onNext((try! behaviorSubject.value()) + newValue)
+        subjectLock.unlock()
+    }, onError: { _ in
+        variable.value = "[Error] variable"
+        behaviorRelay.accept("[Error] behaviorRelay")
+        behaviorSubject.onNext("[Error] behaviorSubject")
+    })
+    .subscribe()
+    .disposed(by: disposeBag)
+
+/*
+2020-12-02 23:41:11.973: === variable:  -> subscribed
+2020-12-02 23:41:12.005: === variable:  -> Event next(init variable)
+2020-12-02 23:41:12.033: === behaviorRelay:  -> subscribed
+2020-12-02 23:41:12.034: === behaviorRelay:  -> Event next(init relay)
+2020-12-02 23:41:12.036: === behaviorSubject:  -> subscribed
+2020-12-02 23:41:12.037: === behaviorSubject:  -> Event next(init subject)
+2020-12-02 23:41:12.141: === variable:  -> Event next(init variable[Thread 1] multi 1)
+2020-12-02 23:41:12.142: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1)
+2020-12-02 23:41:12.142: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1)
+2020-12-02 23:41:12.142: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1)
+2020-12-02 23:41:12.142: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1[Thread 2] multi 1)
+2020-12-02 23:41:12.143: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1[Thread 2] multi 1)
+2020-12-02 23:41:12.143: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2)
+2020-12-02 23:41:12.144: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2)
+2020-12-02 23:41:12.144: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2)
+2020-12-02 23:41:12.144: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2)
+2020-12-02 23:41:12.144: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2)
+2020-12-02 23:41:12.145: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3)
+2020-12-02 23:41:12.215: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2)
+2020-12-02 23:41:12.215: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3)
+2020-12-02 23:41:12.216: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3)
+2020-12-02 23:41:12.216: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3)
+2020-12-02 23:41:12.216: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3)
+2020-12-02 23:41:12.217: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3)
+2020-12-02 23:41:16.434: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1)
+2020-12-02 23:41:16.435: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1)
+2020-12-02 23:41:16.435: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1)
+2020-12-02 23:41:16.436: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1[Thread 3] multi 2)
+2020-12-02 23:41:16.437: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1[Thread 3] multi 2)
+2020-12-02 23:41:16.438: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1[Thread 3] multi 2)
+2020-12-02 23:41:16.438: === variable:  -> Event next(init variable[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1[Thread 3] multi 2[Thread 3] multi 3)
+2020-12-02 23:41:16.439: === behaviorRelay:  -> Event next(init relay[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1[Thread 3] multi 2[Thread 3] multi 3)
+2020-12-02 23:41:16.466: === behaviorSubject:  -> Event next(init subject[Thread 1] multi 1[Thread 2] multi 1[Thread 1] multi 2[Thread 2] multi 2[Thread 1] multi 3[Thread 2] multi 3[Thread 3] multi 1[Thread 3] multi 2[Thread 3] multi 3)
+*/
+```
+
 # Summarize
 
 For replacing `Variable`:
 
 - If we could update the observable value in same thread by order, we can directly replace `Variable` by using `BehaviorRelay` or `BehaviorSubject`
 - If we need to update the observable value in different thread, but we can control the update order, we can directly replace `Variable` by using `BehaviorRelay` or `BehaviorSubject`
-- If there is a case we need to update the observable value in different thread at the same time, even using `Variable`, we also cannot make sure value is update correctly. For this case, we should consider our code logic again, and making the value update in order then replace `Variable` by using `BehaviorRelay` or `BehaviorSubject`
+- If there is a case we need to update the observable value in different thread at the same time, using `Variable` can make sure value update in order, but it is not a good behavior which rx will throw warnings for it. For this case, we should consider our code logic again
+  - if we can change the original code to update the value in order, ex: add delay, run code in same synchronize thread, then we can directly replace `Variable` by using `BehaviorRelay` or `BehaviorSubject`
+  - if we cannot make sure update the value in order, we could consider to use `NSLock` to help force controlling updating order, which is also used in original Variable implementation logic.
 
 The difference between `BehaviorRelay` and `BehaviorSubject` is:
 
 - `BehaviorRelay` is a RelayObject, which is a wrapper of `BehaviorSubject`, it will not terminate by error or complete event
 - `BehaviorSubject` is an ObserverType, which will terminate by error or complete event
+
+Here is my test exercise code: <https://github.com/HevaWu/RxSwift_playground/blob/master/Replace_Variable_Test.playground/Contents.swift>
 
 #### Reference
 
