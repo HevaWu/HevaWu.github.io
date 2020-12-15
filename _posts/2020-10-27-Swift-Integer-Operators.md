@@ -4,7 +4,7 @@ title: Swift Integer Operators
 date: 2020-10-27 21:35:00
 comment_id: 105
 categories: [Swift]
-tags: [bitwise, bit shift, overflow]
+tags: [bit, overflow]
 ---
 
 I'd like to memo some arithmetic and bitwise operations in this article. [Here](https://developer.apple.com/documentation/swift/int/integer_operators) lists the whole integer operations.
