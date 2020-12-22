@@ -3,8 +3,8 @@ layout: post
 title: Swift Modulo Operation
 date: 2020-12-09 20:54:00
 comment_id: 116
-categories: [Swift]
-tags: [Math, Operation]
+categories: [[Math, Swift]
+tags: [Operation]
 ---
 
 Though Swift provide the `remainder` operator(%), however, we cannot directly this operator to calculate the negative numbers modulo operation. Here is the official doc:
