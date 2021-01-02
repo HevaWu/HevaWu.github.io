@@ -12,6 +12,8 @@ tags: [Stack, Queue]
 - `Queue` is a `First-in-First-out` Data Structure
 - Always can implement Queue by BFS
 
+Queue sometimes are used to process some short path problem.
+
 ## Pseudocode
 
 ```
