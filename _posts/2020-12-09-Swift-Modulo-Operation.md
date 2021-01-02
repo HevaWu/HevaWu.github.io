@@ -3,7 +3,7 @@ layout: post
 title: Swift Modulo Operation
 date: 2020-12-09 20:54:00
 comment_id: 116
-categories: [[Math, Swift]
+categories: [Math, Swift]
 tags: [Operation]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: Binary Search Tree
 date: 2020-02-23 10:24:00
 comment_id: 56
-categories: [Algorithm, ]
+categories: [Algorithm, Data Structure]
 tags: [Search]
 ---
 
