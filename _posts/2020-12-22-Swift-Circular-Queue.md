@@ -3,7 +3,7 @@ layout: post
 title: Swift Circular Queue
 date: 2020-12-22 18:43:00
 comment_id: 119
-categories: [Swift]
+categories: [Swift, Data Structure]
 tags: [Queue]
 ---
 

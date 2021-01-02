@@ -3,7 +3,7 @@ layout: post
 title: Hash Table
 date: 2020-02-02 16:51:00
 comment_id: 39
-categories: [DataStructure, Swift, Java, C++]
+categories: [Data Structure, Swift, Java, C++]
 tags: [Collection]
 ---
 
