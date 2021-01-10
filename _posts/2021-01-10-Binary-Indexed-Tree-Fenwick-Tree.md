@@ -2,7 +2,7 @@
 layout: post
 title: Binary Indexed Tree (Fenwick Tree)
 date: 2021-01-10 23:05:00
-comment_id: 126
+comment_id: 127
 categories: [Algorithm]
 tags: [Tree]
 ---
