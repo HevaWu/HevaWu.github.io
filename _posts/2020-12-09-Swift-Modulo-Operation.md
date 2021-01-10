@@ -7,7 +7,7 @@ categories: [Math, Swift]
 tags: [Operation]
 ---
 
-Though Swift provide the `remainder` operator(%), however, we cannot directly this operator to calculate the negative numbers modulo operation. Here is the official doc:
+Though Swift provide the `remainder` operator(%), however, we cannot directly this operator to calculate the negative numbers modulo/modulus operation. Here is the official doc:
 
 > The remainder operator (%) is also known as a modulo operator in other languages. However, its behavior in Swift for negative numbers means that, strictly speaking, it’s a remainder rather than a modulo operation.
 
