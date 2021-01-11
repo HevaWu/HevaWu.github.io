@@ -4,7 +4,7 @@ title: Merge Sort
 date: 2019-09-22 23:19:00
 comment_id: 26
 categories: [Algorithm]
-tags: [Sort]
+tags: [Sort, Divide And Conquer]
 ---
 
 ## Divide And Conquer Algorithem
