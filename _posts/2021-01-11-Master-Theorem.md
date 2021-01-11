@@ -37,7 +37,7 @@ $$\displaylines{
 
 ## Example
 
-### $T(n) = O(n^{log_{b}a})$
+**1. $T(n) = O(n^{log_{b}a})$**
 
 For [finding maximum depth of Binary Tree](https://en.wikipedia.org/wiki/Binary_tree), solve it by DFS, we need to find maximum depth of the given binary tree. The parameter in Master Theorem is:
 
@@ -49,7 +49,7 @@ For [finding maximum depth of Binary Tree](https://en.wikipedia.org/wiki/Binary_
 
 Therefore, the complexity for DFS recursion find depth of Binary Tree is: $d < log_{b}a, i.e. 0 < log_{2}2 = 1, T(n) = O(n^{log_{b}a}) = O(n)$
 
-### T(n) = O(n^dlogn)) = O(n^{log_{b}a}logn)
+**2. $T(n) = O(n^dlogn)) = O(n^{log_{b}a}logn)$**
 
 For [binary search algorithm](https://en.m.wikipedia.org/wiki/Binary_search_algorithm), which is a search algorithm that finds the position of target value in sorted array. The parameter in Master Theorem is:
 
@@ -61,7 +61,7 @@ For [binary search algorithm](https://en.m.wikipedia.org/wiki/Binary_search_algo
 
 Therefore, the complexity for binary search algorithm is: $d = log_{b}a, i.e. 0 = log_{2}1, T(n) = O(n^dlogn)) = O(logn)$
 
-### T(n) = O(n^d)
+**3. $T(n) = O(n^d)$**
 
 For [quickselect](https://en.wikipedia.org/wiki/Quickselect), which is an algorithm that selects the $k$th largest/smallest element in an unsorted list. Quickselect algorithm partitions input list with certain pivot. Assume each time partition input into halves exactly, i.e. the chosen pivot is median of the input. The parameter in Master Theorem is:
 
