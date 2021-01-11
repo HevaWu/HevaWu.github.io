@@ -27,6 +27,8 @@ $$T(n) = {aT({n \over b})+f(n)}$$
 
 where $f(n)$ is the time to create the subproblems and combine their results. Further represent $f(n) \ as \ O(n^d) \ where \ d >= 0$
 
+## Formulation
+
 Master Theorem provides 3 formulas:
 
 $$\displaylines{
@@ -34,6 +36,8 @@ $$\displaylines{
 2. & if a = b^d, i.e. d = log_{b}a = {log_{2}a \over log_2{b}}, then \ T(n) = O(n^dlogn)) = O(n^{log_{b}a}logn) \\
 3. & if a < b^d, i.e. d > log_{b}a = {log_{2}a \over log_2{b}}, then \ T(n) = O(n^d)
 }$$
+
+So, generally, we are comparing $f(n)$ and $n^{log_{b}a}$, if $n^{log_{b}a}$ is larger, this is case1. If $f(n)$ is larger, this is case 3. If these 2 are equal, append log to it, this is case 2.
 
 ## Example
 
