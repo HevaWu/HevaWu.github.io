@@ -144,10 +144,11 @@ $$
 Every index $i$ in the $BIT[]$ array stores the cumulative sum from $ i \ to \  i-(1 << r) + 1 $ (both inclusive), where $r$ represents the last set bit in index $i$.
 
 $$ \displaylines{ 
+\begin{align}
 & first \ 12 \ numbers = BIT[12] + BIT[8] = (a[12]+...+a[9]) + (a[8]+...+a[1]) \\
 & first \ 6 \ numbers = BIT[6] + BIT[4] = (a[6]+a[5]) + (a[4]+...+a[1])
-}
-$$
+\end{align}
+}$$
 
 ### Construct Tree
 
@@ -164,12 +165,14 @@ void update(int x, int delta) {
 Example: call $update(13, 2)$, $13, 14, 16$ cover index 13, we need to add 2 to them also.
 
 $$\displaylines{ 
+\begin{align}
 & BIT[13] += 2 \\ 
 & ==> isolate \ last \ set \ bit \ of \ 13(1101), i.e. x += x \& (-x) \\
 & ==> Last \ bit \ of \ 13 \ is \ 1, x = 13+1 = 14, update \ BIT[14] \\
 & BIT[14] += 2 \\
 & ==> 14(1110), isolate \ last \ bit \ and \ add \ to \ 14, x=14+2=16(10000), update \ BIT[16] \\
 & BIT[16] += 2
+\end{align}
 }$$
 
 In this way, $update()$ operation update all indices of $BIT[]$ which cover index $x$ and maintain $BIT[]$. The loop runs at most the number of bits in index $x(<= n)$, so the update operation takes at most $O(log_{2}n)$ time.
@@ -189,6 +192,7 @@ int query(int x) {
 Example: call $query(14)$
 
 $$ \displaylines{
+\begin{align}
 & ==> initial \ sum \\
 & sum = 0 \\
 & ==> x=14(1110), add \ BIT[14] \\
@@ -204,6 +208,7 @@ $$ \displaylines{
 & ==> isolate \ last \ set \ bit \ from 8(100) -> 8(1000), and \ subtract \ it \ from \ x \\
 & x = 8-8 = 0 \\
 & ==> x=0, break/end \ the \ loop, return \ sum
+\end{align}
 }$$
 
 The loop iterates at most number of bits in $x$, which will be at most $n$ (the size of given array). So query operation takes $O(log_{2}n)$ time.
