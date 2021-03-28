@@ -33,10 +33,10 @@ Here is its basic idea:
 $$
 x^{n}={
     \begin{cases}
-    1, \text{if } n = 0 \\
-    {\frac{1}{x}}^{-n}, \text{if } n < 0 \\
-    x\,(x^{2})^{\frac {n-1}{2}}, \text{if } n \text{ is odd.} \\
-    (x^{2})^{\frac {n}{2}}, \text{if } n \text{ is even.}
+    1, & \text{if } n = 0 \\
+    {\frac{1}{x}}^{-n}, & \text{if } n < 0 \\
+    x\,(x^{2})^{\frac {n-1}{2}}, & \text{if } n \text{ is odd.} \\
+    (x^{2})^{\frac {n}{2}}, & \text{if } n \text{ is even.}
     \end{cases}
     }
 $$
