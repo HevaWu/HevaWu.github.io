@@ -4,7 +4,6 @@ title: Swift Debug Assert
 date: 2019-09-20 14:36:00
 comment_id: 25
 categories: [Swift, Debug]
-tags: [Assert]
 ---
 
 I just notice Swift has this function, which could stop the project when condition is failed.

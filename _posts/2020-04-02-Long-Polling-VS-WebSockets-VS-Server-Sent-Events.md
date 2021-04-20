@@ -3,7 +3,7 @@ layout: post
 title: Long-Polling VS WebSockets VS Server-Sent Events
 date: 2020-04-02 15:57:00
 comment_id: 75
-categories: [SystemDesign]
+categories: [System Design]
 tags: [HTTP, Communication Protocol]
 ---
 
@@ -41,9 +41,9 @@ The basic life cycle of an application using HTTP Long-Polling is as follows:
 
 ## WebSockets
 
-WebSocket provides `Full duplex` (<https://en.wikipedia.org/wiki/Duplex_(telecommunications)#Full_duplex)> communication channels over a single TCP connection. It provides a persistent connection between a client and a server that both parties can `use to start sending data at any time`. 
+WebSocket provides `Full duplex` (<https://en.wikipedia.org/wiki/Duplex_(telecommunications)#Full_duplex)> communication channels over a single TCP connection. It provides a persistent connection between a client and a server that both parties can `use to start sending data at any time`.
 
-The client establishes a WebSocket connection through a process known as the WebSocket handshake. `If the process succeeds, then the server and client can exchange data in both directions at any time.` The WebSocket protocol enables communication between a client and a server with `lower overheads`, facilitating real-time data transfer from and to the server. 
+The client establishes a WebSocket connection through a process known as the WebSocket handshake. `If the process succeeds, then the server and client can exchange data in both directions at any time.` The WebSocket protocol enables communication between a client and a server with `lower overheads`, facilitating real-time data transfer from and to the server.
 
 This is made possible by providing a standardized way for the server to `send content to the browser without being asked by the client` and `allowing for messages to be passed back and forth while keeping the connection open`. In this way, a two-way (bi-directional) ongoing conversation can take place between a client and a server.
 

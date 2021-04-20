@@ -3,7 +3,7 @@ layout: post
 title: Encoding and Evolution
 date: 2020-03-30 15:27:00
 comment_id: 72
-categories: [DataSystems, SystemDesign]
+categories: [Data Systems, System Design]
 tags: [Encode, Decode]
 ---
 
@@ -113,7 +113,7 @@ You can only use null as a default value if it is one of the branches of the uni
 Example:
 
 ```markdown
-Avro writer's schema 
+Avro writer's schema
 
 - Large file with lots of records
   - A common use for Avro—especially in the context of Hadoop—is for storing a large file containing millions of records, all encoded with the same schema. (We will discuss this kind of situation in Chapter 10.) In this case, the writer of that file can just include the writer’s schema once at the beginning of the file. Avro specifies a file format (object container files) to do this.

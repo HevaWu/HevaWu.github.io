@@ -4,7 +4,7 @@ title: Rolling Hash
 date: 2021-03-12 18:58:00
 comment_id: 142
 categories: [Algorithm]
-tags: [hash]
+tags: [Hash]
 ---
 
 > A rolling hash (also known as recursive hashing or rolling checksum) is a hash function where the input is hashed in a window that moves through the input.

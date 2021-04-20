@@ -4,7 +4,7 @@ title: Exposure Notification for COVID-19
 date: 2020-04-30 13:40:00
 comment_id: 81
 categories: [Developer]
-tags: [iOS13.5, ExposureNotification]
+tags: [iOS13.5]
 ---
 
 ## Overview

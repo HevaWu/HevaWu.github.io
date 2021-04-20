@@ -3,8 +3,8 @@ layout: post
 title: Fix Xcode 12 iOS Simulator Development Target Warning
 date: 2020-09-24 15:40:00
 comment_id: 99
-categories: [Xcode12]
-tags: [Warning]
+categories: [Xcode]
+tag: [Xcode12]
 ---
 
 After updating to use Xcode 12, we got this ⬇️ warnings for our project.

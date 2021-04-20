@@ -4,7 +4,6 @@ title: Rail Fence Cipher
 date: 2020-04-08 10:45:00
 comment_id: 78
 categories: [Cipher]
-tags: [Transposition]
 ---
 
 ## Overview

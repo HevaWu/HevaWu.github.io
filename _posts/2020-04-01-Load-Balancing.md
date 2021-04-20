@@ -3,7 +3,7 @@ layout: post
 title: Load Balancing
 date: 2020-04-01 20:41:00
 comment_id: 74
-categories: [DataSystems, SystemDesign]
+categories: [Data Systems, System Design]
 tags: [LoadBalancer]
 ---
 

@@ -3,9 +3,9 @@ layout: post
 title: Duet Activity Scheduler Daemon
 date: 2020-07-02 22:37:00
 comment_id: 87
-categories: [Mac, iPhone, Activity Monitor]
-tags: [Background Process]
---- 
+categories: [MacOS, iOS]
+tags: [Background Process, Activity Monitor]
+---
 
 Recently when we tried to add our own remote notification, we notice that there is a thread called `dasd` which cancel our background push notification. So what it is?
 
@@ -37,9 +37,9 @@ It there is some problem probably with a background task, we might need to check
 ### Run bakcground acitivity
 
 > If its CurrentScore exceeds the ThresholdScore, and is closer to 1.0, then DAS sets the DecisionToRun for that activity to 1, which is the signal to CTS to run the activity. If the CurrentScore is below the ThresholdScore, then its DecisionToRun is set to 0, and the activity is left to the next rescoring.
-> 
+>
 > With DAS giving an activity the instruction to run, that action is passed to CTS, which writes in the log that “DAS told us to run” the activity. It changes the activity’s state from 1 to 2, and initiates inter-process communication by XPC to the running activity.
-> 
+>
 > When the activity is complete, its state is changed from 2 to 5, XPC activity finished, and CTS then works out the next time period in which that activity should be run, if it is due to repeat. This is then passed back to DAS for its list of activities and their scores.
 
 ### Remove background activity

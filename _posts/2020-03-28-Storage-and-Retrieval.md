@@ -3,7 +3,7 @@ layout: post
 title: Storage and Retrieval
 date: 2020-03-28 22:23:00
 comment_id: 71
-categories: [DataSystems, SystemDesign]
+categories: [Data Systems, System Design]
 tags: [Storage, Retrieval]
 ---
 
@@ -166,7 +166,7 @@ The data model of a `data warehouse` is most commonly `relational`, because SQL 
 
 `Star Schema(dimensional modeling)`: there is a center of schema is so called `fact` table. Each row of the fact table represents an event that occurred at a particular time.
 
-`Snowflake schema` is dimensions are further broken down into subdimensions. 
+`Snowflake schema` is dimensions are further broken down into subdimensions.
 
 `Snowflake schemas` are `more` `normalized` than star schemas, but `star` schemas are often `preferred` because they are `simpler` for `analysts` to work with.
 

@@ -3,13 +3,13 @@ layout: post
 title: Data Models and Query Languages
 date: 2020-03-28 22:13:00
 comment_id: 68
-categories: [DataSystems, SystemDesign]
-tags: [DataIntensive]
+categories: [Data Systems, System Design]
+tags: [Data Intensive]
 ---
 
 ## Overview
 
-Most applications are built by layering one data model on top of another. For each layer, the key question is: h`ow is it represented in terms of the next-lower layer?`
+Most applications are built by layering one data model on top of another. For each layer, the key question is: `how is it represented in terms of the next-lower layer?`
 
 Example:
 
@@ -89,7 +89,7 @@ The `problem` was that they made the code for q`uerying and updating the databas
 
 `Relational Model` lay out all the data in the open: a relation (table) is simply `a collection of tuples` (rows), and that’s it. There are no labyrinthine nested structures, no complicated access paths to follow if you want to look at the data. You can read any or all of the rows in a table, selecting those that match an arbitrary condition. You can read a particular row by designating some columns as a key and matching on those. You can insert a new row into any table without worrying about foreign key relationships to and from other tables.
 
-In a `relational` database, the `query optimizer automatically` decides which parts of the `query to execute` in which order, and `which indexes` to use. If you want to query your data in new ways, you can just declare a new index, and queries will automatically use whichever indexes are most appropriate. 
+In a `relational` database, the `query optimizer automatically` decides which parts of the `query to execute` in which order, and `which indexes` to use. If you want to query your data in new ways, you can just declare a new index, and queries will automatically use whichever indexes are most appropriate.
 
 A key insight of the relational model was this: `you only need to build a query optimizer once, and then all applications that use the database can benefit from it`.
 
@@ -135,7 +135,7 @@ The `locality` `advantage` only applies if you `need large parts of the document
 
 `SQL` is a `declarative` query language, whereas `IMS` and `CODASYL` queried the database using `imperative` code.
 
-An `imperative` language tells the computer to `perform certain operations in a certain order`. 
+An `imperative` language tells the computer to `perform certain operations in a certain order`.
 
 In a `declarative` query language, like SQL or relational algebra, you just `specify the pattern of the data you want`—what `conditions` the results must meet, and `how you want the data to be transformed` (e.g., sorted, grouped, and aggregated)—but not how to achieve that goal. It is up to the `database system’s query optimizer` to decide which indexes and which join methods to use, and in which order to execute various parts of the query.
 

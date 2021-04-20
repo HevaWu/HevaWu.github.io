@@ -4,7 +4,6 @@ title: MVVM MVP MVC
 date: 2020-03-12 11:52:00
 comment_id: 60
 categories: [Design Pattern]
-tags: [Pattern]
 ---
 
 ## Overview
@@ -22,7 +21,7 @@ MVC(Model-View-Controller) is commonly used for developing `user interfaces`. It
 >
 > **View**
 > Any representation of information such as a chart, diagram or table. Multiple views of the same information are possible, such as a bar chart for management and a tabular view for accountants.
-> 
+>
 > **Controller**
 > Accepts input and converts it to commands for the model or view.
 
@@ -39,7 +38,7 @@ MVP(Model-View-Presenter) is a derivation of MVC. It also devide into 3 elements
 > The model is an interface defining the data to be displayed or otherwise acted upon in the user interface.
 >
 > The view is a passive interface that displays data (the model) and routes user commands (events) to the presenter to act upon that data.
-> 
+>
 > The presenter acts upon the model and the view. It retrieves data from repositories (the model), and formats it for display in the view.
 
 ## MVVM

@@ -3,8 +3,8 @@ layout: post
 title: "AttributeError: module 'dlib' has no attribute 'image_window'"
 date: 2020-09-04 12:14:00
 comment_id: 97
-categories: [dlib]
-tags: [Error]
+categories: [ML]
+tags: [dlib]
 ---
 
 ## Problem
@@ -23,7 +23,7 @@ AttributeError: module 'dlib' has no attribute 'image_window'
 
 ## Solution
 
-After several researching, I tried to solve it by: 
+After several researching, I tried to solve it by:
 
 - uninstall the `dlib`: If you are using pip to install it, you could directly run `pip uninstall dlib`
 

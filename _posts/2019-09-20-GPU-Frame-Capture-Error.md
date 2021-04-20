@@ -4,7 +4,7 @@ title: GPU Frame Capture Error
 date: 2019-09-20 12:15:00
 comment_id: 24
 categories: [Xcode, Error]
-tags: [GPU Frame Capture Error]
+tags: [GPU]
 ---
 
 Here is one problem I met when build the project.

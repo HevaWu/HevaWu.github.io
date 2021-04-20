@@ -3,7 +3,7 @@ layout: post
 title: SQL vs NoSQL
 date: 2020-03-28 16:22:00
 comment_id: 70
-categories: [Database, SystemDesign]
+categories: [Database, System Design]
 tags: [SQL, NoSQL]
 ---
 

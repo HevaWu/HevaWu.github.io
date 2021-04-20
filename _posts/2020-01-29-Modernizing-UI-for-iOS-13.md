@@ -3,8 +3,8 @@ layout: post
 title: Modernizing UI for iOS 13
 date: 2020-01-29 13:50:00
 comment_id: 37
-categories: [UI, iOS, WWDC2019]
-tags: [iOS13, NavigationBar]
+categories: [iOS, WWDC2019]
+tags: [iOS13, UI, NavigationBar]
 ---
 
 It has already passed half of year after WWDC2019, and I just have time to write a memo for it. 😰 For the next time, I might watch some interested ASAP. ><

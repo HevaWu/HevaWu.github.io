@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Intenal Tester Cannot Check App in Testflight
+title: Internal Tester Cannot Check App in TestFlight
 date: 2020-02-15 11:57:00
 comment_id: 50
-categories: [Testflight]
-tags: [InternalTester]
+categories: [TestFlight]
 ---
 
 Last Monday, we prepare to upload our app to Testflight and ask our QA to help testing it. Then we receive a report that they cannot see the new version of our app in their Testflight.
