@@ -3,7 +3,7 @@ layout: post
 title: Upload app to App Store Connect
 date: 2020-04-10 16:27:00
 comment_id: 79
-categories: [AppStore, Xcode]
+categories: [App Store, Xcode]
 tags: [Xcode11]
 ---
 

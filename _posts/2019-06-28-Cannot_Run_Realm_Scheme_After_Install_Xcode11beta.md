@@ -4,7 +4,7 @@ title: Cannot Run `Real` Scheme After Install Xcode11 beta
 date: 2019-06-28 11:53:00
 comment_id: 16
 categories: [iOS, WWDC2019, Xcode]
-tags: [Real, Xcode 11 beta]
+tags: [Real, Xcode11 beta]
 ---
 
 ## Description

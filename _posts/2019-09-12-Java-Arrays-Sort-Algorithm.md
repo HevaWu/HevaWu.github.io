@@ -3,7 +3,7 @@ layout: post
 title: Java Arrays Sort Algorithm
 date: 2019-09-12 10:57:00
 comment_id: 19
-categories: [Sort, Java]
+categories: [Java]
 tags: [Arrays, Sort]
 ---
 

@@ -4,7 +4,7 @@ title: iOS Refresh Rate
 date: 2020-05-08 17:07:00
 comment_id: 83
 categories: [iOS]
-tags: [Dispaly]
+tags: [UIKit]
 ---
 
 ## Display Refresh

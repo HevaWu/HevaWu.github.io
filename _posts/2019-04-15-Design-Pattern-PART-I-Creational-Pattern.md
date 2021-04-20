@@ -3,8 +3,7 @@ layout: post
 title: Design Pattern PART I - Creational Patterns
 date: 2019-04-15 12:20:00
 comment_id: 10
-categories: [Object Creation]
-tags: [Design Pattern]
+categories: [Design Pattern]
 ---
 
 ### Define

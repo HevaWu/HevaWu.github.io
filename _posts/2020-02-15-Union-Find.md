@@ -3,11 +3,11 @@ layout: post
 title: Union Find
 date: 2020-02-15 11:21:00
 comment_id: 52
-categories: [Data Structure]
+categories: [Algorithm, Data Structure]
 tags: [UnionFind]
 ---
 
-Some application needs to seperate n element into `disjoint set`. Almostly it needs 2 operations:
+Some application needs to separate n element into `disjoint set`. Mostly it needs 2 operations:
 
 - Find the set contains specific element
 - Union 2 set
@@ -57,7 +57,7 @@ LINK(FIND-SET(x), FIND-SET(y))
 // LINK(x,y)
 if x.rank > y.rank
 	y.p = x
-else 
+else
 	x.p = y
 	if x.rank == y.rank
 		y.rank = y.rank + 1

@@ -3,8 +3,8 @@ layout: post
 title: Reliable Scalable & Maintainable
 date: 2020-03-26 21:11:00
 comment_id: 67
-categories: [DataSystems, SystemDesign]
-tags: [DataIntensive]
+categories: [Data Systems, System Design]
+tags: [Data Intensive]
 ---
 
 ## Overview
@@ -64,7 +64,7 @@ There is a move toward systems that can tolerate the loss of entire machines, by
 
 ### Software Faults
 
-Software faults are harder to anticipate, because they are correlated across nodes, they tend to cause many more system failures than uncorrelated hardware faults. ex: 
+Software faults are harder to anticipate, because they are correlated across nodes, they tend to cause many more system failures than uncorrelated hardware faults. ex:
 
 - A software bug that causes every instance of an application server to crash when given a particular bad input. For example, consider the leap second on June 30, 2012, that caused many applications to hang simultaneously due to a bug in the Linux kernel
 - A runaway process that uses up some shared resource — CPU time, memory, disk space, or network bandwidth.
@@ -114,7 +114,7 @@ After discussing the load, we could discuss what happens when the load increases
 - When you incrase a load parameter and keep the system resources(CPU, memory, network, bandwidth, etc.) unchanged, how is the performance of your system affected?
 - When you incrase a load parameter, how much do you need to increase the resources if you want to keep performance unchanged?
 
-In a batch processing system, we usually care about `throughput` - the number of records we can process per second, or the total time ittakes to run a job on a dataset of a certain size. 
+In a batch processing system, we usually care about `throughput` - the number of records we can process per second, or the total time ittakes to run a job on a dataset of a certain size.
 
 To online system, the most important is the service's `response time` - that is, the time between a client sending a request and receiving a response.
 
@@ -209,7 +209,7 @@ In terms of organizational processes, `Agile` working patterns provide a framewo
 
 ## Summary
 
-An application has to meet various requirements in order to be useful. There are `functional` requirements (what it should do, such as allowing data to be stored, retrieved, searched, and processed in various ways), and some `nonfunctional` requirements (general properties like security, reliability, compliance, scalability, compatibility, and maintainability). 
+An application has to meet various requirements in order to be useful. There are `functional` requirements (what it should do, such as allowing data to be stored, retrieved, searched, and processed in various ways), and some `nonfunctional` requirements (general properties like security, reliability, compliance, scalability, compatibility, and maintainability).
 
 `Reliability` means making systems work correctly, even when faults occur. Faults can be in hardware (typically random and uncorrelated), software (bugs are typically systematic and hard to deal with), and humans (who inevitably make mistakes from time to time). Fault-tolerance techniques can hide certain types of faults from the end user.
 

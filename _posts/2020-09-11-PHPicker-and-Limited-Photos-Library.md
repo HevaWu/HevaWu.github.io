@@ -3,8 +3,8 @@ layout: post
 title: PHPicker and Limited Photos Library
 date: 2020-09-11 19:40:00
 comment_id: 98
-categories: [iOS14, WWDC2020]
-tags: [Photo]
+categories: [iOS, WWDC2020]
+tags: [iOS14]
 ---
 
 As we shared in previous [User Privacy and Data Use](https://hevawu.github.io/blog/2020/08/13/User-Privacy-and-Data-Use) article, Apple provided the limited photo library options to users in iOS 14. And this article will primary talk about this part.
@@ -67,26 +67,26 @@ class SingleSelectionPickerViewController: UIViewController, PHPickerViewControl
         var configuration = PHPickerConfiguration()
         // Only wants images
         configuration.filter = .images
-        
+
 		// Initialize picker view controller with a configuration
         let picker = PHPickerViewController(configuration: configuration)
 
 		// Assign a delegate
         picker.delegate = self
-        
+
         // The client is responsible for presentation and dismissal
         present(picker, animated: true)
     }
 
 	// Handling results
-    
+
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         // The client is responsible for presentation and dismissal
         picker.dismiss(animated: true)
-        
+
         // Get the first item provider from the results, the configuration only allowed one image to be selected
         let itemProvider = results.first?.itemProvider
-        
+
 		// Access the UIImage representation for the result
         if let itemProvider = itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
             itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
@@ -108,13 +108,13 @@ import UIKit
 import PhotosUI
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet weak var imageView: UIImageView!
-    
+
     @IBAction func presentPicker(_ sender: Any) {
         var configuration = PHPickerConfiguration()
         configuration.filter = .images
-        
+
         let picker = PHPickerViewController(configuration: configuration)
         picker.delegate = self
         present(picker, animated: true)
@@ -124,7 +124,7 @@ class ViewController: UIViewController {
 extension ViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
-        
+
         if let itemProvider = results.first?.itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
             let previousImage = imageView.image
             itemProvider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
@@ -145,26 +145,26 @@ import UIKit
 import PhotosUI
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet weak var imageView: UIImageView!
-    
+
     var itemProviders: [NSItemProvider] = []
 
 	// use iterator to step the multi-images
     var iterator: IndexingIterator<[NSItemProvider]>?
-    
+
     @IBAction func presentPicker(_ sender: Any) {
         var configuration = PHPickerConfiguration()
         configuration.filter = .images
-		
+
 		// set this selectionLimit for enable multi selection
         configuration.selectionLimit = 0
-        
+
         let picker = PHPickerViewController(configuration: configuration)
         picker.delegate = self
         present(picker, animated: true)
     }
-    
+
     func displayNextImage() {
         if let itemProvider = iterator?.next(), itemProvider.canLoadObject(ofClass: UIImage.self) {
             let previousImage = imageView.image
@@ -176,23 +176,23 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         displayNextImage()
     }
-    
+
 }
 
 extension ViewController: PHPickerViewControllerDelegate {
-    
+
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
-        
+
         itemProviders = results.map(\.itemProvider)
         iterator = itemProviders.makeIterator()
         displayNextImage()
     }
-    
+
 }
 ```
 
@@ -210,13 +210,13 @@ class PhotoKitPickerViewController: UIViewController, PHPickerViewControllerDele
         picker.delegate = self
         present(picker, animated: true)
     }
-    
+
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
-        
+
         let identifiers = results.compactMap(\.assetIdentifier)
         let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
-        
+
         // TODO: Do something with the fetch result if you have Photos Library access
     }
 }
@@ -280,12 +280,12 @@ PHPhotoLibrary.requestAuthorization(for: requiredAccessLevel) { authorizationSta
     default:
         //FIXME: Implement handling for all authorizationStatus
         print("Unimplemented")
-        
+
     }
 }
 ```
 
-Future deprecation: 
+Future deprecation:
 
 ![deprecation](/images/2020-09-11-PHPicker-and-Limited-Photos-Library/deprecation.png)
 
