@@ -4,7 +4,7 @@ title: Diagnose Performance Issue
 date: 2021-04-20 21:44:00
 comment_id: 148
 categories: [WWDC2020, Xcode]
-tag: [Performace]
+tag: [Performance]
 ---
 
 # Scroll **hitches**
