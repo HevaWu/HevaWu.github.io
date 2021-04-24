@@ -2,7 +2,7 @@
 layout: post
 title: Pigeonhole principle
 date: 2021-04-24 11:44:00
-comment_id: 149
+comment_id: 150
 categories: [Math]
 tag: [Performance]
 ---
