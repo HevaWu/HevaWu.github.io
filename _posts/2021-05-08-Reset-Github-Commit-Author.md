@@ -17,9 +17,9 @@ Here is a nice blog for it: <https://mhagemann.medium.com/how-to-change-the-user
 
 ```s
 $ git filter-branch --env-filter '
-OLD_EMAIL="https://github.com/HevaWu"
-NEW_NAME="He Wu(Heva)"
-NEW_EMAIL="hewu9375@gmail.com"
+OLD_EMAIL="old@example.com"
+NEW_NAME="new name"
+NEW_EMAIL="new@example.com"
 if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
 then
   export GIT_COMMITTER_NAME="$NEW_NAME"
