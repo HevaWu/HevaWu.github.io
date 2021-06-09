@@ -4,7 +4,6 @@ title: WWDC2021 What's New in Swift
 date: 2021-06-09 15:33:00
 comment_id: 163
 categories: [WWDC2021, Swift]
-tag: [Concurrency, iOS15]
 ---
 
 # Diversity
