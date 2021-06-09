@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WWDC2021 Swift Concurrency
+title: Swift Concurrency
 date: 2021-06-09 10:55:00
 comment_id: 162
 categories: [WWDC2021, Swift]
