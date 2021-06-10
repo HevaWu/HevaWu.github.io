@@ -200,26 +200,42 @@ updateColor(button.menu?.selectedElements.first?.title)
 - improved submenu interaction
 - selection management
 
-## Others
+## SF Symbol
 
-- Submenus
-  - new ui for `UIMenu` submenus
-  - preserves menu hierarchy
-  - no api adoption required
-- SF Symbol enhancements
-  - monochrome
-  - hierarchical
-  - palette
-  - multicolor
+In iOS, SF Symbols support Dynamic Type and the Bold Text accessibility feature. SF Symbol available in 3 scales: small, medium and large.
+
+SF symbols are automatically `vertically centered` to San Francisco's cap-height in all the different scales and weights.
+
+### Enhancements
+
+- monochrome
+- hierarchical
+- palette
+- multicolor
+
 ![](/images/2021-06-10-WWDC2021-Whats-New-in-UIKit/SF.png)
+
 ```swift
 // use a hierarchical color symbol
 let configuration = UIImage.SymbolConfiguration(hierarchicalColor: UIColor.systemOrange)
 
 let image = UIImage(systemName: "sun.max.circle.fill", withConfiguration: configuration)
 ```
-- SF Symbol variants
+
+### SF Symbol variants
+
+- outline, fill
+- slash
+- enclosing variants: circle, square, rectangle
+
 ![](/images/2021-06-10-WWDC2021-Whats-New-in-UIKit/variants.png)
+
+![](/images/2021-06-10-WWDC2021-Whats-New-in-UIKit/variants2.png)
+
+- Dynamic tint color: `UIColor.tintColor`, can using with new `UIButton.Configuration` and coloful SF Symbols APIs
+
+## Others
+
 - Content size category limits
   - restrict dynamic type sizes in view hierarchies
   - set minimum and maximum size
@@ -229,7 +245,7 @@ extension UIView {
     var maximumContentSizeCategory: UIContentSizeCategory
 }
 ```
-- Dynamic tint color: `UIColor.tintColor`, can using with new `UIButton.Configuration` and coloful SF Symbols APIs
+
 - Color picker enhancements
   - Continuous change
 - TextKit2
@@ -244,6 +260,7 @@ extension UIView {
 - Cell configuration closures
   - UICollectionView and UITableView
   - React to changes in cell state
+
 ```swift
 let cell: UICollectionViewCell = ...
 cell.configurationUpdateHandler = { cell, state in
@@ -254,6 +271,7 @@ cell.configurationUpdateHandler = { cell, state in
     cell.contentConfiguration = content
 }
 ```
+
 - Diffable data source improvements
   - apply snapshots without animation
   - new api to reconfigure items
@@ -310,3 +328,4 @@ From iOS 14.5
 
 - <https://developer.apple.com/wwdc21/10059>
 - <https://developer.apple.com/wwdc21/10064>
+- <https://developer.apple.com/wwdc21/10097>
