@@ -97,7 +97,14 @@ viewController.setContentScrollView(scrollView, for: .bottem)
   - pull-down
   - pop-up
 
+### UIButton.Configuration
+
 ```swift
+// Create SignIn button
+let signInButton = UIBUtton(type: .system)
+signInButton.configuration = .filled()
+signInButton.setTitle("Sign In", for: [])
+
 // create button with UIButton.Configuration
 var config = UIButton.Configuration.tinted()
 
@@ -107,8 +114,93 @@ config.imagePlacement = .trailing
 config.buttonSize = .large
 config.cornerStyle = .capsule
 
-self.addToCartButton = UIButton(configuration: config)
+addToCartButton = UIButton(configuration: config)
+
+// Customize image and subtitle with a configurationUpdateHandler
+addToCartButton.configurationUpdateHandler = { [unowned self] button in
+    var config = button.configuration
+    config?.image = button.isHighlighted
+        ? UIImage(systemName: "cart.fill.badge.plus")
+        : UIImage(systemName: "cart.badge.plus")
+    config?.subtitle = self.itemQuantityDescription
+    button.configuration = config
+}
+
+// Update when itemQuantityDescription changes
+private var itemQuantityDescription: String? {
+    didSet {
+        addToCartButton.setNeedsUpdateConfiguration()
+    }
+}
 ```
+
+**Activity Indicator**
+
+- set `showActivityIndicator = true` in button configuration
+
+**Metrics adjustments**
+
+![](/images/2021-06-10-WWDC2021-Whats-New-in-UIKit/metric.png#simulator)
+
+**Semantic Styling**
+
+![](/images/2021-06-10-WWDC2021-Whats-New-in-UIKit/semantic.png#simulator)
+
+### Toggle Buttons
+
+- preserve a `selected` state
+- already a state of `UIControl`
+- automatically toggles `selected`
+
+```swift
+// Toggle button
+
+let stockToggleAction = UIAction(title: "In Stock Only") { _ in
+    toggleStock()
+}
+
+let button = UIButton(primaryAction: stockToggleAction)
+button.changeSelectionAsPrimaryAction = true
+
+button.isSelected = showingOnlyInStock()
+```
+
+### Pop-up buttons
+
+- Similar to pull-down buttons
+- Enforce a single selected item
+- Display selected item
+
+```swift
+// pop-up button
+
+let colorClosure = { (action: UIAction) in
+    updateColor(action.title)
+}
+
+let button = UIButton(primaryAction: nil)
+button.menu = UIMenu(children: [
+    UIAction(title: "Bondi Blue", handler: colorClosure),
+    UIAction(title: "Flower Power", state: .on, handler: colorClosure)
+])
+
+button.showMenuAsPrimaryAction = true
+button.changesSelectionAsPrimaryAction = true
+
+// update to the currently set one
+updateColor(button.menu?.selectedElements.first?.title)
+
+// update selection
+(button.menu?.children[selectedColorIndex()] as? UIAction)?.state = .on
+```
+
+### UIMenu
+
+- subtitles
+- improved submenu interaction
+- selection management
+
+## Others
 
 - Submenus
   - new ui for `UIMenu` submenus
@@ -217,3 +309,4 @@ From iOS 14.5
 #### Reference
 
 - <https://developer.apple.com/wwdc21/10059>
+- <https://developer.apple.com/wwdc21/10064>
