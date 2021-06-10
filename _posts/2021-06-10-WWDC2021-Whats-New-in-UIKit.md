@@ -96,6 +96,7 @@ viewController.setContentScrollView(scrollView, for: .bottem)
 - Menu
   - pull-down
   - pop-up
+
 ```swift
 // create button with UIButton.Configuration
 var config = UIButton.Configuration.tinted()
@@ -108,6 +109,7 @@ config.cornerStyle = .capsule
 
 self.addToCartButton = UIButton(configuration: config)
 ```
+
 - Submenus
   - new ui for `UIMenu` submenus
   - preserves menu hierarchy
