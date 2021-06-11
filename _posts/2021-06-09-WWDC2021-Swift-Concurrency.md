@@ -1,11 +1,207 @@
 ---
 layout: post
-title: Swift Concurrency
+title: WWDC2021 Swift Concurrency
 date: 2021-06-09 10:55:00
 comment_id: 162
 categories: [WWDC2021, Swift]
 tag: [Concurrency, iOS15]
 ---
+
+# Structured Programming
+
+Previous implementation with completion block is `static scope`:
+
+![](/images/2021-06-09-WWDC2021-Swift-Concurrency/static.png#simulator)
+
+This can let program execution flows from top to bottom.
+
+## Tasks in Swift
+
+- A task provides a new `async` context for executing code concurrently
+- Swift checks usage of tasks to help prevent concurrency bugs
+- When calling an async function a task is `not created`
+
+## Bindings
+
+- Sequential bindings
+
+![](/images/2021-06-09-WWDC2021-Swift-Concurrency/sequential.png#simulator)
+
+- Concurrent bindings
+
+![](/images/2021-06-09-WWDC2021-Swift-Concurrency/concurrent.png#simulator)
+
+Use `async let` for fix amount of concurrency available.
+
+```swift
+func fetchOneThumbnail(withID id: String) async throws -> UIImage {
+    let imageReq = imageRequest(for: id), metadataReq = metadataRequest(for: id)
+    async let (data, _) = URLSession.shared.data(for: imageReq)
+    async let (metadata, _) = URLSession.shared.data(for: metadataReq)
+    guard let size = parseSize(from: try await metadata),
+        let image = try await UIImage(data: data)?.byPreparingThumbnail(ofSize: size) else {
+        throw ThumbnailFailedError()
+    }
+    return image
+}
+```
+
+## Cancellation is cooperative
+
+- Tasks are not stopped immediately when cancelled
+- Cancellation can be checked from anywher
+- Design with cancellation in mind
+
+```swift
+// obtain cancellation status of the current task
+func fetchThumbnails(for ids: [String]) async throws -> [String: UIImage] {
+    var thumbnails: [String: UIImage] = [:]
+    for id in ids {
+        if Task.isCancelled { break }
+        thumbnails[id] = try await fetchOneThumbnail(withID: id)
+    }
+    return thumbnails
+}
+```
+
+## Group tasks
+
+Take this sample:
+
+```swift
+func fetchThumbnails(for ids: [String]) async throws -> [String: UIImage] {
+    var thumbnails: [String: UIImage] = [:]
+    for id in ids {
+        thumbnails[id] = try await fetchOneThumbnail(withID: id)
+    }
+    return thumbnails
+}
+
+func fetchOneThumbnail(withID id: String) async throws -> UIImage {
+    ...
+    async let (data, _) = URLSession.shared.data(for: imageReq)
+    async let (metadata, _) = URLSession.shared.data(for: metadataReq)
+    ...
+}
+```
+
+- `async let` will see each 2 subtasks must be completed before next for loop iteration begin
+- for fetch all of thumbnails concurrently, use `task group`, this is for provide dynamic amount of concurrency.
+
+Change above code by ⬇️, using `withThrowingTaskGroup`
+
+![](/images/2021-06-09-WWDC2021-Swift-Concurrency/group.png#simulator)
+
+## Date-race safety
+
+- Task creation takes a `@Sendable` closure
+- Cannot capture mutable variables
+- Should only capture value types, actors or classes that implement own synchronization
+
+To avoid data race, using ⬇️
+
+```swift
+func fetchThumbnails(for ids: [String]) async throws -> [String: UIImage] {
+    var thumbnails: [String: UIImage] = [:]
+    // return key value in group
+    try await withThrowingTaskGroup(of: (String, UIImage).self) { group in
+        for id in ids {
+            group.async {
+                return (id, try await fetchOneThumbnail(withID: id))
+            }
+        }
+        // this part is sequentially, can safely add
+        for try await (id, thumbnail) in group {
+            thumbnails[id] = thumbnail
+        }
+    }
+    return thumbnails
+}
+```
+
+# Unstructured tasks
+
+- Some tasks need to launch from non-async contexts
+- Some tasks live beyond the confines of a single scope
+
+For example, some delegate
+
+```swift
+// create unstructured task
+@MainActor
+class MyDelegate: UICollectionViewDelegate {
+    func collectionView(_ view: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt item: IndexPath) {
+        let ids = getThumbnailIDs(for: item)
+        async {
+            let thumbnails = await fetchThumbnails(for: ids)
+            display(thumbnails, in: cell)
+        }
+    }
+}
+```
+
+- Inherit actor isolation and priority of the origin context
+- Lifetime is not confined to any scope
+- Can be launched anywhere, even non-async functions
+- Must be manually `cancelled` or `awaited`
+
+```swift
+// cancel unstructured task
+@MainActor
+class MyDelegate: UICollectionViewDelegate {
+    var thumbnailTasks: [IndexPath: Task.Handle<Void, Never>] = [:]
+    func collectionView(_ view: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt item: IndexPath) {
+        let ids = getThumbnailIDs(for: item)
+        thumbnailTasks[item] = async {
+            let thumbnails = await fetchThumbnails(for: ids)
+            display(thumbnails, in: cell)
+        }
+    }
+
+    func collectionView(_ view: UICollectionView,
+                        didEndDisplay cell: UICollectionViewCell,
+                        forItemAt item: IndexPath) {
+        thumbnailTasks[item]?.cancel()
+    }
+}
+```
+
+## Detached Tasks
+
+- Unscoped lifetime, manually cancelled and awaited
+- Do not inherit anything form their originating context
+- Optional parameters control priority and other traits
+
+```swift
+// detaching a task, create a task group inside a detached task
+@MainActor
+class MyDelegate: UICollectionViewDelegate {
+    var thumbnailTasks: [IndexPath: Task.Handle<Void, Never>] = [:]
+    func collectionView(_ view: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt item: IndexPath) {
+        let ids = getThumbnailIDs(for: item)
+        thumbnailTasks[item] = async {
+            defer { thumbnailTasks[item] = nil }
+            let thumbnails = await fetchThumbnails(for: ids)
+            asyncDetached(priority: .background) {
+                withTaskGroup(of: Void.self) { g in
+                    g.async { writeToLocalCache(thumbnails) }
+                    g.async { log(thumbnails) }
+                    g.async { ... }
+                }
+            }
+            display(thumbnails, in: cell)
+        }
+    }
+}
+```
+
+![](/images/2021-06-09-WWDC2021-Swift-Concurrency/tasks.png)
 
 # Async/Await
 
@@ -212,4 +408,5 @@ extension ViewController: PeerSyncDelegate {
 
 #### Reference
 
-- https://developer.apple.com/wwdc21/10132
+- <https://developer.apple.com/wwdc21/10132>
+- <https://developer.apple.com/wwdc21/10134>
