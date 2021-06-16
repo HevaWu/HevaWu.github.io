@@ -16,7 +16,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-.h1, .h2, .h3, .h4, .h5, a, hr {
+.h1, .h2, .h3, .h4, .h5, hr {
   margin-top: 1.25em;
   margin-left: -0.5em;
 }
@@ -94,7 +94,6 @@ a:hover {
 
 .about a {
   line-height: 1.75em;
-  color: rgb(7, 108, 148);
   font-weight: bold;
   font-size: 1em;
 }

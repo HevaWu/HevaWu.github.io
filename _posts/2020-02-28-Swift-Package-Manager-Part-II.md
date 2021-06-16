@@ -118,13 +118,13 @@ When the package manager is determining the available tags for a repository, if 
 
 > For example, suppose the package Foo has the tags [1.0.0, 1.2.0@swift-3, 1.3.0]. If version 3.0 of the package manager is evaluating the available versions for this repository, it will only ever consider version 1.2.0. However, version 4.0 would consider only 1.0.0 and 1.3.0.
 
-**Q: When will we use it?**
+**#### Q: When will we use it?**
 
 > 1. A package wishes to maintain support for Swift 3.0 in older versions, but newer versions of the package require Swift 4.0 for the manifest to be readable. Since Swift 3.0 will not know to ignore those versions, it would fail when performing dependency resolution on the package if no action is taken. In this case, the author can re-tag the last versions which supported Swift 3.0 appropriately.
 >
 > 2. A package wishes to maintain dual support for Swift 3.0 and Swift 4.0 at the same version numbers, but this requires substantial differences in the code. In this case, the author can maintain parallel tag sets for both versions.
 
-**Q: Does it be recommended?**
+**#### Q: Does it be recommended?**
 
 > It is not expected that the packages would ever use this feature unless absolutely necessary to support existing clients. Specifically, packages should not adopt this syntax for tagging versions supporting the latest GM Swift version.
 

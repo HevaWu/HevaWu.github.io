@@ -38,7 +38,7 @@ ffmpeg -i inputFile.avi -b:v 1500k -b:a 128k outputFile.mp4
 # video codec: h265(libx265), vp9 are popular
 # audio codec: aac, mp3(libmp3lame) are popular
 # with h264/h265 encoding, there is an option -crf
-# (Constant Rate Factor) which can be changed to improve 
+# (Constant Rate Factor) which can be changed to improve
 # the visual quality of the video.
 # The lower the value, the better the visual quality.
 ffmpeg -i inputFile.avi -c:v libx265 -c:a aac outputFile.mp4
@@ -91,7 +91,7 @@ ffmpeg -i input.avi -vn output.mp3
 ffmpeg -i input.avi -vn -ar 44100 -ac 2 -b:a 192k output.aac
 
 # get audio with the highest possible quality
-ffmpeg -i input.avi -vn -q:a 0 output.aac
+ffmpeg -i input.avi -vn -#### Q:a 0 output.aac
 
 # extracting audio from the 5th second to the 10th second
 ffmpeg -i input_input.avi -ss 5 -to 10 -vn output.mp3
@@ -119,17 +119,17 @@ ffmpeg -i input.flv -c:a copy output.aac
 ffmpeg -i inputAudio.mp3 -i inputVideo.avi outputVideo.avi
 
 # To avoid above issue
-# use the -shortest option which truncates the output to the same duration as the shortest input 
+# use the -shortest option which truncates the output to the same duration as the shortest input
 # OR use the -t 300 option which will truncate the output at the 300th second.
 ffmpeg -i inputAudio.mp3 -i inputVideo.avi -shortest outputVideo.avi
 ffmpeg -i inputAudio.mp3 -i inputVideo.avi -t 300 outputVideo.avi
 
 ## add additional audio track
 
-# -map 0 copies all streams(audio + video) from the first input file (input_video_with_audio.avi) 
+# -map 0 copies all streams(audio + video) from the first input file (input_video_with_audio.avi)
 # -map 1 copies all streams (in this case, one i.e. audio) from the second input file (new_audio.ac3)
 # Hence the output video will now have 2 audio streams. During playback,
-# the user can choose the audio track to listen. (Works with players that support it, like VLC player) 
+# the user can choose the audio track to listen. (Works with players that support it, like VLC player)
 # By default, it uses the first audio track that was mapped. (-map 0, where 0 refers to the first input file)
 ffmpeg -i input_video_with_audio.avi -i new_audio.ac3 -map 0 -map 1 -c copy outputVideo.avi
 
@@ -182,14 +182,14 @@ ffmpeg -i image%d.jpg output.avi
 ffmpeg -i input.mp4 -vf yadif output.mp4
 
 ## Customize Chroma Subsampling
-## Chroma subsampling is the practice of encoding images by implementing less resolution for chroma information(i.e. color information) 
+## Chroma subsampling is the practice of encoding images by implementing less resolution for chroma information(i.e. color information)
 ## than for luma information(brightness information), taking advantage of the human visual system’s lower acuity for color differences than for luminance.
 
 # The Pixel format is set to yuv420p which denotes 4:2:0 chroma subsampling.
 ffmpeg -i input.mp4 -vf format=yuv420p output.mp4
 
 ## Update Interval of Keyframes
-## A Keyframe is a frame that defines the starting or the ending point of a transition. You can update the keyframes interval to reach the GOP(Group of Pictures) size. 
+## A Keyframe is a frame that defines the starting or the ending point of a transition. You can update the keyframes interval to reach the GOP(Group of Pictures) size.
 ## The GOP size depends on the application and the delay. A higher frame rate has a higher GOP size.
 
 # The expression expr:gte(t\,n_forced/2) is used to place keyframes every half a second.
