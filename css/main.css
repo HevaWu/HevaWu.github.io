@@ -286,6 +286,7 @@ a:hover {
 .post-tag,
 .post-category {
   display: inline-block;
+  margin-top: 0.5em;
   margin-right: .5rem;
   border-radius: 4px;
   font-size: 90%;
