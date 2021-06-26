@@ -490,6 +490,7 @@ a:hover {
 
 .tags-expo-section ul li ,
 .categories-expo-section ul li {
+  margin-top: 0.5em;
   transition-timing-function: ease-in-out;
   list-style-type: none;
 }
