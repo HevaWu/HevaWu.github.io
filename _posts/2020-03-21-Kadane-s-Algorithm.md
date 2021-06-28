@@ -11,7 +11,9 @@ tags: [Sum]
 
 finding a contiguous subarray with the largest sum, within a given one-dimensional array A[1...n] of numbers. Formally, the task is to find indices i and j with 1 <= i <=j <= n such that sum
 
-![sum](/images/2020-03-21-Kadane-s-Algorithm/sum.png#simulator)
+$$
+\sum_{x=i}^{j} A[x]
+$$
 
 is as large as possibble.
 
@@ -52,12 +54,12 @@ def max_subarray(numbers):
          else:
              # Extend the existing sequence with the current element
              current_sum += x
- 
+
          if current_sum > best_sum:
              best_sum = current_sum
              best_start = current_start
              best_end = current_end + 1  # the +1 is to make 'best_end' exclusive
- 
+
      return best_sum, best_start, best_end
 ```
 
