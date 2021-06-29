@@ -9,7 +9,7 @@ tags: [Tree]
 
 > A Fenwick tree or binary indexed tree is a data structure that can efficiently update elements and calculate prefix sums in a table of numbers.
 
-Coding by C: 
+Coding by C:
 
 ```c
 #define LSB(i) ((i) & -(i)) // zeroes all the bits except the least significant one
@@ -19,14 +19,14 @@ int A[SIZE+1];
 int sum(int i) // Returns the sum from index 1 to i
 {
     int sum = 0;
-    while (i > 0) 
+    while (i > 0)
         sum += A[i], i -= LSB(i);
     return sum;
 }
- 
+
 void add(int i, int k) // Adds k to element with index i
 {
-    while (i <= SIZE) 
+    while (i <= SIZE)
         A[i] += k, i += LSB(i);
 }
 ```
@@ -46,7 +46,7 @@ func update(_ x: Int, _ k: Int) {
 
 // return sum from index 0 to x
 func get(_ x: Int) -> Int {
-	var x = x 
+	var x = x
 	var res = 0
 	while x > 0 {
 		res += cache[x]
@@ -69,7 +69,7 @@ By straightforward implementation without using bit. Example: an array is [2, 3,
 int a[] = {2, 1, 4, 6, -1, 5, -32, 0, 1};
 void update(int i, int v)   //assigns value v to a[i]
 {
-    a[i] = v;   
+    a[i] = v;
 }
 int prefixsum(int k)    //calculate the sum of all a[i] such that 0 <= i < k
 {
@@ -102,20 +102,20 @@ $a$ is some binary sequence of any length of 1's and 0's, $b$ is some sequence o
 
 $$\displaylines{
 \begin{align}
--x & = x' + 1 \\ 
-& = (a1b)' + 1 \\ 
-& = a'0b' + 1 \\ 
-& = a'0(0...0)' + 1 \\ 
-& = a'0(1...1) + 1 \\ 
-& = a'1(0...0) \\ 
+-x & = x' + 1 \\
+& = (a1b)' + 1 \\
+& = a'0b' + 1 \\
+& = a'0(0...0)' + 1 \\
+& = a'0(1...1) + 1 \\
+& = a'1(0...0) \\
 & = a'1b
 \end{align}
 }$$
 
 $$ \displaylines{
 \begin{align}
-& \ \ \ \ \ \ a1b ==> x \\ 
-\& \ \ \ \ & \ \ \ \ \ \ a'1b ==> -x \\ 
+& \ \ \ \ \ \ a1b ==> x \\
+\& \ \ \ \ & \ \ \ \ \ \ a'1b ==> -x \\
 &= (0...0)1(0...0)
 \end{align}
 } $$
@@ -132,10 +132,10 @@ Example: array [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
 Each enclosed box denotes the value $BIT[index]$, each $BIT[index]$ stores partial sum of some numbers.
 
-$$ \displaylines{ 
-BIT[x] = 
-\begin{cases} 
-a[x], if \ x \ is \ odd \\ 
+$$ \displaylines{
+BIT[x] =
+\begin{cases}
+a[x], if \ x \ is \ odd \\
 a[1] + .... + a[x], if \ x \ is \ power \ of \ 2
 \end{cases}
 }
@@ -143,7 +143,7 @@ $$
 
 Every index $i$ in the $BIT[]$ array stores the cumulative sum from $ i \ to \  i-(1 << r) + 1 $ (both inclusive), where $r$ represents the last set bit in index $i$.
 
-$$ \displaylines{ 
+$$ \displaylines{
 \begin{align}
 & first \ 12 \ numbers = BIT[12] + BIT[8] = (a[12]+...+a[9]) + (a[8]+...+a[1]) \\
 & first \ 6 \ numbers = BIT[6] + BIT[4] = (a[6]+a[5]) + (a[4]+...+a[1])
@@ -156,7 +156,7 @@ $BIT[]$ is array of size $1+a[]$, initially is 0. Call $update()$ operation to c
 
 ```java
 //add "delta" at index "x"
-void update(int x, int delta) {      
+void update(int x, int delta) {
     for(; x <= n; x += x&-x)
           BIT[x] += delta;
 }
@@ -164,9 +164,9 @@ void update(int x, int delta) {
 
 Example: call $update(13, 2)$, $13, 14, 16$ cover index 13, we need to add 2 to them also.
 
-$$\displaylines{ 
+$$\displaylines{
 \begin{align}
-& BIT[13] += 2 \\ 
+& BIT[13] += 2 \\
 & ==> isolate \ last \ set \ bit \ of \ 13(1101), i.e. x += x \& (-x) \\
 & ==> Last \ bit \ of \ 13 \ is \ 1, x = 13+1 = 14, update \ BIT[14] \\
 & BIT[14] += 2 \\
