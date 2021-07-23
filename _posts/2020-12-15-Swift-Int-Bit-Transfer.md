@@ -4,7 +4,7 @@ title: Swift Int Bit Transfer
 date: 2020-12-15 23:03:00
 comment_id: 118
 categories: [Swift]
-tags: [bit]
+tags: [Bit]
 ---
 
 For getting specific bit of an integer in Swift, we could do it by using [bit shifting operator](https://hevawu.github.io/blog/2020/10/27/Swift-Integer-Operators):
