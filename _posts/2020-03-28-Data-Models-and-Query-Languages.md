@@ -69,6 +69,8 @@ If the user interface has free-text fields for entering the region and the indus
 
 The `advantage` of `using an ID` is that because it has `no meaning to humans`, it `never needs to change`: the ID can remain the same, even if the information it identifies changes. That incurs write overheads, and risks inconsistencies (where some copies of the information are updated but others aren’t). `Removing such duplication` is the key idea behind normalization in databases.
 
+In `relational databases`, it’s normal to refer to rows in other tables by ID, because `joins are easy`. In `document databases`, `joins are not needed` for one-to-many tree structures, and support for joins is often weak
+
 ### Are document Databases Repeating History?
 
 Various solutions were proposed to `solve the limitations of the hierarchical model`. The two most prominent were the `relational model` (which became SQL, and took over the world) and the `network model` (which initially had a large following but eventually faded into obscurity).
@@ -191,6 +193,17 @@ If we put graph data in a relational structure, can we also query it using SQL? 
 The `triple-store` model is mostly equivalent to the property graph model, using `different words` to describe the same ideas. In a triple-store, all information is stored in the form of very simple three-part statements: (`subject`, `predicate`, `object`). For example, in the triple (Jim, likes, bananas), Jim is the subject, likes is the predicate (verb), and bananas is the object.
 
 `SPARQL` is a `query` language for `triple-stores` using the `RDF` data model.
+
+### Graph Databases Compared to the Network Model
+
+Are graph databases the second coming of CODASYL in disguise?
+
+NO.
+
+- In `CODASYL`, a database had a `schema` that specified which record type could be nested within which other record type. In a `graph` database, there is `no` such restriction: any vertex can have an edge to any other vertex. This gives much greater flexibility for applications to adapt to changing requirements.
+- In `CODASYL`, the `only way to reach a particular record was to traverse one of the access paths` to it. In a `graph` database, you can refer `directly to any vertex by its unique ID`, or you can `use an index to find vertices with a particular value`.
+- In `CODASYL`, the `children of a record were an ordered set`, so the database had to maintain that ordering (which had consequences for the storage layout) and applications that inserted new records into the `database had to worry about the positions` of the new records in these sets. In a `graph` database, vertices and edges are `not ordered` (you can only sort the results when making a query).
+- In `CODASYL`, all queries were `imperative`, `difficult to write and easily broken` by changes in the schema. In a `graph` database, you can write your traversal in imperative code if you want to, but most graph databases also support `high-level, declarative query languages` such as Cypher or SPARQL.
 
 ### Datalog
 
