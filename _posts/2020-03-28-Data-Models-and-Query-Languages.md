@@ -205,4 +205,4 @@ One thing that `document` and `graph` databases have in `common` is that they ty
 
 #### Reference
 
-<https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321>
+- https://learning.oreilly.com/library/view/-/9781491903063/ch02.html
