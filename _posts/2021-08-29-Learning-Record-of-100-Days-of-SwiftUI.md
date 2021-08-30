@@ -10,6 +10,8 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 
 ## Day 17
 
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/releases/tag/v0.17.0)
+
 - `.keyboardType()`: can specify type of keyboard, but user still can input other values by copy/paste.
 - Add `NavigationView` outside to make sure `Picker` view can be pushed
 - `.navigationBarTitle` NOT add directly end of NavigationView, because navigation views are capable of showing many views when program runs. Attach title to the object inside NavigationView can make code change title freely.
@@ -18,6 +20,8 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 - `"$\(totalPerPerson, specifier: "%.2f")"`: use `specifier` ([C-style format string](https://en.wikipedia.org/wiki/Printf_format_string)) to help control floating point.
 
 ## Day 16
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/releases/tag/v0.16.0)
 
 - `var body: some View`: `some` restrict the it must be `same` kind of view being returned.
 - `struct ContentView_Previews: PreviewProvider`: `PreviewProvider` protocol is for Xcode to show preview of UI design of the code
