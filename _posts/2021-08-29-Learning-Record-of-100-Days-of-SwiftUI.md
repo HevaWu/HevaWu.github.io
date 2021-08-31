@@ -10,7 +10,7 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 
 ## Day 18
 
-[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/releases/tag/v0.18.0)
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.17.0...v0.18.0)
 
 - All SwiftUI views must inherit from `View` protocol.
 - views must contain at least one computed property which is `body`. It can also contain more if we want.
@@ -19,7 +19,7 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 
 ## Day 17
 
-[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/releases/tag/v0.17.0)
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.16.0...v0.17.0)
 
 - `.keyboardType()`: can specify type of keyboard, but user still can input other values by copy/paste.
 - Add `NavigationView` outside to make sure `Picker` view can be pushed
