@@ -4,6 +4,7 @@ title: ML Reading Ch04 - Training Models
 date: 2021-06-29 14:11:00
 comment_id: 170
 categories: [ML]
+tag: [Hands-On Machine Learning]
 ---
 
 # Linear Regression

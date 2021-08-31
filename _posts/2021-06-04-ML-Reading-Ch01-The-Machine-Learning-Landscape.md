@@ -4,6 +4,7 @@ title: ML Reading Ch01 - The Machine Learning Landscape
 date: 2021-06-04 10:30:00
 comment_id: 158
 categories: [ML]
+tag: [Hands-On Machine Learning]
 ---
 
 # Types of Machine Learning Systems

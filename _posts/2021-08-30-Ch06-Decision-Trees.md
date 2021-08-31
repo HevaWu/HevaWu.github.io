@@ -4,6 +4,7 @@ title: Ch06 - Decision Trees
 date: 2021-08-30 22:36:00
 comment_id: 190
 categories: [ML]
+tag: [Hands-On Machine Learning]
 ---
 
 Visualize trained decision tree by using `export_graphviz()` to output a graph definition file (with extension of `.dot`). Then use `dot` command-line tool from Graphviz package to convert dot file to variety of formats.

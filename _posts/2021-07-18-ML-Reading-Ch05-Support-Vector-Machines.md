@@ -4,6 +4,7 @@ title: ML Reading Ch05 - Support Vector Machines
 date: 2021-07-18 21:51:00
 comment_id: 175
 categories: [ML]
+tag: [Hands-On Machine Learning]
 ---
 
 > Support Vector Machine (SVM) are particularly well suited for classification of complex small- or medium-sized datasets.

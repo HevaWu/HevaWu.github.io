@@ -4,6 +4,7 @@ title: ML Reading Ch02 - End-to-End Machine Learning Project
 date: 2021-06-04 15:12:00
 comment_id: 159
 categories: [ML]
+tag: [Hands-On Machine Learning]
 ---
 
 One example.
