@@ -115,4 +115,4 @@ Once this is done, we can make a prediction for a new instance by going through 
 
 #### References
 
-- https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ch07.html
+- <https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ch07.html>
