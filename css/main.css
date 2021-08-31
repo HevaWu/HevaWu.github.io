@@ -431,6 +431,7 @@ a:hover {
 }
 
 .post-date {
+  margin-top: 0.25em;
   color: #8a8a8a;
   font-family: Monaco, "Courier New", monospace;
   font-weight: 600;
