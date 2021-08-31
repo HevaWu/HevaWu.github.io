@@ -10,8 +10,12 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 
 ## Day 18
 
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/releases/tag/v0.18.0)
+
 - All SwiftUI views must inherit from `View` protocol.
 - views must contain at least one computed property which is `body`. It can also contain more if we want.
+- `Form`s can scroll
+- When `@State` property changes, Swift re-invoke `body` property. This forces all values inside the body to be re-evaluated, making sure they are updated for the changes.
 
 ## Day 17
 
