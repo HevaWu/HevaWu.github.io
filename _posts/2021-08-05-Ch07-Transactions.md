@@ -4,6 +4,7 @@ title: Ch07 Transactions
 date: 2021-08-05 18:52:00
 comment_id: 184
 categories: [Data Systems, System Design]
+tags: [Designing Data Intensive Applications]
 ---
 
 `transaction`: a way for an application to group several reads and writes together into a logical unit. Conceptually, `all the reads and writes in a transaction are executed as one operation`: either the entire transaction succeeds (commit) or it fails (abort, rollback). If it fails, the application can safely retry. With transactions, error handling becomes much simpler for an application, because it doesn’t need to worry about partial failure—i.e., the case where some operations succeed and some fail (for whatever reason).

@@ -4,6 +4,7 @@ title: Ch09 Consistency and Consensus
 date: 2021-08-07 18:13:00
 comment_id: 185
 categories: [Data Systems, System Design]
+tags: [Designing Data Intensive Applications]
 ---
 
 `tolerating faults`: keeping the service functioning correctly, even if some internal component is faulty.

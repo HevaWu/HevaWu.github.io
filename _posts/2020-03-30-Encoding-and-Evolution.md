@@ -4,7 +4,7 @@ title: Encoding and Evolution
 date: 2020-03-30 15:27:00
 comment_id: 72
 categories: [Data Systems, System Design]
-tags: [Encode, Decode]
+tags: [Encode, Decode, Designing Data Intensive Applications]
 ---
 
 ## Overview

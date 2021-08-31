@@ -4,7 +4,7 @@ title: Pigeonhole principle
 date: 2021-04-24 11:44:00
 comment_id: 150
 categories: [Math]
-tag: [Performance]
+tags: [Performance]
 ---
 
 > The `pigeonhole principle states` that if $n$ items are put into $m$ containers, with $n>m$, then at least one container must contain more than one item.

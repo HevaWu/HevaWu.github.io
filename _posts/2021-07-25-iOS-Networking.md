@@ -4,7 +4,7 @@ title: iOS Networking
 date: 2021-07-25 21:42:00
 comment_id: 180
 categories: [iOS, WWDC2019]
-tag: [Network]
+tags: [Network]
 ---
 
 # Advance Network

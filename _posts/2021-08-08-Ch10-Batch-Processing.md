@@ -4,6 +4,7 @@ title: Ch10 Batch Processing
 date: 2021-08-08 19:36:00
 comment_id: 186
 categories: [Data Systems, System Design]
+tags: [Designing Data Intensive Applications]
 ---
 
 Three different types of systems:

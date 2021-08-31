@@ -4,6 +4,7 @@ title: Ch07 - Ensemble Learning and Random Forests
 date: 2021-08-31 21:34:00
 comment_id: 191
 categories: [ML]
+tags: [Hands-On Machine Learning]
 ---
 
 - `ensemble`: A group of predictors

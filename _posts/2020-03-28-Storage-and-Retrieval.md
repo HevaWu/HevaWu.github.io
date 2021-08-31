@@ -4,7 +4,7 @@ title: Storage and Retrieval
 date: 2020-03-28 22:23:00
 comment_id: 71
 categories: [Data Systems, System Design]
-tags: [Storage, Retrieval]
+tags: [Storage, Retrieval, Designing Data Intensive Applications]
 ---
 
 ## Overview

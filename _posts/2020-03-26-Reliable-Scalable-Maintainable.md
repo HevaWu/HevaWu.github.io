@@ -4,7 +4,7 @@ title: Reliable Scalable & Maintainable
 date: 2020-03-26 21:11:00
 comment_id: 67
 categories: [Data Systems, System Design]
-tags: [Data Intensive]
+tags: [Data Intensive, Designing Data Intensive Applications]
 ---
 
 ## Overview

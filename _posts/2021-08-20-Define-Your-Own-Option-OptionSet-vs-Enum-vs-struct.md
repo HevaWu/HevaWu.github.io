@@ -4,7 +4,7 @@ title: Define Your Own Option - OptionSet vs Enum vs Struct
 date: 2021-08-20 11:29:00
 comment_id: 188
 categories: [Swift]
-tag: [OptionSet, Enum, Struct]
+tags: [OptionSet, Enum, Struct]
 ---
 
 Recently our project is trying to do modularization. For some parts, we might would like to make it more generic. ex: logging system's category part.

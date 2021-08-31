@@ -4,7 +4,7 @@ title: ML Reading Ch03 - Classification
 date: 2021-06-08 21:06:00
 comment_id: 161
 categories: [ML]
-tag: [Hands-On Machine Learning]
+tags: [Hands-On Machine Learning]
 ---
 
 Classify by using MNIST dataset, which is a set of 70,000 small images of handwritten digits. Each image is labeled with the digit it represents.

@@ -4,6 +4,7 @@ title: Ch11 Stream Processing
 date: 2021-08-09 19:36:00
 comment_id: 187
 categories: [Data Systems, System Design]
+tags: [Designing Data Intensive Applications]
 ---
 
 The `problem` with `daily batch processes` is that changes in the input are only reflected in the output a day later, which is too `slow` for many impatient users.

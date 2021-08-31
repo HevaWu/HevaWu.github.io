@@ -4,6 +4,7 @@ title: Ch05 Replication
 date: 2021-08-02 18:20:00
 comment_id: 182
 categories: [Data Systems, System Design]
+tags: [Designing Data Intensive Applications]
 ---
 
 `Replication` means keeping a copy of the same data on multiple machines that are connected via a network. Reasons why we should keep:

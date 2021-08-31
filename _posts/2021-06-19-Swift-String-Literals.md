@@ -4,7 +4,7 @@ title: Swift String Literals
 date: 2021-06-19 16:00:00
 comment_id: 167
 categories: [Swift]
-tag: [String]
+tags: [String]
 ---
 
 > A string literal is a sequence of characters surrounded by double quotation marks (").

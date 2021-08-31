@@ -4,7 +4,7 @@ title: WWDC2021 What's New in Foundation
 date: 2021-06-09 17:31:00
 comment_id: 164
 categories: [WWDC2021, Swift]
-tag: [Foundation]
+tags: [Foundation]
 ---
 
 # AttributedString

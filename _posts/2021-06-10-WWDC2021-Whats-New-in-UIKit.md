@@ -4,7 +4,7 @@ title: WWDC2021 What's New in UIKit
 date: 2021-06-10 12:16:00
 comment_id: 166
 categories: [WWDC2021]
-tag: [UIKit, iPadOS15, iOS15]
+tags: [UIKit, iPadOS15, iOS15]
 ---
 
 # Productivity

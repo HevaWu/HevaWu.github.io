@@ -4,7 +4,7 @@ title: Protocol-Oriented Programming in Swift
 date: 2021-06-28 22:12:00
 comment_id: 169
 categories: [Swift]
-tag: [Protocol]
+tags: [Protocol]
 ---
 
 > At the heart of Swift's design are two incredibly powerful ideas: protocol-oriented programming and first class value semantics. Each of these concepts benefit predictability, performance, and productivity, but together they can change the way we think about programming.

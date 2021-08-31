@@ -4,6 +4,7 @@ title: Ch06 Partitioning
 date: 2021-08-03 18:52:00
 comment_id: 183
 categories: [Data Systems, System Design]
+tags: [Designing Data Intensive Applications]
 ---
 
 `partitions` (`sharding`): each piece of data (each record, row, or document) belongs to exactly one partition.
