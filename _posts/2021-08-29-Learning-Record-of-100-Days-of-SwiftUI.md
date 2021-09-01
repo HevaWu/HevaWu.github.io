@@ -8,6 +8,13 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 19
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.18.0...v0.19.0)
+
+- Swift have default [Measurement](https://developer.apple.com/documentation/foundation/measurement) instance to support unit conversion
+- use `.symbol` to get one Measurement Unit string
+
 ## Day 18
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.17.0...v0.18.0)
