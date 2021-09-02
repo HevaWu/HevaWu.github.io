@@ -8,6 +8,21 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 20
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.19.0...v0.20.0)
+
+- `HStack`, `VStack`, `ZStack` for horizontal, vertical, zepth stack. Has limitation of maximum of 10 children. If we want to add more, use `Group`
+- `Color`, can use `frame()` modifier to change specific sizes
+- Use `edgesIgnoringSafeArea(.all)` modifier ignore the safeArea insets
+- `LinearGradient`, `RadialGradient`, `RadialGradient`
+- `Button(action:label:)` can help add customize Button design
+- `Image`
+  - `Image("pencil")`: load image already added in project
+  - `Image(decorative: "pencil")`: load image added in project, but not read it out for screen reader user
+  - `Image(systemName: "pencil")`: load image embedded in iOS, use Apple's SF Symbols
+- Use `Alert` to add one alert. Also can use `Button(){}.alert()` to define when should we show alert.
+
 ## Day 19
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.18.0...v0.19.0)
