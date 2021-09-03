@@ -12,11 +12,11 @@ The integer square root of a positive integer $n$ is the positive integer $m >= 
 One way of calculating $\sqrt{n}$ is to use Newton's method. Here is the formula:
 
 $$
-\begin{align}
+\begin{cases}
 & x_{k+1} = { 1 \over 2 }(x_k + {n \over x_k}), k >= 0, x_0 > 0 \\
 & stop \ when \ \left | x_{k+1} - x_k \right | < 1 \\
 & ensure \ \lfloor x_{k+1} \rfloor = \lfloor \sqrt{n} \rfloor
-\end{align}
+\end{cases}
 $$
 
 ## C Implementation

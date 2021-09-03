@@ -8,6 +8,15 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 21
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.20.0...v0.21.0)
+
+- `Image.renderingMode(.original)` render original image
+- `font`, `fontWeight` modifier of Text view
+- `clipShape` modifier to use built in shape, ex: rectangle, rounded rectangle, circle, capsule
+- `overlay()` modifier to drawing above previous
+- `shadow()` modifier to apply shadow effect
 ## Day 20
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.19.0...v0.20.0)
