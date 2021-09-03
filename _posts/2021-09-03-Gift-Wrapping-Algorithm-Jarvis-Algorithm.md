@@ -3,10 +3,10 @@ layout: post
 title: Gift Wrapping Algorithm(Jarvis Algorithm)
 date: 2021-09-03 22:44:00
 comment_id: 192
-categories: [Computational Geometry, Algorithm]
+categories: [Computational Geometry, Convex Hull, Algorithm]
 ---
 
-> the `gift wrapping algorithm` is an algorithm for computing the convex hull of a given set of points.
+> the `gift wrapping algorithm` is an algorithm for computing the [`convex hull`](https://en.wikipedia.org/wiki/Convex_hull) of a given set of points.
 
 ![](/images/2021-09-03-Gift-Wrapping-Algorithm-Jarvis-Algorithm/Animation_depicting_the_gift_wrapping_algorithm.gif#simulator)
 
@@ -14,7 +14,7 @@ categories: [Computational Geometry, Algorithm]
 
 ## Pseudocode
 
-```java
+```sh
 algorithm jarvis(S) is
     // S is the set of points
     // P will be the set of points which form the convex hull. Final set size is i.
