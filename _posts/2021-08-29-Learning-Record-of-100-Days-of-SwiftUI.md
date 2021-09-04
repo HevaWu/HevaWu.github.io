@@ -8,6 +8,14 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 22
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.21.0...v0.22.0)
+
+- Decorative images are not read by the screen reader.
+- Semantic colors are named according to the use. ex: `Color.primary` might be light or dark depending on device theme
+- `Color` are `views` in SwiftUI
+
 ## Day 21
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.20.0...v0.21.0)
@@ -24,13 +32,13 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 - `HStack`, `VStack`, `ZStack` for horizontal, vertical, zepth stack. Has limitation of maximum of 10 children. If we want to add more, use `Group`
 - `Color`, can use `frame()` modifier to change specific sizes
 - Use `edgesIgnoringSafeArea(.all)` modifier ignore the safeArea insets
-- `LinearGradient`, `RadialGradient`, `RadialGradient`
+- `LinearGradient`, `RadialGradient`, `AngularGradient(Conic gradient)`
 - `Button(action:label:)` can help add customize Button design
 - `Image`
   - `Image("pencil")`: load image already added in project
   - `Image(decorative: "pencil")`: load image added in project, but not read it out for screen reader user
   - `Image(systemName: "pencil")`: load image embedded in iOS, use Apple's SF Symbols
-- Use `Alert` to add one alert. Also can use `Button(){}.alert()` to define when should we show alert.
+- Use `Alert` to add one alert. Also can use `Button(){}.alert()` to define when should we show alert. It will be run when `isPresented` condition is true.
 
 ## Day 19
 
