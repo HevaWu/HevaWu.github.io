@@ -8,6 +8,12 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 24
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.23.0...v0.24.0)
+
+- SwiftUI use `struct` for Views. use class might not compile
+
 ## Day 23
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.22.0...v0.23.0)
@@ -17,14 +23,14 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 - modifier order is important.
   - `type(of:)` prints exact type of particular value.
   - `ModifiedContent`: once we apply one modifier, stack up `ModifiedContent<ModifiedContent<...>>`
-- use `some View`: opaque return types
+- use `some View`: `opaque` return types
   - one specific type that conforms to `View` protocol
   - always return same type of View
   - compiler know what view type is back, even we don't known
   - `VStack` makes SwiftUI creates `TupleView<T>` which wrote to handle at most 10 types views. That's why SwiftUI cannot handle more than 10 views
 - `ternary operator`: can be used as condition checking
 - `environment modifier`: can apply to all container views
-  - ex: `font` is environment modifier which can be overridden, `blur` is regular modifier which cannot replace child view's setting
+  - ex: `font` is `environment` modifier which can be overridden, `blur` is `regular` modifier which cannot replace child view's setting
 - okay to create view as property. But cannot create one property refers to other stored properties, ex: a `TextFiled` bound to local property which will cause problem
 - okay to resemble view in SwiftUI. It's also okay to define custom container.
 - use `ViewModifier` to define custom modifier. And call it by `.modifier`
