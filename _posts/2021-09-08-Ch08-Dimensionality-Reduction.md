@@ -70,6 +70,75 @@ Use NumPy’s `svd()` function to obtain all the principal components of the tra
 
 *WARN: PCA assumes that the `dataset is centered` around the origin.*
 
+## Projecting Down to d Dimensions
+
+Once you have identified all the principal components, you can reduce the dimensionality of the dataset down to d dimensions by projecting it onto the hyperplane defined by the first d principal components.
+
+Projecting the training set down to d dimensions:
+
+$$
+\text{X}_{d-proj} = \text{X}\text{W}_d
+$$
+
+## Using Scikit-Learn
+
+Scikit-Learn’s `PCA` class uses `SVD decomposition` to implement PCA.
+
+## Explained Variance Ratio
+
+`explained variance ratio`: indicates the proportion of the dataset’s variance that lies along each principal component. available via `explained_variance_ratio_` variable
+
+## Choosing the Right Number of Dimensions
+
+Example of preserve 95% of training set's variance, and use auto-pick right number of dimensions
+
+```python
+# option 1
+pca = PCA()
+pca.fit(X_train)
+cumsum = np.cumsum(pca.explained_variance_ratio_)
+d = np.argmax(cumsum >= 0.95) + 1
+pca = PCA(n_components = d) # run again
+
+# option 2
+pca = PCA(n_components=0.95)
+```
+
+## PCA for Compression
+
+After dimensionality reduction, the training set takes up much less space.
+
+It's also possible to `decompress` the reduced dataset back to original dimensions by applying the `inverse` transformation of PCA projection. NOTE, this will not give back original data, this will only likely close to original data.
+
+`reconstruction error`: The mean squared distance between the original data and the reconstructed data (compressed and then decompressed)
+
+PCA inverse transformation, back to the original number of dimensions:
+
+$$
+\text{X}_{recovered} = \text{X}_{d-proj}\text{W}^{\top}
+$$
+
+## Randomized PCA
+
+`Randomized PCA`: quickly finds an approximation of the first d principal components. Set it with `svd_solver="randomized"` in Scikit-Learn
+
+Its computational complexity is O(m × d2) + O(d3), instead of O(m × n2) + O(n3) for the full SVD approach, so it is dramatically faster than full SVD when d is much smaller than n.
+
+```python
+rnd_pca = PCA(n_components=154, svd_solver="randomized")
+X_reduced = rnd_pca.fit_transform(X_train)
+```
+
+By default, `svd_solver` is actually set to `"auto"`: Scikit-Learn automatically uses the randomized PCA algorithm `if m or n is greater than 500 and d is less than 80% of m or n`, or else it uses the full SVD approach. If you want to force Scikit-Learn to use full SVD, you can set the `svd_solver` hyperparameter to `"full"`.
+
+## Incremental PCA
+
+`Incremental PCA (IPCA)`: split the training set into mini-batches and feed an IPCA algorithm one mini-batch at a time.
+
+*NOTE: use `partial_fit()` with mini-batch, rather than fit().*
+
+Numpy's `memmap`: allows you to manipulate a large array stored in a binary file on disk as if it were entirely in memory; the class loads only the data it needs in memory, when it needs it.
+
 #### References
 
 - <https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ch08.html>
