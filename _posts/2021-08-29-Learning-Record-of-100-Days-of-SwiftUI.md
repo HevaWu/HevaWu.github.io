@@ -8,6 +8,16 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 26
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.25.0...v0.26.0)
+
+- Use of `Stepper`: -+ button tapped to control increment and decrement
+- Use `DatePicker` to bind date property
+  - `displayComponents` to define which want to display
+  - `Form + DatePicker` clean format
+  - `in:` to define Date range
+
 ## Day 25
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.24.0...v0.25.0)
