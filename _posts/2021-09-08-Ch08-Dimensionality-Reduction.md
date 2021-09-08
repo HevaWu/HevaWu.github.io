@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Ch08 - Dimensionality Reduction
-date: 2021-09-02 22:02:00
-comment_id: 192
+date: 2021-09-08 22:02:00
+comment_id: 194
 categories: [ML]
 tags: [Hands-On Machine Learning]
 ---
@@ -25,7 +25,7 @@ Training instances are `not spread out uniformly` across all dimensions. Many fe
 
 projection is not always the best approach to dimensionality reduction. In many cases the subspace may twist and turn, such as in the famous `Swiss roll toy dataset`. ⬇️
 
-![](/images/2021-09-02-Ch08-Dimensionality-Reduction/mls2_0804.png)
+![](/images/2021-09-08-Ch08-Dimensionality-Reduction/mls2_0804.png)
 
 ## Manifold Learning
 
