@@ -8,6 +8,14 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 27
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.26.0...v0.27.0)
+
+- Use `.navigationBarItems(trailing:)` to add right bar button item at navigationBar
+- Use `static var` variable if we want to set one `@State` variable's default value
+- Use `WheelDatePickerStyle()` to present DatePicker as wheel style
+
 ## Day 26
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.25.0...v0.26.0)
