@@ -8,6 +8,12 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 28
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.27.0...v0.28.0)
+
+- `trailing` shown on the right in `left-to-right` languages, it will be automatically flipped for `right-to-left`
+
 ## Day 27
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.26.0...v0.27.0)
