@@ -8,6 +8,16 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 29
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.28.0...v0.29.0)
+
+- `List` provide scrolling table of database
+  - use `listStyle` to modify its view styles
+  - `List` can dynamically adding rows without `ForEach`. ex: `List(0..<5) { _ in ... }`
+  - use `id: \.self` to quick map each data, same as `ForEach`
+-
+
 ## Day 28
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.27.0...v0.28.0)
