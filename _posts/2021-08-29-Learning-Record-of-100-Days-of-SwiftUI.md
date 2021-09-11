@@ -16,7 +16,10 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
   - use `listStyle` to modify its view styles
   - `List` can dynamically adding rows without `ForEach`. ex: `List(0..<5) { _ in ... }`
   - use `id: \.self` to quick map each data, same as `ForEach`
--
+- Use `UITextChecker` to help checking misspelled word
+  - call `rangeOfMisspelledWord(in:range:startubgAt:wrap:language:)` to check it find any. It send back another Objective-C string range. If there is some, return range. If not, return `NSNotFound`
+- `UTF-16` is character encoding, it is useful to let objective-c to understand how Swift's string stored, which is nice binding format to connect the two
+  - The `UTF-16` code units of a string’s utf16 view match the elements accessed through indexed `NSString` APIs
 
 ## Day 28
 
