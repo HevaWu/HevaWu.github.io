@@ -8,6 +8,17 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 30
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.29.0...v0.30.0)
+
+- `TextFiled`
+  - `textFiledStyle()` to update style
+  - `onCommit:` to set function when user press return on the keyboard
+  - `autocapitalization()` to set capitalization
+- `NavigationView`
+  - `onAppear` to set which function run when view is shown
+
 ## Day 29
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.28.0...v0.29.0)
