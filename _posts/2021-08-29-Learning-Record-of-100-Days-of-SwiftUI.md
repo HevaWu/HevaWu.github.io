@@ -8,6 +8,12 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 31
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.30.0...v0.31.0)
+
+- Place 2+ views in `List row` will create implicit `HStack`
+
 ## Day 30
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.29.0...v0.30.0)
