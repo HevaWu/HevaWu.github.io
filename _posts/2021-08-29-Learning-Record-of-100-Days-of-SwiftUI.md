@@ -8,6 +8,23 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 32
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.31.0...v0.32.0)
+
+- `.scaleEffect` to apply scale effect
+- `.animation(.default)` to apply default animation, which is "ease in, ease out" animation
+  - `Animation.interpolatingSpring` for bouncing
+  - `Animation.easeInOut.delay` to apply delay time on animation
+  - can also set `repeatCount(,autoreverses)`, `repeatForever(autoreverses)` to repeat animation
+  - repeat setting will trigger `onAppear()`
+- can apply `animation()` for `binder`, this will add bind animations.
+  - This will do implicitly animations.
+    - this one `not` set animation on View and animate it with state change. (state change don't know it trigger animation)
+    - this one set nothing on view and explicitly with a state change. (view don't know it will be animated)
+- `rotation3DEffect` define 3 axis amount to determine how view rotate
+- `withAnimation()` can define an animation
+
 ## Day 31
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.30.0...v0.31.0)
