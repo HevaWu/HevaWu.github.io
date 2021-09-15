@@ -8,6 +8,19 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 33
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.32.0...v0.33.0)
+
+- can attach `multiple animation()` modifiers but the order matters
+- can disable animation by setting `.animation(nil)`
+- Gesture have `onChanged()` and `onEnded()` action block
+- `transition()` modifier could help apply transitions to view
+  - `.scale` to scale up and down
+  - `.asymmetric` to add separate transition of show the view and disappear a view
+- `UnitPoint` type for controlling anchor, to specify exact X/Y for rotation or use builtin options: `.topLeading`, `.bottomTrailing`, etc
+- `extension AnyTransition { static var }` to add custom transition
+
 ## Day 32
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.31.0...v0.32.0)
