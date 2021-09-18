@@ -8,6 +8,34 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 36
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.35.0...v0.36.0)
+
+- `@State` property wrapper
+  - useful for simple local to current view data.
+  - with `struct` object, everytime binding actually create new `copy`, where SwiftUI notice its change, then update UI.
+  - If change this to `class` object, it might not show properly(because with class, SwiftUI can modify its value directly, where the actual property does not change in fact, which means State didn't monitor it). So the values in class does change, but the view isn't being reloaded to reflect the change
+  - when we want to share data between views, better to use other property wrappers(ex: `@ObservedObject`, `@EnvironmentObject`)
+- `@ObservedObject` property wrapper can help monitoring class variable changes
+  - mark var as `@ObservedObject` to tell SwiftUI to watch class changes
+  - extend class object as `ObservableObject`, this is because `@ObservedObject` can only be used on types conform to it
+  - set class property as `@Published` property observer
+- `sheet(isPresented:)`: present another view on top of current one
+  - default is card presentation style
+  - swipe down can dismiss it
+  - dismiss by trigger button: use `@Environment(\.presentationMode)` to attached presentation mode variable stored in app's environment. Then dismiss by calling `presentationMode.wrappedValue.dismiss()`
+    - `@Environment` create properties which store values like: light or dark mode, smaller or larger fonts, timezone, etc.
+    - `wrappedValue` is required. because `presentationMode` is actually a binding that can be updated automatically by system
+- `onDelete(performed: { indexSet in })` in `List { ForEach }` to provide delete row function
+  - `onDelete()` only exist in `ForEach`
+  - `IndexSet` tell position of all items in ForEach that should be removed. It's like a set of integers, which its sorted
+- `.navigationBarItems(leading: EditButton())` show Edit/Down button to navigation bar
+- `UserDefaults`: store small amount of user data(better be no more than 512KB)
+  - the data stored there will automatically be loaded when app launches.
+  - store user settings and important data
+  - `UserDefaults.standard` a built-in instance of UserDefaults
+
 ## Day 35
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.34.0...v0.35.0)
