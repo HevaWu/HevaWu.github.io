@@ -8,6 +8,13 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 37
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.36.0...v0.37.0)
+
+- Set object as `Identifiable`, then in `ForEach`, it will be okay to remove `id:` things, ex: `ForEach(items) {...}`
+- `SwiftUI View`: it is okay to put dummy object in `_Preview` part if current View required some variables
+
 ## Day 36
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.35.0...v0.36.0)
