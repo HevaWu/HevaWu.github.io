@@ -8,13 +8,26 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 39
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.38.0...v0.39.0)
+
+- `aspectRatio()` could set contentMode (fit or fill)
+- `GeometryReader`: a view can be used to handle `GeometryProxy`, which able to query environment, ex: big of container, position of view, safe area insets, etc
+  - use like `GeometryReader { geo in ... }`
+  - use `geo.size.width` to fill the width of screen
+- `ScrollView`: use to make UIScrollView like view
+  - when add the view to scroll view, it get create immediately, ex: for 100 items, scrollView will generate all 100 items at the first. While `List` only create items when it is needed
+- `NavigationLink` to push the view in the view stack.
+  - the destination view can be any view
+  - `List + NavigationLink` will show `gray indicator at the right side` in default
+
 ## Day 38
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.37.0...v0.38.0)
 
 - `UserDefaults integer(forKey:)` will return `0` if key doesn't exist
 - JSON stand for JavaScript Object Notion
-
 
 ## Day 37
 
