@@ -8,6 +8,14 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 40
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.39
+.0...v0.40.0)
+
+- DateFormatter, `mm` means `zero padded minute`, `MM` means `zero padded month`
+- `JSONDecoder.dateDecodingStrategy` to tell how it should decode dates
+
 ## Day 39
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.38.0...v0.39.0)
