@@ -8,6 +8,17 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 41
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.40.0...v0.41.0)
+
+- `Spacer(minLength:)`: to define minimum size of Space.
+  - helpful in scroll view since total height is flexible
+  - helpful define space min length in HStack and VStack
+- `NavigationLink.buttonStyle()`: use to change linked button style
+- `layoutPriority` to control view shrinks/expands.
+  - All views have layout priority of `0` by default. Increase 1 means that view have higher priority to take available space.
+
 ## Day 40
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.39.0...v0.40.0)
