@@ -14,7 +14,7 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 .0...v0.40.0)
 
 - DateFormatter, `mm` means `zero padded minute`, `MM` means `zero padded month`
-- `JSONDecoder.dateDecodingStrategy` to tell how it should decode dates
+- `JSONDecoder.dateDecodingStrategy` to tell how it should decode dates. It need to be careful at timeZone part.
 
 ## Day 39
 
