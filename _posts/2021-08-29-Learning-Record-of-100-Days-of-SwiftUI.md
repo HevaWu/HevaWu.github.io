@@ -8,6 +8,29 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 43
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.42.0...v0.43.0)
+
+- `Path`: SwiftUI use this to draw custom shapes
+  - `moveTo`, `addLine` to start drawing some line
+  - draw any where
+  - design to do specific thing
+- `Shape` is View
+  - draw inside rectangle (no rely on coordinates)
+  - built using path
+  - can draw space and accept parameters to customize further
+- `StrokeStyle` control how line should be connected to line after it (`lineJoin`), and how line should be drawn when it ends without a connection after it (`lineCap`)
+- Trickle in drawing Arc:
+  - SwiftUI not `treat 0 degrees` as straight upward, instead it directly `to the right`
+  - Shape `measure the coordinates from bottom-left corner` rather than top-left corner (the clockwise not correct as our setting)
+- `strokeBorder` modifier: make border visible
+  - use `stoke` directly might get border out of edge of the screen (which means the outside part of the border ends up beyond screen edges)
+- `InsettableShape`: a shape can be inset by a certain amount to produce another shape.
+  - require `inset(by:)`, this function given the inset amount(half the line width of stoke), and return a new kind of insettable shape.
+    - since don't know the actual size of the shape, it's okay to hold a `insetAmount` property to record the inset amount there. Then call it where required to be set
+  - extend custom `Shape` from `InsettableShape` can make them able to call `strokeBorder` modifier
+
 ## Day 42
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.41.0...v0.42.0)
