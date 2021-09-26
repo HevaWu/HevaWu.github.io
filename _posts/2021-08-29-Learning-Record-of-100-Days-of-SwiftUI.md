@@ -8,6 +8,21 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 44
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.43.0...v0.44.0)
+
+- `.fill(, style: FillStyle(eoFille: true))` to apply `even-odd` rule to fill the shape
+- `ImagePaint` type to wrap image that we can control how it should be rendered
+  - `sourceRect` for specify rect within image, range of 0(start) to 1(end)
+  - useful add for view backgrounds and shape strokes
+- any `bellow 60fps render has problem(slow)`, many iOS render at 120fps
+- `Color(hue:saturation:brightness:)` make color from hue
+  - `hue` is value from 0 to 1 controlling kind of color we see. res is both 0 and 1, other hues in between
+- `drawingGroup()` modifier tell SwiftUI should render the contents of the view into an off-screen image before putting it back onto the screen as a single rendered output.
+  - powered by Metal, working directly with GPU
+  - NOTE: add this might slow down SwiftUI for simple drawing. Add it when there is really a performance problem there.
+
 ## Day 43
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.42.0...v0.43.0)
