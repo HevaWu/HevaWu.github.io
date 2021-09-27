@@ -8,11 +8,25 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 45
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.44.0...v0.45.0)
+
+- `blendMode()` to specify blend mode
+  - `.normal` default value
+  - `.multiply`: multiply each source pixel color with destination pixel color. Like a tint effect
+  - `.screen`: inverts the colors then perform multiply, then inverts them again, resulting with a brighter image
+- `colorMultiply()` directly blend Color modes
+- `saturation()` adjust how much color used in side a view. value is in range 0(no color, gray scale) to 1(full color)
+- `animatableData` property: use to animate one shape, to help see smooth animation changing. Always be one value.
+- `AnimatablePair<,>`: contains pair of animatable values, animate more variable
+  - ex: SwiftUI's EdgeInsets `AnimatablePair<CGFloat, AnimatablePair<CGFloat, AnimatablePair<CGFloat, CGFloat>>>`
+
 ## Day 44
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.43.0...v0.44.0)
 
-- `.fill(, style: FillStyle(eoFille: true))` to apply `even-odd` rule to fill the shape
+- `.fill(, style: FillStyle(eoFill: true))` to apply `even-odd` rule to fill the shape
 - `ImagePaint` type to wrap image that we can control how it should be rendered
   - `sourceRect` for specify rect within image, range of 0(start) to 1(end)
   - useful add for view backgrounds and shape strokes
