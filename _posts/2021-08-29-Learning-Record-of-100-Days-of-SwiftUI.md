@@ -8,6 +8,15 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 46
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.45.0...v0.46.0)
+
+- `saturation() / blur()`: able to be applied by any view in real-time
+- `stroke()` draw a line around a path that is half-way inside the line and half-way outside
+- `stokeBorder()` draw stroke to be entirely within the shape
+- `AnimatablePair<>` only animate values that are animatable, which excludes integers.
+
 ## Day 45
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.44.0...v0.45.0)
