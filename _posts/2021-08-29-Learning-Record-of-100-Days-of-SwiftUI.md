@@ -8,6 +8,13 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 47
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.46.0...v0.47.0)
+
+- `presentationMode.wrappedValue.dismiss()` work for both `present -> dismiss` and `push -> pop`
+- `_count = State(initialValue: activity.count)` to set initial value of `State`
+
 ## Day 46
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.45.0...v0.46.0)
