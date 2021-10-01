@@ -8,13 +8,19 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 50
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.49.0...v0.50.0)
+
+- add `.animation()` after one published property to see animation when this property changes
+
 ## Day 49
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.47.0...v0.49.0)
 
 - add `required init(from decoder:)` and `encode(to encoder:)` function to allow setting `Codable` object property as `@Published`
   - need to implement Codable Conformance itself
-- `disabled()` to control under which condition disable the element
+- use `disabled()` to control under which condition disable the element
 
 ## Day 47
 
