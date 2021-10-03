@@ -8,6 +8,12 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 52
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.51.0...v0.52.0)
+
+- `@Published` property wrapper places properties inside a `Published` struct behind the scenes.
+- `MIME` types were invented fro email attachments, and is short for Multipurpose INternet Mail Extensions
 
 ## Day 51
 
