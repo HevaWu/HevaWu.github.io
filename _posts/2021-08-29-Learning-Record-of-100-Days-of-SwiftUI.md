@@ -8,6 +8,22 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 53
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.52.0...v0.53.0)
+
+- `@Binding` connect an `@State` property of one view to some underlying model data
+  - create mutable value in the view
+- `@Environment(\.horizontalSizeClass)` tell screen sizes: `compact` or `regular`
+- `AnyView` type erased wrapper
+  - conform to `View` protocol as Text, Color, VStack, etc.
+  - doesn't expose what it contains (Swift see the returning only AnyView, which considered the same type)
+  - DON'T use it anytime, only use when requires
+    - if SwiftUI knows exactly view types, it can add and remove small parts trivially as needed
+    - if use AnyView, the above will be denied
+- `@FetchRequest(entity:sortDescriptors)` property wrapper to get core data fetch request, with type of `FetchedResults<>`
+- `@Environment(\.managedObjectContext)` property wrapper to get current managed object context
+
 ## Day 52
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.51.0...v0.52.0)
