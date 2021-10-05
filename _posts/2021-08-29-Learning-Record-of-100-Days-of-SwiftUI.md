@@ -8,11 +8,22 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 54
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.53.0...v0.54.0)
+
+- use `.environment(\.managedObjectContext, moc)` to pass environment setting to another view
+  - use it to write values in the environment
+  - when use sheet() to present the view, need to add a managed object context property to pass it
+  - when use push, current view will share environment setting with its ancestor
+- use `.constant()` to set default `@Binding` property's value in `_Preview`
+- `.onTapGesture {}` to add tap action function
+
 ## Day 53
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.52.0...v0.53.0)
 
-- `@Binding` connect an `@State` property of one view to some underlying model data
+- `@Binding` property wrapper to connect an `@State` property of one view to some underlying model data
   - create mutable value in the view
 - `@Environment(\.horizontalSizeClass)` tell screen sizes: `compact` or `regular`
 - `AnyView` type erased wrapper
