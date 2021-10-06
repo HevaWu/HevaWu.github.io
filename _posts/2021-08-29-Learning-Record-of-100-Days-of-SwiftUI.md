@@ -8,6 +8,16 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 55
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.54.0...v0.55.0)
+
+- use `NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)` to create dummy test data in `_Preview` part
+  - this creat a managed object context involves telling system what concurrency type here want to use
+  - `mainQueueCurrencyType` indicate to use main queue
+- use `NSSortDescriptor(keyPath:, sorting:)` to sort fetch request
+- use moc`.delete` to delete one data record from fetch request
+
 ## Day 54
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.53.0...v0.54.0)
