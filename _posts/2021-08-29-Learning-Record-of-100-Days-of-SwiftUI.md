@@ -8,6 +8,15 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 56
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.55.0...v0.56.0)
+
+- SFSymbbols automatically adapts to the text around it.
+  - it can be shown larger or small by using `font()` modifier
+- `constant` binding cannot be changed by user
+  - its's good for prototyping
+
 ## Day 55
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.54.0...v0.55.0)
