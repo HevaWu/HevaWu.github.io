@@ -8,6 +8,30 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 57
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.56.0...v0.57.0)
+
+- `\.self` to identify whole object
+  - Swift compute **hash value** of the object
+  - `\.self` works for anything conform to `Hashable`
+- Core Data generate object ID sequentially we create objects. These ID are unique to the object.
+- `Hashable`: though calculating same hash for an object twice should return same value. If calculating it between 2 runs of the app (quit then relaunch), the hash can return different values.
+- manual manage object context
+  - `Codegen` select `Manual/None`
+  - `Create NSManagedObject Subclass`
+- `@NSManaged` read and write from a directory that CoreData uses to store the information
+  - benefits: when read data, transparently fetches the data and sends it back
+- CoreData is `lazy`
+  - sometimes looks like data is loaded when it really hasn't been
+  - these are **faults**, sense of fault line - a line between where something exists and where something is just a placeholder
+- `NSManagedObjectContext.save()`
+  - before call it, always check `moc.hasChanges` first, to avoid making CoreData do work that isn't required
+- CoreData constraints
+  - `Inspector -> Constraints` to change constraints
+  - use `context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy` to tell CoreData always keep constraint attribute unique
+  - when there is duplicates object, only one data get written
+
 ## Day 56
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.55.0...v0.56.0)
