@@ -8,6 +8,27 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 58
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.57.0...v0.58.0)
+
+- provide `NSPredicate` in `@FetchRequest` to control which results should be shown
+  - use `%@` means "insert some data here"
+    - "IN", "BEGINSWITH"(case sensitive), "BEGINSWITH[c]"(ignore the case), "CONTAINS[c]", "NOT", "AND"
+  - `NSCompoundPredicate` to build one predicate out of several smaller ones
+- Dynamically update FetchRequest
+  - okay to set `var fetchRequest: FetchRequest<T>`
+  - use `fetchRequest.wrappedValue` property to get fetchedResult
+  - For filter in any field
+    - use `%K` for specify filter key, insert value but not add extra quote mark around
+    - use `%@` will add extra quote mark
+    - ex:
+      - `"%@ BEGINSWITH %@", lastName, S` == `"'lastName' BEGINSWITH 'S'"`
+      - `"%K BEGINSWITH %@", lastName, S` == `"lastName' BEGINSWITH 'S'"`
+- CoreData Relationships
+  - 4 forms: 1 to 1, 1 to many, many to 1, many to many
+  - convert `NSSet` to `Set<>`, use Swift native type
+
 ## Day 57
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.56.0...v0.57.0)
