@@ -8,6 +8,12 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 59
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.58.0...v0.59.0)
+
+- fetch requests can be created by using `@FetchRequest` or `FetchRequest` struct
+
 ## Day 58
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.57.0...v0.58.0)
