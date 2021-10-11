@@ -8,6 +8,17 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 60
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.59.0...v0.60.0)
+
+- `AnyView` vs `Group`
+  - both can contains different type of views inside its closure
+  - array type
+    - `[Group]`, SwiftUI can't make this type, because it is no meaning, SwiftUI want to know what's in the group
+    - `[AnyView]` is okay, because AnyView is the contents
+- define `decoder.keyDecodingStrategy = .convertFromSnakeCase` can tell Swift to convert snake case to and from camel case.
+
 ## Day 59
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.58.0...v0.59.0)
