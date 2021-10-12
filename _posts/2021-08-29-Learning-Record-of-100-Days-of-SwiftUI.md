@@ -13,6 +13,7 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.60.0...v0.61.0)
 
 - use `PersistenceController.shared.container.performBackgroundTask` to keep updating concurrently
+  - Apple CoreData Concurrency Guide: <https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/Concurrency.html>
 
 ## Day 60
 
