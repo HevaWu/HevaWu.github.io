@@ -8,6 +8,12 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 61
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.60.0...v0.61.0)
+
+- use `PersistenceController.shared.container.performBackgroundTask` to keep updating concurrently
+
 ## Day 60
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.59.0...v0.60.0)
