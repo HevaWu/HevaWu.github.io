@@ -8,6 +8,21 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 62
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.61.0...v0.62.0)
+
+- @State
+  - `@propertyWrapper` attribute allow make State of struct
+  - have a `wrappedValue`, which is actual value SwiftUI trying to store
+- `Binding<Value>` to make new binding object
+  - can be used to observing @State element changes
+  - init need `get: {}, set: {}`
+  - both get and set are `@escaping`, Binding struct stores them for use later on
+- use `actionsheet()` to show ActionSheet
+  - style of buttons: `default()`, `cancel()`, `destructive()`
+  - usage similar to alert
+
 ## Day 61
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.60.0...v0.61.0)
