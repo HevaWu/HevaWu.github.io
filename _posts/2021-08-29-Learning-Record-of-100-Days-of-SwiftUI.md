@@ -8,6 +8,25 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 63
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.62.0...v0.63.0)
+
+- image types
+  - `UIImage`, form UIKit, capable of variety of image types, including bitmaps(like PNG), vectors(like SVG), even sequences form an animation
+  - `CGImagae`, from Core Graphics, 2D array of pixels
+  - `CIImage`, from Core Image, store all information required to produce an image but doesn't actually turn that into pixels unless it's asked to. an "image recipe"
+- CoreImage filter: `import CoreImage.CIFilterBuiltins`
+  - sepial filter: `CIFilter.sepiaTone()`, intensity is between 0(original image) to 1(full sepia)
+  - pixellation filter: `CIFilter.pixellate()`, sclae = 100 means pixels are 100 points across
+  - crystal effect: `CIFilter.crystallize`
+  - also can set input image for a filter by using `kCIInputImageKey`
+  - `CIVector` is CoreImage's way of storing points and directions
+  - Read output image in SwiftUI: CIImage -> CGImage -> UIImage -> Image
+- wrap UIKit view controller
+  - extend a struct from `UIViewControllerRepresentable`, which build on `View`
+  - implement `makeUIViewController()` and `updateUIViewController()`
+
 ## Day 62
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.61.0...v0.62.0)
