@@ -8,6 +8,25 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 64
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.63.0...v0.64.0)
+
+- SwiftUI Coordinator
+  - design to act as delegate for UIKit view controllers
+  - `class Coordinator`, has to be class
+  - implement `makeCoordinator()` to create and configure Coordinator instance
+  - `xx.delegate = context.coordinator`, don't call makeCoordinator(), SwiftUI will automatically call and associate coordinator. When makeUIViewController() and updateUIViewController() calls, automatically pass the coordinator object
+  - `class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate`:
+    - `NSObject`: allows objective-c to ask object what functionality it supports at runtime
+    - `UIImagePickerControllerDelegate`: NSObject let objective-c check for the functionality, this protocol is waht actually provide it
+    - `UINavigationControllerDelegate`: detect when user move between screens
+  - add property and environment in struct, then in Coordinator class, update the property inside delegate function
+  - in where we call the view, use property to update the view UI components
+- save image to photo
+  - UIKit use `UIImageWriteToSavedPhotoAlbum()`
+  - SwiftUI can use a class to wrapper and implement #selector function to it
+
 ## Day 63
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.62.0...v0.63.0)
