@@ -8,6 +8,15 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI>
 
+## Day 65
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.64.0...v0.65.0)
+
+- `context.createCGImage(output, from: output.extent)`:
+  - use `output.extent` to get proper rect property
+- for filter, use `setValue()` would be safer
+- use `Binding<Double>` to bind filter param with user interface
+
 ## Day 64
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.63.0...v0.64.0)
