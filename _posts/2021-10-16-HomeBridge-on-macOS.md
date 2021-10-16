@@ -76,7 +76,7 @@ ex: `homebridge-nature-remo-sensor` plugin to setup Temperature Sensor
     ],
     "platforms": [
         {
-            "...
+            "..."
         }
     ]
 }
