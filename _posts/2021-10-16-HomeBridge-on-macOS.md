@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HomeBridge on macOS
-date: 2021-10-15 09:48:00
+date: 2021-10-16 09:48:00
 comment_id: 196
 categories: [macOS, HomeKit]
 tags: [HomeBridge]
