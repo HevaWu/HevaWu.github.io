@@ -8,6 +8,15 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 67
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.66.0...v0.67.0)
+
+- `@objc` attribute lets Objective-C code call a Swift method
+- can place optional views directly into SwiftUI View hierarchy
+  - SwiftUI will only render them if they have a value
+- reuse `CIContext` is good for performance
+
 ## Day 66
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.65.0...v0.66.0)
