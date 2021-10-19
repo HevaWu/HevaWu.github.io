@@ -8,6 +8,21 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 68
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.67.0...v0.68.0)
+
+- `FileManager` to find document direcrtory of current user
+  - when app deleted, this directory will automatically deleted
+  - no physical limitation, but user can check it at Settings app
+  - ex: `FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)`
+- use `write(to:)` to write data
+  - use `String(contentsOf:)` and `Data(contentsOf:)` to read data
+  - `atomic` writing data
+    - system write full file to temporary filename, and when its finished it does a rename to target filename
+    - either whole file is there, or nothing is
+    - this is safer, otherwise, if we set atomic as false, it might cause problem that: when reading data, writing might not finish yet, so only read part of data
+
 ## Day 67
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.66.0...v0.67.0)
