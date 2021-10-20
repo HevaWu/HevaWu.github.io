@@ -22,7 +22,11 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
   - `mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation)` to customize annotation mark
   - `MKPinAnnotationView` one of Apple annotation view design
     - set `canShowCallOut = true` means tap the pin shows information then send it back
-  -
+- FaceID unlock
+  - `import LocalAuthentication`
+  - `LAContext` to query biometric status and perform authentication check
+    - use `canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics` and `evaluatePolicy()` to evalute user's biometric data
+  - for simulator, use `Feature -> FaceID -> Enrolled` to enable simulator faceID. use `MatchingFace` or `Non-matching face` to test fetch result
 
 ## Day 68
 
@@ -38,11 +42,6 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
     - system write full file to temporary filename, and when its finished it does a rename to target filename
     - either whole file is there, or nothing is
     - this is safer, otherwise, if we set atomic as false, it might cause problem that: when reading data, writing might not finish yet, so only read part of data
-- FaceID unlock
-  - `import LocalAuthentication`
-  - `LAContext` to query biometric status and perform authentication check
-    - use `canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics` and `evaluatePolicy()` to evalute user's biometric data
-  - for simulator, use `Feature -> FaceID -> Enrolled` to enable simulator faceID. use `MatchingFace` or `Non-matching face` to test fetch result
 
 ## Day 67
 
