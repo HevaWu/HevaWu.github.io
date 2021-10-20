@@ -8,6 +8,22 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 69
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.68.0...v0.69.0)
+
+- `UIViewRepresentable` as wrap of a UIView
+  - `makeUIView()` and `updateUIView()` to handle instantiating and updating of a view when a SwiftUI state changes
+  - UIViewRepresentable `Context` equal to `UIViewRepresentable<Self>`
+- `MKMapView` to show the map
+  - `import MapKit`
+  - `mapViewDidChangeVisibleRegion` delegate func check when map is zoom, rootate, moves
+  - `MKPointAnnotation` to display annotations
+  - `mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation)` to customize annotation mark
+  - `MKPinAnnotationView` one of Apple annotation view design
+    - set `canShowCallOut = true` means tap the pin shows information then send it back
+  -
+
 ## Day 68
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.67.0...v0.68.0)
@@ -22,6 +38,11 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
     - system write full file to temporary filename, and when its finished it does a rename to target filename
     - either whole file is there, or nothing is
     - this is safer, otherwise, if we set atomic as false, it might cause problem that: when reading data, writing might not finish yet, so only read part of data
+- FaceID unlock
+  - `import LocalAuthentication`
+  - `LAContext` to query biometric status and perform authentication check
+    - use `canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics` and `evaluatePolicy()` to evalute user's biometric data
+  - for simulator, use `Feature -> FaceID -> Enrolled` to enable simulator faceID. use `MatchingFace` or `Non-matching face` to test fetch result
 
 ## Day 67
 
