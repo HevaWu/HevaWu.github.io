@@ -8,6 +8,22 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 70
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.69.0...v0.70.0)
+
+- to add pin on the MapView in SwiftUI
+  - use Binding to bind centerCoordinator
+  - add annotations property to record current map annotations
+- `mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?`
+  - `dequeueReusableAnnotationView(withIdentifier:)` to try reuse view
+  - `annotationView.canShowCallout = true` to show the call out
+    - for showing it, `annotation must have a title`
+  - `annotationView.rightCallOutAccessoryView` can customize call out view to show more information
+  - `.detailDisclosure` Swift Button style, show button like an "i" with a circle around it
+- `mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)` to update call out view for one annotation
+  - `calloutAccessoryControlTapped` get called when button is tapped
+
 ## Day 69
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.68.0...v0.69.0)
