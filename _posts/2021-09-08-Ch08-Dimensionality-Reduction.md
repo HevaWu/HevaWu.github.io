@@ -139,6 +139,67 @@ By default, `svd_solver` is actually set to `"auto"`: Scikit-Learn automatically
 
 Numpy's `memmap`: allows you to manipulate a large array stored in a binary file on disk as if it were entirely in memory; the class loads only the data it needs in memory, when it needs it.
 
+# Kernel PCA
+
+`Kernel PCA(kPCA)`: implicitly maps instances into a very high-dimensional space (called the feature space), enabling nonlinear classification and regression with Support Vector Machines. Use `from sklearn.decomposition import KernelPCA` in Scikit-Learn
+
+## Selecting a Kernel and Tuning Hyperparameters
+
+### Approach 1:
+
+1. dimensionality reduction
+2. grid search to select best kernel and gamma
+
+### Approach 2:
+
+select the kernel and hyperparameters that yield the lowest reconstruction error.
+
+*NOTE: if we could invert the linear PCA step for a given instance in the reduced space, the reconstructed point would lie in feature space, not in the original space (e.g., like the one represented by an X in the diagram).*
+
+**How to perform reconstruction**
+
+train a supervised regression model, with projected instances as the training set and the original instances as the targets. In Scikit-Lean, set `fit_inverse_transform = TRUE` will do this automatically
+
+## LLE
+
+`LLE(Locally Linear Embedding)`: non linear dimensionality reduction(NLDR) technique.
+
+- works by first measuring how each training instance linearly relates to its closest neighbors (c.n.), and then looking for a low-dimensional representation of the training set where these local relationships are best preserved (more details shortly).
+
+### Algorithm
+
+Step1: Linearly modeling local relationships
+
+for each training instance $x^{(i)}$, the algorithm identifies its $k$ closest neighbors (in the preceding code $k = 10$), then tries to reconstruct $x^{(i)}$ as a linear function of these neighbors.
+
+$$
+\hat{W} = \text{argmin} \sum_{i=1}^m(x^{(i)} - \sum_{j=1}^m w_{i,j} x^{(j)})^2 \\
+\text{subject to}
+
+\begin{cases}
+w_{i,j} = 0 \text{   if x(j) is not one of the k c.n. of x(i)} \\
+\sum_{j=1}^{m} w_{i,j} = 1 \text{   for i = 1,2, ..., m}
+\end{cases}
+$$
+
+Step 2: Reducing dimensionality while preserving relationships
+
+$$
+\hat{Z} = \text{argmin} \sum_{i=1}^m(z^{(i)} - \sum_{j=1}^m \hat{w_{i,j}} x^{(j)})^2
+$$
+
+Time Complexit: $O(m log(m)n log(k))$ for finding $k$ nearest neighbors, $O(mnk^3)$ for optimizing the weight, and $O(dm^2)$ for constructing low dimensional representations.
+
+The last step $m^2$ make this algorithm scale poorly to very large datasets.
+
+# Other Dimensionality Reduction techniques
+
+- `Random Projections`: projects the data to a lower-dimensional space using a random linear projection.
+- `Multidimensional Scaling (MDS)`: Reduces dimensionality while trying to preserve the distances between the instances.
+- `Isomap`: Creates a graph by connecting each instance to its nearest neighbors, then reduces dimensionality while trying to preserve the geodesic distances between the instances.
+- `t-Distributed Stochastic Neighbor Embedding (t-SNE)`: Reduces dimensionality while trying to keep similar instances close and dissimilar instances apart.
+- `Linear Discriminant Analysis (LDA)`: Is a classification algorithm, but during training it learns the most discriminative axes between the classes, and these axes can then be used to define a hyperplane onto which to project the data.
+
 #### References
 
 - <https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/ch08.html>
