@@ -8,6 +8,12 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 7
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.71.0...v0.72.0)
+
+- add `completeFileProtection` options when write data to fileManager, to make file accessable only while device is unlocked
+
 ## Day 71
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.70.0...v0.71.0)
