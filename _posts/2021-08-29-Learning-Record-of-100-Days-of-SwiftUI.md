@@ -8,6 +8,12 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 73
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.72.0...v0.73.0)
+
+- `italic` text was first used in Venice in 1500.
+
 ## Day 72
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.71.0...v0.72.0)
