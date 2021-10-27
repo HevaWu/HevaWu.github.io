@@ -8,6 +8,20 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 74
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.73.0...v0.74.0)
+
+- use `.accessibility(label:)` and `.accessibility(hint:)` to control what VoiceOver reads
+- use `.accessibilityAddTraits(.isButton)` to provide extra behind scenes information to VoiceOver to describes how view works
+  - similarly, have `accessibilityRemoveTraits()`
+- `Image(decorative:)` tell SwiftUI it should be ignored by SwiftUI
+  - it will not read out the image's filename as the automatic VoiceOver label. If we add label or a hint that will be read
+  - can use `.accessibilityHidden()` to make view completely invisible to the accessibility system
+- `accessibilityElement(children: .combine)` apply this to parent view can combine its children into a single accessibility element
+  - `combine` will have a pause between two pieces of text
+  - use `accessibilityElement(children: .ignore)` + `accessibilityLabel(Text)` is more natural way, text will read all at once
+
 ## Day 73
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.72.0...v0.73.0)
