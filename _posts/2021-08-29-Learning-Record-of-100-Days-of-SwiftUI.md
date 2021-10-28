@@ -8,6 +8,10 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 75
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.74.0...v0.75.0)
+
 ## Day 74
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.73.0...v0.74.0)
