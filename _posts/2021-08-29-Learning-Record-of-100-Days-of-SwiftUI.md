@@ -8,6 +8,14 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 77
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.76.0...v0.77.0)
+
+- add `@propertyWrapper` before a struct, to define custom property wrapper
+- `.jpegData()` to save image as jpeg format
+  - `compressionQuality`: range from 0(low quality) to 1(high quality). Normally pick 0.8
+
 ## Day 76
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.75.0...v0.76.0)
