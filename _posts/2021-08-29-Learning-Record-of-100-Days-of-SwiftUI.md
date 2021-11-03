@@ -8,6 +8,24 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 79
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.78.0...v0.79.0)
+
+- `@EnvironmentObject`: place an object into the environment so that any child view can automatically have access to it
+  - when `push` view, environment will be shared
+  - when `present` view, not automatically shared data, Apple will change in the future
+  - it will automatically look for corresponding instance, if it cannot find, it will crash
+    - ex: `@EnvironmentObject var user: User`, it will look for User
+  - `.environmentObject` to specify corresponding environment object
+- `TabView` show tabBar
+  - attach `.tabItem()` to each view inside TabView. For customize way the view shown in the tabBar
+  - in `tabItem`, SwiftUI always show no more than one image and no more than one text view(even add more image and text view, it doesn't matter)
+  - programmatically control TabView current view(switch tab)
+    - use `@State` to track current selected tab, modify this property to new value to switch, pass this as binding and tell SwiftUI which tab should be shown
+    - `TabView(selection:)` to bind with selected property
+    - use `tag` as tab identifier (recommend use `String` rather than int identifier for this to help better understanding each tab's work)
+
 ## Day 78
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.77.0...v0.78.0)
