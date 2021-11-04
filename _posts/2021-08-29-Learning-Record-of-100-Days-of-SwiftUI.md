@@ -8,6 +8,19 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 80
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.79.0...v0.80.0)
+
+- `String(decoding: data, as: UTF8.self)` to convert Data to a string
+- `objectWillChange`, a publisher
+  - `ObservableObject` will automatically gain this property
+  - notifies view that are observing the object that something important has changed
+  - will be triggered immediately before make change
+  - call like `objectWillChange.send()`
+- `interpolation()` to control how pixel blending is applied
+  - `.none` will turn off image interpolation entirely. (rather than blending, it will scale up small image with sharp edges)
+
 ## Day 79
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.78.0...v0.79.0)
