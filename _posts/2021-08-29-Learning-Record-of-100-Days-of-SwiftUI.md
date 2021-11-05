@@ -8,8 +8,15 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
-## Day 80
+## Day 81
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.80.0...v0.81.0)
 
+- use `contextMenu()` to show attach context menu
+  - when user press hard on it, it will show some views
+  - each item in context menu can have one text and one image attached
+  - always be `text first then image` (no matter order we type it)
+
+## Day 80
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.79.0...v0.80.0)
 
 - `String(decoding: data, as: UTF8.self)` to convert Data to a string
