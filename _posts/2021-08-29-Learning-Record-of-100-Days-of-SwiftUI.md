@@ -8,7 +8,18 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 82
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.81.0...v0.82.0)
+
+- `@EnvironmentObject` explicitly tell SwiftUI that object will exist in the environment by the time the view is created
+  - if it isn't present, app will crash immediately
+  - treat this as an implicitly unwrapped optional
+  - How SwiftUI know to refresh view when property changed?
+    - it doesn't know it. When add @EnvironmentObject property, SwiftUI reinvoke `body` property whenever property changes.
+
 ## Day 81
+
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.80.0...v0.81.0)
 
 - use `contextMenu()` to show attach context menu
@@ -17,6 +28,7 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
   - always be `text first then image` (no matter order we type it)
 
 ## Day 80
+
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.79.0...v0.80.0)
 
 - `String(decoding: data, as: UTF8.self)` to convert Data to a string
