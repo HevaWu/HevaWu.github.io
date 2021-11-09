@@ -8,6 +8,14 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 83
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.82.0...v0.83.0)
+
+- `.textContentType()` modifier to TextField to tell what kind of information this is asking for
+  - system use this information to offer suggestions while user enter text on iOS or tvOS
+- `CIFilter.qrCodeGenerator()` filter of QR code, to generate QR code image
+
 ## Day 82
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.81.0...v0.82.0)
