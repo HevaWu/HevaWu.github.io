@@ -68,4 +68,4 @@ public var NSURLErrorBackgroundSessionWasDisconnected: Int { return -997 }
 
 #### Reference
 
-- https://github.com/apple/swift-corelibs-foundation/blob/main/Sources/Foundation/NSURLError.swift
+- <https://github.com/apple/swift-corelibs-foundation/blob/main/Sources/Foundation/NSURLError.swift>
