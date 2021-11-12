@@ -8,6 +8,39 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 86
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.85.0...v0.86.0)
+
+- Gesture
+  - `onTapGesture(count: 2)` to handle double taps
+  - `onLongPressGesture` to handle long taps
+    - call `onLongPressGesture(minimumDuration)` to specify duration
+    - `pressing`: the change closure, will be called when user long press it
+  - `gesture()` with specifying special gesture
+    - ex: DragGesture, LongPressGesture, MagnificationGesture, RotationGesture, TapGesture
+      - have special modifier like `onEnded()`, `onChanged()`
+  - gesture clash: when 2 or more gestures that might be recognize at same time, SwiftUI always give child's gesture high priority
+    - ex: one gesture attach to a view, and same gesture attached to its parent view
+    - if we want to change higher one's priority, can use `highPriorityGesture()` to force set parent has high priority
+    - use `simultaneousGesture()` to tell both parent and child to trigger at same time
+  - gesture sequence: `ges1.sequenced(before:ges2)`
+    - force user do ges1 then ges2
+- Haptic: small motors in device to create sensations such as taps and vibrations
+  - `UINotificationFeedbackGenerator` and `.notificationOccurred` to trigger built-in haptic
+    - success, error, warning
+  - `CoreHaptics` framework
+    - make customize haptic, ex: combine taps, continuous vibrations, parameter curves, etc
+    - use `CHHapticEngine`, the object responsible for creating vibrations
+      - `.hapticIntensity` to control how strong the haptic should be
+      - `.hapticSharpness` to control how sharp the haptic it is
+        - sharpness of 0, feel dull compare to value of 1
+- Disable user interactivity
+  - `allowsHitTesting(flag:)`
+    - when it is attached to a view with its parameter set to false, the view isn't even consider tappable
+  - `contentShape()`, can specify tappable shape
+    - useful when tap actions attached to stacks with spacers
+
 ## Day 85
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.84.0...v0.85.0)
