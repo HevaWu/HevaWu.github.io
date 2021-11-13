@@ -8,6 +8,28 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 87
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.86.0...v0.87.0)
+
+- `Timer` to create Timer publisher
+  - ex: `Timer.publish(every: 1, on: .main, in: .common).autoconnect()`
+    - fire every 1s, run on main thread, run on common, connects timer immediately, assign whole thing to timer constant so that it stay alive
+  - use `upstream` publisher to find timer itself
+    - `timer.upstream.connect().cancel()` will stop timer
+  - specify timer tolerance: ex: `Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()`
+- `onReceive()` to accept publisher, and run function
+- SwiftUI can notify NotificationCenter notifications
+  - ex: `onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification))`, will notify when user go to background
+  - `willEnterForegroundNotification` will notify when user re-active the app
+  - `userDidTakeScreenshotNotification` will notify user take screenshot
+  - `significantTimeChangeNotification` will notify when user changes the clock or when daylight savings time changes
+  - `keyboardDidShowNotification` will notify when keyboard is shown
+- Property to read user's custom accessibility settings
+  - `@Environment(\.accessibilityDifferentiateWithoutColor)` can monitor user's "Settings -> Accessibility -> Display & Text Size -> Differentiate Without Color" settings
+  - `@Environment(\.accessibilityReduceMotion)` check user's "Settings -> Accessibility -> Motion -> Reduce Motion" settings
+  - `@Environment(\.accessibilityReduceTransparency)` check user's "Settings -> Accessibility -> Display & Text Size -> Reduce Transparency" settings
+
 ## Day 86
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.85.0...v0.86.0)
