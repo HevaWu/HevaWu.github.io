@@ -8,6 +8,13 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 88
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.87.0...v0.88.0)
+
+- `shadow(radius)` when add a view on top of another view which has same background color. To make current view clearly visible, can add shadow on current view to show it gentle depth effect.
+- `withAnimation` to wrap remove function, the remaining will automatically slide up
+
 ## Day 87
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.86.0...v0.87.0)
