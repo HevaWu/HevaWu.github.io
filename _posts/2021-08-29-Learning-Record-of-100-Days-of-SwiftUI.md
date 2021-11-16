@@ -8,6 +8,18 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 90
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.89.0...v0.90.0)
+
+- Warm up Taptic Engine help reducing the latency between call `play()` and effect actually happening. It also have battery impact so the system will only stay ready for 1s or 2s after call `prepare()`
+  - OK call `prepare()` then never call `play()`. Sytem will keep Taptic Engine ready for a few seconds then power it down again.
+  - if repeatedly call `prepare()` and never call `play()`, system might start ignoring `prepare()` until at least one `play()` happened
+  - allow to call `prepare()` many ntimes before calling `play()` once. `prepare()` doesn't pause app while Taptic Engine warm up, not have any real performace cost when system is already prepared
+- `Image(decorative:)` make decorative image, that SwiftUI will ignores this image in Accessibility
+- `.navigationViewStyle(.stack)` tell SwiftUI only show stack style (one view at a time)
+  - when rotate screen to landscape one, might face blank view issue. This is because SwiftUI allows 2 views sit side by side. Left side view decide show what, right side is details. Sometimes, might cause blank view there.
+
 ## Day 89
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.88.0...v0.89.0)
