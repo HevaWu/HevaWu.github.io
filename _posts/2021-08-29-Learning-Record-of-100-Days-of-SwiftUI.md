@@ -8,6 +8,14 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 91
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.90.0...v0.91.0)
+
+- Only modern iPhone support Core Haptics
+- Timer tolerance allows to delay timer for better energy efficiency.
+  - default is zero tolerance, but still doesn't guarantee exact timings
+
 ## Day 90
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.89.0...v0.90.0)
