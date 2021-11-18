@@ -8,6 +8,26 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 92
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.91.0...v0.92.0)
+
+- `layout neutral`: `ContentView` size is exactly always size of its body
+- `ModifiedContent`, when apply a modifier to a view, SwiftUI actually get back new ModifiedContent, it stores both original giew and its modifier.
+  - when apply a modifier, actual view goes into hierarchy is the modified view, not original one
+  - applying modifier creates new views rather than just modifying the existing views in-place
+  - ex: `Text().background`, text view becomes a child of its background
+- if view hierarchy is wholly layout neutral, it will take up all available spaces (ex: `Color.red`)
+- `HStack(alignment: .lastTextBaseline)`: align text on baseline of last child
+- `alignmentGuide(Alignment, computeValue: (ViewDimensions))`, use to custom alignment
+  - `ViewDimensions` contains width and height of the view, along with ability to read its various edges
+- `offset()` will NOT change original dimensions
+- make custom `VerticalAlignment`/`HorizontalAlignment`
+  - use `AlignmentID` to build custom type
+    - provide `static defaultVal(in:)` to accept `ViewDimensions` and return `CGFloat` specify how view should be aligned if there is no `alignmentGuide()` modifier
+    - set custom AlignmentID object to `enum` rather than struct
+      - by using `enum`, can't make an instance there. Clearer this only house some functionality
+
 ## Day 91
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.90.0...v0.91.0)
