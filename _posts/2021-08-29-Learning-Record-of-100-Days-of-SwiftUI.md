@@ -8,6 +8,25 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 93
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.92.0...v0.93.0)
+
+- position views
+  - `position()`, absolute position
+    - once applied position(), get back new view
+  - `offset()`, not change original dimensions
+    - only change location where view should be rendered without actually changing its underlying geometry
+- `GeometryReader`
+  - create size that was proposed by the parent, then use it to manipulate view
+  - view get returned has flexible preferred size, it will expand to take up more space as needed
+  - `frame(in:)` to read frame of a view
+  - `coordinate spaces`
+    - `global space`: measure view frame relative to whole screen
+    - `local space`: measure view frame relative to parent
+  - `coordinateSpace()` to create custom coordinate spaces (any child of that can then read its frame relative to that coordinate space)
+  - can grab values from view's environment dynamically, then feed in its absolute or relative position ino various modifier
+
 ## Day 92
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.91.0...v0.92.0)
