@@ -14,7 +14,7 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 
 - `GeometryReader` is given one value inside its layout closure, which is a `GeometryProxy` containing layout information
 - `.background(GeometryReader { geo -> Color in })` is one way to get subview's content geo value
-
+- When setting offset/degree on SwiftUI.Image, use `Double` rather than CGFloat to keep safe
 ## Day 93
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.92.0...v0.93.0)
