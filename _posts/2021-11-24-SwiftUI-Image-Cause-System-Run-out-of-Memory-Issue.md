@@ -75,3 +75,4 @@ I fixed the issue by using `Double` and double check my logic to be sure only se
 #### Reference
 
 - <https://www.reddit.com/r/SwiftUI/comments/qj4qtd/sourcekitservice_runaway_ram_usage/>
+- My practice code: <https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.93.0...v0.94.0>
