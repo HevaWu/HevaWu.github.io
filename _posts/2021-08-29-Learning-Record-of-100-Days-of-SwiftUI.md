@@ -8,6 +8,28 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 96
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.95.0...v0.96.0)
+
+- 2 side by side view
+  - UIKit `UISplitViewController`
+    - on iPad, show 2 views side by side
+    - on iPhone, collapse 2 views into one, get navigation view push-and-pop behavior
+  - SwiftUI `NavigationView` with two views as its body
+    - a. on portrait, only see first view
+    - b. on large landscape iPHone, see second view, when swipe from left to right, show first view partially slide over second view
+    - c. on portrait iPads also see second view, when swipe from left to right, show first view partially slide over second view
+    - d. on landscape iPads see both first view and second view
+    - SwiftUI automatically link first and second view, if add `NavigationLink` in first view, it will automatically load content in second view when iPhone is landscape
+    - SwiftUI supports `either one or two child` views, even put more, they will be ignored
+- `navigationBarHidden(true)` to hide navigation bar
+- `alert` and `sheet` with optionals: use optional `Identifiable` object as condition, alert and sheet will be shown when object has value.
+  - when alert dismissed, the object will `back to nil`
+- `Group` as transparent layout container
+  - can create series of views inside a group, then wrap group in different stack
+- `@Environment(\.horizontalSizeClass)` to check current device horizontal layout(ex: `.compact`)
+
 ## Day 95
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.94.0...v0.95.0)
