@@ -8,6 +8,16 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 97
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.96.0...v0.97.0)
+
+- `static let` is `lazy`, which not got created until be used
+- On landscape iPhone, SwiftUI default behavior is show secondary view, with primary view as slide over.
+- `UIDevice.current.userInterfaceIdiom == .phone` check current user's device
+- `ListFormatter` to convert array of string into string
+  - ex: ["A", "B", "C"] will return "A, B, and C", more readable
+
 ## Day 96
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.95.0...v0.96.0)
