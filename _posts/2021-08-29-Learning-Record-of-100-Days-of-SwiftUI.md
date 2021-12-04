@@ -15,7 +15,7 @@ This will record what I learned from [100 Days of SwiftUI](https://www.hackingwi
 - `.userInterfaceIdiom` tell whether device is tablet, phone or TV
 - All iOS devices have horizontal and vertical size classes
 - Picker label is not shown well, this is known issue
-  - ref: https://developer.apple.com/forums/thread/688518
+  - ref: <https://hevawu.github.io/blog/2021/12/04/SwiftUI-Picker-Label-Not-Showing-Issue>
 - Use `onChange` to observer `Picker` selected item changes and add action
 
 ## Day 98
