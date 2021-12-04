@@ -8,6 +8,16 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 99
+
+[Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.98.0...v0.99.0)
+
+- `.userInterfaceIdiom` tell whether device is tablet, phone or TV
+- All iOS devices have horizontal and vertical size classes
+- Picker label is not shown well, this is known issue
+  - ref: https://developer.apple.com/forums/thread/688518
+- Use `onChange` to observer `Picker` selected item changes and add action
+
 ## Day 98
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.97.0...v0.98.0)
