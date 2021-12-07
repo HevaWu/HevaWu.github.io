@@ -8,6 +8,26 @@ categories: [SwiftUI, Swift]
 
 This will record what I learned from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/). I will also use this to track my trial. Here is my practice repo: <https://github.com/HevaWu/100DaysOfSwiftUI
 
+## Day 100
+
+- `Shape` must be able to create a path
+- `@NSManaged`is pre-dates property wrapper in Swift
+- Local modifier always override environment modifier from parents
+  - ex: if VStack has foreground color and some text inside also has foreground color. It will pick Text one.
+- custom alignment guide must provide default value
+  - this will be used if we don't attach `alignmentGuide()` to a view
+- use `ForEach` inside `List` to mix dynamic rows alongside static rows
+- both `navigationViewStyle(StackNavigationViewStyle())` and `.navigationViewStyle(.stack)` tell SwiftUI only show stack style (one view at a time)
+- `.labelsHidden()` to remove label from date picker
+  - this is better than set empty label which might cause problems for screen readers
+- `aspectRatio(contentMode: .fit)` = `scaledToFit()`
+- Text fileds have no border by default
+  - it is okay to use `textFieldStyle()` to add border
+- use `onDismiss()` to detect when a sheet is closed
+- `disabled()` can be used with methods, as long as it returns a Boolean
+- can attach `animation()` to a binding to trigger animation
+- `blur()` applies Gaussian blur
+
 ## Day 99
 
 [Practice Code](https://github.com/HevaWu/100DaysOfSwiftUI/compare/v0.98.0...v0.99.0)
