@@ -10,7 +10,9 @@
 
 ## Work Experience
 
-### [LINE Sticker Maker](https://apps.apple.com/app/line-sticker-maker/id1239684967)
+### LINE Fukuoka Corp. (Oct.2017 - Now)
+
+**[LINE Sticker Maker](https://apps.apple.com/app/line-sticker-maker/id1239684967)**
 
 - Lead iOS team to develop new feature, discuss with project manager, product manager, planner, server and designer
 - Support SceneDelegate to replace deprecated AppDelegate key window
@@ -21,7 +23,7 @@
 - Implement human face detection by using MLKit and match it into custom decoration frame Build and test new API Request by using URLSession and URLRequest
 - Migrated and updated mobile application synchronous data by using Realm
 
-### [LINE Official Account](https://apps.apple.com/app/line-official-account/id1450599059)
+**[LINE Official Account](https://apps.apple.com/app/line-official-account/id1450599059)**
 
 - Improve iOS version upgrade, remove and update deprecated method and delegate
 - Maintenance UI layout and refactor navigation bar
