@@ -2,7 +2,7 @@
 layout: post
 title: Zermelo's theorem
 date: 2022-01-24 19:22:00
-comment_id: 204
+comment_id: 203
 categories: [Game, Theorem]
 ---
 
