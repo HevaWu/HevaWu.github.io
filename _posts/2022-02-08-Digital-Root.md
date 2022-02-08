@@ -36,6 +36,7 @@ $$
 ### Code
 
 ```swift
+// Swift
 func addDigits(_ num: Int) -> Int {
     if num == 0 { return 0}
     if num % 9 == 0 { return 9 }
@@ -44,12 +45,14 @@ func addDigits(_ num: Int) -> Int {
 ```
 
 ```java
+// Java
 public int addDigits(int num) {
     return 1 + (num-1)%9;
 }
 ```
 
 ```py
+# Python
 def addDigits(self, num: int) -> int:
     if num == 0:
         return 0
