@@ -14,7 +14,8 @@
 
 **[LINE Sticker Maker](https://apps.apple.com/app/line-sticker-maker/id1239684967)**
 
-- Lead iOS team to develop new feature, discuss with project manager, product manager, planner, server and designer
+- Lead iOS team to develop and release new feature, discuss with project manager, product manager, planner, server and designer
+- Implement Avatar stickers feature by cooperating with LINE Avatar team
 - Support SceneDelegate to replace deprecated AppDelegate key window
 - Implement user review feature by using StoreKit SKStoreReviewController
 - Make submodule with Swift Packages to improve project build time and decrease code size
