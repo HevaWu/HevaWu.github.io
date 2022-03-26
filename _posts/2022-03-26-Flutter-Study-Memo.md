@@ -9,6 +9,8 @@ tags: [Flutter]
 
 ## [First App](https://docs.flutter.dev/get-started/codelab)
 
+Practice Code: <https://github.com/HevaWu/TestFlutter/tree/main/my_app>
+
 - [Material](https://material.io/design) is visual design language that is standard on mobile and web. Flutter offers rich set of Material widgets.
 - good to set `uses-material-design: true` entry in the `flutter` section under `pubspec.yaml` file. This will use more features of Material, exL set of predefined icons
 - `StatelessWidget`, make app itself a widget. Almost all of things in Flutter is widget, include `alignment, padding, layout`
