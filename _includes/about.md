@@ -4,24 +4,34 @@
 <img src="/images/logo.png" width="300" class="about-logo">
 </div>
 
-**He Wu(Heva) is a Software engineer with 3+ years of work experience in iOS development. 9+ years of coding experience include web development, data analysis and mathematical modeling.**
+**He Wu(Heva) is a Software engineer with 4+ years of work experience in iOS development. 10+ years of coding experience include web development, data analysis and mathematical modeling.**
 
 # Projects
 
 ## Work Experience
 
-### LINE Fukuoka Corp. (Oct.2017 - Now)
+### Woven Planet Holdings. (Mar.2022 - Now)
 
-**[LINE Sticker Maker](https://apps.apple.com/app/line-sticker-maker/id1239684967)**
+Mobile Application Developer
 
-- Lead iOS team to develop new feature, discuss with project manager, product manager, planner, server and designer
-- Support SceneDelegate to replace deprecated AppDelegate key window
-- Implement user review feature by using StoreKit SKStoreReviewController
+
+### LINE Fukuoka Corp. (Oct.2017 - Mar.2022)
+
+**[LINE Sticker Maker](https://apps.apple.com/app/line-sticker-maker/id1239684967) - iOS Team Lead**
+
+- Lead iOS team to develop and release new feature, discuss with project manager, product manager, planner, server and designer
 - Make submodule with Swift Packages to improve project build time and decrease code size
 - Build dependencies and create binary framework by using Cocoapods, Carthage and Swift Package Manager Build, Deploy, Test Beta/Alpha/Real prototype by using Fastlane and Jenkins
-- Asynchronous processing code by using RxSwift, RxCocoa, RxDataSource, and RxRealm Implement auto-trimming and improve trimming feature by using OpenCV
-- Implement human face detection by using MLKit and match it into custom decoration frame Build and test new API Request by using URLSession and URLRequest
+- Asynchronous processing code by using RxSwift, RxCocoa, RxDataSource, and RxRealm
 - Migrated and updated mobile application synchronous data by using Realm
+- Configure analytics tools for tracking, using Google Analytics and Firebase Analytics
+- Maintenance code when new version released: iOS, Swift, Xcode
+- Implement Avatar stickers feature by cooperating with LINE Avatar team
+- Support SceneDelegate to replace deprecated AppDelegate key window
+- Implement user review feature by using StoreKit SKStoreReviewController
+- Implement human face detection by using MLKit and match it into custom decoration frame Build and test new API Request by using URLSession and URLRequest
+- Implement auto-trimming and improve trimming feature by using OpenCV
+- Update the related code to support the new version Line SDK which also include token upgrade
 
 **[LINE Official Account](https://apps.apple.com/app/line-official-account/id1450599059)**
 

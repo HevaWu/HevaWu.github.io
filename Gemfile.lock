@@ -120,7 +120,7 @@ DEPENDENCIES
   jemoji
   kramdown (>= 2.3.0)
   kramdown-parser-gfm
-  nokogiri (>= 1.12.5)
+  nokogiri (>= 1.13.2)
   rack (>= 2.1.4)
   webrick (~> 1.7)
 
