@@ -7,6 +7,24 @@ categories: [Dart]
 tags: [Flutter]
 ---
 
+## [Test](https://docs.flutter.dev/testing)
+
+- `unit test`: tests a single function, method, or class.
+- `widget test`(`component test`): tests a single widget.
+- `integration test`: tests a complete app or a large part of an app.
+- Style
+  - use `flutter_test` package
+  - `WidgetTester`: build and interact with widget in test environment
+  - `testWidget()`: auto-create a new WidgetTester for each test case, nad is used in place of normal `test()` functions
+    - WidgetTester's `pumpWidget` builds and renders provided widget
+      - `tester.pump(Duration duration)`: schedule a frame and trigger rebuild of widget.
+      - `tester.pumpAndSettle()` repeatedly call `pump()` with given duration until there are no longer any frames scheduled, waits for all animations to complete
+      - `tester.scrollUntilVisible()` repeatedly scroll through lists of items until finds
+      - `tester.enterText()`, `tester.tap()`, `tester.drag()`
+  - `Finder` allow searching for widgets in test environment
+  - `Matcher` constant verify whether a Finder locates a widget or multiple widgets in the tets environment
+    - `findsOneWidget`, `findsWidgets`, `findsNWidgets`, `matchesGoldenFile`
+
 ## [Dart Language](https://dart.dev/overview)
 
 ### Dart: [The language](https://dart.dev/guides/language/language-tour)
