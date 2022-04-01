@@ -31,6 +31,13 @@ sudo systemctl disable ssh
 sudo apt-get remove openssh-server
 ```
 
+some ssh settings on MacBook:
+
+```s
+# copy ssh ip_rsa from MacBook to Linux
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@host
+```
+
 ### Troubleshooting:
 
 **Linux warning `no ssh command`**
