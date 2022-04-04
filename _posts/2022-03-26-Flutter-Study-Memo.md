@@ -7,6 +7,50 @@ categories: [Dart]
 tags: [Flutter]
 ---
 
+## Design
+
+Test Project:
+
+- [Drawer](https://github.com/HevaWu/TestFlutter/tree/main/add_a_drawer_to_a_screen)
+- [SnackBar](https://github.com/HevaWu/TestFlutter/tree/main/display_a_snackbar)
+
+Notes:
+
+- `Drawer`: better use it from material library, which adheres to Material Design Spec
+  - need a `AppBar` to show it
+  - use `Navigator.pop(context)` to close drawer. When user open a drawer(menu), Flutter add drawer to navigation stack.
+- `Scaffold` from material library, ensure widget won't overlap
+- `SnackBar`, can add action by `action: SnackBarAction`
+- `ScaffoldMessenger.of` could use to show SnackBar
+
+## Animation
+
+Test project:
+
+- [Animate Page Route](https://github.com/HevaWu/TestFlutter/tree/main/animate_a_page_route_transition)
+- [Animate Widget Physics](https://github.com/HevaWu/TestFlutter/tree/main/animate_a_widget_using_a_physics_simulation)
+- [Animate Container](https://github.com/HevaWu/TestFlutter/tree/main/animate_the_properties_of_a_container)
+- [Fade in and out](https://github.com/HevaWu/TestFlutter/tree/main/fade_a_widget_in_and_out)
+
+Notes:
+
+- `PageRouteBuilder` provide `Animation` object
+  - Animation can be used with `Tween` and `Curve` object to customize the transition animation
+  - `child` param in transitionBuilder is widget returned from pageBuilder.
+  - `pageBuilder` only called the first time the route is built. Framework can avoid extra work because `child` stays the same throughout the transition.
+- `FractionalTranslation`, apply translation transformation before painting its child
+- `AnimatedWidget` rebuild themselves when the value of the animation changes(ex: `SlideTransition`)
+- `chain()` to combine tweens
+- `tween.animate(CurvedAnimation)` could generate animation with easing curve
+- extend from `SingleTicketProviderStateMixin` allows state object to be a `TicketProvider` for `AnimationController`
+- `Alignment`, visual coordinates, increase x move left to right.
+- `GestureDetector`, handle `onPanDown/onPanUpdate/onPanEnd`.
+- `AnimationController` listen `Animation` value to monitor animation and update position
+- `DragEndDetails` provide velocity of the pointer when it stopped contacing the screen
+- `AnimationController.animateWith(SpringSimulation)` set the velocity of animation
+- `AnimatedContainer`, when rebuilt with new properties, it automatically animates between old and new values (implicit animations)
+- `AnimatedOpacity` to perform opacity animations
+
 ## [Test](https://docs.flutter.dev/testing)
 
 - `unit test`: tests a single function, method, or class.
