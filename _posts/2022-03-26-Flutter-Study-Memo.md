@@ -7,12 +7,29 @@ categories: [Dart]
 tags: [Flutter]
 ---
 
+## Effect
+
+Test project:
+
+- [Download Button](https://github.com/HevaWu/TestFlutter/tree/main/create_download_button)
+
+Notes:
+
+- `AlwaysStoppedAnimation` animation always stop at one time
+- `ChangeNotifier` A class that can be extended or mixed in that provides a change notification API using VoidCallback for notifications.
+  - `notifyLiseners()` notify changes
+
+
 ## Design
 
 Test Project:
 
 - [Drawer](https://github.com/HevaWu/TestFlutter/tree/main/add_a_drawer_to_a_screen)
 - [SnackBar](https://github.com/HevaWu/TestFlutter/tree/main/display_a_snackbar)
+- [Export Fonts](https://github.com/HevaWu/TestFlutter/tree/main/export_fonts_from_a_package)
+- [Orientation](https://github.com/HevaWu/TestFlutter/tree/main/update_ui_based_on_orientation)
+- [Themes](https://github.com/HevaWu/TestFlutter/tree/main/use_themes_to_share_colors_and_fonts_styles)
+- [Tabs](https://github.com/HevaWu/TestFlutter/tree/main/work_with_tabs)
 
 Notes:
 
@@ -22,6 +39,17 @@ Notes:
 - `Scaffold` from material library, ensure widget won't overlap
 - `SnackBar`, can add action by `action: SnackBarAction`
 - `ScaffoldMessenger.of` could use to show SnackBar
+- `OrientationBuilder`: build different layout on landscape or portrait
+- use `MediaQuery.of(context).orientation` could get orientation of the screen
+- Flutter supports `.ttf` and `.otf` font formats
+- set font as default: directly set app's `theme`(use fontFamily)
+- set font for specific widget: use `TextStyle(fontFamily)`
+- app wide themes: define app's `textTheme`
+- create unique theme using `ThemeData`
+- `Theme.copyWith()` extend parent theme
+- `TabController` build a tabbar controller
+  - `TabBar(tabs:[])` create each tabBarItem
+  - `body: TabBarView(children:)` create each tabBar content view
 
 ## Animation
 
