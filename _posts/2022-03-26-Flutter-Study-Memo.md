@@ -12,13 +12,26 @@ tags: [Flutter]
 Test project:
 
 - [Download Button](https://github.com/HevaWu/TestFlutter/tree/main/create_download_button)
+- [Nested Navigation Flow](https://github.com/HevaWu/TestFlutter/tree/main/create_a_nested_navigation_flow)
 
 Notes:
 
 - `AlwaysStoppedAnimation` animation always stop at one time
 - `ChangeNotifier` A class that can be extended or mixed in that provides a change notification API using VoidCallback for notifications.
   - `notifyLiseners()` notify changes
-
+- `Navigator` widget to handle top-level navigation flow
+  - `MaterialPageRoute<dynamic>` construct MaterialPageRoute whose contents are defined by builder
+  - `NavigatorState`, the state for Navigator widget
+- `GlobalKey` is key that is unique across the entire app
+  - provide access to `State`
+- `PreferredSizeWidget`, an interface for widget that ca nreturn size this widget prefer
+  - for `AppBar` and `TabBar`, widget needs to expose a preferred or default size
+- `WillPopScope` calback when user attempts to dismiss the enclosing ModalRoute
+- `AlertDialog` to show alert dialog
+- `BoxDecoration` add borderRadius, color decoration
+- `ElevatedButton`, material design, buttons to add dimension to otherwise mosftly flat layout
+- `MaterialStateProperty`, interface for class resolve to value of T based on widget interactive state(`MaterialState`)
+- `StatefulWidget` contains property `mounted`, check if this state object is currently in a tree
 
 ## Design
 
