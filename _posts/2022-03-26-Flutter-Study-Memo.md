@@ -13,9 +13,26 @@ Test project:
 
 - [Download Button](https://github.com/HevaWu/TestFlutter/tree/main/create_download_button)
 - [Nested Navigation Flow](https://github.com/HevaWu/TestFlutter/tree/main/create_a_nested_navigation_flow)
+- [Photo Filter Selector](https://github.com/HevaWu/TestFlutter/tree/main/create_a_photo_filter_carousel)
 
 Notes:
 
+- `Image` can apply filters with `color` and `colorBlendMode`
+- `LayoutBuilder`: parent constrains the child's size and doesn't depend on the child's intrinsic size.
+- `SizedBox.expand()` create box become as large as its parent allows
+- `IgnorePointer` widget is invisible when hit, disable interaction
+- `ClipOval`: widget clip with oval
+- `Scrollable`
+  - `ListView` widget always position first element at beginning of available space.
+  - `PageView` widget layout children from the center of the available space, and provides snapping physics.
+  - `PageController` has `viewportFraction` used to display multiple item on screen at the same time
+    - can `addListener` to controller, monitor changes
+    - use `hasClients` and `position.hasContentDimensions` to check if there is PageView and PageController is attached
+    - `animateToPage` move that item into center
+  - for customize the position of child widgets within a scrollable area, use `Scrollable` with `viewportBuilder`, place `Flow` widget inside the `viewportBuilder`. The `Flow` has a `delegate property` that allows position child widget wherever we want, based on current `viewportOffset`
+- `ValueNotifier` notify when value changed
+  - `ValueListenableBuilder` could use to listen this notifier
+- `BoxFit` how to fit another box, ex: contain, cover
 - `AlwaysStoppedAnimation` animation always stop at one time
 - `ChangeNotifier` A class that can be extended or mixed in that provides a change notification API using VoidCallback for notifications.
   - `notifyLiseners()` notify changes
@@ -28,7 +45,7 @@ Notes:
   - for `AppBar` and `TabBar`, widget needs to expose a preferred or default size
 - `WillPopScope` calback when user attempts to dismiss the enclosing ModalRoute
 - `AlertDialog` to show alert dialog
-- `BoxDecoration` add borderRadius, color decoration
+- `BoxDecoration`, decorative way to draw a box, add borderRadius, color decoration
 - `ElevatedButton`, material design, buttons to add dimension to otherwise mosftly flat layout
 - `MaterialStateProperty`, interface for class resolve to value of T based on widget interactive state(`MaterialState`)
 - `StatefulWidget` contains property `mounted`, check if this state object is currently in a tree
