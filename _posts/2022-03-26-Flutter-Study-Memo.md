@@ -14,9 +14,13 @@ Test project:
 - [Download Button](https://github.com/HevaWu/TestFlutter/tree/main/create_download_button)
 - [Nested Navigation Flow](https://github.com/HevaWu/TestFlutter/tree/main/create_a_nested_navigation_flow)
 - [Photo Filter Selector](https://github.com/HevaWu/TestFlutter/tree/main/create_a_photo_filter_carousel)
+- [Prallax Scrolling](https://github.com/HevaWu/TestFlutter/tree/main/create_a_scrolling_parallax_effect)
 
 Notes:
 
+- `ClipRRect`, widget clips using rounded rectangle
+- `context.findRenderObject() as RenderBox` return a `RenderBox` to tell where the item are
+- `Alignment.inscribe()` return rect of the given size, aligned within given rect as specified
 - `Image` can apply filters with `color` and `colorBlendMode`
 - `LayoutBuilder`: parent constrains the child's size and doesn't depend on the child's intrinsic size.
 - `SizedBox.expand()` create box become as large as its parent allows
@@ -29,6 +33,10 @@ Notes:
     - can `addListener` to controller, monitor changes
     - use `hasClients` and `position.hasContentDimensions` to check if there is PageView and PageController is attached
     - `animateToPage` move that item into center
+  - `Flow`, can control transform of a child widget immediately before widget paint, control where child is painted
+    - `FlowDelegate` control how its children are sized and where children are painted
+  - `CustomPaint`, control what a child paints
+  - `RenderBox`, control layout, painting, hit testing
   - for customize the position of child widgets within a scrollable area, use `Scrollable` with `viewportBuilder`, place `Flow` widget inside the `viewportBuilder`. The `Flow` has a `delegate property` that allows position child widget wherever we want, based on current `viewportOffset`
 - `ValueNotifier` notify when value changed
   - `ValueListenableBuilder` could use to listen this notifier
