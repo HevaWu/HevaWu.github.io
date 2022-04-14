@@ -9,7 +9,7 @@ end
 
 gem "jemoji"
 gem "rack", ">= 2.1.4"
-gem "nokogiri", ">= 1.13.2" # Fix github security
+gem "nokogiri", ">= 1.13.4" # Fix github security
 gem "jekyll-assets"
 gem "kramdown", ">= 2.3.0"
 gem "kramdown-parser-gfm"
