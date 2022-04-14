@@ -81,7 +81,7 @@ Someone point out this might be issue of `loadString()` in `asset_bundle.dart`.
 > One solution — create your own asset bundle and override this method without this size check
 
 ```dart
-class YourOwnTestAssetBundleextends CachingAssetBundle {
+class YourOwnTestAssetBundleExtends CachingAssetBundle {
   @override
   Future<String> loadString(String key, {bool cache = true}) async {
     final ByteData data = await load(key);
@@ -93,9 +93,7 @@ class YourOwnTestAssetBundleextends CachingAssetBundle {
 }
 ```
 
-Please refer this doc for more details: https://medium.com/@sardox/flutter-test-and-randomly-missing-assets-in-goldens-ea959cdd336a
-
-
+Please refer this doc for more details: <https://medium.com/@sardox/flutter-test-and-randomly-missing-assets-in-goldens-ea959cdd336a>
 
 #### References
 
