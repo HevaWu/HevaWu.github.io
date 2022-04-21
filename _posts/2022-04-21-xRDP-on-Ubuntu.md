@@ -7,6 +7,12 @@ categories: [Linux]
 tags: [Ubuntu, xRDP, SSH]
 ---
 
+[xRDP](http://xrdp.org/) is under open source remote desktop protocol server. It is powerful to build security connection between server and local.
+
+I use it on my work, and here is my env:
+- Ubuntu 18.0.4
+- local PC: MacOS Monterey 12.2.1, M1 chip
+
 ## Install xRDP guide
 
 Here is a good documentation which explain it: <http://c-nergy.be/blog/?p=14965>
