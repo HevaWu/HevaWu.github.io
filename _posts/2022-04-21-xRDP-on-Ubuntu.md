@@ -90,7 +90,17 @@ polkit.addRule(function(action, subject) {
  return polkit.Result.YES;
  }
  });
- ```
+```
+
+### 3. When putty display remote window, Ubuntu machine's display is not working (keyboard and mouse is locked)
+
+Try ⬇️
+
+```sh
+sudo apt install xserver-xorg-input-all
+```
+
+Some discussion is at here: <https://askubuntu.com/questions/1348291/what-is-xserver-xorg-input-all-and-its-purpose>
 
 #### References
 
