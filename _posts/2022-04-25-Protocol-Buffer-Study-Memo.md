@@ -109,6 +109,7 @@ NOTE:
 - can use other message Types as fields of another message
 - import definitions by `import xxx/xxx.proto;`
 - `import public` help forward all imports to a new location
+
 ```s
 // new.proto
 // All definitions are moved here
