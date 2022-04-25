@@ -50,7 +50,7 @@ message Timestamp {
 
 ## How do Protocol Buffers Work
 
-![](/images/2022-04-21-Protocol-Buffer-Study-Memo/protocol-buffers-concepts.png)
+![](/images/2022-04-25-Protocol-Buffer-Study-Memo/protocol-buffers-concepts.png)
 
 # Language Guide (proto3)
 
