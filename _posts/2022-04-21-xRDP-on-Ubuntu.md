@@ -3,7 +3,7 @@ layout: post
 title: xRDP on Ubuntu
 date: 2022-04-21 13:58:00
 comment_id: 211
-categories: [Linux]
+categories: [Linux, M1Mac]
 tags: [Ubuntu, xRDP, SSH]
 ---
 
