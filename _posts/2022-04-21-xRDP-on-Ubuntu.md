@@ -102,6 +102,10 @@ sudo apt install xserver-xorg-input-all
 
 Some discussion is at here: <https://askubuntu.com/questions/1348291/what-is-xserver-xorg-input-all-and-its-purpose>
 
+### 4. Locale setting is wrong
+
+on Mac, under `Terminal` -> `Preferences` -> `Advanced` -> turn off `Set locale environment variables on startup`
+
 #### References
 
 - <http://c-nergy.be/blog/?p=14965>
