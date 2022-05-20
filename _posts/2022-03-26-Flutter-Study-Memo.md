@@ -7,6 +7,18 @@ categories: [Dart]
 tags: [Flutter]
 ---
 
+## Networking
+
+Test project:
+
+- 
+
+Notes:
+
+- `http` pakcage, composable and Future-based library for making HTTP request
+- `Future` is core Dart class for working with async operations. Future object represents potential value/error thatwill be available at some time in the future
+- `http.Response` contains data received from a successful http call
+
 ## Effect
 
 Test project:
@@ -149,6 +161,13 @@ Notes:
   - ex: factory constructor might return an instance from cache, or might return an instance of subtype
   - initializing a final variable using logic that can't be handled in initializer list
   - Factory constructors have no access to `this`.
+- stream
+  - `stream.listen` could use to receive event, use it at: receive element when another progress also running
+  - `await for` use to receive event, but it will keep waiting not end, use to eait for stream finish
+  - `broadcast()`, use to `listen` at multiple places
+  - `sink.add` to add send event
+  - `async`, the return variable will be one Stream(return `Future` element)
+  -  `yield`, only use inside `async` block, could be instead of `return`, do similar as `StreamController.sink.add()` 
 
 ### Dart: [The Libraries](https://dart.dev/guides/libraries)
 
