@@ -11,13 +11,35 @@ tags: [Flutter]
 
 Test project:
 
-- 
+- [Fetch Data](https://github.com/HevaWu/TestFlutter/tree/main/delete_data_on_the_internet)
 
 Notes:
 
 - `http` pakcage, composable and Future-based library for making HTTP request
 - `Future` is core Dart class for working with async operations. Future object represents potential value/error thatwill be available at some time in the future
 - `http.Response` contains data received from a successful http call
+- `FutureBuilder` widget to display data on screen
+  - `snapshot.hasData` only returns `true` when snapshot contains a non-null data value
+
+## JSON and Serialization
+
+### Manual serialization
+
+- use built-in JSON decoder in `dart:convert`
+  - serialize JSON inline
+    - `jsonDecode()` return `Map<String, dynamic>`
+    - don't know the types of values until runtime, lose statically typed language features: type safety, autocompletion, compile-time exceptions
+  - serialize JSON inside model classes
+    - `.fromJson()` for constructing from map structure
+    - `toJson()` convert to a map
+    - type safety
+
+### Automated serialization using code generation
+
+- have external library generate the encoding boilerplate, run file watcher that generates code from model classes, ex: `json_serializable` and `built_value`
+  - `json_serializable` allow to make regular classes serializing by using annotations
+  - `built-value` provides higher-level way of defining immutable value classes taht can also be serialized to JSON
+- use it for medium or larger project
 
 ## Effect
 
