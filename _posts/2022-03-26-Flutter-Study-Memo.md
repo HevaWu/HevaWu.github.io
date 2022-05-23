@@ -7,6 +7,19 @@ categories: [Dart]
 tags: [Flutter]
 ---
 
+## Internalization
+
+- add `flutter_localizations` package as dependency
+- add `intl` package dependency
+- add `generate: true` under `pubspec.yaml - flutter`
+- add `l10n.yaml`
+  - with `arb-dir`, `template-arb-file`, `output-localization-file`
+- provides localized strings and values for library
+  - `GlobalMaterialLocalizations.delegate`
+  - `GlobalWidgetsLocalizations.delegate`
+- `Locale` language code entries in [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
+- `Localizations.localOf()` get app current locale
+
 ## Networking
 
 Test project:
@@ -189,7 +202,7 @@ Notes:
   - `broadcast()`, use to `listen` at multiple places
   - `sink.add` to add send event
   - `async`, the return variable will be one Stream(return `Future` element)
-  -  `yield`, only use inside `async` block, could be instead of `return`, do similar as `StreamController.sink.add()` 
+  -  `yield`, only use inside `async` block, could be instead of `return`, do similar as `StreamController.sink.add()`
 
 ### Dart: [The Libraries](https://dart.dev/guides/libraries)
 
