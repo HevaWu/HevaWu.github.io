@@ -72,6 +72,12 @@ sudo sed -i.bak "4 a #fixGDM-by-Griffon\ngnome-shell-extension-tool -e ubuntu-ap
 fi
 ```
 
+OR
+
+```sh
+sudo apt-get install xorgxrdp -y
+```
+
 ### 2. Authentication Required to Create Managed Color Device
 
 Detail explanation is [at here](https://c-nergy.be/blog/?p=12073)
