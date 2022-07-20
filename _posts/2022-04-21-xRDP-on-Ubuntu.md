@@ -3,8 +3,8 @@ layout: post
 title: xRDP on Ubuntu
 date: 2022-04-21 13:58:00
 comment_id: 211
-categories: [Linux, M1Mac]
-tags: [Ubuntu, xRDP, SSH]
+categories: [Linux, M1Mac, Ubuntu]
+tags: [xRDP, SSH]
 ---
 
 [xRDP](http://xrdp.org/) is under open source remote desktop protocol server. It is powerful to build security connection between server and local.
