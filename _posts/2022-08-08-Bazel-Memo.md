@@ -6,10 +6,47 @@ comment_id: 228
 categories: [Bazel]
 ---
 
+## Install
+
+### MacOS
+
 Install from `brew`, use
 
 ```s
 brew install bazelisk
+```
+
+### Ubuntu
+
+Install from [apt repository](https://bazel.build/install/ubuntu#install-on-ubuntu):
+
+```s
+sudo apt install apt-transport-https curl gnupg
+curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
+sudo mv bazel-archive-keyring.gpg /usr/share/keyrings
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+
+sudo apt update && sudo apt install bazel
+sudo apt update && sudo apt full-upgrade
+
+# install specific version
+sudo apt install bazel-1.0.0
+```
+
+### Install Buildifier
+
+If we use VSCode [Bazel extension](https://marketplace.visualstudio.com/items?itemName=BazelBuild.vscode-bazel), it will require buildifier tools to help linting file.
+
+It is possible to download it via go:
+
+```s
+go get github.com/bazelbuild/buildtools/buildifier
+```
+
+It will put buildifier in `~/go/bin/buildifier` in Mac, `~/go/bin` in Ubuntu. So we need to add it into PATH:
+
+```s
+export PATH="$PATH:$HOME/go/bin"
 ```
 
 ## File
