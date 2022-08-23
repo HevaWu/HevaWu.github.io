@@ -56,7 +56,7 @@ export PATH="$PATH:$HOME/go/bin"
   - mark directory and any sub-directories not containing a `BUILD` file as a `package`, can contain `targets` created by `rules`
 - [WORKSPACE](https://bazel.build/reference/glossary#workspace-file) file: a directory to be a workspace.
   - file can be empty
-  - usually contain external repository declarations to fetch additional dependencies from network or local filesystem.
+  - usually contain **external** repository declarations to fetch additional dependencies from network or local filesystem.
 
 ## Commands
 
@@ -69,6 +69,12 @@ bazel build //[path from WORKSPACE to BUILD:target name]
 # ex: bazel-bin/main/hello-world
 bazel-bin/[path from WORKSPACE to BUILD]/[target name]
 ```
+
+NOTE:
+- if bazel error on `../..`
+  - it is possible that MacOS complain about the shell. Start from Catalina, Apple changed the shell, which convert `...` to `../..` by default. For compatibility, always quote the `...` Bazel wildcard, ex: `bazel build '...'`
+- if run bazel on Windows, sometimes, it might ignore `//` command of bazel
+  - add `export MSYS_NO_PATHCONV=1` and `export MYSYS2_ARG_CONV_EXCL="*"` to allow windows pc run `bazel build //[path from WORKSPACE to BUILD: target name]`
 
 ## Common C++ Rules
 
