@@ -7,7 +7,6 @@
 	request.onload = function () {
 		if (this.status >= 200 && this.status < 400) {
 			let response = JSON.parse(this.response);
-
 			for (var i = 0; i < response.length; i++) {
 				document.getElementById('gh-comments-list').appendChild(createCommentEl(response[i]));
 			}
@@ -59,7 +58,7 @@
 
 		let commentContents = document.createElement('div');
 		commentContents.classList.add('comment-content');
-		commentContents.innerHTML = marked(response.body);
+		commentContents.innerHTML = response.body;
 
 		// Reaction
 
