@@ -30,7 +30,7 @@ I could switch my view controllers (FirstViewController, SecondViewController) b
 
 - At `xib` file, we could directly select the color under `Attributes Inspector`
 
-![xib](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/xib.png)
+![xib](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/xib.png#simulator)
 
 - At coding part, we could directly call `UIColor(named: "TabBarItemLabelColor")` to use it
 
@@ -92,12 +92,12 @@ Maybe reading the `color` from `Assets.xsassets` takes some time & calculation.
 
 At the `xib` file part, if we checking its code
 
-![text_color](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/text_color.png)
+![text_color](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/text_color.png#simulator)
 
 So Xcode read the color by its `name`
 And in the `resources` part
 
-![resources](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/resources.png)
+![resources](/images/2019-07-03-Be-Careful-Using-Named-Color-at-Xcode-Xib-File/resources.png#simulator)
 
 Xcode will try to find the `named Color` by reading its resources
 
