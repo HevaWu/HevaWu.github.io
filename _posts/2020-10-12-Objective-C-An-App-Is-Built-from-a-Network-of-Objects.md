@@ -31,7 +31,7 @@ This article will focus on the `An App Is Built from a Network of Objects`, the 
 
 ## Defining Classes
 
-> In object-oriented programming terms, an object is an instance of a class. 
+> In object-oriented programming terms, an object is an instance of a class.
 
 In objective-C, we could define a class by
 
@@ -62,7 +62,7 @@ The interface of the class defines the way we intend other objects to interact. 
 ```objective-c
 // declare class interface
 @interface SimpleClass : NSObject
- 
+
 @end
 
 // ------ Sample ------
@@ -86,9 +86,9 @@ The interface of the class defines the way we intend other objects to interact. 
 
 ```objective-c
 #import "XYZPerson.h"
- 
+
 @implementation XYZPerson
- 
+
 @end
 
 // ------ Sample ------
@@ -98,7 +98,7 @@ The interface of the class defines the way we intend other objects to interact. 
 // @end
 
 #import "XYZPerson.h"
- 
+
 @implementation XYZPerson
 - (void)sayHello {
     NSLog(@"Hello, World!");
@@ -158,7 +158,7 @@ int interestingNumber = [someObject magicNumber]; // If you do need to keep trac
 // the string object continues to exist when it is passed as a return value even though the stringToReturn pointer goes out of scope.
 - (NSString *)magicString {
     NSString *stringToReturn = // create an interesting string...
- 
+
     return stringToReturn;
 }
 ```
@@ -173,7 +173,7 @@ int interestingNumber = [someObject magicNumber]; // If you do need to keep trac
 
 ```objective-c
 // The NSObject root class provides a class method, alloc, which handles this process for you:
-// 
+//
 // Notice that the return type of this method is id. This is a special keyword used in Objective-C to mean “some kind of object.” It is a pointer to an object, like (NSObject *), but is special in that it doesn’t use an asterisk.
 //
 // The alloc method has one other important task, which is to clear out the memory allocated for the object’s properties by setting them to zero. This avoids the usual problem of memory containing garbage from whatever was stored before, but is not enough to initialize an object completely.
@@ -184,6 +184,12 @@ int interestingNumber = [someObject magicNumber]; // If you do need to keep trac
 
 // NSObject *newObject = [[NSObject alloc] init];
 
+// factory methods
+// alternative to the traditional alloc] init] process, without need to nest two methods
++ (NSNumber *)numberWithInt:(int)value;
+// use like
+NSNumber *magicNumber = [NSNumber numberWithInt:42];
+
 // use new to Create an object If No Arguments Are Needed for Initialization
 XYZObject *object = [XYZObject new];
 // is effectively the same as:
@@ -191,7 +197,7 @@ XYZObject *object = [[XYZObject alloc] init];
 
 // literals
 NSString *someString = @"Hello, World!";
-// equal to 
+// equal to
 NSString *someString = [NSString stringWithCString:"Hello, World!" encoding:NSUTF8StringEncoding];
 ```
 
@@ -207,6 +213,13 @@ id someObject = @"Hello, World!";
 // rewrite to static type
 NSString *someObject = @"Hello, World!";
 [someObject removeAllObjects];
+
+// class of an object determined at runtime
+XYZPerson *firstPerson = [[XYZPerson alloc] init];
+XYZPerson *secondPerson = [[XYZShoutingPerson alloc] init];
+[firstPerson sayHello];
+[secondPerson sayHello];
+// Although both firstPerson and secondPerson are statically typed as XYZPerson objects, secondPerson will point, at runtime, to an XYZShoutingPerson object. When the sayHello method is called on each object, the correct implementations will be used; for secondPerson, this means the XYZShoutingPerson version.
 
 /* ----- equality of objects ----- */
 
@@ -279,11 +292,12 @@ NSString *firstName = [somePerson firstName];
 
 // attribute
 @property (readonly) NSString *fullName;
+// if don't want to allow property to be changed via setter method, add readonly attribute
 // The opposite of `readonly` is `readwrite`. There’s no need to specify the `readwrite` attribute explicitly, because it is the default.
 
-// it’s possible to specify a custom name by adding attributes to the property. 
+// it’s possible to specify a custom name by adding attributes to the property.
 @property (getter=isFinished) BOOL finished;
-// specify multiple attributes, 
+// specify multiple attributes,
 @property (readonly, getter=isFinished) BOOL finished;
 // In this case, the compiler will synthesize only an isFinished method, but not a setFinished: method.
 
@@ -308,14 +322,14 @@ somePerson.firstName = @"Johnny";
 // myString is a local variable and _someString is an instance variable
 - (void)someMethod {
     NSString *myString = @"An interesting string";
- 
+
     _someString = myString;
 }
 
 // use accessor methods or dot syntax for property access even if you’re accessing an object’s properties from within its own implementation, in which case you should use self
 - (void)someMethod {
     NSString *myString = @"An interesting string";
- 
+
     self.someString = myString;
   // or
     [self setSomeString:myString];
@@ -339,12 +353,13 @@ somePerson.firstName = @"Johnny";
 
 /* Define Instance Variables without Properties */
 
+// definev own instance variables without declaring properties, add them inside braces
 @interface SomeClass : NSObject {
     NSString *_myNonPropertyInstanceVariable;
 }
 ...
 @end
- 
+
 @implementation SomeClass {
     NSString *_anotherCustomInstanceVariable;
 }
@@ -359,11 +374,11 @@ somePerson.firstName = @"Johnny";
 
 - (id)init {
     self = [super init];
- 
+
     if (self) {
         // initialize instance variables here
     }
- 
+
     return self;
 }
 ```
@@ -382,11 +397,12 @@ somePerson.firstName = @"Johnny";
 // custom accessor method
 //
 // If you need to write a custom accessor method for a property that does use an instance variable, you must access that instance variable directly from within the method
+// lazy accessor, delay initialization of a property until its first requested
 - (XYZObject *)someImportantObject {
     if (!_someImportantObject) {
         _someImportantObject = [[XYZObject alloc] init];
     }
- 
+
     return _someImportantObject;
 }
 ```
@@ -424,9 +440,9 @@ somePerson.firstName = @"Johnny";
 ### Manage the Object Graph through Ownership and Responsibility
 
 > By default, both Objective-C properties and variables maintain strong references to their objects. This is fine for many situations, but it does cause a potential problem with strong reference cycles.
->
-> ### Avoid Strong Reference Cycles:
-> 
+
+### Avoid Strong Reference Cycles
+
 > Although strong references work well for one-way relationships between objects, you need to be careful when working with groups of interconnected objects. If a group of objects is connected by a circle of strong relationships, they keep each other alive even if there are no strong references from outside the group.
 
 ```objective-c
@@ -434,8 +450,17 @@ somePerson.firstName = @"Johnny";
 
 @property (weak) id delegate;
 
+// a strong reference cycle for local variables
+NSDate *originalDate = self.lastModificationDate;
+self.lastModificationDate = [NSDate date];
+NSLog(@"Last modification date changed from %@ to %@",
+    originalDate, self.lastModificationDate);
+
 // If you don’t want a variable to maintain a strong reference, you can declare it as __weak:
 NSObject * __weak weakVariable;
+
+NSDate * __weak originalDate = self.lastModificationDate;
+    self.lastModificationDate = [NSDate date];
 
 // if you need to make sure a weak property is not nil before using it. It’s not enough just to test it
 if (self.someWeakProperty) {
@@ -452,7 +477,7 @@ cachedObject = nil;                                       // 5
 ```
 
 > There are a few classes in Cocoa and Cocoa Touch that don’t yet support weak references, which means you can’t declare a weak property or weak local variable to keep track of them.
-> 
+>
 > If you need to use a weak reference to one of these classes, you must use an unsafe reference. For a property, this means using the unsafe_unretained attribute:
 >
 > An unsafe reference is similar to a weak reference in that it doesn’t keep its related object alive, but it won’t be set to nil if the destination object is deallocated. This means that you’ll be left with a dangling pointer to the memory originally occupied by the now deallocated object, hence the term “unsafe.” Sending a message to a dangling pointer will result in a crash.
