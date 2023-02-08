@@ -10,4 +10,3 @@ tags: [Script]
 |Command| Description|
 |:--|:--|
 |`dpkg --print-architecture`| output primary architecture of machine it's run on, ex: arm64 or amd64|
-
