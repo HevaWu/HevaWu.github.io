@@ -1,4 +1,3 @@
-
 <div class="center-img-container">
 <!-- ![](/images/logo.png) -->
 <img src="/images/logo.png" width="300" class="about-logo">
@@ -10,10 +9,25 @@
 
 ## Work Experience
 
-### Woven Planet Holdings. (Mar.2022 - Now)
+### Google (Dec.2022 - Now)
+
+Software Engineer
+
+- Develop features in Google Maps for iOS
+
+### Woven Planet Holdings. (Mar.2022 - Dec.2022)
 
 Mobile Application Developer
 
+- Build and debug mobility vehicle system and application with Arene and C++
+- Integrate, modularize and package subcomponents with Bazel
+- Create mock Vertex ECU image to debug system and applications
+- Push and pull packages, files, docker containers to JFrog Artifactory
+- Work with product owner to check enterprise architecture(EA) and JAMA requirements
+- Work with server engineer to debug cloud services in AWS
+- Negotiate and develop feature with product owner, UX designer
+- Design navigation and route redirection structure by using GoRouter
+- Send remote notification through Firebase Cloud Messaging
 
 ### LINE Fukuoka Corp. (Oct.2017 - Mar.2022)
 
@@ -51,13 +65,13 @@ Mobile Application Developer
 - Collect Japan Pet Friendly "Restaurants, Hotel, Places" data and build custom map
 - [JP Pet Friendly Restaurants Map](https://www.google.com/maps/d/edit?mid=1wHFX3dEHEx2LriB8KgHYU5C5ZqOp6f9z&usp=sharing)
 - [JP Pet Friendly Hotel Map](https://www.google.com/maps/d/edit?mid=1LDjDRLP2BLjVB_fRIqATAEU-k88nmpI8&usp=sharing)
-- [JP Pet Friendly Travel Places Map](https://www.google.com/maps/d/edit?mid=1rfvBFol3CjsgT7wpIfH3amwAPMs5E_g7&usp=sharing )
+- [JP Pet Friendly Travel Places Map](https://www.google.com/maps/d/edit?mid=1rfvBFol3CjsgT7wpIfH3amwAPMs5E_g7&usp=sharing)
 
 ### [AmazonJP Book Parser](https://github.com/HevaWu/AmazonJPBookParser)
 
 - Parsing Amazon JP Books information.
 - single book parser: parse one single book's ISBN-10, ISBN-13, title, writer, publisher, editor reviews, rate, category, author introduction, tags, person who read this book might read other book list
-- amazon parser: input the Japan 2020年本屋大賞's top 10 books, then try to find the similar book lists, and save the data into mongoDB database
+- amazon parser: input the Japan 2020 年本屋大賞's top 10 books, then try to find the similar book lists, and save the data into mongoDB database
 
 ## Academic Projects
 
@@ -67,7 +81,7 @@ Mobile Application Developer
 - Redirected and post data to another page by using jQuery AJAX calls
 - Designed the website by BOOTSTRAP framework and CSS stylesheet
 
-### Register Events API	(Oct.2016 - Nov.2016)
+### Register Events API (Oct.2016 - Nov.2016)
 
 - People participate in events, using EXPRESS module to create a router for linking to the net
 - Each event contain its details (start time, description, location and attendees)
@@ -85,8 +99,7 @@ Mobile Application Developer
 - Collected information from Stevens website, using web crawler and jsoup
 - Generated the verify code randomly and sent it by email from server to user, using java.mail and selenium library
 
-
-### Data Mining in Campus Crime	(Mar.2016 - May.2016)
+### Data Mining in Campus Crime (Mar.2016 - May.2016)
 
 - Based on the campus-crime data in 2012-2014, finding the relationship in crime type, using SAS to finish this
 - Preprocessing data and classify the crime type into three groups by checking the correlation between each two types
@@ -109,7 +122,6 @@ Mobile Application Developer
 
 Stevens Institute Of Technology, Master of Science in Computer Science (CS), GPA: 3.96/4.0
 
-
 # Awards
 
 - Honorable Mention in the USA National College Mathematical Contest in Modeling (MCM/ICM) (Apr. 2014)
@@ -119,11 +131,8 @@ Stevens Institute Of Technology, Master of Science in Computer Science (CS), GPA
 
 **This blog will record something she interested during developing. It will keep updating, but might irregularly. Each creative and motivate sharing is welcoming.**
 
-
 **You can find her on [Linkedin](https://www.linkedin.com/in/he-heva-wu-2a6819113/), [Github](https://github.com/HevaWu/), [Facebook](https://www.facebook.com/), [Twitter](https://twitter.com/hewu9375). Let's connect!**
 
-
 **Coding's world is mystery, and you would never said you know everything.**
-
 
 [● Latest Blog List](/blog.html)
