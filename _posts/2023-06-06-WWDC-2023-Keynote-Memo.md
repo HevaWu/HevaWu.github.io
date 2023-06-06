@@ -2,7 +2,7 @@
 layout: post
 title: WWDC 2023 Keynote Memo
 date: 2023-06-06 21:40:00
-comment_id: 23
+comment_id: 238
 categories: [iOS, WWDC2023]
 ---
 
