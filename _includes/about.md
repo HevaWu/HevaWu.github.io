@@ -1,9 +1,8 @@
-<div class="center-img-container">
-<!-- ![](/images/logo.png) -->
-<img src="/images/logo.png" width="300" class="about-logo">
-</div>
+.
 
-**He Wu(Heva) is a Software engineer with 4+ years of work experience in iOS development. 10+ years of coding experience include web development, data analysis and mathematical modeling.**
+![](/images/logo.png)
+
+**He Wu(Heva) is a Software engineer with 7+ years of work experience in iOS development. 13+ years of coding experience include web development, data analysis and mathematical modeling.**
 
 # Projects
 
